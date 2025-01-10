@@ -1,4 +1,6 @@
+"use client"
 import Link from "next/link"
+import { useTranslations } from "use-intl"
 
 function Navbar() {
 
@@ -39,11 +41,13 @@ function Navbar() {
         },
     ]
 
+    const t = useTranslations("homepage.navbar")
+
     return (
     <section>
         <div className='flex w-screen h-16 bg-slate-100 items-center sm:px-5 lg:px-16'>
             <div className='flex-1'>
-                <h1>Ocean Sport Tours</h1>
+                <h1>{t("title")}</h1>
             </div>
             <div className="flex gap-3">
                 {
