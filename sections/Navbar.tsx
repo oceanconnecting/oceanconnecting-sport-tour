@@ -7,17 +7,15 @@ import LanguageSwitcher from "@/Components/LanguageSwitcher";
 
 function Navbar() {
 
+    const t = useTranslations("homepage.navbar")
+
     const navbarLink = [
         {
-            title : "item",
+            title : t("about"),
             link : "/"
         },
         {
-            title : "item",
-            link : "/"
-        },
-        {
-            title : "item",
+            title : t("services_title"),
             link : "/",
             subItems : [
                 {
@@ -44,7 +42,6 @@ function Navbar() {
         },
     ]
 
-    const t = useTranslations("homepage.navbar")
 
     return (
     <section className="fixed">

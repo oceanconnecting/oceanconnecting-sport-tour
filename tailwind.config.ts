@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       backgroundImage : {
-        bannerImg: "url('/pexels-kindelmedia-7863341.jpg')"
+        bannerImg: "url('/BannerImg.jpg')"
       },
       colors: {
         'text': {

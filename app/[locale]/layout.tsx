@@ -4,10 +4,15 @@ import Navbar from "@/sections/Navbar";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Poppins } from 'next/font/google'
+import { Poppins, Tajawal } from 'next/font/google'
 
 const poppins = Poppins({
   subsets: ['latin'],
+  weight: "300"
+})
+
+const tajawal = Tajawal({
+  subsets: ['arabic'],
   weight: "300"
 })
 
@@ -36,7 +41,7 @@ export default async function RootLayout({
     <NextIntlClientProvider messages={messages}>
       <html lang={locale} dir={direction}>
         <body
-          className={poppins.className}>
+          className={locale === "ar" ? tajawal.className : poppins.className}>
           <Navbar/>
           {children}
         </body>
