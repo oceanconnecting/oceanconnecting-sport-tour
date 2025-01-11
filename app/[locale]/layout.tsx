@@ -4,7 +4,12 @@ import Navbar from "@/sections/Navbar";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { Poppins } from 'next/font/google'
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: "300"
+})
 
 export const metadata: Metadata = {
   title: "Ocean Sport Tours",
@@ -31,8 +36,7 @@ export default async function RootLayout({
     <NextIntlClientProvider messages={messages}>
       <html lang={locale} dir={direction}>
         <body
-          className="antialiased"
-        >
+          className={poppins.className}>
           <Navbar/>
           {children}
         </body>

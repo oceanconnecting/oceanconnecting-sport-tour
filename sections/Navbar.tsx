@@ -44,8 +44,8 @@ function Navbar() {
     const t = useTranslations("homepage.navbar")
 
     return (
-    <section>
-        <div className='flex w-screen h-16 bg-slate-100 items-center sm:px-5 lg:px-16'>
+    <section className="fixed">
+        <div className='flex w-screen h-16 bg-slate-100 shadow-md items-center sm:px-5 lg:px-16'>
             <div className='flex-1'>
                 <h1>{t("title")}</h1>
             </div>
@@ -57,10 +57,10 @@ function Navbar() {
                                 <Link className="px-3" href={link.link}>{link.title}</Link>
                             </div>
                         ) : (
-                            <div className="relative inline-block group px-3" key={idx}>
+                            <div className="relative inline-flex justify-center group px-3" key={idx}>
                                 <Link href={link.link}>{link.title}</Link>
-                                <div className="pt-5 absolute hidden group-hover:block">
-                                    <ul className="bg-slate-600 pt-3 px-3">
+                                <div className="pt-11 absolute hidden group-hover:block">
+                                    <ul className="bg-slate-600 shadow-md pt-3 px-3">
                                         {
                                             link.subItems.map((sublink, idx) => (
                                                 <li className="block w-fit pb-3" key={idx}><Link className="px-3 text-nowrap" href={sublink.link}>{sublink.title}</Link></li>
