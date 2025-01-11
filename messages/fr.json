@@ -1,5 +1,15 @@
 {
-    "navbar":{
-        "title": "frfrfrfrfr"
+    "homepage": {
+      "navbar": {
+        "title": "Ocean Sports Tour",
+        "about": "حول",
+        "services_title": "الخدمات",
+        "services": {
+          "wfwfwf": "دسدف",
+          "wfwfhjhwf": "دسدف",
+          "wfwhfwf": "دسدف",
+          "wfwojfwf": "دسدف"
+        }
+      }
     }
 }
