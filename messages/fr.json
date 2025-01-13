@@ -1,15 +1,24 @@
 {
-    "homepage": {
-      "navbar": {
-        "title": "Ocean Sports Tour",
-        "about": "حول",
-        "services_title": "الخدمات",
-        "services": {
-          "wfwfwf": "دسدف",
-          "wfwfhjhwf": "دسدف",
-          "wfwhfwf": "دسدف",
-          "wfwojfwf": "دسدف"
-        }
-      }
+  "homepage": {
+    "navbar": {
+      "title": "Ocean Sports Tour",
+      "about": "à propos",
+      "activity_title": "activités",
+      "activities": {
+        "": ""
+      },
+      "downloads": "téléchargements",
+      "galery": "galerie",
+      "professional": "professionnels",
+      "contact": "contact"
+    },
+    "hero": {
+      "hero_tag": "Des aventures conçues pour les esprits curieux",
+      "grand_title": "Explorez, apprenez et grandissez avec",
+      "highlighted": "Ocean Sports Tour",
+      "descr": "Nous sommes spécialisés dans la création d'expériences de visites inoubliables pour les enfants ! Notre mission est d'inspirer la curiosité, de stimuler la créativité et de favoriser l'apprentissage à travers des aventures passionnantes conçues spécialement pour les jeunes explorateurs.",
+      "contact_button": "Contactez-nous",
+      "book_button": "Réservez une visite"
     }
+  }
 }

@@ -16,22 +16,52 @@ function Navbar() {
       link: "/",
     },
     {
-      title: t("services_title"),
-      link: "/",
-      subItems: [
-        { title: "Sub Item 1", link: "/" },
-        { title: "Sub Item 2", link: "/" },
-        { title: "Sub Item 3", link: "/" },
-      ],
+      title: t("activity_title"),
+      link: "/"
     },
     {
-      title: "Item 1",
+      title: t("downloads"),
       link: "/",
     },
     {
-      title: "Item 2",
+      title: t("galery"),
+      link: "/",
+      subItems:[
+        {
+          title:"essaouira",
+          link:"/"
+        },
+        {
+          title:"imsouane",
+          link:"/"
+        },
+        {
+          title:"sidi bibi",
+          link:"/"
+        },
+        {
+          title:"tafraout",
+          link:"/"
+        },
+        {
+          title:"taroudant",
+          link:"/"
+        },
+        {
+          title:"tiznit",
+          link:"/"
+        },
+      ]
+    },
+    {
+      title: t("professional"),
       link: "/",
     },
+    {
+      title: t("contact"),
+      link: "/",
+    },
+    
   ];
 
   const [isOpen, setIsOpen] = useState(false); // Mobile menu toggle
@@ -42,7 +72,7 @@ function Navbar() {
   };
 
   return (
-    <section className="fixed">
+    <section className="fixed z-50">
       <div className="flex w-screen h-fit min-h-16 bg-white backdrop-blur-2xl bg-opacity-90 shadow-md items-center px-5 lg:px-16">
         <div className="flex-1 flex gap-3 items-center">
           <div>
@@ -159,6 +189,7 @@ function Navbar() {
               </div>
             ) : (
               <div key={idx} className="pl-5 py-3">
+
                 <div
                   onClick={() => toggleSubMenu(idx)}
                   className="flex gap-1 items-center cursor-pointer"
@@ -171,6 +202,7 @@ function Navbar() {
                   />
                   <span>{link.title}</span>
                 </div>
+
                 {openSubMenu === idx && (
                   <ul className="pl-5 mt-2">
                     {link.subItems.map((sublink, subIdx) => (
@@ -188,6 +220,9 @@ function Navbar() {
               </div>
             )
           )}
+          <div className="pl-5 py-3">
+            <LanguageSwitcher />
+          </div>
         </div>
       )}
     </section>

@@ -3,12 +3,32 @@
       "navbar": {
         "title": "Ocean Sports Tour",
         "about": "about",
-        "services_title": "services",
-        "services": {
-          "wfwfwf": "دسدف",
-          "wfwfhjhwf": "دسدف",
-          "wfwhfwf": "دسدف",
-          "wfwojfwf": "دسدف"
+        "activity_title": "activities",
+        "activities":{
+          "":""
+        },
+        "downloads":"downloads",
+        "galery":"galery",
+        "professional":"professional",
+        "contact":"contact"
+      },
+      "hero":{
+        "hero_tag":"Adventure Tailored for Curious Minds",
+        "grand_title":"Explore, Learn, and Grow with",
+        "highlighted":"Ocean Sports Tour",
+        "descr":"we specialize in creating unforgettable tour experiences for kids! Our mission is to inspire curiosity, spark creativity, and foster learning through exciting adventures tailored just for young explorers.",
+        "contact_button": "Contact Us",
+        "book_button": "Book A Tour"
+      },
+      "activities":{
+        "activities_title":"activities",
+        "activities":{
+          "agadir_oufella":"Agadir Oufella",
+          "aqua_park":"Aqua Park",
+          "camel_ride":"Camel Ride",
+          "camera_pictures":"Camera Pictures",
+          "corniche":"Corniche",
+          "croco_park":"Croco Park"
         }
       }
     }

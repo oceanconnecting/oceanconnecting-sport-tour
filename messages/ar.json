@@ -1,15 +1,24 @@
 {
-    "homepage": {
-      "navbar": {
-        "title": "المحيط المتصل",
-        "about": "حول",
-        "services_title": "الخدمات",
-        "services": {
-          "wfwfwf": "دسدف",
-          "wfwfhjhwf": "دسدف",
-          "wfwhfwf": "دسدف",
-          "wfwojfwf": "دسدف"
-        }
-      }
+  "homepage": {
+    "navbar": {
+      "title": "Ocean Sports Connecting",
+      "about": "من نحن",
+      "activity_title": "الأنشطة",
+      "activities": {
+        "": ""
+      },
+      "downloads": "التنزيلات",
+      "galery": "المعرض",
+      "professional": "المحترفين",
+      "contact": "اتصل بنا"
+    },
+    "hero": {
+      "hero_tag": "مغامرات مصممة خصيصًا للعقول الفضولية",
+      "grand_title": "استكشف، تعلم، وانمو مع",
+      "highlighted": "جولات أوشن سبورتس",
+      "descr": "نحن متخصصون في إنشاء تجارب جولات لا تُنسى للأطفال! مهمتنا هي إلهام الفضول، وإشعال الإبداع، وتعزيز التعلم من خلال مغامرات مثيرة مصممة خصيصًا للمستكشفين الصغار.",
+      "contact_button": "اتصل بنا",
+      "book_button": "احجز جولة"
     }
+  }
 }
