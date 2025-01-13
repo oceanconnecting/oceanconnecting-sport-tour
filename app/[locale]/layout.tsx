@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/sections/Navbar";
+import Footer from "@/sections/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -13,7 +14,7 @@ const poppins = Poppins({
 
 const tajawal = Tajawal({
   subsets: ['arabic'],
-  weight: "300"
+  weight: "400"
 })
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params: { locale },
+  params: {locale},
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
@@ -44,6 +45,7 @@ export default async function RootLayout({
           className={locale === "ar" ? tajawal.className : poppins.className}>
           <Navbar/>
           {children}
+          <Footer/>
         </body>
       </html>
     </NextIntlClientProvider>

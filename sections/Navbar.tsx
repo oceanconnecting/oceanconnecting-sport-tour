@@ -17,13 +17,7 @@ function Navbar() {
     },
     {
       title: t("activity_title"),
-      link: "/",
-      subItems:[
-        {
-          title:"ds",
-          link:"/"
-        }
-      ]
+      link: "/"
     },
     {
       title: t("downloads"),
@@ -32,6 +26,32 @@ function Navbar() {
     {
       title: t("galery"),
       link: "/",
+      subItems:[
+        {
+          title:"essaouira",
+          link:"/"
+        },
+        {
+          title:"imsouane",
+          link:"/"
+        },
+        {
+          title:"sidi bibi",
+          link:"/"
+        },
+        {
+          title:"tafraout",
+          link:"/"
+        },
+        {
+          title:"taroudant",
+          link:"/"
+        },
+        {
+          title:"tiznit",
+          link:"/"
+        },
+      ]
     },
     {
       title: t("professional"),
@@ -52,7 +72,7 @@ function Navbar() {
   };
 
   return (
-    <section className="fixed">
+    <section className="fixed z-50">
       <div className="flex w-screen h-fit min-h-16 bg-white backdrop-blur-2xl bg-opacity-90 shadow-md items-center px-5 lg:px-16">
         <div className="flex-1 flex gap-3 items-center">
           <div>
