@@ -16,22 +16,32 @@ function Navbar() {
       link: "/",
     },
     {
-      title: t("services_title"),
+      title: t("activity_title"),
       link: "/",
-      subItems: [
-        { title: "Sub Item 1", link: "/" },
-        { title: "Sub Item 2", link: "/" },
-        { title: "Sub Item 3", link: "/" },
-      ],
+      subItems:[
+        {
+          title:"ds",
+          link:"/"
+        }
+      ]
     },
     {
-      title: "Item 1",
+      title: t("downloads"),
       link: "/",
     },
     {
-      title: "Item 2",
+      title: t("galery"),
       link: "/",
     },
+    {
+      title: t("professional"),
+      link: "/",
+    },
+    {
+      title: t("contact"),
+      link: "/",
+    },
+    
   ];
 
   const [isOpen, setIsOpen] = useState(false); // Mobile menu toggle
@@ -159,6 +169,7 @@ function Navbar() {
               </div>
             ) : (
               <div key={idx} className="pl-5 py-3">
+
                 <div
                   onClick={() => toggleSubMenu(idx)}
                   className="flex gap-1 items-center cursor-pointer"
@@ -171,6 +182,7 @@ function Navbar() {
                   />
                   <span>{link.title}</span>
                 </div>
+
                 {openSubMenu === idx && (
                   <ul className="pl-5 mt-2">
                     {link.subItems.map((sublink, subIdx) => (
@@ -188,6 +200,9 @@ function Navbar() {
               </div>
             )
           )}
+          <div className="pl-5 py-3">
+            <LanguageSwitcher />
+          </div>
         </div>
       )}
     </section>
