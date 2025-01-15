@@ -8,7 +8,7 @@ import { useState, useTransition } from "react";
 import { CiGlobe } from "react-icons/ci";
 
 function LanguageSwitcher() {
-  const locale = useLocale(); // Corrected variable name
+  const locale = useLocale();
   const router = useRouter();
   const validLocales = ["fr", "en", "ar"];
 

@@ -3,10 +3,8 @@
     "navbar": {
       "title": "Ocean Sports Tour",
       "about": "à propos",
-      "activity_title": "activités",
-      "activities": {
-        "": ""
-      },
+      "activities": "activités",
+      "places":"places",
       "downloads": "téléchargements",
       "galery": "galerie",
       "professional": "professionnels",
