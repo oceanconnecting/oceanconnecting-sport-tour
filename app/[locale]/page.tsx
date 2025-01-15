@@ -2,6 +2,7 @@
 import About from "@/sections/About";
 import Hero from "@/sections/Hero";
 import Activities from "@/sections/Activities";
+import Places from "@/sections/Places";
 
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero/>
       <About/>
       <Activities/>
+      <Places/>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Activity from '@/Components/Activity';
+import Button from '@/Components/Button';
 import Tag from '@/Components/Tag'
 import { GiSevenPointedStar } from "react-icons/gi";
 
@@ -23,6 +24,7 @@ function Activities() {
           </div>
         ))}
       </div>
+      <Button variant="dark_primary">Show more</Button>
     </div>
   </section>  
   )

@@ -15,10 +15,14 @@ function Navbar() {
   const navbarLink = [
     {
       title: t("about"),
-      link: "/",
+      link: "/#about",
     },
     {
-      title: t("activity_title"),
+      title: t("activities"),
+      link: "/"
+    },
+    {
+      title: t("places"),
       link: "/"
     },
     {
@@ -80,7 +84,7 @@ function Navbar() {
           <div>
             <PiUmbrellaThin />
           </div>
-          <h1>{t("title")}</h1>
+          <Link href='/'>{t("title")}</Link>
         </div>
         <div className="gap-3 hidden lg:flex items-center">
           {navbarLink.map((link, idx) =>
@@ -202,7 +206,7 @@ function Navbar() {
                       openSubMenu === idx && "rotate-180"
                     )}
                   />
-                  <span>{link.title}</span>
+                  <Link href={link.link}>{link.title}</Link>
                 </div>
 
                 {openSubMenu === idx && (

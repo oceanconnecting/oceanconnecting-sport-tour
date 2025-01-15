@@ -10,7 +10,7 @@ function About() {
   };
 
   return (
-    <section>
+    <section id="about">
       <div className="w-full bg-background-950 gap-6 py-16 px-10 flex items-center flex-col">
         <Tag icon={<GiSevenPointedStar />}>Who we are</Tag>
         <div className="grid lg:grid-cols-2 gap-4 h-full justify-center items-center">

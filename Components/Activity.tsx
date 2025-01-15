@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 function Activity(props: any) {
   const { title, descr, image } = props;
   return (
@@ -13,7 +11,6 @@ function Activity(props: any) {
         <h2 className="text-2xl font-bold text-white mb-2">{title}</h2>
         <p className="text-sm text-gray-300">{descr}</p>
       </div>
-      <Link href="/contact"></Link>
     </div>
   );
 }
