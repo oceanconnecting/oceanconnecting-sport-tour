@@ -6,9 +6,11 @@ import { PiUmbrellaThin } from "react-icons/pi";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import LanguageSwitcher from "@/Components/LanguageSwitcher";
 import { twMerge } from "tailwind-merge";
+import {useLocale} from "use-intl";
 
 function Navbar() {
   const t = useTranslations("homepage.navbar");
+  const locale = useLocale()
 
   const navbarLink = [
     {
@@ -59,7 +61,7 @@ function Navbar() {
     },
     {
       title: t("contact"),
-      link: "/",
+      link: `/${locale}/contact`,
     },
     
   ];
