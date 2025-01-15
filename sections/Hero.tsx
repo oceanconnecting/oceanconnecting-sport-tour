@@ -1,10 +1,11 @@
 import Button from '@/Components/Button'
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { GiSevenPointedStar } from "react-icons/gi";
 
 function Hero() {
 
     const t = useTranslations("homepage.hero")
+    const locale = useLocale()
 
   return (
     <section className='bg-bannerImg bg-cover bg-center w-full h-screen'>
@@ -24,8 +25,8 @@ function Hero() {
                     {t("descr")}
                 </p>
                 <div className='flex mt-5 gap-3 flex-col md:flex-row'>
-                    <Button variant='primary'>{t("book_button")}</Button>
-                    <Button variant='secondary'>{t("contact_button")}</Button>
+                    <Button href={`/${locale}/booking`} variant='primary'>{t("book_button")}</Button>
+                    <Button href={`/${locale}/contact`} variant='secondary'>{t("contact_button")}</Button>
                 </div>
             </div>
             

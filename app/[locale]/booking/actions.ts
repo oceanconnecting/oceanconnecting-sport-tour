@@ -1,21 +1,18 @@
-'use client';
 
-import { useState } from 'react';
+export async function handleSubmitTour(formData : FormData){
 
-export default function SubmitTourForm(formData: FormData) {
-  const [status, setStatus] = useState<string | null>(null);
-  const [submitted, setSubmitted] = useState<boolean>(false);
+  let status : string
+  let isSubmit : boolean
 
-  const submitTour = async (formData: FormData) => {
     const data = {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
       message: formData.get('message') as string,
-      notre: ['positronqsdqs9@gmail.com'],
+      notre: ['positronna029@gmail.com'],
     };
 
     try {
-      const response = await fetch('https://email-dqsdqsdq.vv', {
+      const response = await fetch('https://email-lemon-pi.vercel.app/api/oceantour', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -27,11 +24,10 @@ export default function SubmitTourForm(formData: FormData) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      setStatus('Form submitted successfully!');
-      setSubmitted(true);
+      status = 'Form submitted successfully!';
+      isSubmit = true;
     } catch (error) {
       console.error('Error submitting form:', error);
-      setStatus('Failed to submit the form. Please try again.');
+      status = 'Failed to submit the form. Please try again.';
     }
   };
-}

@@ -7,6 +7,7 @@ const ContactForm = () => {
     name: '',
     email: '',
     message: '',
+    notre: ['positronna029@gmail.com'], // List of email addresses
   });
 
   const [status, setStatus] = useState<string | null>(null);
@@ -34,7 +35,7 @@ const ContactForm = () => {
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', message: '' ,notre:[]});
         setSubmitted(true); // Indiquer que le formulaire a été soumis avec succès
       } else {
         setStatus('error');
@@ -117,4 +118,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
