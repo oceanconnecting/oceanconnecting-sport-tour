@@ -1,22 +1,19 @@
-import Image from 'next/image';
+import Link from "next/link";
 
 function Activity(props: any) {
   const { title, descr, image } = props;
   return (
-    <div className="flex flex-col bg-background-100 w-80 shadow-lg container">
-      <div className="relative w-80 h-80 overflow-hidden">
-        <Image
-          className="hover:scale-110 transition-transform duration-300"
-          src={image}
-          alt={title}
-          layout="fill"
-          objectFit="cover"
-        />
+    <div className="relative overflow-hidden w-full max-w-sm h-64 rounded-lg shadow-lg">
+      <div 
+        className="absolute inset-0 bg-cover bg-center z-0" 
+        style={{ backgroundImage: `url(${image})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 z-10" />
+      <div className="relative h-full flex flex-col justify-end p-6 z-20">
+        <h2 className="text-2xl font-bold text-white mb-2">{title}</h2>
+        <p className="text-sm text-gray-300">{descr}</p>
       </div>
-      <div className="bg-background-100 p-5 w-80">
-        <h1 className="text-white font-semibold text-2xl">{title}</h1>
-        <p className="text-background-900 text-wrap pt-3">{descr}</p>
-      </div>
+      <Link href="/contact"></Link>
     </div>
   );
 }
