@@ -1,6 +1,9 @@
 import Button from '@/Components/Button'
 import { useLocale, useTranslations } from 'next-intl';
 import { GiSevenPointedStar } from "react-icons/gi";
+import { ToastContainer, toast } from 'react-toastify';
+
+export const notify = () => toast("Wow so easy!");
 
 function Hero() {
 
@@ -24,6 +27,7 @@ function Hero() {
                 <p className="mt-4 text-slate-200 sm:text-xl/relaxed max-w-xl text-center">
                     {t("descr")}
                 </p>
+                <ToastContainer/>
                 <div className='flex mt-5 gap-3 flex-col md:flex-row'>
                     <Button href={`/${locale}/contact`} variant='primary'>{t("book_button")}</Button>
                     <Button href={`/${locale}/contact`} variant='secondary'>{t("contact_button")}</Button>

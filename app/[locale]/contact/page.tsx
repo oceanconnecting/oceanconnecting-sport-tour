@@ -1,14 +1,13 @@
-'use client';
-import { useEffect } from 'react';
-import { handleSubmitTour, getStatus } from './actions';
+'use client'
+
+import { handleSubmitTour } from './actions';
 import Button from '@/Components/Button';
 import Tag from '@/Components/Tag';
+import { ToastContainer, toast } from 'react-toastify';
+
+export const notify = (message : string) => toast(message);
 
 export default function SubmitTourForm() {
-
-  useEffect(() => {
-    console.log(getStatus)
-  }, [getStatus])
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -25,6 +24,7 @@ export default function SubmitTourForm() {
             <label className='w-10' htmlFor="name">name</label>
             <input id='name' className='px-6 w-80 py-4 rounded-full border border-black outline-none' type="text" name="name" placeholder="Name" required />
           </div>
+          <ToastContainer />
           <div className='flex items-center justify-between'>
             <label className='w-10' htmlFor="email">email</label>
             <input className='px-6 w-80 py-4 rounded-full border border-black outline-none' id='email' type="email" name="email" placeholder="Email" required />
