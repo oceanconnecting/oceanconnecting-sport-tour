@@ -19,7 +19,7 @@ function Navbar() {
     },
     {
       title: t("activities"),
-      link: "/"
+      link: "/#activities"
     },
     {
       title: t("places"),
@@ -86,7 +86,7 @@ function Navbar() {
           </div>
           <Link href='/'>{t("title")}</Link>
         </div>
-        <div className="gap-3 hidden lg:flex items-center">
+        <div className="gap-3 font-medium hidden lg:flex items-center">
           {navbarLink.map((link, idx) =>
             !link.subItems ? (
               <div key={idx}>

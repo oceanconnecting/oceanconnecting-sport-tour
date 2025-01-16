@@ -15,7 +15,7 @@ function About() {
           <div>
             <div className="flex items-center flex-col">
               <p className="mt-6 text-center lg:text-left text-text-50 sm:text-xl/relaxed max-w-lg">
-                OCEAN sport et tours, company of tourist transport and sport based in Agadir, began operation in 2022.<br/>
+                ocean sport et tours, company of tourist transport and sport based in Agadir, began operation in 2022.<br/>
                 The association operates a very diversified range of services who deemed to be of high quality, they combine availability, proactivity and quality.<br/>
                 We are committed to make difference in everything we do, as our main goal is to reflect a great image to tourism in Morocco by listening to the needs and requests of customers and offer them insightful and worry-free experience
               </p>
