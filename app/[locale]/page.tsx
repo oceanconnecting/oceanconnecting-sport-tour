@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 
 import About from "@/sections/About";
 import Hero from "@/sections/Hero";
@@ -10,12 +11,14 @@ import TextTicker from "@/sections/TextTicker";
 export default function Home() {
   return (
     <div>
-      <Hero/>
-      <About/>
-      <Choose/>
-      <Activities/>
-      <TextTicker/>
-      <Places/>
+      <Suspense fallback={<p>loading . . .</p>}>
+        <Hero/>
+        <About/>
+        <Choose/>
+        <Activities/>
+        <TextTicker/>
+        <Places/>
+      </Suspense>
     </div>
   );
 }

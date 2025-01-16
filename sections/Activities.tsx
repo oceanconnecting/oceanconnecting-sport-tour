@@ -2,6 +2,7 @@ import ImageCard from '@/Components/ImageCard';
 import Button from '@/Components/Button';
 import Tag from '@/Components/Tag'
 import { GiSevenPointedStar } from "react-icons/gi";
+import { Suspense } from 'react';
 
 const activities = [
   { "title": "Aqua Park", "descr": "Fun water slides and pools.", "image": "/activities/aqua-park.jpg" },
@@ -19,6 +20,7 @@ const activities = [
 function Activities() {
   return (
     <section id="activities">
+      <Suspense fallback={<p>loading . . .</p>}>
     <div className="w-full bg-background-950 py-16 px-10 flex flex-col items-center gap-6">
       <Tag icon={<GiSevenPointedStar />}>Activities</Tag>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center justify-center gap-6 w-full max-w-7xl">
@@ -29,7 +31,8 @@ function Activities() {
         ))}
       </div>
     </div>
-  </section>  
+    </Suspense>
+  </section> 
   )
 }
 
