@@ -1,8 +1,12 @@
 'use client';
-import { handleSubmitTour } from './actions';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { handleSubmitTour, getStatus } from './actions';
 
 export default function SubmitTourForm() {
+
+  useEffect(() => {
+    console.log(getStatus)
+  }, [getStatus])
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -15,13 +19,6 @@ export default function SubmitTourForm() {
       <input className='' type="text" name="name" placeholder="Name" required />
       <input type="email" name="email" placeholder="Email" required />
       <textarea name="message" placeholder="Message" required />
-      <label htmlFor="cars">Choose a car:</label>
-      <select name="cars" id="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
       <button type="submit">Submit</button>
       {status && <p>{status}</p>}
     </form>
