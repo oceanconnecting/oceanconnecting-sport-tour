@@ -16,21 +16,18 @@ const activities = [
   { "title": "Surfing", "descr": "Ride the waves at popular surf spots.", "image": "/activities/surfing.jpg" }
 ]
 
-
-
 function Activities() {
   return (
     <section id="activities">
     <div className="w-full bg-background-950 py-16 px-10 flex flex-col items-center gap-6">
       <Tag icon={<GiSevenPointedStar />}>Activities</Tag>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-full max-w-7xl">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center justify-center gap-6 w-full max-w-7xl">
         {activities.map((activity, idx) => (
           <div key={idx} className="flex justify-center">
             <ImageCard title={activity.title} descr={activity.descr} image={activity.image} />
           </div>
         ))}
       </div>
-      <Button variant="dark_primary">Show more</Button>
     </div>
   </section>  
   )

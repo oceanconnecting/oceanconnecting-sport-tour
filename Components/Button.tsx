@@ -15,7 +15,7 @@ const classes = cva("", {
 
 type ButtonProps = {
   variant: "primary" | "secondary" | "dark_primary" | "dark_secondary";
-  href?: string; // Make href optional
+  href?: string;
 } & Omit<LinkProps, "href"> &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, "type">;
