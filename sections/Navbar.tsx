@@ -23,7 +23,7 @@ function Navbar() {
     },
     {
       title: t("places"),
-      link: "/"
+      link: "/#places",
     },
     {
       title: t("downloads"),
