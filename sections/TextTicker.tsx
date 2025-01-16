@@ -18,7 +18,7 @@ const quotes: string[] = [
 function InfiniteText() {
   return (
     <section id="infinteTicker">
-        <div className="overflow-x-clip my-16 flex bg-secondary-950">
+        <div className="overflow-x-clip mt-16 mb-32 flex bg-secondary-950">
         <motion.div
         animate={
             {x: "-50%"}

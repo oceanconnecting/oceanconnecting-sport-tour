@@ -84,7 +84,7 @@ function Navbar() {
           <div>
             <PiUmbrellaThin />
           </div>
-          <Link href='/'>{t("title")}</Link>
+          <Link href='/#main'>{t("title")}</Link>
         </div>
         <div className="gap-3 font-medium hidden lg:flex items-center">
           {navbarLink.map((link, idx) =>

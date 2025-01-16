@@ -6,6 +6,7 @@ import Activities from "@/sections/Activities";
 import Places from "@/sections/Places";
 import Choose from "@/sections/choose";
 import TextTicker from "@/sections/TextTicker";
+import Downloads from '@/sections/Downloads';
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Activities/>
         <TextTicker/>
         <Places/>
+        <Downloads/>
       </Suspense>
     </div>
   );
