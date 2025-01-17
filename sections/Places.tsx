@@ -43,7 +43,7 @@ function Places() {
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-full max-w-7xl">
             {places.map((place, index) => (
               <div  onClick={() => openModal(place)} key={index} className=" cursor-grab flex flex-col items-center">
-                <ImageCard title={place.title} descr={place.descr} image={place.image} />
+                <ImageCard title={place.title} descr="" image={place.image} />
                 
               </div>
             ))}
