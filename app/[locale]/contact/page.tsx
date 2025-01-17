@@ -6,7 +6,9 @@ import Tag from '@/Components/Tag';
 import { ToastContainer, toast } from 'react-toastify';
 import { useRef } from 'react';
 
-export const notify = (message: string) => toast(message);
+export function notify(message: string){
+  toast(message)
+}
 
 export default function SubmitTourForm() {
   const nameInput = useRef<HTMLInputElement>(null);
