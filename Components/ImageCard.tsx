@@ -5,7 +5,7 @@ function ImageCard(props: any) {
 
   const { title, descr, image, } = props;
   return (
-    <div className="relative overflow-hidden w-full max-w-sm h-64 rounded-lg shadow-lg">
+    <div className="relative overflow-hidden w-full min-w-sm h-64 rounded-lg shadow-lg">
       <div 
         className="absolute inset-0 bg-cover bg-center z-0" 
         style={{ backgroundImage: `url(${image})` }}/>

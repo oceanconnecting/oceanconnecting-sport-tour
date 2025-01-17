@@ -3,33 +3,37 @@ import Tag from '../Components/Tag';
 import { GiSevenPointedStar } from 'react-icons/gi';
 import { PiGlobeHemisphereWestDuotone, PiBookBookmarkDuotone, PiShieldCheckDuotone} from "react-icons/pi";
 import { twMerge } from 'tailwind-merge';
-
-const ChooseData = [
-  {
-    icon: <PiShieldCheckDuotone className="text-4xl text-primary-100"/>,
-    title: "Safe and Secure",
-    subtitle: "Your child's safety is our top priority with trained staff and secure trips.",
-    bg: "bg-primary-950",
-  },
-  {
-    icon: <PiGlobeHemisphereWestDuotone className="text-4xl text-primary-100"/>,
-    title: "Fun Activities",
-    subtitle: "Engaging and fun experiences that kids will enjoy and remember.",
-    bg: "bg-primary-950",
-  },
-  {
-    icon: <PiBookBookmarkDuotone className="text-4xl text-primary-100"/>,
-    title: "Educational Value",
-    subtitle: "A mix of learning and adventure to expand your child's horizons.",
-    bg: "bg-primary-950",
-  }
-]
+import { useTranslations } from 'next-intl';
 
 function choose() {
+
+  const t = useTranslations("homepage.choose")
+
+  const ChooseData = [
+    {
+      icon: <PiShieldCheckDuotone className="text-4xl text-primary-100"/>,
+      title: t("choose_1.title"),
+      subtitle: t("choose_1.descr"),
+      bg: "bg-primary-950",
+    },
+    {
+      icon: <PiGlobeHemisphereWestDuotone className="text-4xl text-primary-100"/>,
+      title: t("choose_2.title"),
+      subtitle: t("choose_1.descr"),
+      bg: "bg-primary-950",
+    },
+    {
+      icon: <PiBookBookmarkDuotone className="text-4xl text-primary-100"/>,
+      title: t("choose_3.title"),
+      subtitle: t("choose_1.descr"),
+      bg: "bg-primary-950",
+    }
+  ]
+
   return ( 
-    <section className="py-12 px-4 gap-5 flex flex-col items-center">
-      <Tag icon={<GiSevenPointedStar />}>Why To choose Us</Tag>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <section className="py-44 px-4 h-screen gap-5 flex flex-col items-center">
+      <Tag icon={<GiSevenPointedStar />}>{t("title")}</Tag>
+      <div className="grid flex-1 grid-cols-1 justify-center items-center lg:grid-cols-3 gap-6">
         {ChooseData.map((item: any, index: any) => (
             <div key={index} className="w-full max-w-xs border-black rounded-xl border-opacity-35">
               <div className="flex flex-col items-center text-center p-6">

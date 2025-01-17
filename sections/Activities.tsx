@@ -1,23 +1,28 @@
 import ImageCard from '@/Components/ImageCard';
-import Button from '@/Components/Button';
 import Tag from '@/Components/Tag'
 import { GiSevenPointedStar } from "react-icons/gi";
 import { Suspense } from 'react';
+import { useTranslations } from 'next-intl';
 
-const activities = [
-  { "title": "Aqua Park", "descr": "Fun water slides and pools.", "image": "/activities/aqua-park.jpg" },
-  { "title": "Camel Ride", "descr": "Ride camels through scenic spots.", "image": "/activities/camel-ride.jpg" },
-  { "title": "Hot Air Balloon", "descr": "Enjoy breathtaking views from above.", "image": "/activities/hot-air-balloon.jpg" },
-  { "title": "Horse Ride", "descr": "Explore landscapes on horseback.", "image": "/activities/horse-ride.jpeg" },
-  { "title": "Jetski", "descr": "Exciting water sports experience.", "image": "/activities/jetski.jpg" },
-  { "title": "Karting", "descr": "Race on thrilling karting tracks.", "image": "/activities/karting.jpg" },
-  { "title": "Parachute", "descr": "Thrilling aerial adventure with parachuting.", "image": "/activities/parachute.jpg" },
-  { "title": "Quad n Buggy", "descr": "Explore off-road trails with quads and buggies.", "image": "/activities/quad-n-buggy.jpg" },
-  { "title": "Sandboarding", "descr": "Slide down sandy dunes for fun.", "image": "/activities/sandboarding.jpg" },
-  { "title": "Surfing", "descr": "Ride the waves at popular surf spots.", "image": "/activities/surfing.jpg" }
-]
+
 
 function Activities() {
+
+  const t = useTranslations("homepage.activities")
+
+  const activities = [
+    { "title": t("activities.activity_1.title"), "descr": t("activities.activity_1.descr"), "image": "/activities/aqua-park.jpg" },
+    { "title": t("activities.activity_2.title"), "descr": t("activities.activity_2.descr"), "image": "/activities/camel-ride.jpg" },
+    { "title": t("activities.activity_3.title"), "descr": t("activities.activity_3.descr"), "image": "/activities/hot-air-balloon.jpg" },
+    { "title": t("activities.activity_4.title"), "descr": t("activities.activity_4.descr"), "image": "/activities/horse-ride.jpeg" },
+    { "title": t("activities.activity_5.title"), "descr": t("activities.activity_5.descr"), "image": "/activities/jetski.jpg" },
+    { "title": t("activities.activity_6.title"), "descr": t("activities.activity_6.descr"), "image": "/activities/karting.jpg" },
+    { "title": t("activities.activity_7.title"), "descr": t("activities.activity_7.descr"), "image": "/activities/parachute.jpg" },
+    { "title": t("activities.activity_8.title"), "descr": t("activities.activity_8.descr"), "image": "/activities/quad-n-buggy.jpg" },
+    { "title": t("activities.activity_9.title"), "descr": t("activities.activity_9.descr"), "image": "/activities/sandboarding.jpg" },
+    { "title": t("activities.activity_10.title"), "descr": t("activities.activity_10.descr"), "image": "/activities/surfing.jpg" }
+  ]
+
   return (
     <section id="activities">
       <Suspense fallback={<p>loading . . .</p>}>
