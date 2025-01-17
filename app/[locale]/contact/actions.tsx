@@ -1,4 +1,4 @@
-import { notify } from "./page";
+import { ToastContainer, toast } from 'react-toastify';
 
 let status : string = 'not yet'
 let isSubmit : boolean = false
@@ -26,15 +26,16 @@ export async function handleSubmitTour(formData : FormData){
     }
 
     status = 'Form submitted successfully!';
-    notify('Form submitted successfully!')
+    toast("Form submitted successfully!")
     isSubmit = true;
   } catch (error) {
     console.error('Error submitting form:', error);
     status = 'Failed to submit the form. Please try again.';
-    notify('Failed to submit the form. Please try again.')
   }
 };
 
-export function getStatus(){
-  return {status}
+export default function Toaster(){
+  return(
+    <ToastContainer hideProgressBar={true} />
+  )
 }
