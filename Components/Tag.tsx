@@ -7,7 +7,7 @@ function Tag(props : any) {
   return (
     <div className="px-6 py-4 flex text-primary-200 items-center justify-center gap-3 w-fit">
 
-        <h1 className="text-5xl font-semibold">{children}</h1>
+        <h1 className="text-5xl text-center font-semibold">{children}</h1>
 
     </div>
   )
