@@ -44,11 +44,11 @@ function LanguageSwitcher() {
 
       {/* Dropdown */}
       {isDropdownOpen && (
-        <ul className="absolute top-full mt-5 bg-white w-44 py-2">
+        <ul className="absolute top-full mt-5 bg-white px-4 w-fit py-2">
           {routing.locales.map((lang, idx) => (
             <li
-              className={`pb-3 hover:text-primary-400 px-3 cursor-pointer ${
-                lang === locale ? "font-bold text-primary-400" : ""
+              className={`py-2 my-2 transition hover:text-primary-300 hover:bg-primary-950 duration-200 text-center rounded-xl px-3 cursor-pointer ${
+                lang === locale ? "text-primary-300 bg-primary-950" : ""
               }`}
               onClick={() => handleLocaleChange(lang)}
               key={idx}
