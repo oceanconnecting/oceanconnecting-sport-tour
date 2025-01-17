@@ -105,6 +105,7 @@
       "text_10": "A well-planned tour is more than a trip, it's a gateway to wonder."
     },
     "places": {
+      "title":"places",
       "place_1": {
         "title": "Agadir Oufella",
         "descr": "A historic hilltop fortress offering panoramic views of Agadir and its coastline. It's a perfect spot for history enthusiasts and photographers."
@@ -152,13 +153,14 @@
       "place_12": {
         "title": "Taghazout",
         "descr": "A charming fishing village turned surf haven, known for its world-class waves, relaxed vibe, and stunning sunsets."
-      }
+      },
+      "show_more":"show more"
     },
     "downloads":{
       "title":"Downloads",
       "descr":"Our company offer for you all the information you're going to need for your unique tour with us, Throughout, ocean sport and tours takes care of everything, from the day you land, until the moment we say goodbye at the airport. About here, you will come across Everything concerning Tariff and schedule of your tours, trips, travels, accommodation… that you can download easy and fast.",
-      "text_1":"Download 7days<br/> planning",
-      "text_2":"Download 10days <br/> planning",
+      "text_1":"Download 7days planning",
+      "text_2":"Download 10days planning",
       "button":"Download"
     }
   }

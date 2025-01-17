@@ -1,7 +1,7 @@
 "use client"
 import { PiBeachBallDuotone } from "react-icons/pi";
 import { motion } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 function InfiniteText() {
     const t = useTranslations("homepage.text_ticker")
@@ -18,13 +18,16 @@ function InfiniteText() {
         t("text_10"),
     ];
 
+    const locale = useLocale()
+    const isArabic = locale === 'ar'
 
   return (
+
     <section id="infinteTicker">
         <div className="overflow-x-clip my-16 flex bg-secondary-950">
         <motion.div
         animate={
-            {x: "-50%"}
+            {x: isArabic ? "50%" : "-50%"}
         }
         whileHover={{
             

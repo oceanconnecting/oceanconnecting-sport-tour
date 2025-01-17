@@ -39,7 +39,7 @@ function Places() {
     <div>
       <section id="places">
         <div className="w-full bg-background-950 py-16 px-10 flex flex-col items-center gap-6">
-          <Tag icon={<FaPlaceOfWorship />}>Places</Tag>
+          <Tag icon={<FaPlaceOfWorship />}>{t("title")}</Tag>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-full max-w-7xl">
             {places.map((place, index) => (
               <div  onClick={() => openModal(place)} key={index} className=" cursor-grab flex flex-col items-center">
@@ -49,7 +49,7 @@ function Places() {
             ))}
           </div>
           <Button href={`/${locale}/places`} variant="dark_primary">
-            Show more
+            {t("show_more")}
           </Button>
         </div>
       </section>
