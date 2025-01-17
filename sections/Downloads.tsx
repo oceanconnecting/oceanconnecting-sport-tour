@@ -14,14 +14,17 @@ function Downloads() {
             About here, you will come across Everything concerning Tariff and schedule of your tours, trips, travels, accommodation… that you can download easy and fast.
           </p>
           <div className="flex flex-row w-full justify-center items-center gap-10">
-            <CardDownloadButtonImage href="/planning/7days planning watermark.pdf" title="Download" descr="qsdqsdqsdqsd" image="/activities/aqua-park.jpg" button_title="Download" >
-              <h2 className="text-2xl font-bold text-white mb-2">Download</h2>
-              <p className="text-sm text-gray-300">sqhkjqshdkjqsdkjqsnkjqsn</p>
-              <Button className="mt-7" variant="primary" href="/planning/7days planning watermark.pdf" download>click me you dumbass</Button>
+            <CardDownloadButtonImage image="/places/souss-massa.jpg" >
+
+              <h2 className="text-2xl font-bold text-white mb-2">Download 7days<br/> planning</h2>
+              <Button className="mt-7" variant="primary" href="/planning/7days planning watermark.pdf" download>download</Button>
+            
             </CardDownloadButtonImage>
-            <CardDownloadButtonImage href="/planning/7days planning watermark.pdf" title="Download" descr="qsdqsdqsdqsd" image="/activities/aqua-park.jpg" button_title="Download" >
-              <h2 className="text-2xl font-bold text-white mb-2">Download</h2>
-              <p className="text-sm text-gray-300">sqhkjqshdkjqsdkjqsnkjqsn</p>
+            <CardDownloadButtonImage image="/places/souss-massa.jpg" >
+            
+              <h2 className="text-2xl font-bold text-white mb-2">Download 10days <br/> planning</h2>              
+              <Button className="mt-7" variant="primary" href="/planning/10days planning watermark.pdf" download>Download</Button>
+            
             </CardDownloadButtonImage>
         </div>
         </div>
