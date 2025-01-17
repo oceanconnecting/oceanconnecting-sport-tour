@@ -9,7 +9,7 @@ function CardDownloadButtonImage(props: any) {
           className="absolute inset-0 bg-cover bg-center z-0" 
           style={{ backgroundImage: `url(${image})` }}
         />
-        <div className={twMerge("absolute inset-0 opacity-70 z-10",`bg-gradient-to-b from-transparent to-black`)}/>
+        <div className="absolute inset-0 opacity-55 z-10 bg-black"/>
         <div className="relative h-full flex flex-col justify-end p-6 z-20">
           {children}
         </div>

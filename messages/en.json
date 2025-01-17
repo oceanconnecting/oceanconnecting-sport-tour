@@ -1,33 +1,167 @@
 {
-    "homepage": {
-      "navbar": {
-        "title": "Ocean Sports Tour",
-        "about": "about",
-        "activities": "activities",
-        "places":"places",
-        "downloads":"downloads",
-        "galery":"galery",
-        "professional":"professional",
-        "contact":"contact"
+  "homepage": {
+    "navbar": {
+      "title": "Ocean Sports Tour",
+      "about": "about",
+      "activities": "activities",
+      "places":"places",
+      "downloads":"downloads",
+      "galery":{
+        "title":"galery",
+        "galery":{
+          "gal_1":"essaouira",
+          "gal_2":"imsouane",
+          "gal_3":"sidi bibi",
+          "gal_4":"tafraout",
+          "gal_5":"taroudant",
+          "gal_6":"tiznit"
+        }
       },
-      "hero":{
-        "hero_tag":"Adventure Tailored for Curious Minds",
-        "grand_title":"Explore, Learn, and Grow with",
-        "highlighted":"Ocean Sports Tour",
-        "descr":"we specialize in creating unforgettable tour experiences for kids! Our mission is to inspire curiosity, spark creativity, and foster learning through exciting adventures tailored just for young explorers.",
-        "contact_button": "Contact Us",
-        "book_button": "Book A Tour"
+      "professional":"professional",
+      "contact":"contact"
+    },
+    "hero":{
+      "hero_tag":"Adventure Tailored for Curious Minds",
+      "grand_title":"Explore, Learn, and Grow with",
+      "highlighted":"Ocean Sports Tour",
+      "descr":"we specialize in creating unforgettable tour experiences for kids! Our mission is to inspire curiosity, spark creativity, and foster learning through exciting adventures tailored just for young explorers.",
+      "contact_button": "Contact Us",
+      "book_button": "Book A Tour"
+    },
+    "about":{
+      "about_title":"about us",
+      "about_text":"ocean sport et tours, company of tourist transport and sport based in Agadir, began operation in 2022. The association operates a very diversified range of services who deemed to be of high quality, they combine availability, proactivity and quality. We are committed to make difference in everything we do, as our main goal is to reflect a great image to tourism in Morocco by listening to the needs and requests of customers and offer them insightful and worry-free experience"
+    },
+    "choose":{
+      "title":"Why to Choose Us",
+      "choose_1":{
+        "title":"Safe and Secure",
+        "descr":"Your child's safety is our top priority with trained staff and secure trips."
       },
-      "activities":{
-        "activities_title":"activities",
-        "activities":{
-          "agadir_oufella":"Agadir Oufella",
-          "aqua_park":"Aqua Park",
-          "camel_ride":"Camel Ride",
-          "camera_pictures":"Camera Pictures",
-          "corniche":"Corniche",
-          "croco_park":"Croco Park"
+      "choose_2":{
+        "title":"Fun Activities",
+        "descr":"Engaging and fun experiences that kids will enjoy and remember."
+      },
+      "choose_3":{
+        "title":"Educational Value",
+        "descr":"A mix of learning and adventure to expand your child's horizons."
+      }
+    },
+    "activities":{
+      "activities_title":"activities",
+      "activities": {
+        "activity_1": {
+          "title": "Aqua Park",
+          "descr": "Enjoy a day of fun-filled water slides, wave pools, and lazy rivers at the aqua park."
+        },
+        "activity_2": {
+          "title": "Camel Ride",
+          "descr": "Experience a traditional desert adventure by riding a camel through scenic dunes."
+        },
+        "activity_3": {
+          "title": "Hot Air Balloon",
+          "descr": "Soar high above the landscape and take in breathtaking views in a hot air balloon ride."
+        },
+        "activity_4": {
+          "title": "Horse Ride",
+          "descr": "Embark on a peaceful journey through trails and open fields on horseback."
+        },
+        "activity_5": {
+          "title": "Jetski",
+          "descr": "Feel the thrill of speeding across the water on a high-powered jetski."
+        },
+        "activity_6": {
+          "title": "Karting",
+          "descr": "Race against friends and family on a go-kart track for an adrenaline-packed experience."
+        },
+        "activity_7": {
+          "title": "Parachute",
+          "descr": "Take a leap of faith and experience the excitement of skydiving with a parachute."
+        },
+        "activity_8": {
+          "title": "Quad & Buggy",
+          "descr": "Navigate rugged terrains and sandy trails with a quad bike or buggy ride."
+        },
+        "activity_9": {
+          "title": "Sandboarding",
+          "descr": "Slide down towering sand dunes on a sandboard for a unique desert adventure."
+        },
+        "activity_10": {
+          "title": "Surfing",
+          "descr": "Catch the waves and enjoy the thrill of surfing in the open sea."
         }
       }
+    },
+    "text_ticker": {
+      "text_1": "Inspiring young minds, one adventure at a time.",
+      "text_2": "Every journey is a chance to spark curiosity and joy.",
+      "text_3": "Create memories that last a lifetime through exploration and play.",
+      "text_4": "Organizing adventures, shaping dreams, and bringing smiles.",
+      "text_5": "Every child deserves the magic of discovery and fun.",
+      "text_6": "Exploration fuels imagination, and activities bring dreams to life.",
+      "text_7": "Plan it. Explore it. Cherish it.",
+      "text_8": "Turning simple trips into extraordinary adventures for kids.",
+      "text_9": "The organizers who care create the memories kids treasure.",
+      "text_10": "A well-planned tour is more than a trip, it's a gateway to wonder."
+    },
+    "places": {
+      "title":"places",
+      "place_1": {
+        "title": "Agadir Oufella",
+        "descr": "A historic hilltop fortress offering panoramic views of Agadir and its coastline. It's a perfect spot for history enthusiasts and photographers."
+      },
+      "place_2": {
+        "title": "Corniche",
+        "descr": "A lively seaside promenade lined with cafes, restaurants, and shops, ideal for leisurely walks and enjoying the ocean breeze."
+      },
+      "place_3": {
+        "title": "Croco Park",
+        "descr": "A unique crocodile park featuring lush gardens and over 300 Nile crocodiles. A fun and educational experience for families."
+      },
+      "place_4": {
+        "title": "Dolphin World Agadir",
+        "descr": "An entertainment center where visitors can enjoy dolphin shows and interact with these intelligent marine animals."
+      },
+      "place_5": {
+        "title": "Imi Ouaddar",
+        "descr": "A picturesque coastal village known for its pristine beaches and laid-back atmosphere, perfect for a relaxing getaway."
+      },
+      "place_6": {
+        "title": "Legzira",
+        "descr": "Famous for its stunning red rock arches on the beach, this natural wonder is a must-visit for nature lovers and photographers."
+      },
+      "place_7": {
+        "title": "Marina",
+        "descr": "A modern harbor area featuring luxury yachts, upscale shops, and waterfront dining options."
+      },
+      "place_8": {
+        "title": "Medina and Amazigh Heritage Museum",
+        "descr": "A cultural hub showcasing traditional Moroccan architecture, art, and artifacts, celebrating Amazigh heritage."
+      },
+      "place_9": {
+        "title": "Paradise Valley",
+        "descr": "A lush oasis with natural pools and waterfalls, surrounded by palm trees and dramatic cliffs. Ideal for hiking and swimming."
+      },
+      "place_10": {
+        "title": "Souss Massa",
+        "descr": "A national park known for its diverse wildlife, including flamingos and rare bird species, as well as its scenic landscapes."
+      },
+      "place_11": {
+        "title": "Souk El Had",
+        "descr": "A bustling traditional market offering a wide variety of goods, from spices and textiles to handicrafts and fresh produce."
+      },
+      "place_12": {
+        "title": "Taghazout",
+        "descr": "A charming fishing village turned surf haven, known for its world-class waves, relaxed vibe, and stunning sunsets."
+      },
+      "show_more":"show more"
+    },
+    "downloads":{
+      "title":"Downloads",
+      "descr":"Our company offer for you all the information you're going to need for your unique tour with us, Throughout, ocean sport and tours takes care of everything, from the day you land, until the moment we say goodbye at the airport. About here, you will come across Everything concerning Tariff and schedule of your tours, trips, travels, accommodation… that you can download easy and fast.",
+      "text_1":"Download 7days planning",
+      "text_2":"Download 10days planning",
+      "button":"Download"
     }
+  }
 }

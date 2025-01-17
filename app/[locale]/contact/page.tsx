@@ -1,12 +1,9 @@
 'use client';
 
-import { handleSubmitTour } from './actions';
+import Toaster, { handleSubmitTour } from './actions';
 import Button from '@/Components/Button';
 import Tag from '@/Components/Tag';
-import { ToastContainer, toast } from 'react-toastify';
 import { useRef } from 'react';
-
-export const notify = (message: string) => toast(message);
 
 export default function SubmitTourForm() {
   const nameInput = useRef<HTMLInputElement>(null);
@@ -24,14 +21,15 @@ export default function SubmitTourForm() {
     const formData = new FormData(event.currentTarget);
     handleSubmitTour(formData); // Your custom function to handle form submission
     clearInputs();
+    
   };
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 h-screen w-full">
       <div className="flex flex-col gap-3 h-screen py-8 w-full justify-center items-center">
-        <ToastContainer hideProgressBar={true} />
+        <Toaster/>
         <Tag>Contact Us</Tag>
-        <form className="flex w-full px-[5vh] lg:px-10 flex-col gap-2" onSubmit={handleSubmit}>
+        <form className="flex w-full px-[2vh] sm:px-[10vh] lg:px-16 flex-col gap-2" onSubmit={handleSubmit}>
           <div className="flex items-center justify-between">
             <label className="w-10" htmlFor="name">Name</label>
             <input

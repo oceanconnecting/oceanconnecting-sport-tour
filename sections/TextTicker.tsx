@@ -1,27 +1,33 @@
 "use client"
 import { PiBeachBallDuotone } from "react-icons/pi";
 import { motion } from "motion/react";
-
-const quotes: string[] = [
-    "Inspiring young minds, one adventure at a time.",
-    "Every journey is a chance to spark curiosity and joy.",
-    "Create memories that last a lifetime through exploration and play.",
-    "Organizing adventures, shaping dreams, and bringing smiles.",
-    "Every child deserves the magic of discovery and fun.",
-    "Exploration fuels imagination, and activities bring dreams to life.",
-    "Plan it. Explore it. Cherish it.",
-    "Turning simple trips into extraordinary adventures for kids.",
-    "The organizers who care create the memories kids treasure.",
-    "A well-planned tour is more than a trip; it’s a gateway to wonder."
-  ];
+import { useLocale, useTranslations } from "next-intl";
 
 function InfiniteText() {
+    const t = useTranslations("homepage.text_ticker")
+    const quotes: string[] = [
+        t("text_1"),
+        t("text_2"),
+        t("text_3"),
+        t("text_4"),
+        t("text_5"),
+        t("text_6"),
+        t("text_7"),
+        t("text_8"),
+        t("text_9"),
+        t("text_10"),
+    ];
+
+    const locale = useLocale()
+    const isArabic = locale === 'ar'
+
   return (
+
     <section id="infinteTicker">
         <div className="overflow-x-clip my-16 flex bg-secondary-950">
         <motion.div
         animate={
-            {x: "-50%"}
+            {x: isArabic ? "50%" : "-50%"}
         }
         whileHover={{
             
