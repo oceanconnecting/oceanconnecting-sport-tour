@@ -30,31 +30,31 @@ function Navbar() {
       link: "/",
     },
     {
-      title: t("galery"),
+      title: t("galery.title"),
       link: "/",
       subItems:[
         {
-          title:"essaouira",
+          title:t("galery.galery.gal_1"),
           link:"/"
         },
         {
-          title:"imsouane",
+          title:t("galery.galery.gal_2"),
           link:"/"
         },
         {
-          title:"sidi bibi",
+          title:t("galery.galery.gal_3"),
           link:"/"
         },
         {
-          title:"tafraout",
+          title:t("galery.galery.gal_4"),
           link:"/"
         },
         {
-          title:"taroudant",
+          title:t("galery.galery.gal_5"),
           link:"/"
         },
         {
-          title:"tiznit",
+          title:t("galery.galery.gal_6"),
           link:"/"
         },
       ]

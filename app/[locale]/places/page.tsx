@@ -2,23 +2,28 @@ import React from 'react'
 import ImageCard from '@/Components/ImageCard';
 import Tag from '@/Components/Tag'
 import { FaPlaceOfWorship } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 function page() {
+
+  const t = useTranslations("homepage.places")
+
   const places = [
-    { "title": "Agadir Oufella", "descr": "Historic hilltop with stunning views of Agadir.", "image": "/places/agadir-oufella.jpg" },
-    { "title": "Corniche", "descr": "Beachfront promenade with cafes and scenic views.", "image": "/places/corniche.webp" },
-    { "title": "Croco Park", "descr": "Crocodile park with exotic plants and reptiles.", "image": "/places/croco-park.jpg" },
-    { "title": "Dolphin World Agadir", "descr": "Interactive dolphin shows and experiences.", "image": "/places/dolphin-world-agadir.jpg" },
-    { "title": "Imi Ouaddar", "descr": "Peaceful beach village ideal for relaxation.", "image": "/places/imi-ouaddar.jpg" },
-    { "title": "Legzira", "descr": "Famous beach with unique red rock arches.", "image": "/places/legzira.jpg" },
-    { "title": "Marina", "descr": "Modern marina with shops, restaurants, and yachts.", "image": "/places/marina.png" },
-    { "title": "Medina and Amazigh Heritage Museum", "descr": "Explore the culture and history of the Amazigh people.", "image": "/places/medina-museum.jpg" },
-    { "title": "Paradise Valley", "descr": "Lush oasis with natural pools and waterfalls.", "image": "/places/paradise-valley.jpg" },
-    { "title": "Souss Massa", "descr": "Nature reserve with diverse wildlife and landscapes.", "image": "/places/souss-massa.jpg" },
-    { "title": "Souk El Had", "descr": "Vibrant market with local goods and souvenirs.", "image": "/places/souk-el-had.jpg" },
-    { "title": "Taghazout", "descr": "Popular surf town with stunning beaches.", "image": "/places/taghazout.webp" }
+    { "title": t("place_1.title"), "descr": t("place_1.descr"), "image": "/places/agadir-oufella.jpg" },
+    { "title": t("place_2.title"), "descr": t("place_2.descr"), "image": "/places/corniche.webp" },
+    { "title": t("place_3.title"), "descr": t("place_3.descr"), "image": "/places/croco-park.jpg" },
+    { "title": t("place_4.title"), "descr": t("place_4.descr"), "image": "/places/dolphin-world-agadir.jpg" },
+    { "title": t("place_5.title"), "descr": t("place_5.descr"), "image": "/places/imi-ouaddar.jpg" },
+    { "title": t("place_6.title"), "descr": t("place_6.descr"), "image": "/places/legzira.jpg" },
+    { "title": t("place_7.title"), "descr": t("place_7.descr"), "image": "/places/marina.png" },
+    { "title": t("place_8.title"), "descr": t("place_8.descr"), "image": "/places/medina-museum.jpg" },
+    { "title": t("place_9.title"), "descr": t("place_9.descr"), "image": "/places/paradise-valley.jpg" },
+    { "title": t("place_10.title"), "descr": t("place_10.descr"), "image": "/places/souss-massa.jpg" },
+    { "title": t("place_11.title"), "descr": t("place_11.descr"), "image": "/places/souk-el-had.jpg" },
+    { "title": t("place_12.title"), "descr": t("place_12.descr"), "image": "/places/taghazout.webp" },
   ];
+
   return (
-   
+
     <div>
       <div className="w-full bg-background-950 py-16 px-10 flex flex-col items-center gap-6">
       <Tag icon={<FaPlaceOfWorship  />}>Places</Tag>
