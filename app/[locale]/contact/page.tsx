@@ -29,7 +29,7 @@ export default function SubmitTourForm() {
       <div className="flex flex-col gap-3 h-screen py-8 w-full justify-center items-center">
         <Toaster/>
         <Tag>Contact Us</Tag>
-        <form className="flex w-full px-[5vh] lg:px-10 flex-col gap-2" onSubmit={handleSubmit}>
+        <form className="flex w-full px-[2vh] sm:px-[10vh] lg:px-16 flex-col gap-2" onSubmit={handleSubmit}>
           <div className="flex items-center justify-between">
             <label className="w-10" htmlFor="name">Name</label>
             <input

@@ -1,21 +1,33 @@
 {
   "homepage": {
     "navbar": {
-      "title": "Ocean Sports Connecting",
-      "about": "من نحن",
-      "activities": "الأنشطة",
-      "downloads": "التنزيلات",
-      "galery": "المعرض",
-      "professional": "المحترفين",
-      "contact": "اتصل بنا"
+      "title": "Ocean Sports Tour",
+      "about": "about",
+      "activities": "activities",
+      "places":"places",
+      "downloads":"downloads",
+      "galery":"galery",
+      "professional":"professional",
+      "contact":"contact"
     },
-    "hero": {
-      "hero_tag": "مغامرات مصممة خصيصًا للعقول الفضولية",
-      "grand_title": "استكشف، تعلم، وانمو مع",
-      "highlighted": "جولات أوشن سبورتس",
-      "descr": "نحن متخصصون في إنشاء تجارب جولات لا تُنسى للأطفال! مهمتنا هي إلهام الفضول، وإشعال الإبداع، وتعزيز التعلم من خلال مغامرات مثيرة مصممة خصيصًا للمستكشفين الصغار.",
-      "contact_button": "اتصل بنا",
-      "book_button": "احجز جولة"
+    "hero":{
+      "hero_tag":"Adventure Tailored for Curious Minds",
+      "grand_title":"Explore, Learn, and Grow with",
+      "highlighted":"Ocean Sports Tour",
+      "descr":"we specialize in creating unforgettable tour experiences for kids! Our mission is to inspire curiosity, spark creativity, and foster learning through exciting adventures tailored just for young explorers.",
+      "contact_button": "Contact Us",
+      "book_button": "Book A Tour"
+    },
+    "activities":{
+      "activities_title":"activities",
+      "activities":{
+        "agadir_oufella":"Agadir Oufella",
+        "aqua_park":"Aqua Park",
+        "camel_ride":"Camel Ride",
+        "camera_pictures":"Camera Pictures",
+        "corniche":"Corniche",
+        "croco_park":"Croco Park"
+      }
     }
   }
 }

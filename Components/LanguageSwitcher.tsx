@@ -44,7 +44,7 @@ function LanguageSwitcher() {
 
       {/* Dropdown */}
       {isDropdownOpen && (
-        <ul className="absolute top-full mt-2 bg-white w-20 shadow-md rounded-md py-2">
+        <ul className="absolute top-full mt-5 bg-white w-44 py-2">
           {routing.locales.map((lang, idx) => (
             <li
               className={`pb-3 hover:text-primary-400 px-3 cursor-pointer ${
