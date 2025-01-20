@@ -108,50 +108,62 @@
       "title":"places",
       "place_1": {
         "title": "Agadir Oufella",
+        "city":"Agadir",
         "descr": "A historic hilltop fortress offering panoramic views of Agadir and its coastline. It's a perfect spot for history enthusiasts and photographers."
       },
       "place_2": {
         "title": "Corniche",
+        "city":"Marrakech",
         "descr": "A lively seaside promenade lined with cafes, restaurants, and shops, ideal for leisurely walks and enjoying the ocean breeze."
       },
       "place_3": {
         "title": "Croco Park",
+        "city":"Agadir",
         "descr": "A unique crocodile park featuring lush gardens and over 300 Nile crocodiles. A fun and educational experience for families."
       },
       "place_4": {
         "title": "Dolphin World Agadir",
+        "city":"Agadir",
         "descr": "An entertainment center where visitors can enjoy dolphin shows and interact with these intelligent marine animals."
       },
       "place_5": {
         "title": "Imi Ouaddar",
+        "city":"Agadir",
         "descr": "A picturesque coastal village known for its pristine beaches and laid-back atmosphere, perfect for a relaxing getaway."
       },
       "place_6": {
         "title": "Legzira",
+        "city":"Essaouira",
         "descr": "Famous for its stunning red rock arches on the beach, this natural wonder is a must-visit for nature lovers and photographers."
       },
       "place_7": {
         "title": "Marina",
+        "city":"Essaouira",
         "descr": "A modern harbor area featuring luxury yachts, upscale shops, and waterfront dining options."
       },
       "place_8": {
         "title": "Medina and Amazigh Heritage Museum",
+        "city":"Marrakech",
         "descr": "A cultural hub showcasing traditional Moroccan architecture, art, and artifacts, celebrating Amazigh heritage."
       },
       "place_9": {
         "title": "Paradise Valley",
+        "city":"Agadir",
         "descr": "A lush oasis with natural pools and waterfalls, surrounded by palm trees and dramatic cliffs. Ideal for hiking and swimming."
       },
       "place_10": {
         "title": "Souss Massa",
+        "city":"Marrakech",
         "descr": "A national park known for its diverse wildlife, including flamingos and rare bird species, as well as its scenic landscapes."
       },
       "place_11": {
         "title": "Souk El Had",
+        "city":"Marrakech",
         "descr": "A bustling traditional market offering a wide variety of goods, from spices and textiles to handicrafts and fresh produce."
       },
       "place_12": {
         "title": "Taghazout",
+        "city":"Essaouira",
         "descr": "A charming fishing village turned surf haven, known for its world-class waves, relaxed vibe, and stunning sunsets."
       },
       "show_more":"show more"

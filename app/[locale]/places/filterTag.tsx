@@ -1,50 +1,38 @@
-'use client'
-import Filter from "@/Components/Filter";
-import Image from "next/image";
-import { useState } from "react";
+import React from 'react';
+import ImageCard from '@/Components/ImageCard';
 
+interface FilterTagProps {
+  places: Place[];
+  activeTag: string;
+  handleTag: (tag: string) => void;
+  tagList: string[];
+}
 
 interface Place {
-   
-    title : string ;
-    descr :string ;
-    image : string ;
-    ville:string;
-
-  }
-  interface FilterTagProps {
-    places: Place[];
-  }
-export default function FilterTag({ places }: FilterTagProps) {
-    
-  const [activeTag, setActiveTag] = useState('All')
-  let tagList = ['All', 'Agadir', 'Marakech', 'Essaouira']
-
-  const handleTag = (tag : string) => {
-    setActiveTag(tag)
-  }
-
-  const filterTags = (array : Place[]):Place[] => {
-    if (activeTag.toLowerCase() == "all"){
-      return array
-    } else {
-      return array.filter(el => el.ville.toLocaleLowerCase() == (activeTag.toLocaleLowerCase()))
-    }
-  }
-
-  let filteredList = filterTags(places)
-
-
-
-  return (
-    <main className="flex min-h-screen flex-col items-center p-24 bg-white">
-    
-     <Filter tagList={tagList} activeTag={activeTag} handleTag={handleTag}/>
-     <div className="w-full flex flex-col gap-2 py-4">
-      {filteredList.map((el, i) => (
-        <div className="w-full border-[1px] border-gray-500 px-2 rounded-xl py-4" key={i}>{el.ville}</div>
-      ))}
-     </div>
-    </main>
-  );
+  title: string;
+  descr: string;
+  image: string;
+  city:string ;
 }
+const FilterTag: React.FC<FilterTagProps> = ({ places, activeTag, handleTag, tagList }) => {
+   // Filter the places based on the active tag
+   const filteredPlaces = activeTag === 'All' ? places : places.filter((place) => place.city === activeTag);
+  return (
+    <div className="w-[60%] flex flex-row justify-between">
+      {tagList.map((tag, i) => (
+        <div
+          onClick={() => handleTag(tag)}
+          className={`py-1 px-4 cursor-pointer rounded-full ${
+            activeTag === tag ? 'bg-gray-400 text-gray-950' : 'bg-opacity-0'
+          }`}
+          key={i}
+        >
+           {tag}
+        </div>
+      ))}
+    </div>
+    
+  );
+};
+
+export default FilterTag;
