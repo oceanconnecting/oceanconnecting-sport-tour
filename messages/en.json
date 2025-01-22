@@ -106,9 +106,7 @@
     },
     "places": {
       "title":"places",
-      "Marrakech": "Marrakech",
-      "Essaouira": "Essaouira",
-      "Agadir": "Agadir",
+      
       "place_1": {
         "title": "Agadir Oufella",
         "city":"Agadir",

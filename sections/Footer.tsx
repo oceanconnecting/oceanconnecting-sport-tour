@@ -1,10 +1,14 @@
 "use client"
 import Button from '@/Components/Button'
 import {format} from 'date-fns'
+import { useTranslations } from "next-intl";
+import Tag from "@/Components/Tag";
 
 
 
 function Footer() {
+    const t = useTranslations("homepage.hero")
+
     const currentDate = format(new Date(), "yyyy");
   return (
         <footer className="bg-white">
@@ -22,18 +26,17 @@ function Footer() {
             <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
                 <div className="col-span-2">
                 <div>
-                    <h2 className="text-2xl font-bold text-gray-900">Get the latest news!</h2>
+                    <p className="text-2xl font-medium text-gray-900">Get the latest news!</p>
 
-                    <p className="mt-4 text-gray-500">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non cupiditate quae nam
-                    molestias.
+                    <p className="mt-4 text-gray-900">
+                        <Tag>{t("highlighted")}</Tag>
                     </p>
                 </div>
                 </div>
 
                 <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">
                 <form className="w-full">
-                    <label htmlFor="UserEmail" className="sr-only"> Email </label>
+                    <label htmlFor="UserEmail" className="sr-only"> oceanconnecting.ma@gmail.com </label>
 
                     <div
                     className="border p-2 rounded-full border-primary-50 focus-within:ring sm:flex sm:items-center sm:gap-4"
@@ -151,7 +154,7 @@ function Footer() {
                 <ul className="col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
                 <li>
                     <a
-                    href="#"
+                    href="https://www.facebook.com/the.ocean.connecting/"
                     rel="noreferrer"
                     target="_blank"
                     className="text-gray-700 transition hover:opacity-75"
@@ -170,7 +173,7 @@ function Footer() {
 
                 <li>
                     <a
-                    href="#"
+                    href="https://www.instagram.com/oceanconnecting.ma/"
                     rel="noreferrer"
                     target="_blank"
                     className="text-gray-700 transition hover:opacity-75"
@@ -189,7 +192,7 @@ function Footer() {
 
                 <li>
                     <a
-                    href="#"
+                    href="https://twitter.com/connectionocean"
                     rel="noreferrer"
                     target="_blank"
                     className="text-gray-700 transition hover:opacity-75"
@@ -206,7 +209,7 @@ function Footer() {
 
                 <li>
                     <a
-                    href="#"
+                    href="https://github.com/port-labs/ocean"
                     rel="noreferrer"
                     target="_blank"
                     className="text-gray-700 transition hover:opacity-75"

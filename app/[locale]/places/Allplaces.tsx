@@ -1,6 +1,12 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+interface AllPlaces {
+    title: string;
+    descr: string;
+    image: string;
+    city: string;
+  }
 
 const AllPlaces = () => {
   const t = useTranslations('homepage.places');

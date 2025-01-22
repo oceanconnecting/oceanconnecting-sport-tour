@@ -24,14 +24,7 @@ const Places: React.FC = () => {
   const locale = useLocale();
  
 
-  const places: Place[] = [
-    { title: t('place_1.title'), city:  t('place_1.city'), descr: t('place_1.descr'), image: '/places/agadir-oufella.jpg' },
-    { title: t('place_2.title'), city:  t('place_2.city'), descr: t('place_2.descr'), image: '/places/souk-el-had.jpg' },
-    { title: t('place_3.title'), city:  t('place_3.city'), descr: t('place_3.descr'), image: '/places/marina.png' },
-    { title: t('place_4.title'), city:  t('place_4.city'), descr: t('place_4.descr'), image: '/places/croco-park.jpg' },
-    { title: t('place_5.title'), city: t('place_5.city'), descr: t('place_5.descr'), image: '/places/paradise-valley.jpg' },
-    { title: t('place_6.title'), city:  t('place_6.city'), descr: t('place_6.descr'), image: '/places/taghazout.webp' },
-  ];
+  
   const allplaces=Allplaces()
   const tagList = ['All', 'Agadir', 'Marrakech', 'Essaouira'];
   const [activeTag, setActiveTag] = useState('All');
@@ -70,7 +63,7 @@ const Places: React.FC = () => {
 
         <div  className="w-full bg-background-950 py-16 px-10 flex flex-col items-center gap-6">
           <Tag icon={<FaPlaceOfWorship />}>{t('title')}</Tag>
-        <Filter places={places} activeTag={activeTag} handleTag={handleTag} tagList={tagList} />
+        <Filter places={allplaces} activeTag={activeTag} handleTag={handleTag} tagList={tagList} />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-full max-w-7xl">
             {displayedPlaces.map((place, index) => (
             

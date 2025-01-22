@@ -3,8 +3,9 @@ import ImageCard from '@/Components/ImageCard';
 import Tag from '@/Components/Tag'
 import { FaPlaceOfWorship } from "react-icons/fa";
 import { useTranslations } from 'next-intl';
-function page() {
 
+function page() {
+  
   const t = useTranslations("homepage.places")
   const places = [
     { "title": t("place_1.title"),"city": t('place_1.city') ,"descr": t("place_1.descr"), "image": "/places/agadir-oufella.jpg" },
