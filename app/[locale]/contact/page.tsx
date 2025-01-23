@@ -26,8 +26,8 @@ export default function SubmitTourForm() {
 
   return (
     <div className="h-screen lg:grid lg:grid-cols-2 w-full">
+      <Toaster/>
       <div className="flex flex-col gap-3 h-screen bg-white backdrop-blur-md bg-opacity-80 py-16 w-full justify-center items-center">
-        <Toaster/>
         <Tag>Contact Us</Tag>
         <form className="flex w-full h-screen px-16 pb-6 flex-col gap-5" onSubmit={handleSubmit}>
           <div className="flex flex-col justify-start">
