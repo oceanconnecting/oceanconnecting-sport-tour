@@ -108,51 +108,94 @@
       "title": "lieux",
       "place_1": {
         "title": "Agadir Oufella",
+        "city":"Agadir",
         "descr": "Une forteresse historique au sommet d'une colline offrant une vue panoramique sur Agadir et sa côte. Un endroit parfait pour les amateurs d'histoire et les photographes."
       },
       "place_2": {
         "title": "Corniche",
+        "city":"Agadir",
         "descr": "Une promenade animée en bord de mer bordée de cafés, de restaurants et de boutiques, idéale pour des balades tranquilles et profiter de la brise océanique."
       },
       "place_3": {
         "title": "Parc aux Crocodiles",
+        "city":"Agadir",
         "descr": "Un parc unique de crocodiles avec des jardins luxuriants et plus de 300 crocodiles du Nil. Une expérience amusante et éducative pour les familles."
       },
       "place_4": {
         "title": "Monde des Dauphins Agadir",
+        "city":"Agadir",
         "descr": "Un centre de divertissement où les visiteurs peuvent profiter de spectacles de dauphins et interagir avec ces animaux marins intelligents."
       },
       "place_5": {
         "title": "Imi Ouaddar",
+        "city":"Agadir",
         "descr": "Un village côtier pittoresque connu pour ses plages immaculées et son atmosphère détendue, parfait pour une escapade relaxante."
       },
       "place_6": {
         "title": "Legzira",
+        "city":"Agadir",
         "descr": "Célèbre pour ses impressionnantes arches rocheuses rouges sur la plage, ce site naturel est un incontournable pour les amoureux de la nature et les photographes."
       },
       "place_7": {
         "title": "Marina",
+        "city":"Agadir",
         "descr": "Une zone portuaire moderne avec des yachts de luxe, des boutiques haut de gamme et des options de restauration en bord de mer."
       },
       "place_8": {
         "title": "Médina et Musée du Patrimoine Amazigh",
+        "city":"Agadir",
         "descr": "Un centre culturel mettant en valeur l'architecture traditionnelle marocaine, l'art et les artefacts, célébrant le patrimoine amazigh."
       },
       "place_9": {
         "title": "Vallée du Paradis",
+        "city":"Agadir",
         "descr": "Une oasis luxuriante avec des piscines naturelles et des cascades, entourée de palmiers et de falaises spectaculaires. Idéal pour la randonnée et la baignade."
       },
       "place_10": {
         "title": "Souss Massa",
+        "city":"Agadir",
         "descr": "Un parc national connu pour sa faune diversifiée, notamment des flamants roses et des espèces rares d'oiseaux, ainsi que ses paysages pittoresques."
       },
       "place_11": {
         "title": "Souk El Had",
+        "city":"Agadir",
         "descr": "Un marché traditionnel animé offrant une grande variété de produits, des épices et textiles aux objets artisanaux et produits frais."
       },
       "place_12": {
         "title": "Taghazout",
+        "city":"Agadir",
         "descr": "Un charmant village de pêcheurs devenu un havre pour les surfeurs, connu pour ses vagues de classe mondiale, son ambiance détendue et ses couchers de soleil spectaculaires."
+      },
+      "place_13": {
+        "title": "Kasbah",
+        "city":"Essaouira",
+        "descr": "est l'un des sites historiques emblématiques d'Essaouira, située sur la côte atlantique du Maroc. "
+      },
+      "place_14": {
+        "title": "medina",
+        "city":"Essaouira",
+        "descr": "située sur la côte atlantique du Maroc, est un site historique et culturel inscrit au patrimoine mondial de l'UNESCO depuis 2001. Fondée au XVIIIe siècle par le sultan Mohammed ben Abdallah, elle reflète un mélange unique d'architecture islamique et européenne, témoignant de son rôle en tant que carrefour commercial et culturel. "
+      },
+      "place_15": {
+        "title": "remparts d'Essaouira",
+        "city":"Essaouira",
+        "descr": "Visitez les murailles de la médina pour découvrir des vues époustouflantes—couchers de soleil pittoresques, panoramas sur la mer, et ses falaises sauvages—ou rendez-vous vers les anciens canons qui protègent cette forteresse. Atmosphère calme et romantique, n'oubliez surtout pas votre appareil photo. "
+      },
+      "place_16": {
+        "title": "Le Jardin Majorelle",
+        "city":"Marrakech",
+        "descr": "Ce jardin botanique enchanteur, créé par Jacques Majorelle et restauré par Yves Saint Laurent, offre un havre de paix avec des plantes exotiques et des bâtiments bleu Majorelle. "
+      },
+      "place_17": {
+        "title": " Jemaa el-Fna",
+        "city":"Marrakech",
+        "descr": "Cœur battant de Marrakech, cette place animée regorge de charme. Pendant la journée, on y trouve des marchands, des charmeurs de serpents et des conteurs. La nuit, elle se transforme en un grand restaurant en plein air. "
+      },
+      
+      "place_18": {
+        "title": "  La Ménara",
+        "city":"Marrakech",
+        "descr": " Ce vaste jardin avec son bassin central est un lieu idéal pour une promenade relaxante avec une vue magnifique sur les montagnes de l'Atlas. "
       },
       "show_more": "voir plus"
     },
@@ -162,6 +205,14 @@
       "text_1": "Télécharger le planning 7 jours",
       "text_2": "Télécharger le planning 10 jours",
       "button": "Télécharger"
-    }
-  }
+    },
+    "footer": {
+  "tanks": "Merci de visiter notre site web et bienvenue à",
+  "Rights": "Tous droits réservés",
+  "Copyright": "Droit d'auteur"
 }
+
+}
+
+  }
+
