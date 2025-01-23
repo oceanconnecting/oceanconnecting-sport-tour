@@ -55,11 +55,11 @@ function LanguageSwitcher() {
 
       {/* Dropdown */}
       {isDropdownOpen && (
-        <ul className="absolute top-full mt-2 ounded-full bg-white border border-gray-200 shadow-lg rounded-lg w-48 py-2 z-20">
+        <ul className="absolute top-full mt-5 bg-white px-4 w-fit py-2">
           {routing.locales.map((lang, idx) => (
             <li
-              className={`flex items-center px-8 p-y-2  text-black hover:bg-gray-100 hover:text-primary-500 cursor-pointer transition-colors duration-200  ${
-                lang === locale ? "font-bold text-black" : ""
+              className={`py-2 my-2 transition hover:text-primary-300 hover:bg-primary-950 duration-200 text-center rounded-xl px-3 cursor-pointer ${
+                lang === locale ? "text-primary-300 bg-primary-950" : ""
               }`}
               onClick={() => handleLocaleChange(lang)}
               key={idx}

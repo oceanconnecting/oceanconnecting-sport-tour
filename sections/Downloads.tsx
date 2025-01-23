@@ -17,9 +17,9 @@ function Downloads() {
           <p className="px-3 leading-7 text-center text-pretty">
           {t("descr")}
           </p>
-          <div className="flex px-3 flex-col lg:flex-row w-full justify-center items-center gap-10">
-            <DownloadCard title={t("text_1")} description="" fileSize="249 kb" downloadUrl="https://www.upload.ee/files/17639571/7days_planning_watermark.pdf.html"/>
-            <DownloadCard title={t("text_2")} description="" fileSize="242 kb" downloadUrl="https://www.upload.ee/files/17639581/10days_planning_watermark.pdf.html"/>
+          <div className="flex px-3 mt-5 flex-col lg:flex-row w-full justify-center items-center gap-10">
+            <DownloadCard title={t("text_1")} description="" fileSize="249 kb" downloadUrl="/planning/7days planning watermark.pdf"/>
+            <DownloadCard title={t("text_2")} description="" fileSize="242 kb" downloadUrl="/planning/10days planning watermark.pdf"/>
         </div>
         </div>
       </div>
