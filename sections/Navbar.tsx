@@ -6,6 +6,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import LanguageSwitcher from "@/Components/LanguageSwitcher";
 import { twMerge } from "tailwind-merge";
 import {useLocale} from "use-intl";
+import { AnimatePresence, motion } from "motion/react";
 
 function Navbar() {
   const t = useTranslations("homepage.navbar");
@@ -182,8 +183,13 @@ function Navbar() {
           </div>
         </div>
       </div>
+      <AnimatePresence>
       {isOpen && (
-        <div className="block lg:hidden w-full h-fit">
+        <motion.div
+        initial={{height:0}}
+        animate={{height:"auto"}}
+        exit={{height:0}}
+        className="block lg:hidden overflow-hidden w-full h-fit">
           {navbarLink.map((link, idx) =>
             !link.subItems ? (
               <div key={idx} className="pl-5 py-3 flex justify-center hover:text-primary-100">
@@ -195,7 +201,7 @@ function Navbar() {
                 </Link>
               </div>
             ) : (
-              <div key={idx} className="pl-5 py-3 flex justify-center">
+              <div key={idx} className="pl-5 py-3 flex flex-col items-center">
 
                 <div
                   onClick={() => toggleSubMenu(idx)}
@@ -209,7 +215,6 @@ function Navbar() {
                   />
                   <Link href={link.link}>{link.title}</Link>
                 </div>
-
                 {openSubMenu === idx && (
                   <ul className="pl-5 text-text-200 mt-2">
                     {link.subItems.map((sublink, subIdx) => (
@@ -230,8 +235,9 @@ function Navbar() {
           <div className="pl-5 py-3 flex justify-center">
             <LanguageSwitcher />
           </div>
-        </div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </section>
   );
 }
