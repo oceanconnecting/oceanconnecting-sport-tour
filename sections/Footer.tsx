@@ -14,7 +14,7 @@ function Footer() {
  
   return (
 
-    <footer className="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+    <footer className="p-4 bg-white md:p-8 lg:p-10">
     <div className="mx-auto max-w-screen-xl text-center">
     <div className="col-span-2 flex justify-start gap-6 lg:col-span-5 ">
         <p  className='m-5'>
@@ -25,7 +25,7 @@ function Footer() {
                 />
             </svg>
         </p>
-        <Link  href="#hero" className="justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
+        <Link  href="#hero" className="justify-center items-center text-2xl font-semibold text-gray-900">
         <span className="mt-4 text-gray-900">
         <Tag><p>{th("highlighted")}</p></Tag>
         </span>
@@ -128,8 +128,8 @@ function Footer() {
      
 
 
-      <p className="my-6 text-black-500 dark:text-gray-400">{tf("tanks")}<a   className='text-blue-900' href="https://www.oceanconnecting.ma/">Ocean Connecting</a> .</p>
-      <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+      <p className="my-6 text-black-500  text-gray-400">{tf("tanks")}<a   className='text-blue-900' href="https://www.oceanconnecting.ma/">Ocean Connecting</a> .</p>
+      <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900">
           <li>
               <a href="#about" className="mr-4 hover:underline md:mr-6 ">{tn("about")}</a>
           </li>
@@ -143,7 +143,7 @@ function Footer() {
               <a  href={`/${locale}/contact`}  className="mr-4 hover:underline md:mr-6"> {tn("contact")} </a>
           </li>
       </ul>
-      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {currentDate} <a href="#" className="hover:underline">{tf("Copyright")} </a>- {tf("Rights")} </span>
+      <span className="text-sm text-gray-500 sm:text-center">© {currentDate} <a href="#" className="hover:underline">{tf("Copyright")} </a>- {tf("Rights")} </span>
   </div>
 </footer>
   )

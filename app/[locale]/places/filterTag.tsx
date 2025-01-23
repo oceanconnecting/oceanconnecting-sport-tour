@@ -23,7 +23,7 @@ const FilterTag: React.FC<FilterTagProps> = ({ places, activeTag, handleTag, tag
         <div
           onClick={() => handleTag(tag)}
           className={`py-1 px-4 cursor-pointer rounded-full ${
-            activeTag === tag ? 'bg-gray-400 text-gray-950' : 'bg-opacity-0'
+            activeTag === tag ? 'bg-primary-800 text-gray-950' : 'bg-opacity-0'
           }`}
           key={i}
         >
