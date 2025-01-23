@@ -77,8 +77,8 @@ function Navbar() {
   };
 
   return (
-    <section className="fixed z-50">
-      <div className="flex w-screen h-fit min-h-16 bg-white backdrop-blur-2xl bg-opacity-90 shadow-md items-center px-5 lg:px-16">
+    <section className="fixed z-50 bg-white shadow-md backdrop-blur-2xl bg-opacity-90">
+      <div className="flex w-screen h-fit min-h-16 items-center px-5 lg:px-16">
         <div className="flex-1 flex gap-3 items-center">
           <div className="mx-4">
             {/* logo */}
@@ -183,23 +183,23 @@ function Navbar() {
         </div>
       </div>
       {isOpen && (
-        <div className="block lg:hidden  backdrop-blur-xl bg-white/30  bg-opacity-20 w-full h-fit">
+        <div className="block lg:hidden w-full h-fit">
           {navbarLink.map((link, idx) =>
             !link.subItems ? (
-              <div key={idx} className="pl-5 py-3   hover:text-primary-100">
+              <div key={idx} className="pl-5 py-3 flex justify-center hover:text-primary-100">
                 <Link
-                  className="px-3 text-slate-50 hover:text-primary-300 transition duration-300"
+                  className="px-3 text-primary-100 hover:text-primary-300 transition duration-300"
                   href={link.link}
                 >
                   {link.title}
                 </Link>
               </div>
             ) : (
-              <div key={idx} className="pl-5 py-3">
+              <div key={idx} className="pl-5 py-3 flex justify-center">
 
                 <div
                   onClick={() => toggleSubMenu(idx)}
-                  className="flex   text-slate-500 gap-1 items-center cursor-pointer"
+                  className="flex text-primary-100 gap-1 items-center cursor-pointer"
                 >
                   <RiArrowDropDownLine
                     className={twMerge(
@@ -211,7 +211,7 @@ function Navbar() {
                 </div>
 
                 {openSubMenu === idx && (
-                  <ul className="pl-5 text-slate-50 mt-2">
+                  <ul className="pl-5 text-text-200 mt-2">
                     {link.subItems.map((sublink, subIdx) => (
                       <li key={subIdx} className="py-2">
                         <Link
@@ -227,7 +227,7 @@ function Navbar() {
               </div>
             )
           )}
-          <div className="pl-5 py-3">
+          <div className="pl-5 py-3 flex justify-center">
             <LanguageSwitcher />
           </div>
         </div>
