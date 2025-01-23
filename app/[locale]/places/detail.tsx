@@ -32,7 +32,7 @@ export default function PlacesDetail({ isOpen, onClose, data }: ModalDetailProps
           <DialogBackdrop className="fixed inset-0 bg-background-100/75" />
           <div className="flex items-center px-6 lg:px-64 pt-11 inset-0 z-10 overflow-y-auto h-full">
             <div className="flex items-center justify-center min-h-full p-4 text-center sm:p-0">
-              <DialogPanel className="relative h-fit bg-white rounded-lg shadow-xl sm:max-w-4xl lg:max-w-5xl w-full sm:h-[80vh]">
+              <DialogPanel className="relative h-fit bg-white rounded-lg shadow-xl sm:max-w-4xl lg:max-w-5xl w-full">
                 {/* Close Button */}
                 <div className="px-4 py-4 sm:px-6 sm:flex sm:flex-row-reverse">
                   <button
