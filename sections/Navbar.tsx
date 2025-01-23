@@ -7,6 +7,7 @@ import LanguageSwitcher from "@/Components/LanguageSwitcher";
 import { twMerge } from "tailwind-merge";
 import {useLocale} from "use-intl";
 import { AnimatePresence, motion } from "motion/react";
+import Image from "next/image";
 
 function Navbar() {
   const t = useTranslations("homepage.navbar");
@@ -80,10 +81,10 @@ function Navbar() {
   return (
     <section className="fixed z-50 bg-white shadow-md backdrop-blur-2xl bg-opacity-90">
       <div className="flex w-screen h-fit min-h-16 items-center px-5 lg:px-16">
-        <div className="flex-1 flex gap-3 items-center">
+        <div className="flex-1 flex items-center">
           <div className="mx-4">
             {/* logo */}
-            
+            <Image src="/logo.webp" alt={"logo"} width={50} height={50}></Image>
           </div>
           <Link href='/#main'>{t("title")}</Link>
         </div>
