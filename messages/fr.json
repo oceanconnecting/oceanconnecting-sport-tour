@@ -197,7 +197,14 @@
         "city":"Marrakech",
         "descr": " Ce vaste jardin avec son bassin central est un lieu idéal pour une promenade relaxante avec une vue magnifique sur les montagnes de l'Atlas. "
       },
-      "show_more": "voir plus"
+      "show_more": "voir plus",
+      "city":{
+        "All":"tous",
+        "Agadir":"Agadir",
+        "Marrakech":"Marrakech",
+        "Essaouira":"Essaouira"
+  
+      }
     },
     "downloads": {
       "title": "Téléchargements",
