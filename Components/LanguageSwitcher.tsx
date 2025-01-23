@@ -5,7 +5,6 @@ import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
-import { CiGlobe } from "react-icons/ci";
 
 function LanguageSwitcher() {
   const locale = useLocale();
