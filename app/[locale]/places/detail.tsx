@@ -1,10 +1,15 @@
-'use client';
+"use client";
 
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/react";
 import { IoMdClose } from "react-icons/io";
-import Button from '@/Components/Button';
-import { useLocale } from 'next-intl';
-import { AnimatePresence, motion } from 'framer-motion';
+import Button from "@/Components/Button";
+import { useLocale } from "next-intl";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface ModalDetailProps {
   isOpen: boolean;
@@ -16,11 +21,19 @@ interface ModalDetailProps {
   };
 }
 
-export default function PlacesDetail({ isOpen, onClose, data }: ModalDetailProps) {
+export default function PlacesDetail({
+  isOpen,
+  onClose,
+  data,
+}: ModalDetailProps) {
   const locale = useLocale();
 
   return (
-    <Dialog open={isOpen} onClose={onClose} className="flex-row relative z-11 w-full">
+    <Dialog
+      open={isOpen}
+      onClose={onClose}
+      className="flex-row relative z-11 w-full"
+    >
       <AnimatePresence>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -32,13 +45,13 @@ export default function PlacesDetail({ isOpen, onClose, data }: ModalDetailProps
           <DialogBackdrop className="fixed inset-0 bg-background-100/75" />
           <div className="flex items-center px-6 lg:px-64 pt-11 inset-0 z-10 overflow-y-auto h-full">
             <div className="flex items-center justify-center min-h-full p-4 text-center sm:p-0">
-              <DialogPanel className="relative h-fit bg-white rounded-lg shadow-xl sm:max-w-4xl lg:max-w-5xl w-full sm:h-[80vh]">
+              <DialogPanel className="relative h-fit bg-white rounded-lg shadow-xl sm:max-w-4xl lg:max-w-5xl w-full">
                 {/* Close Button */}
                 <div className="px-4 py-4 sm:px-6 sm:flex sm:flex-row-reverse">
                   <button
                     type="button"
                     onClick={onClose}
-                    className="inline-flex w-full justify-center px-0 py-0 text-2xl font-bold text-black sm:ml-3 sm:w-auto"
+                    className="inline-flex h-fit justify-center px-0 py-0 text-2xl font-bold text-black sm:ml-3 sm:w-auto"
                   >
                     <IoMdClose />
                   </button>
@@ -46,13 +59,20 @@ export default function PlacesDetail({ isOpen, onClose, data }: ModalDetailProps
 
                 {/* Image */}
                 {data.image && (
-                  <div className="h-64 mx-16 rounded-lg inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${data.image})` }} />
+                  <div
+                    className="h-64 mx-16 rounded-lg inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${data.image})` }}
+                  />
                 )}
 
                 {/* Content */}
                 <div className="px-64 pt-5 sm:p-6">
-                  <DialogTitle className="text-lg font-bold text-gray-900">{data.title}</DialogTitle>
-                  <p className="mt-2 text-sm font-medium text-black-900">{data.descr}</p>
+                  <DialogTitle className="text-lg font-bold text-gray-900">
+                    {data.title}
+                  </DialogTitle>
+                  <p className="mt-2 text-sm font-medium text-black-900">
+                    {data.descr}
+                  </p>
                 </div>
 
                 {/* Actions */}

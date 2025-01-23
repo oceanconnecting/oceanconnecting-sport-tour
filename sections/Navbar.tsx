@@ -6,6 +6,8 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import LanguageSwitcher from "@/Components/LanguageSwitcher";
 import { twMerge } from "tailwind-merge";
 import {useLocale} from "use-intl";
+import * as motion from "motion/react-client"
+import { text } from "stream/consumers";
 
 function Navbar() {
   const t = useTranslations("homepage.navbar");
@@ -187,10 +189,18 @@ function Navbar() {
         </div>
       </div>
       {isOpen && (
-        <div className="block lg:hidden  backdrop-blur-xl bg-white/30  bg-opacity-20 w-full h-fit">
+        <div    className="block lg:hidden  backdrop-blur-3xl bg-black/30  bg-opacity-20 w-full h-fit">
           {navbarLink.map((link, idx) =>
+          
+
+
+         
+
+
+
+
             !link.subItems ? (
-              <div key={idx} className="pl-5 py-3   hover:text-primary-100">
+              <div key={idx} className="pl-5 py-3 text-center  hover:text-primary-50">
                 <Link
                   className="px-3 text-slate-50 hover:text-primary-300 transition duration-300"
                   href={link.link}
@@ -203,23 +213,26 @@ function Navbar() {
 
                 <div
                   onClick={() => toggleSubMenu(idx)}
-                  className="flex   text-slate-500 gap-1 items-center cursor-pointer"
+                  className="flex   text-slate-800 gap-1 items-center cursor-pointer"
                 >
                   <RiArrowDropDownLine
                     className={twMerge(
-                      "transition duration-200",
+                      "transition text-center duration-200",
                       openSubMenu === idx && "rotate-180"
+                      
                     )}
                   />
                   <Link href={link.link}>{link.title}</Link>
                 </div>
 
                 {openSubMenu === idx && (
-                  <ul className="pl-5 text-slate-50 mt-2">
+                  <ul className="pl-5 text-slate-950 mt-2">
                     {link.subItems.map((sublink, subIdx) => (
-                      <li key={subIdx} className="py-2">
+                      <li key={subIdx} className="py-2 " 
+                      
+                      >
                         <Link
-                          className="hover:text-primary-950 transition"
+                          className="hover:text-primary-300 transition"
                           href={sublink.link}
                         >
                           {sublink.title}
