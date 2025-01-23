@@ -32,23 +32,34 @@ function LanguageSwitcher() {
   };
 
   return (
-    <div className="relative inline-flex flex-col items-center">
+    <div className="relative rounded-xl inline-flex flex-col items-center">
       {/* Combo Button */}
       <button
-        className="flex items-center gap-1 cursor-pointer group"
+        className="flex items-center  gap-1 cursor-pointer group"
         onClick={toggleDropdown}
       >
-        <CiGlobe className="text-2xl" />
-        <h1>{locale}</h1>
+       
+        <svg
+      className={`w-4 h-4 transition-transform duration-200 ${
+        isDropdownOpen ? "rotate-180" : "rotate-0"
+      }`}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+    </svg>
+        <h1  className="text-sm font-medium">{locale}</h1>
       </button>
 
       {/* Dropdown */}
       {isDropdownOpen && (
-        <ul className="absolute top-full mt-5 bg-white w-44 py-2">
+        <ul className="absolute top-full mt-2 ounded-full bg-white border border-gray-200 shadow-lg rounded-lg w-48 py-2 z-20">
           {routing.locales.map((lang, idx) => (
             <li
-              className={`pb-3 hover:text-primary-400 px-3 cursor-pointer ${
-                lang === locale ? "font-bold text-primary-400" : ""
+              className={`flex items-center px-8 p-y-2  text-black hover:bg-gray-100 hover:text-primary-500 cursor-pointer transition-colors duration-200  ${
+                lang === locale ? "font-bold text-black" : ""
               }`}
               onClick={() => handleLocaleChange(lang)}
               key={idx}

@@ -24,14 +24,19 @@ const Places: React.FC = () => {
   const locale = useLocale();
  
 
-  
+//   let tableau = [1, 2, 3, 2, 4, 5, 1, 6, 3];
+
+// let tableauUnique = tableau.filter((value, index, self) => {
+//   return self.indexOf(value) === index;
+// });
+
   const allplaces=Allplaces()
   const tagList = ['All', 'Agadir', 'Marrakech', 'Essaouira'];
   const [activeTag, setActiveTag] = useState('All');
   const [isOpen, setIsOpen] = useState(false);
   const [modalData, setModalData] = useState<Place | null>(null);
   const [displayedPlaces, setDisplayedPlaces] = useState<Place[]>(allplaces); 
-
+  
 
   const handleTag = (tag: string) => {
     setActiveTag(tag);

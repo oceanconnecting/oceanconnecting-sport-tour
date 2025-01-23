@@ -114,7 +114,7 @@
       },
       "place_2": {
         "title": "Corniche",
-        "city":"Marrakech",
+        "city":"Agadir",
         "descr": "A lively seaside promenade lined with cafes, restaurants, and shops, ideal for leisurely walks and enjoying the ocean breeze."
       },
       "place_3": {
@@ -134,17 +134,17 @@
       },
       "place_6": {
         "title": "Legzira",
-        "city":"Essaouira",
+        "city":"Agadir",
         "descr": "Famous for its stunning red rock arches on the beach, this natural wonder is a must-visit for nature lovers and photographers."
       },
       "place_7": {
         "title": "Marina",
-        "city":"Essaouira",
+        "city":"Agadir",
         "descr": "A modern harbor area featuring luxury yachts, upscale shops, and waterfront dining options."
       },
       "place_8": {
         "title": "Medina and Amazigh Heritage Museum",
-        "city":"Marrakech",
+        "city":"Agadir",
         "descr": "A cultural hub showcasing traditional Moroccan architecture, art, and artifacts, celebrating Amazigh heritage."
       },
       "place_9": {
@@ -154,19 +154,52 @@
       },
       "place_10": {
         "title": "Souss Massa",
-        "city":"Marrakech",
+        "city":"Agadir",
         "descr": "A national park known for its diverse wildlife, including flamingos and rare bird species, as well as its scenic landscapes."
       },
       "place_11": {
         "title": "Souk El Had",
-        "city":"Marrakech",
+        "city":"Agadir",
         "descr": "A bustling traditional market offering a wide variety of goods, from spices and textiles to handicrafts and fresh produce."
       },
       "place_12": {
         "title": "Taghazout",
-        "city":"Essaouira",
+        "city":"Agadir",
         "descr": "A charming fishing village turned surf haven, known for its world-class waves, relaxed vibe, and stunning sunsets."
       },
+        "place_13": {
+          "title": "Kasbah",
+          "city": "Essaouira",
+          "descr": "One of the iconic historical sites of Essaouira, located on Morocco's Atlantic coast."
+        },
+        "place_14": {
+          "title": "Medina",
+          "city": "Essaouira",
+          "descr": "Located on Morocco's Atlantic coast, it is a historical and cultural site inscribed as a UNESCO World Heritage Site since 2001. Founded in the 18th century by Sultan Mohammed ben Abdallah, it reflects a unique blend of Islamic and European architecture, showcasing its role as a commercial and cultural crossroads."
+        },
+        "place_15": {
+          "title": "Essaouira Ramparts",
+          "city": "Essaouira",
+          "descr": "Visit the medina's walls to discover breathtaking views—picturesque sunsets, panoramic sea views, and wild cliffs—or head to the old cannons that protect this fortress. Calm and romantic atmosphere; don't forget your camera."
+        },
+        "place_16": {
+          "title": "Le Jardin Majorelle",
+          "city": "Marrakech",
+          "descr": "This enchanting botanical garden, created by Jacques Majorelle and restored by Yves Saint Laurent, offers a haven of peace with exotic plants and buildings painted in Majorelle blue."
+        },
+        "place_17": {
+          "title": "Jemaa el-Fna",
+          "city": "Marrakech",
+          "descr": "The beating heart of Marrakech, this lively square is full of charm. During the day, it hosts vendors, snake charmers, and storytellers. At night, it transforms into a large open-air restaurant."
+        },
+        "place_18": {
+          "title": "La Ménara",
+          "city": "Marrakech",
+          "descr": "This vast garden with its central basin is an ideal place for a relaxing stroll with a magnificent view of the Atlas Mountains."
+        },
+      
+      
+      
       "show_more":"show more"
     },
     "downloads":{
@@ -175,6 +208,11 @@
       "text_1":"Download 7days planning",
       "text_2":"Download 10days planning",
       "button":"Download"
+    },
+    "footer":{
+      "tanks":"Thank you for visiting our website and welcome to",
+      "Rights":"All Rights Reserved",
+      "Copyright":"Copyright"
     }
   }
 }
