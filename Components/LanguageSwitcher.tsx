@@ -32,7 +32,6 @@ function LanguageSwitcher() {
 
   return (
     <div className="relative rounded-xl inline-flex flex-col items-center">
-      {/* Combo Button */}
       <button
         className="flex items-center  gap-1 cursor-pointer group"
         onClick={toggleDropdown}

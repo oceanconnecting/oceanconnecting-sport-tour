@@ -18,11 +18,10 @@ export default function Home() {
         <Choose/>
         <Activities/>
         <Services/>
-        
         <TextTicker/>
         <Places/>
         <Downloads/>
-      </Suspense>
+        </Suspense>
     </div>
   );
 }
