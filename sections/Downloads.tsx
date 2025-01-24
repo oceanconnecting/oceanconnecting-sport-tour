@@ -10,7 +10,7 @@ function Downloads() {
   const t = useTranslations("homepage.downloads")
 
   return (
-    <section  id="downloads"className="flex justify-center">
+    <section  id="downloads" className="flex justify-center">
       <div className="flex flex-col h-fit py-16 w-full justify-center container items-center">
         <Tag>{t("title")}</Tag>
         <div className="mt-5 flex justify-center w-full flex-col gap-5 items-center">
