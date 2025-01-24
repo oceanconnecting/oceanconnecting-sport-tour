@@ -89,7 +89,7 @@ const Places: React.FC = () => {
 }
 
           </div>
-         
+        
         </div>
       </section>
 

@@ -57,9 +57,9 @@ function page() {
     ]
 
   return (
-    <section className='pt-20 flex flex-col justify-center items-center'>
+    <section className='pt-20 flex flex-col w-full justify-center items-center'>
         <Tag>Galery</Tag>
-        <div className=' mt-16 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
+        <div className=' mt-16 grid w-full px-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
             {
                 Images.map((collection, idx) => (
                     <div key={idx}>
