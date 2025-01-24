@@ -21,6 +21,7 @@ interface Place {
 
 const Places: React.FC = () => {
   const t = useTranslations('homepage.places');
+  const tc = useTranslations('homepage.city');
   const locale = useLocale();
  
 
@@ -31,8 +32,8 @@ const Places: React.FC = () => {
 // });
 
   const allplaces=Allplaces()
-  const tagList = ['All', 'Agadir', 'Marrakech', 'Essaouira'];
-  const [activeTag, setActiveTag] = useState('All');
+  const tagList = [tc('All'), tc('Agadir'), tc('Marrakech'),tc ('Essaouira')];
+  const [activeTag, setActiveTag] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [modalData, setModalData] = useState<Place | null>(null);
   const [displayedPlaces, setDisplayedPlaces] = useState<Place[]>(allplaces); 
@@ -70,17 +71,25 @@ const Places: React.FC = () => {
           <Tag icon={<FaPlaceOfWorship />}>{t('title')}</Tag>
         <Filter places={allplaces} activeTag={activeTag} handleTag={handleTag} tagList={tagList} />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-full max-w-7xl">
-            {displayedPlaces.map((place, index) => (
+          
             
+            
+          {activeTag === '' 
+  ? displayedPlaces.slice(0, 6).map((place, index) => (
+      <div 
+        key={index} 
+        className="cursor-pointer flex justify-center" 
+        onClick={() => openModal(place)}
+      >
+        <ImageCard  title={place.title} descr={place.descr} image={place.image}  /></div> ))
+  : displayedPlaces.map((place, index) => (
+     <div key={index} className="cursor-pointer flex justify-center" onClick={() => openModal(place)}>
+        <ImageCard title={place.title} descr={place.descr}  image={place.image} /> </div>
+    ))
+}
 
-              <div key={index} className="cursor-pointer flex justify-center" onClick={() => openModal(place)} >
-              <ImageCard title={place.title} descr={place.descr} image={place.image} />
-            </div>
-            ))}
           </div>
-          <Button href={`/${locale}/places`} variant="dark_primary">
-            {t('show_more')}
-          </Button>
+         
         </div>
       </section>
 

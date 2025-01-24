@@ -202,6 +202,13 @@
       
       "show_more":"show more"
     },
+    "city":{
+      "All":"All",
+      "Agadir":"Agadir",
+      "Marrakech":"Marrakech",
+      "Essaouira":"Essaouira"
+
+    },
     "downloads":{
       "title":"Downloads",
       "descr":"Our company offer for you all the information you're going to need for your unique tour with us, Throughout, ocean sport and tours takes care of everything, from the day you land, until the moment we say goodbye at the airport. About here, you will come across Everything concerning Tariff and schedule of your tours, trips, travels, accommodation… that you can download easy and fast.",
