@@ -1,11 +1,8 @@
 'use client';
 
 import Toaster, { handleSubmitTour } from './actions';
-import Button from '@/Components/Button';
-import Tag from '@/Components/Tag';
-import { Input } from 'postcss';
-import { getIsSubmitit } from './actions';
-import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import { useRef, useState } from 'react';
 
 export default function SubmitTourForm() {
   const nameInput = useRef<HTMLInputElement>(null);
@@ -49,7 +46,7 @@ export default function SubmitTourForm() {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="name" className="block pl-4 text-sm font-medium text-gray-700">
                 Name
               </label>
               <input
@@ -58,11 +55,11 @@ export default function SubmitTourForm() {
                 id="name"
                 name="name"
                 required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="mt-1 block w-full border rounded-full border-gray-300 shadow-sm py-3 px-5 outline-none focus:border-primary-400 focus:ring-indigo-500 sm:text-sm"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block pl-4 text-sm font-medium text-gray-700">
                 Email
               </label>
               <input
@@ -71,7 +68,7 @@ export default function SubmitTourForm() {
                 id="email"
                 name="email"
                 required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="mt-1 block w-full border rounded-full border-gray-300 shadow-sm py-3 px-5 outline-none focus:border-primary-400 focus:ring-indigo-500 sm:text-sm"
               />
             </div>
             <div>
@@ -84,13 +81,13 @@ export default function SubmitTourForm() {
                 name="message"
                 rows={4}
                 required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-3xl outline-none border py-3 px-5 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               ></textarea>
             </div>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="inline-flex justify-center rounded-full border border-transparent bg-primary-300 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <>
@@ -111,17 +108,16 @@ export default function SubmitTourForm() {
             </div>
             <div className="flex items-center space-x-3 text-gray-600">
               <input className="h-5 w-5" />
-              <span>+1 (555) 123-4567</span>
+              <span>+212 6969 666 69</span>
             </div>
             <div className="flex items-center space-x-3 text-gray-600">
               <input className="h-5 w-5" />
-              <span>contact@example.com</span>
+              <span>oceantours@gamiiil.com</span>
             </div>
           </div>
         </div>
-
-        <div className="flex-1 relative h-[400px] lg:h-auto rounded-lg overflow-hidden">
-          {/** IMAGE */}
+        <div className="flex-1 flex justify-center relative h-[400px] lg:h-auto">
+          <Image className='rounded-xl' src={'/ContactImg.jpg'} alt={''} width={400} height={500}></Image>
         </div>
       </div>
     </section>

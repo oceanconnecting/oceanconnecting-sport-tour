@@ -18,50 +18,38 @@ function Navbar() {
       link: "/#about",
     },
     {
-      title: "services",
-      link: "/#services",
-    },
-    {
       title: t("activities"),
       link: "/#activities"
     },
     {
+      title: "services",
+      link: "/#services",
+    },
+    {
       title: t("places"),
       link: "/#places",
+      subItems:[
+        {
+          title: "Agadir",
+          link:"/"
+        },
+        {
+          title: "Marrakech",
+          link:"/"
+        },
+        {
+          title: "Essaouira",
+          link:"/"
+        },
+      ]
     },
     {
       title: t("downloads"),
       link: "/",
     },
     {
-      title: t("galery.title"),
-      link: "/",
-      subItems:[
-        {
-          title:t("galery.galery.gal_1"),
-          link:"/"
-        },
-        {
-          title:t("galery.galery.gal_2"),
-          link:"/"
-        },
-        {
-          title:t("galery.galery.gal_3"),
-          link:"/"
-        },
-        {
-          title:t("galery.galery.gal_4"),
-          link:"/"
-        },
-        {
-          title:t("galery.galery.gal_5"),
-          link:"/"
-        },
-        {
-          title:t("galery.galery.gal_6"),
-          link:"/"
-        },
-      ]
+      title: "galery",
+      link: `/${locale}/galery`
     },
     {
       title: t("professional"),
