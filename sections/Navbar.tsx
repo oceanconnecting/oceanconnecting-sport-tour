@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useTranslations } from "use-intl";
-import { useState } from "react";
+import { startTransition, useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import LanguageSwitcher from "@/Components/LanguageSwitcher";
 import { twMerge } from "tailwind-merge";
@@ -32,7 +32,7 @@ function Navbar() {
     },
     {
       title: t("galery.title"),
-      link: "/",
+      link: `/${locale}/galery`,
       subItems:[
         {
           title:t("galery.galery.gal_1"),
@@ -84,7 +84,7 @@ function Navbar() {
         <div className="flex-1 flex items-center">
           <div className="mx-4">
             {/* logo */}
-            <Image src="/logo.webp" alt={"logo"} width={50} height={50}></Image>
+            <Image className="rounded-lg" src="/logo.webp" alt={"logo"} width={50} height={50}></Image>
           </div>
           <Link href='/#main'>{t("title")}</Link>
         </div>
