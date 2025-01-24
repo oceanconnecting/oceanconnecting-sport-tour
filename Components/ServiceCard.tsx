@@ -3,23 +3,17 @@ function ServiceCard(props: any) {
 
     return (
         <div className="relative overflow-hidden w-full min-w-sm h-64 rounded-lg shadow-lg">
-            {/* Background Image */}
             <div 
                 className="absolute inset-0 bg-cover bg-center z-0" 
                 style={{ backgroundImage: `url(${img})` }} 
             />
-            
-            {/* Gradient Overlay */}
             <div 
                 className="absolute inset-0 z-10" 
                 style={{
                     background: `linear-gradient(0deg, ${color}, ${color}cc 30%, ${color}00 100%)`
                 }} 
             />
-
-            {/* Content */}
             <div className="relative h-full flex flex-col justify-between z-20">
-                {/* Icon */}
                 <div 
                     className="bg-white text-primary-400 text-3xl w-20 aspect-square mt-2 ml-2 p-2 flex justify-center items-center rounded-full"
                     style={{ color: color }} // Icon color matches the gradient color

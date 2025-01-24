@@ -34,6 +34,10 @@ export async function handleSubmitTour(formData : FormData){
   }
 };
 
+export function getIsSubmitit(){
+  return isSubmit
+}
+
 export default function Toaster(){
   return(
     <ToastContainer hideProgressBar={true} />
