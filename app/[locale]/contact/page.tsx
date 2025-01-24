@@ -25,40 +25,40 @@ export default function SubmitTourForm() {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 h-screen w-full">
-      <div className="flex flex-col gap-3 h-screen py-8 w-full justify-center items-center">
-        <Toaster/>
+    <div className="h-screen lg:grid lg:grid-cols-2 w-full">
+      <Toaster/>
+      <div className="flex flex-col gap-3 h-screen bg-white backdrop-blur-md bg-opacity-80 py-16 w-full justify-center items-center">
         <Tag>Contact Us</Tag>
-        <form className="flex w-full px-[2vh] sm:px-[10vh] lg:px-16 flex-col gap-2" onSubmit={handleSubmit}>
-          <div className="flex items-center justify-between">
-            <label className="w-10" htmlFor="name">Name</label>
+        <form className="flex w-full h-screen px-16 pb-6 flex-col gap-5" onSubmit={handleSubmit}>
+          <div className="flex flex-col justify-start">
+            <label className="w-10 ml-5 mb-1" htmlFor="name">Name</label>
             <input
               ref={nameInput}
               id="name"
-              className="px-6 w-80 py-4 rounded-full border border-black outline-none"
+              className="px-5 py-2 rounded-full border w-full border-black outline-none"
               type="text"
               name="name"
               placeholder="Name"
               required
             />
           </div>
-          <div className="flex items-center justify-between">
-            <label className="w-10" htmlFor="email">Email</label>
+          <div className="flex flex-col justify-start">
+            <label className="w-10 ml-5 mb-1" htmlFor="email">Email</label>
             <input
               ref={emailInput}
               id="email"
-              className="px-6 w-80 py-4 rounded-full border border-black outline-none"
+              className="px-5 py-2 w-full rounded-full border border-black outline-none"
               type="email"
               name="email"
               placeholder="Email"
               required
             />
           </div>
-          <div className="flex items-start justify-between">
-            <label htmlFor="message">Message</label>
+          <div className="flex flex-col justify-start">
+            <label className='ml-5 mb-1' htmlFor="message">Message</label>
             <textarea
               ref={messageInput}
-              className="px-6 w-80 max-h-32 py-4 rounded-3xl border border-black outline-none"
+              className="px-6 w-full h-24 min-h-24 max-h-24 py-4 rounded-3xl border border-black outline-none"
               name="message"
               placeholder="Message"
               required
@@ -70,7 +70,7 @@ export default function SubmitTourForm() {
         </form>
       </div>
       <div
-        className="hidden lg:block inset-0 bg-cover bg-center"
+        className=" absolute -z-20 inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/ContactImg.jpg')" }}
       ></div>
     </div>
