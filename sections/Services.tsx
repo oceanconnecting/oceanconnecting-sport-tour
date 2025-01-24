@@ -56,7 +56,7 @@ const Services : React.FC= ()=>{
     
    return(
         <section id='services'> 
-            <div className="w-full px-48 md:px-40 lg:px-10 py-10 flex flex-col items-center ">
+            <div className="w-full px-[2vh] md:px-40 lg:px-10 py-10 flex flex-col items-center ">
                 <div className="text-center  flex justify-center py-8 w-full first-letter:"> 
                 <Tag>Services</Tag>
                     </div>
