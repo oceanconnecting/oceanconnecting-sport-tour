@@ -201,6 +201,9 @@
       
       "show_more": "عرض المزيد"
     },
+    "services":{
+      "title":"services"
+    },
     "city":{
       "All":"الكل",
       "Agadir":"أغادير",

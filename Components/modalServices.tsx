@@ -1,0 +1,88 @@
+'use client';
+
+import { AnimatePresence, motion } from 'framer-motion';
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6';
+import React from 'react';
+
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  data: {
+    title: string;
+    images: string[];
+  };
+  currentImage: number;
+  setCurrentImage: React.Dispatch<React.SetStateAction<number>>;
+}
+
+const ModalServices: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+  data,
+  currentImage,
+  setCurrentImage,
+}) => {
+  if (!isOpen) return null;
+
+  const handlePrev = () => {
+    setCurrentImage((prev) => (prev - 1 + data.images.length) % data.images.length);
+  };
+
+  const handleNext = () => {
+    setCurrentImage((prev) => (prev + 1) % data.images.length);
+  };
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          // onClick={onClose}
+        >
+          <div   className="relative grid grid-cols-12 items-center justify-center w-screen max-h-full">
+            {/* Bouton Précédent */}
+            <div className="col-span-2 flex items-center justify-center">
+              <button
+                onClick={handlePrev}
+                className="w-16 h-16  bg-opacity-70 hover:text-black text-slate-100 flex items-center justify-center rounded-full shadow-lg hover:bg-gray-500 transition"
+              >
+                <FaAngleLeft size={24} />
+              </button>
+            </div>
+
+            {/* Image centrale */}
+            <div className="col-span-8 flex flex-col items-center justify-center px-4">
+              <img
+                src={data.images[currentImage]}
+                alt={data.title}
+                className="w-full max-w-3xl h-auto rounded-lg shadow-lg"
+              />
+              <h2 className="text-white text-2xl font-semibold mt-4">{data.title}</h2>
+              <button
+                onClick={onClose}
+                className="mt-4 px-6 py-2 bg-gray-400 text-white rounded-lg shadow-lg hover:bg-gray-500 transition"
+              >
+                Close
+              </button>
+            </div>
+
+            {/* Bouton Suivant */}
+            <div className="col-span-2 flex items-center justify-center">
+              <button
+                onClick={handleNext}
+                className="  bg-opacity-70 over:text-black text-slate-100   hover:text-black  w-16 h-16   flex items-center justify-center rounded-full shadow-lg hover:bg-gray-500 transition"
+              >
+                <FaAngleRight size={24} />
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
+export default ModalServices;
