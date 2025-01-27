@@ -90,7 +90,8 @@ function Navbar() {
         </div>
 
         {/* style responsive */}
-        <div className="block lg:hidden">
+        <div className="flex gap-3 lg:hidden">
+          <LanguageSwitcher />
           <div
             onClick={() => setIsOpen(!isOpen)}
             className="flex gap-5 lg:hidden flex-col cursor-pointer">
@@ -159,9 +160,6 @@ function Navbar() {
               </div>
             )
           )}
-          <div className="pl-5 py-3 flex justify-center">
-            <LanguageSwitcher />
-          </div>
         </motion.div>
       )}
       </AnimatePresence>
