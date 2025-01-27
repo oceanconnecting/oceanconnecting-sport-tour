@@ -15,9 +15,9 @@ function InfiniteTextChange({ textArray }: InfiniteTextChangeProps) {
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % textArray.length);
-    }, 2000);
+    }, 3000);
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
+    return () => clearInterval(interval);
   }, [textArray]);
 
   if (textArray.length === 0) {
@@ -32,7 +32,7 @@ function InfiniteTextChange({ textArray }: InfiniteTextChangeProps) {
           initial={{ y: "100%", opacity: 0, }}
           animate={{ y: "0%", opacity: 1, }}
           exit={{ y: "-100%", opacity: 0, }}
-          transition={{ duration: 0.25 }}
+          transition={{ duration: 0.2 }}
           className="h-10 lg:h-16 w-fit text-center"
         >
           {textArray[currentIndex]}
