@@ -201,7 +201,12 @@
       
       
       "show_more":"show more"
-    },
+    }
+    ,
+    "services":{
+      "title":"services"
+    }
+    ,
     "city":{
       "All":"All",
       "Agadir":"Agadir",
