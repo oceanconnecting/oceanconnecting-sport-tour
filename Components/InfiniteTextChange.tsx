@@ -25,7 +25,7 @@ function InfiniteTextChange({ textArray }: InfiniteTextChangeProps) {
   }
 
   return (
-    <div className="h-12 gap-4 w-full overflow-hidden flex items-center justify-center">
+    <div className="h-10 lg:h-16 gap-4 w-auto overflow-hidden flex items-center justify-center">
       <AnimatePresence mode="popLayout">
         <motion.div
           key={currentIndex}
@@ -33,12 +33,12 @@ function InfiniteTextChange({ textArray }: InfiniteTextChangeProps) {
           animate={{ y: "0%", opacity: 1, }}
           exit={{ y: "-100%", opacity: 0, }}
           transition={{ duration: 0.25 }}
-          className="h-12 w-fit text-center"
+          className="h-10 lg:h-16 w-fit text-center"
         >
           {textArray[currentIndex]}
         </motion.div>
       </AnimatePresence>
-      <motion.h1 layout>with</motion.h1>
+      <motion.h1 className=" h-10 lg:h-16" layout>with</motion.h1>
     </div>
   );
 }

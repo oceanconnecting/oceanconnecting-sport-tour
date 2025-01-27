@@ -78,7 +78,7 @@ function Navbar() {
             (
               <div key={idx}>
                 <Link
-                  className="px-3 hover:text-primary-300 transition"
+                  className="mx-3 hover:text-primary-300 border-b-2 duration-150 border-opacity-0 hover:border-opacity-100 border-primary-300 pb-5 transition-all"
                   href={link.link}
                 >
                   {link.title}

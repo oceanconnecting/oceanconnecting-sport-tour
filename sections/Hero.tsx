@@ -26,14 +26,14 @@ function Hero() {
                     <p className='text-sm lg:text-lg text-center'>{t("hero_tag")}</p>
                     <GiSevenPointedStar />
                 </div>
-                <h1 className="text-3xl text-center font-extrabold text-white sm:text-5xl">
+                <h1 className="text-4xl text-center mt-5 font-extrabold text-white sm:text-6xl">
                     <InfiniteTextChange textArray={textList}/>
                     <strong className="font-extrabold text-primary-800 sm:block">{t("highlighted")}</strong>
                 </h1>
-                <p className="mt-4 text-slate-200 sm:text-xl/relaxed max-w-xl text-center">
+                <p className="mt-6 text-slate-300 sm:text-lg/relaxed max-w-4xl text-center">
                     {t("descr")}
                 </p>
-                <div className='flex mt-5 gap-3 flex-col md:flex-row'>
+                <div className='flex mt-7 gap-3 flex-col md:flex-row'>
                     <Button href={`/${locale}/contact`} variant='primary'>{t("contact_button")}</Button>
                 </div>
             </div>
