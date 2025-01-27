@@ -1,11 +1,17 @@
+"use client"
+
 import Button from '@/Components/Button'
+import InfiniteTextChange from '@/Components/InfiniteTextChange';
 import { useLocale, useTranslations } from 'next-intl';
 import { GiSevenPointedStar } from "react-icons/gi";
+import { motion } from "motion/react";
 
 function Hero() {
 
     const t = useTranslations("homepage.hero")
     const locale = useLocale()
+
+    const textList = ['Learn', 'Travel', 'Grow']
 
   return (
     <section id='main' className='bg-bannerImg bg-cover bg-center w-full h-screen'>
@@ -17,7 +23,7 @@ function Hero() {
                     <GiSevenPointedStar />
                 </div>
                 <h1 className="text-3xl text-center font-extrabold text-white sm:text-5xl">
-                    {t("grand_title")}
+                    <InfiniteTextChange textArray= {textList}/>
                     <strong className="font-extrabold text-primary-800 sm:block">{t("highlighted")}</strong>
                 </h1>
                 <p className="mt-4 text-slate-200 sm:text-xl/relaxed max-w-xl text-center">
