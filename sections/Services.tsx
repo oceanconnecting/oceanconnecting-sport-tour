@@ -89,6 +89,7 @@ const closeModal = () => setIsOpen(false);
             )}
     </div>
   );
+
 };
 
 export default Services;

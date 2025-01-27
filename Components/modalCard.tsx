@@ -12,7 +12,7 @@ function ImageCard(props: any) {
     <div>
       <div
         onClick={() => setIsOpen(true)}
-        className="relative overflow-hidden min-w-sm w-96 h-64 rounded-lg shadow-lg cursor-pointer"
+        className="relative overflow-hidden w-full min-w-sm h-64 rounded-lg shadow-lg cursor-pointer"
       >
         <div
           className="absolute inset-0 bg-cover bg-center z-0"

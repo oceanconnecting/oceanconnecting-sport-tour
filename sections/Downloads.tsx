@@ -10,7 +10,7 @@ function Downloads() {
   const t = useTranslations("homepage.downloads")
 
   return (
-    <section  id="downloads"className="flex justify-center">
+    <section  id="downloads" className="flex justify-center">
       <div className="flex flex-col h-fit py-16 w-full justify-center container items-center">
         <Tag>{t("title")}</Tag>
         <div className="mt-5 flex justify-center w-full flex-col gap-5 items-center">
@@ -18,8 +18,8 @@ function Downloads() {
           {t("descr")}
           </p>
           <div className="flex px-3 mt-5 flex-col lg:flex-row w-full justify-center items-center gap-10">
-            <DownloadCard title={t("text_1")} description="" fileSize="249 kb" downloadUrl="/planning/7days planning watermark.pdf"/>
-            <DownloadCard title={t("text_2")} description="" fileSize="242 kb" downloadUrl="/planning/10days planning watermark.pdf"/>
+            <DownloadCard title={t("text_1")} description="download the plan for loream ipsum sigma rizz skibiddi toilet" fileSize="249 kb" downloadUrl="/planning/7days planning watermark.pdf"/>
+            <DownloadCard title={t("text_2")} description="download the plan for loream ipsum sigma rizz skibiddi toilet" fileSize="242 kb" downloadUrl="/planning/10days planning watermark.pdf"/>
         </div>
         </div>
       </div>
