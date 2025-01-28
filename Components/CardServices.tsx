@@ -17,7 +17,10 @@ const CardServices: React.FC<service> = (props) => {
         style={{ backgroundImage: `url(${image})` }}
       >
         {/* Dégradé pour améliorer la lisibilité du texte */}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-500 via-gray-400 to-transparent z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-400 via-gray-200 to-transparent z-0"></div>
+
+       
+
       </div>
 
       {/* Contenu principal */}

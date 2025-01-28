@@ -63,20 +63,21 @@ const ModalServices: React.FC<ModalProps> = ({
 
 
             {/* Image centrale */}
-            <motion.div
+            <div
               
-              initial={{ opacity: 0, x: -100 }}  // Image enters from the left
-              animate={{ opacity: 1, x: 0 }}    // Image settles in the center
-              exit={{ opacity: 0, x: 100 }}    // Image exits to the right
+             
             className="col-span-8 flex flex-col items-center justify-center px-4">
-              <img
+              <motion.img
+               initial={{ opacity: 0, x: -100 }}  // Image enters from the left
+               animate={{ opacity: 1, x: 0 }}    // Image settles in the center
+               exit={{ opacity: 0, x: 100 }}    // Image exits to the right
                 src={data.images[currentImage]}
                 alt={data.title}
                 className="w-full max-w-3xl h-auto rounded-lg shadow-lg"
               />
               <h2 className="text-white text-2xl font-semibold mt-4">{data.title}</h2>
               
-            </motion.div>
+            </div>
 
             {/* Bouton Suivant */}
             <div
