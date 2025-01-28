@@ -19,12 +19,12 @@ const CardServices: React.FC<service>=(props)=> {
     style={{ backgroundImage: `url(${image})` }}
   >
     {/* Dégradé pour améliorer la lisibilité du texte */}
-    <div className="absolute inset-0 bg-gradient-to-t from-gray-500 via-gray-400 to-transparent z-0"></div>
+    <div className="absolute inset-0 bg-gradient-to-t from-primary-800 via-primary-700 to-transparent z-0"></div>
   </div>
 
   {/* Contenu principal */}
   <div className="relative h-full flex flex-col justify-end p-6 z-10">
-    <p className="text-2xl font-serif group-hover:text-black group-hover:font-bold text-white mb-2 transition-all duration-300">
+    <p className="text-2xl group-hover:text-black group-hover:font-bold text-white mb-2 transition-all duration-300">
       {title}
     </p>
   </div>

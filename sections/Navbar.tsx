@@ -18,6 +18,10 @@ function Navbar() {
       link: "/#about",
     },
     {
+      title: "Features",
+      link: "/#features"
+    },
+    {
       title: t("activities"),
       link: "/#activities"
     },
