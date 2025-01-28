@@ -38,8 +38,8 @@ function Navbar() {
       link: "/#downloads",
     },
     {
-      title: "galery",
-      link: `/${locale}/galery`
+      title: "gallery",
+      link: `/${locale}/gallery`
     },
     {
       title: t("contact"),
@@ -47,9 +47,8 @@ function Navbar() {
     },
   ];
 
-  const [isOpen, setIsOpen] = useState(false); // Mobile menu toggle
-  const [openSubMenu, setOpenSubMenu] = useState(null); // Submenu toggle
-
+  const [isOpen, setIsOpen] = useState(false); 
+  const [openSubMenu, setOpenSubMenu] = useState(null);
   const toggleSubMenu = (index : any) => {
     setOpenSubMenu(openSubMenu === index ? null : index);
   };
