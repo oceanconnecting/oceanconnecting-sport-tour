@@ -38,8 +38,8 @@ function Navbar() {
       link: "/#downloads",
     },
     {
-      title: "galery",
-      link: `/${locale}/galery`
+      title: "gallery",
+      link: `/${locale}/gallery`
     },
     {
       title: t("contact"),
