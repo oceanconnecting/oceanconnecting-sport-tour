@@ -34,7 +34,7 @@ function Hero() {
                     {t("descr")}
                 </p>
                 <div className='flex mt-7 gap-3 flex-col md:flex-row'>
-                    <Button href={`/${locale}/contact`} variant='primary'>{t("contact_button")}</Button>
+                    <Button href={`/${locale}/contact`} variant='primary'>Get In touch</Button>
                 </div>
             </div>
         </div>

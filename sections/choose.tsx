@@ -31,7 +31,7 @@ function choose() {
   ]
   
   return ( 
-    <section id='features' className="py-44 px-4 min-h-screen gap-5 flex flex-col justify-center items-center">
+    <section id='features' className="py-44 px-4 h-fit gap-5 flex flex-col justify-center items-center">
       <Tag icon={<GiSevenPointedStar />}>{t("title")}</Tag>
       <div className="grid flex-1 grid-cols-1 justify-center items-center lg:grid-cols-3 gap-6">
         {ChooseData.map((item: any, index: any) => (

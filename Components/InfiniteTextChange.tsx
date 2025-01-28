@@ -25,7 +25,7 @@ function InfiniteTextChange({ textArray }: InfiniteTextChangeProps) {
   }
 
   return (
-    <div className="h-10 lg:h-16 gap-4 w-auto overflow-hidden flex items-center justify-center">
+    <div className="h-10 lg:h-16 gap-3 w-auto overflow-hidden flex items-center justify-center">
       <AnimatePresence mode="popLayout">
         <motion.div
           key={currentIndex}
