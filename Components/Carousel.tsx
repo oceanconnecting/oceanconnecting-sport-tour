@@ -5,19 +5,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 interface CarouselProps {
-  images: string[]; // Define the type for the images prop
+  images: string[];
 }
 
 export default function Carousel({ images }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [dir, setDir] = useState(0)
 
   const handlePrevious = () => {
+    setDir(-1)
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      (prevIndex === 0 ? images.length - 1 : prevIndex - 1)
     );
   };
 
   const handleNext = () => {
+    setDir(1)
     setCurrentIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
@@ -34,9 +37,9 @@ export default function Carousel({ images }: CarouselProps) {
                 src={src}
                 alt={`Slide ${index + 1}`}
                 className="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg"
-                initial={{ opacity: 0, x: 300 }}
+                initial={{ opacity: 0, x: dir * 300}}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 }}
+                exit={{ opacity: 0, x: -300 * dir}}
                 transition={{ duration: 0.5 }}
               />
             )
@@ -45,7 +48,7 @@ export default function Carousel({ images }: CarouselProps) {
 
       <button
         onClick={handlePrevious}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-300 transition-all duration-200 z-10"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 shadow-xl bg-white hover:bg-opacity-75 rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-300 transition-all duration-200 z-10"
         aria-label="Previous slide"
       >
         <IoIosArrowBack className="w-6 h-6 text-gray-800" />
@@ -53,7 +56,7 @@ export default function Carousel({ images }: CarouselProps) {
 
       <button
         onClick={handleNext}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-300 transition-all duration-200 z-10"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 shadow-xl bg-white hover:bg-opacity-75 rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-300 transition-all duration-200 z-10"
         aria-label="Next slide"
       >
         <IoIosArrowForward className="w-6 h-6 text-gray-800" />
