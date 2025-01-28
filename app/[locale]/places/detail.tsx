@@ -1,10 +1,15 @@
-'use client';
+"use client";
 
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/react";
 import { IoMdClose } from "react-icons/io";
-import Button from '@/Components/Button';
-import { useLocale } from 'next-intl';
-import { AnimatePresence, motion } from 'framer-motion';
+import Button from "@/Components/Button";
+import { useLocale } from "next-intl";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface ModalDetailProps {
   isOpen: boolean;
@@ -16,11 +21,19 @@ interface ModalDetailProps {
   };
 }
 
-export default function PlacesDetail({ isOpen, onClose, data }: ModalDetailProps) {
+export default function PlacesDetail({
+  isOpen,
+  onClose,
+  data,
+}: ModalDetailProps) {
   const locale = useLocale();
 
   return (
-    <Dialog open={isOpen} onClose={onClose} className="flex-row relative z-11 w-full">
+    <Dialog
+      open={isOpen}
+      onClose={onClose}
+      className="flex-row relative z-11 w-full"
+    >
       <AnimatePresence>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -38,7 +51,7 @@ export default function PlacesDetail({ isOpen, onClose, data }: ModalDetailProps
                   <button
                     type="button"
                     onClick={onClose}
-                    className="inline-flex w-full justify-center px-0 py-0 text-2xl font-bold text-black sm:ml-3 sm:w-auto"
+                    className="inline-flex h-fit justify-center px-0 py-0 text-2xl font-bold text-black sm:ml-3 sm:w-auto"
                   >
                     <IoMdClose />
                   </button>
@@ -46,13 +59,20 @@ export default function PlacesDetail({ isOpen, onClose, data }: ModalDetailProps
 
                 {/* Image */}
                 {data.image && (
-                  <div className="h-64 mx-16 rounded-lg inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${data.image})` }} />
+                  <div
+                    className="h-64 mx-16 rounded-lg inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${data.image})` }}
+                  />
                 )}
 
                 {/* Content */}
                 <div className="px-64 pt-5 sm:p-6">
-                  <DialogTitle className="text-lg font-bold text-gray-900">{data.title}</DialogTitle>
-                  <p className="mt-2 text-sm font-medium text-black-900">{data.descr}</p>
+                  <DialogTitle className="text-lg font-bold text-gray-900">
+                    {data.title}
+                  </DialogTitle>
+                  <p className="mt-2 text-sm font-medium text-black-900">
+                    {data.descr}
+                  </p>
                 </div>
 
                 {/* Actions */}
