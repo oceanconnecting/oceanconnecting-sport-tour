@@ -201,7 +201,38 @@
       
       
       "show_more":"show more"
-    },
+    }
+    ,
+    "services": {
+      "title": "services",
+      "services": {
+        "service6": {
+          "title": "Excursions, trips, and adventures",
+          "desc": "Explore unique destinations and embark on unforgettable adventures."
+        },
+        "service5": {
+          "title": "Sports programs and training camps",
+          "desc": "Participate in sports activities and improve your performance."
+        },
+        "service4": {
+          "title": "Shuttle and airport transfer",
+          "desc": "Convenient shuttle services and airport transfers for easy travel."
+        },
+        "service3": {
+          "title": "Events and parties",
+          "desc": "Organize and attend events and parties for memorable experiences."
+        },
+        "service2": {
+          "title": "Accommodation and car rental",
+          "desc": "Book accommodations and rent cars for convenient travel."
+        },
+        "service1": {
+          "title": "Transport and logistics",
+          "desc": "Efficient transport and logistics solutions for your needs."
+        }
+      }
+    }
+    ,
     "city":{
       "All":"All",
       "Agadir":"Agadir",

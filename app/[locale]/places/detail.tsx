@@ -82,7 +82,7 @@ export default function PlacesDetail({
                     onClick={onClose}
                     className="dark:hover:bg-[#050708]/30 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-black-600 inline-flex w-full justify-center bg-black-600 text-white shadow-sm sm:ml-3 sm:w-auto"
                     href={`/${locale}/contact`}
-                    variant="dark_primary"
+                    variant="primary"
                   >
                     Contact
                   </Button>

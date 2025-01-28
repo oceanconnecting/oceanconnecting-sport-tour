@@ -89,9 +89,7 @@ const Places: React.FC = () => {
 }
 
           </div>
-          <Button href={`/${locale}/places`} variant="dark_primary">
-            {t('show_more')}
-          </Button>
+        
         </div>
       </section>
 

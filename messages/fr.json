@@ -196,7 +196,37 @@
         "title": "  La Ménara",
         "city":"Marrakech",
         "descr": " Ce vaste jardin avec son bassin central est un lieu idéal pour une promenade relaxante avec une vue magnifique sur les montagnes de l'Atlas. "
-      },
+      }},
+     
+      "services": {
+        "title": "services",
+        "services": {
+          "service6": {
+            "title": "Excursions, voyages et aventures",
+            "desc": "Explorez des destinations uniques et embarquez pour des aventures inoubliables."
+          },
+          "service5": {
+            "title": "Programmes sportifs et camps d'entraînement",
+            "desc": "Participez à des activités sportives et améliorez vos performances."
+          },
+          "service4": {
+            "title": "Navette et transfert aéroport",
+            "desc": "Services de navette pratiques et transferts aéroport pour des déplacements faciles."
+          },
+          "service3": {
+            "title": "Événements et fêtes",
+            "desc": "Organisez et assistez à des événements et fêtes pour des expériences mémorables."
+          },
+          "service2": {
+            "title": "Hébergement et location de voiture",
+            "desc": "Réservez des hébergements et louez des voitures pour des déplacements pratiques."
+          },
+          "service1": {
+            "title": "Transport et logistique",
+            "desc": "Des solutions de transport et de logistique efficaces pour vos besoins."
+          }
+        },
+    
       "show_more": "voir plus",
       "city":{
         "All":"tous",

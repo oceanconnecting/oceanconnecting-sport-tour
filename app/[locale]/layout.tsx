@@ -6,6 +6,7 @@ import { NextIntlClientProvider, useLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Poppins, Tajawal } from 'next/font/google'
+import BackToTopButton from "@/Components/BackToTopButton";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -53,6 +54,7 @@ export default async function RootLayout(
         <body
           className={locale === "ar" ? tajawal.className : poppins.className}>
           <Navbar/>
+          <BackToTopButton/>
           {children}
           <Footer/>
         </body>
