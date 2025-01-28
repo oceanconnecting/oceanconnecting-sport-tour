@@ -225,17 +225,17 @@
             "title": "Transport et logistique",
             "desc": "Des solutions de transport et de logistique efficaces pour vos besoins."
           }
-        },
+        }
     
+      },
       "show_more": "voir plus",
       "city":{
-        "All":"tous",
+        "All":"Tous",
         "Agadir":"Agadir",
         "Marrakech":"Marrakech",
         "Essaouira":"Essaouira"
   
-      }
-    },
+      },
     "downloads": {
       "title": "Téléchargements",
       "descr": "Notre entreprise vous propose toutes les informations dont vous aurez besoin pour votre visite unique avec nous. Tout au long, Ocean Sport et Tours s'occupe de tout, depuis le jour de votre arrivée jusqu'au moment où nous vous disons au revoir à l'aéroport. Ici, vous trouverez tout ce qui concerne les tarifs et le programme de vos visites, voyages, hébergements... que vous pouvez télécharger facilement et rapidement.",

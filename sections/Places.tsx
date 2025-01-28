@@ -41,7 +41,7 @@ const Places: React.FC = () => {
 
   const handleTag = (tag: string) => {
     setActiveTag(tag);
-    if (tag === 'All') {
+    if (tag === tc('All')) {
       setDisplayedPlaces(allplaces); // Affiche tous les lieux
     } else {
       const filtered = allplaces.filter((place) =>
@@ -71,11 +71,7 @@ const Places: React.FC = () => {
           <Tag icon={<FaPlaceOfWorship />}>{t('title')}</Tag>
         <Filter places={allplaces} activeTag={activeTag} handleTag={handleTag} tagList={tagList} />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-full max-w-7xl">
-          
-            
-            
-          {activeTag === '' 
-  ? displayedPlaces.slice(0, 6).map((place, index) => (
+          {activeTag === ''? displayedPlaces.slice(0, 6).map((place, index) => (
       <div 
         key={index} 
         className="cursor-pointer flex justify-center" 
