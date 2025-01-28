@@ -69,7 +69,7 @@ function About() {
         <Tag>{t("about_title")}</Tag>
         <div className="grid lg:grid-cols-2 gap-4 h-full justify-center items-center">
           <div className="flex flex-col items-center lg:items-start">
-            <div className="text-xl lg:text-3xl flex gap-2 text-text-200 rounded-full font-bold bg-primary-900 w-fit px-6 py-3">
+            <div className="text-md md:text-xl lg:text-3xl flex gap-2 text-text-200 rounded-full font-bold bg-primary-900 w-fit px-6 py-3">
               +<Counter from={0} to={3}/> Years of experience
             </div>
             <div className="flex items-center flex-col">
