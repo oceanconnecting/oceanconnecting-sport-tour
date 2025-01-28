@@ -25,12 +25,6 @@ const Places: React.FC = () => {
   const locale = useLocale();
  
 
-//   let tableau = [1, 2, 3, 2, 4, 5, 1, 6, 3];
-
-// let tableauUnique = tableau.filter((value, index, self) => {
-//   return self.indexOf(value) === index;
-// });
-
   const allplaces=Allplaces()
   const tagList = [tc('All'), tc('Agadir'), tc('Marrakech'),tc ('Essaouira')];
   const [activeTag, setActiveTag] = useState('');
@@ -50,10 +44,6 @@ const Places: React.FC = () => {
       setDisplayedPlaces(filtered); // Affiche les lieux filtrés
     }
   };
-    
-  // const filteredPlaces = activeTag === 'All'
-  //   ? places
-  //   : places.filter((place) => place.city.toLowerCase() === activeTag.toLowerCase());
 
   const openModal = (place: Place) => {
     setModalData(place);
@@ -69,7 +59,7 @@ const Places: React.FC = () => {
 
         <div  className="w-full bg-background-950 py-16 px-10 flex flex-col items-center gap-6">
           <Tag icon={<FaPlaceOfWorship />}>{t('title')}</Tag>
-        <Filter places={allplaces} activeTag={activeTag} handleTag={handleTag} tagList={tagList} />
+          <Filter places={allplaces} activeTag={activeTag} handleTag={handleTag} tagList={tagList} />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-full max-w-7xl">
           {activeTag === ''? displayedPlaces.slice(0, 6).map((place, index) => (
       <div 
