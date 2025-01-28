@@ -8,7 +8,6 @@ import Choose from "@/sections/choose";
 import TextTicker from "@/sections/TextTicker";
 import Downloads from '@/sections/Downloads';
 import Services from '@/sections/Services';
-import InfiniteTextChange from '@/Components/InfiniteTextChange';
 
 export default function Home() {
   return (

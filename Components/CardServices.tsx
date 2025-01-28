@@ -10,6 +10,7 @@ const CardServices: React.FC<service> = (props) => {
 
   return (
     <div className="relative overflow-hidden w-full min-w-sm h-64 rounded-lg shadow-lg group">
+
       {/* Image de fond */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
