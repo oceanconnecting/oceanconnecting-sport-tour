@@ -79,7 +79,8 @@ function About() {
             </div>
           </div>
           <div className="lg:flex hidden justify-center items-center">
-            <Image className="rounded-2xl" src={"/aboutImg.jpg"} alt={"img sportif kid"} width={280} height={360} />
+            <div className="bg-primary-700 -z-0 w-64 h-64 absolute blur-3xl rounded-full"></div>
+            <Image className="rounded-2xl z-10" src={"/aboutImg.jpg"} alt={"img sportif kid"} width={280} height={360} />
           </div>
         </div>
       </div>
