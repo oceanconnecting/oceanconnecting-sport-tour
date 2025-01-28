@@ -19,7 +19,7 @@ function ServiceCard(props: any) {
                     style={{ color: color }} // Icon color matches the gradient color
                 >
                     {icon}
-                </div>
+                </div>ser
 
                 <div className="flex flex-col justify-end p-6">
                     <h2 className="text-2xl font-bold text-white mb-2">{title}</h2>

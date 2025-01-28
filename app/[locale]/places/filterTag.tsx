@@ -16,6 +16,7 @@ interface Place {
 }
 const FilterTag: React.FC<FilterTagProps> = ({ places, activeTag, handleTag, tagList }) => {
    // Filter the places based on the active tag
+   
    const filteredPlaces = activeTag === 'All' ? places : places.filter((place) => place.city === activeTag);
   return (
     <div className="w-[60%] flex flex-row justify-between">
