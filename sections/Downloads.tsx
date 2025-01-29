@@ -14,7 +14,7 @@ function Downloads() {
       <div className="flex flex-col h-fit py-16 w-full justify-center container items-center">
         <Tag>{t("title")}</Tag>
         <div className="mt-5 flex justify-center w-full flex-col gap-5 items-center">
-          <p className="px-3 leading-7 text-center text-pretty">
+          <p className="px-3 leading-7 text-slate-600 text-center text-pretty">
           {t("descr")}
           </p>
           <div className="flex px-3 mt-5 flex-col lg:flex-row w-full justify-center items-center gap-10">

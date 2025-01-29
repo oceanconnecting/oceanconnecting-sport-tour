@@ -34,7 +34,7 @@ function ImageCard(props: any) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)} // Closes modal on backdrop click
-            className="fixed top-0 left-0 z-30 bg-black px-5 bg-opacity-40 h-screen w-full flex justify-center items-center"
+            className="fixed top-0 left-0 z-30 bg-black px-5 bg-opacity-75 backdrop-blur-lg h-screen w-full flex justify-center items-center"
           >
             <div
               onClick={(e) => e.stopPropagation()} // Prevents modal from closing when interacting with content
