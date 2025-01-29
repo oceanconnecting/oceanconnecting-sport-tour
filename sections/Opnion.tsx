@@ -48,7 +48,7 @@ const opinions = [
 
 function Opinion() {
   const FAST_DURATION = 20;
-  const SLOW_DURATION = 200;
+  const SLOW_DURATION = 150;
 
   const [duration, setDuration] = useState(FAST_DURATION);
   let [ref, { width }] = useMeasure();
@@ -85,7 +85,7 @@ function Opinion() {
   }, [rerender, xTranslation, duration, width]);
     return (
         <section className="bg-slate-50">
-            <div className="flex flex-col overflow-hidden items-center p-6 w-full min-h-screen">
+            <div className="flex flex-col overflow-hidden items-center p-6 w-full h-fit">
                 <Tag>What Our Customers Said About Us</Tag>
                 <div className="overflow-hidden mt-6 w-full">
                 <motion.div
@@ -96,11 +96,19 @@ function Opinion() {
                     setMustFinish(true);
                     setDuration(SLOW_DURATION);
                     }}
+                    onTouchStart={() => {
+                        setMustFinish(true);
+                        setDuration(SLOW_DURATION);
+                    }}
+                    onTouchEnd={() => {
+                        setMustFinish(true);
+                        setDuration(FAST_DURATION);
+                    }}
                     onHoverEnd={() => {
                     setMustFinish(true);
                     setDuration(FAST_DURATION);
-                    }}
-                        >
+                    }}    
+                    >
                         {[...opinions, ...opinions].map((opinion, idx) => (
                             <Card key={idx} {...opinion} />
                         ))}
