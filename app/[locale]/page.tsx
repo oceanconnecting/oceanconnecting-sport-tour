@@ -8,6 +8,7 @@ import Choose from "@/sections/choose";
 import TextTicker from "@/sections/TextTicker";
 import Downloads from '@/sections/Downloads';
 import Services from '@/sections/Services';
+import Tours from '@/sections/Tours';
 import Opnion from '@/sections/Opnion';
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <Services/>
         <TextTicker/>
         <Places/>
+        <Tours/>
         <Opnion/>
         <Downloads/>
         </Suspense>
