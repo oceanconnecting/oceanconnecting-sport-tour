@@ -37,9 +37,9 @@ export default function Carousel({ images }: CarouselProps) {
                 src={src}
                 alt={`Slide ${index + 1}`}
                 className="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg"
-                initial={{ opacity: 0, x: dir * 300}}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 * dir}}
+                initial={{ opacity: 0}}
+                animate={{ opacity: 1}}
+                exit={{ opacity: 0}}
                 transition={{ duration: 0.5 }}
               />
             )
