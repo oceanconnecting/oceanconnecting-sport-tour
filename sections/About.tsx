@@ -73,7 +73,7 @@ function About() {
               +<Counter from={0} to={3}/> Years of experience
             </div>
             <div className="flex items-center flex-col">
-              <p className="mt-6 text-center lg:text-left text-text-50 sm:text-xl/relaxed max-w-lg">
+              <p className="mt-6 text-center lg:text-left text-slate-800 sm:text-lg/relaxed max-w-lg">
                 {t("about_text")}
               </p>
             </div>

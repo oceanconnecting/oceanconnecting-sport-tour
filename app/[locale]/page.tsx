@@ -9,6 +9,7 @@ import TextTicker from "@/sections/TextTicker";
 import Downloads from '@/sections/Downloads';
 import Services from '@/sections/Services';
 import Tours from '@/sections/Tours';
+import Opnion from '@/sections/Opnion';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <TextTicker/>
         <Places/>
         <Tours/>
+        <Opnion/>
         <Downloads/>
         </Suspense>
     </div>
