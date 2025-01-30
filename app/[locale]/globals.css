@@ -9,3 +9,13 @@ html{
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+::-moz-selection { /* Code for Firefox */
+  color: #0e1c25;
+  background: #91bad4;
+}
+
+::selection {
+  color: #0e1c25;
+  background: #91bad4;
+}
