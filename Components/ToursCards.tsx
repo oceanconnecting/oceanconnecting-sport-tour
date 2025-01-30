@@ -2,7 +2,7 @@
 import { GoDotFill } from "react-icons/go";
 import { LuDot } from "react-icons/lu";
 import { FaStar, FaRegStar } from 'react-icons/fa';
-
+import { useLocale } from "next-intl";
 import { useRouter } from 'next/navigation';
 interface Tour{
     id:number,
@@ -13,7 +13,7 @@ description:string ,
 arrival:string ,
 duration: string,
 type:string,
-rating: number,
+rating:number  ,
 newPrice:string,
 latesPrice:string
 }
@@ -29,11 +29,16 @@ const ToursCard: React.FC<ToursCardProps> =({tour})=>{
     const fullStars = Math.floor(tour.rating); // Nombre d'étoiles pleines
   const halfStar = tour.rating % 1 >= 0.5 ? 1 : 0; // Gérer les demi-étoiles
     const router=useRouter();
-    const handleClick=()=>{
-        router.push(`/tours/${tour.id}`)
-    }
+    const locale=useLocale()
+    
+    const handleClick = () => {
+    // Utilise router.push pour naviguer vers la page de détail avec l'ID du tour
+    router.push(`/${locale}/tours/${tour.id}`);  
+    };
+
+
     return (
-        <div   className=" group-hover:scale-110 cursor-pointer grid gap-6">
+        <div  onClick={handleClick} className=" group-hover:scale-110 cursor-pointer grid gap-6">
         
           <div  className="rounded shadow-md p-4 bg-white">
             <img src={tour.image} alt={tour.title} className="w-full h-48 object-cover rounded-md" />
