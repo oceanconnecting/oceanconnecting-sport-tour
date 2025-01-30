@@ -33,7 +33,7 @@ const ToursCard: React.FC<ToursCardProps> =({tour})=>{
     
     const handleClick = () => {
     // Utilise router.push pour naviguer vers la page de détail avec l'ID du tour
-    router.push(`/${locale}/tours/${tour.id}`);  
+    router.push(`/${locale}/Tours/${tour.id}`);  
     };
 
 
