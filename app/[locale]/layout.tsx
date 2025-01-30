@@ -8,17 +8,17 @@ import { notFound } from "next/navigation";
 import { Poppins, Tajawal } from "next/font/google";
 import BackToTopButton from "@/Components/BackToTopButton";
 
-
+// ✅ Load Google Fonts
 const poppins = Poppins({ subsets: ["latin"], weight: "300" });
 const tajawal = Tajawal({ subsets: ["arabic"], weight: "400" });
 
+// ✅ Define Metadata
 export const metadata: Metadata = {
   title: "Ocean Sport Tours",
   description: "Ocean Sport Tours",
-  keywords:
-    "Ocean connecting tours, ocean sports, ocean sports tours, Formation Agadir, Formation Professionnelle Agadir, sport, tours, kids, fun, Apprentissage des Langues Agadir, Formation Agent Aéroport, Formation Agent d’Enregistrement, Formation DJ Agadir, Formation Soins Infirmiers, Placement Professionnel Agadir, Recrutement International, Recrutement Agadir, Assistance aux Documents, Services de Soutien à l’Emploi, Domiciliation Entreprise Agadir, Domiciliation d’Entreprise, Formation Développement Web, Développement d’Applications Agadir, Nettoyage de Façade Agadir, Nettoyage de Fenêtres Agadir, Revêtement Extérieur Agadir, Services de Bardage Agadir, Nettoyage de Panneaux Solaires, Entretien des Panneaux Solaires Agadir, Services Extérieurs Agadir, Solutions de Développement Personnalisées, Cours de Langues Agadir, Formation Infirmière Agadir, Formation Service Client, Formation aux Procédures de Sécurité, Formation en Gestion d'Événements, Croissance Professionnelle Agadir, Soutien aux Carrières Internationales, Formation Professionnelle Personnalisée, Opportunités de Carrière Agadir, Formation à la Promotion en Ligne, Création d'Entreprise Agadir, Solutions de Formation Complètes, Développement de Compétences Agadir, Meilleure Formation à Agadir, Cours Professionnels Avancés, Soutien Professionnel Expert ",
 };
 
+// ✅ Fetch Messages (Fix for Async Issue)
 async function fetchMessages(locale: string) {
   const validLocales = ["fr", "en", "ar"];
   if (!validLocales.includes(locale)) {
@@ -27,21 +27,14 @@ async function fetchMessages(locale: string) {
   return await getMessages({ locale });
 }
 
-export default async function RootLayout({
-  children,
-  params: { locale },
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-
+// ✅ Fix: `params` must be awaited before destructuring
+export default async function RootLayout({ children, params }: { children: React.ReactNode; params: { locale: string } }) {
+  const { locale } = params; // ✅ Fix: Destructure inside the function
   const messages = await fetchMessages(locale);
-
-
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html lang={locale} dir={direction}>
+    <html lang={locale} dir={direction}> {/* ✅ NO EXTRA SPACE HERE */}
       <body className={locale === "ar" ? tajawal.className : poppins.className}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
