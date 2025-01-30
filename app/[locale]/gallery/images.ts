@@ -28,7 +28,7 @@ export const Images = [
             "/gallery/camelRide/camelRide1.webp",
             "/gallery/camelRide/camelRide2.webp",
             "/gallery/camelRide/camelRide3.jpg",
-            "/gallery/camelRide/camelRide3.jpg",
+            "/gallery/camelRide/camelRide4.jpg",
         ]
     },
     {
