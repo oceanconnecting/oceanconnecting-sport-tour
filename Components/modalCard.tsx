@@ -21,9 +21,8 @@ function ImageCard(props: any) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 z-10" />
         <div className="relative h-full flex flex-col justify-end z-10">
-          <div className="p-6 bg-black bg-opacity-50 flex items-center justify-between">
+          <div className="p-6 flex items-center justify-between">
           <h2 className="text-2xl font-bold text-white mb-2">{title}</h2>
-          <Button variant="primary">open</Button>
           </div>
         </div>
       </div>
