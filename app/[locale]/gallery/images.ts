@@ -1,5 +1,5 @@
 
-const raw : string[] = Array.from({ length: 120 }, (_, i) => `/gallery/raw/pic${i + 1}.jpg`);
+const raw : string[] = Array.from({ length: 61 }, (_, i) => `/gallery/img/pic${i + 1}.jpg`);
 
 export const Images = [
     {
