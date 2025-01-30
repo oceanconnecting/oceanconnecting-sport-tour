@@ -19,7 +19,7 @@ interface TourProps{
         
     }[];
     };
-const Tours:React.FC<TourProps>=({tours})=>{
+const Tours = ()=>{
     const ToursData = [
         {id:1,title: "Voyage d'Agadir à Marrakech",image: "/places/Agadir/agadir-oufella.jpg",description: "Découvrez les paysages pittoresques entre Agadir et Marrakech avec des escales fascinantes.",rating: 4.5,departure: "Agadir",arrival: "Marrakech",type: "Aventure",duration: "10 - 12 hours",latesPrice: "300", newPrice: "250"},
         {id:2, title: "Excursion Marrakech - Essaouira",image: "/places/Marrakech/Jemaa-el-Fna.jpg",description: "Un parcours magique à travers les collines et forêts d'arganiers jusqu'à la côte atlantique.",rating: 4.8,departure: "Marrakech",arrival: "Essaouira",type: "Découverte",duration: "2 hours 30 minutes", latesPrice: "400",newPrice: ""},
