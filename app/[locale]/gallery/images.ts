@@ -1,4 +1,11 @@
+
+const raw : string[] = Array.from({ length: 120 }, (_, i) => `/gallery/raw/pic${i + 1}.jpg`);
+
 export const Images = [
+    {
+        title: "some pictures",
+        images : raw
+    },
     {
         title: "agadir oufella",
         images: [
