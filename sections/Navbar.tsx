@@ -153,8 +153,12 @@ function Navbar() {
         className="block lg:hidden overflow-hidden w-full h-fit">
           {navbarLink.map((link, idx) =>
             (
-              <div key={idx} className="pl-5 py-3 flex justify-center hover:text-primary-100">
+              <div
+              key={idx} className="pl-5 py-3 flex justify-center hover:text-primary-100">
                 <Link
+                  onClick={() => (
+                    setIsOpen(false)
+                  )}
                   className="px-3 text-primary-100 hover:text-primary-300 transition duration-300"
                   href={link.link}
                 >
