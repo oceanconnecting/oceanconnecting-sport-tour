@@ -6,6 +6,7 @@ import useMeasure from "react-use-measure";
 import Tag from "@/Components/Tag";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa6";
+import { useLocale, useTranslations } from "next-intl";
 
 interface CardProps {
     image: string;
@@ -36,17 +37,21 @@ function Card({ image, name, descr, starRate }: CardProps) {
     );
 }
 
-const opinions = [
-    { name: "Alex Smith", descr: "Amazing experience! My kids had a blast on the adventure tour. The guides were friendly and well-prepared. Highly recommended!", starRate: 5, image: "/Opinion/f1.jpg" },
-    { name: "Mark Johnson", descr: "Great sports activities! My son enjoyed the soccer camp. Everything was well-organized, and the coaches were professional.", starRate: 4, image: "/Opinion/f2.jpg" },
-    { name: "Juan Lee", descr: "The tour was fun, but the schedule was a bit tight. More free time for kids would be great. Overall, a good experience!", starRate: 3, image: "/Opinion/f3.jpg" },
-    { name: "David Brown", descr: "Excellent service! My daughter loved the outdoor activities. It was safe, engaging, and educational. Will book again!", starRate: 5, image: "/Opinion/f4.jpg" },
-    { name: "Emmanual Wilson", descr: "The staff was very caring, and my kids felt comfortable throughout the trip. They especially enjoyed the team-building games!", starRate: 5, image: "/Opinion/f5.jpg" },
-    { name: "James Carter", descr: "A well-organized tour with a variety of activities. My son loved the basketball training, but the food options could be improved.", starRate: 4, image: "/Opinion/f6.jpg" },
-    { name: "Oliver Martinez", descr: "Fantastic sports program! My daughter learned so much and made new friends. She’s already asking to join again next year.", starRate: 5, image: "/Opinion/f7.jpg" },
-];
-
 function Opinion() {
+
+    const t = useTranslations("homepage.opinion")
+    const locale = useLocale()
+    const isArabic = locale == "ar"
+    const opinions = [
+        { name: t("opinions.opinion_1.name"), descr: t("opinions.opinion_1.opinion"), starRate: 5, image: "/Opinion/f1.jpg" },
+        { name: t("opinions.opinion_2.name"), descr: t("opinions.opinion_2.opinion"), starRate: 4, image: "/Opinion/f2.jpg" },
+        { name: t("opinions.opinion_3.name"), descr: t("opinions.opinion_3.opinion"), starRate: 3, image: "/Opinion/f3.jpg" },
+        { name: t("opinions.opinion_4.name"), descr: t("opinions.opinion_4.opinion"), starRate: 5, image: "/Opinion/f4.jpg" },
+        { name: t("opinions.opinion_5.name"), descr: t("opinions.opinion_5.opinion"), starRate: 5, image: "/Opinion/f5.jpg" },
+        { name: t("opinions.opinion_6.name"), descr: t("opinions.opinion_6.opinion"), starRate: 4, image: "/Opinion/f6.jpg" },
+        { name: t("opinions.opinion_7.name"), descr: t("opinions.opinion_7.opinion"), starRate: 5, image: "/Opinion/f7.jpg" },
+    ];
+
   const FAST_DURATION = 20;
   const SLOW_DURATION = 150;
 
@@ -60,7 +65,7 @@ function Opinion() {
 
   useEffect(() => {
     let controls;
-    let finalPosition = -width / 2 - 8;
+    let finalPosition = isArabic ? (width / 2 - 8) : (-width / 2 - 8);
 
     if (mustFinish) {
       controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
@@ -86,7 +91,7 @@ function Opinion() {
     return (
         <section className="bg-slate-50">
             <div className="flex flex-col overflow-hidden items-center p-6 w-full h-fit">
-                <Tag>What Our Customers Said About Us</Tag>
+                <Tag>{t("title")}</Tag>
                 <div className="overflow-hidden mt-6 w-full">
                 <motion.div
                     className="flex gap-6 w-max flex-nowrap"

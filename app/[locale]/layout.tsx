@@ -27,7 +27,7 @@ export default async function RootLayout({
   const { locale } = await params; // Attendre params avant d'extraire locale
 
   const messages = await getMessages();
-  const validLocales = ["fr", "en", "ar"];
+  const validLocales = ["fr", "en", "ar", "du", "es"];
 
   if (!validLocales.includes(locale)) {
     notFound();

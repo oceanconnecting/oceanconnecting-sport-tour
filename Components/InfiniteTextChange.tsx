@@ -1,7 +1,9 @@
 "use client";
 
 import { motion, AnimatePresence } from "motion/react";
+import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
+
 
 interface InfiniteTextChangeProps {
   textArray: string[];
@@ -23,7 +25,7 @@ function InfiniteTextChange({ textArray }: InfiniteTextChangeProps) {
   if (textArray.length === 0) {
     return <div>No text provided</div>;
   }
-
+  const t = useTranslations("homepage.hero")
   return (
     <div className="h-10 lg:h-16 gap-3 w-auto overflow-hidden flex items-center justify-center">
       <AnimatePresence mode="popLayout">
@@ -38,7 +40,7 @@ function InfiniteTextChange({ textArray }: InfiniteTextChangeProps) {
           {textArray[currentIndex]}
         </motion.div>
       </AnimatePresence>
-      <motion.h1 className=" h-10 lg:h-16" layout>with</motion.h1>
+      <motion.h1 className=" h-10 lg:h-16" layout>{t("grand_title.end_txt")}</motion.h1>
     </div>
   );
 }

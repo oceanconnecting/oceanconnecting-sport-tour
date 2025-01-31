@@ -18,7 +18,7 @@ function Footer() {
           link: "/#about",
         },
         {
-          title: "Features",
+          title: tn("features"),
           link: "/#features"
         },
         {
@@ -26,7 +26,7 @@ function Footer() {
           link: "/#activities"
         },
         {
-          title: "services",
+          title: tn("services"),
           link: "/#services",
         },
         {
@@ -38,8 +38,8 @@ function Footer() {
           link: "/#downloads",
         },
         {
-          title: "galery",
-          link: `/${locale}/galery`
+          title: tn("gallery"),
+          link: `/${locale}/gallery`
         },
         {
           title: tn("contact"),
