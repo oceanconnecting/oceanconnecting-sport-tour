@@ -68,20 +68,20 @@ function Navbar() {
                     originX: 0,
                 }}
             />
-      <div className="flex w-screen h-fit min-h-16 items-center px-5 lg:px-16">
+      <div className="flex w-screen h-fit min-h-16 items-center px-5 lg:px-10">
         <div className="flex-1 flex gap-3 items-center">
-          <div className="mx-4">
+          <div className="">
             {/* logo */}
             
           </div>
-          <Link href='/#main'>{t("title")}</Link>
+          <Link className="transition text-sm lg:text-lg duration-300 font-semibold hover:text-primary-200" href='/#main'>{t("title")}</Link>
         </div>
-        <div className="gap-3 font-medium hidden lg:flex items-center">
+        <div className="lg:gap-8 md:gap-4 font-medium hidden lg:flex items-center">
           {navbarLink.map((link, idx) =>
             (
               <div key={idx}>
                 <Link
-                  className="mx-3 hover:text-primary-300 border-b-2 duration-150 border-opacity-0 hover:border-opacity-100 border-primary-300 pb-5 transition-all"
+                  className="hover:text-primary-300 border-b-2 duration-150 border-opacity-0 hover:border-opacity-100 border-primary-300 pb-5 transition-all"
                   href={link.link}
                 >
                   {link.title}
