@@ -51,9 +51,9 @@ const ToursCard: React.FC<ToursCardProps> =({tour})=>{
             <p>
                 <strong>Arrival:</strong> {tour.arrival}
             </p>
-            <p className="flex">
+            <div className="flex">
               {tour.duration}  hours  <span> <GoDotFill size={7} />   </span>
-            </p>
+            </div>
             <div className="flex items-center">
       {/* Affichage des étoiles pleines */}
       {Array.from({ length: fullStars }).map((_, index) => (
@@ -70,19 +70,19 @@ const ToursCard: React.FC<ToursCardProps> =({tour})=>{
     </div>
     <div>
 
-        {tour.newPrice===""?(
+        {tour.newPrice===" "?(
             
-        <p className="text-lg font-medium">
-        <span className="text-xl  mr-2">À partir {tour.latesPrice} <span className="text-xs pr-3" >MAD </span>par pesonne</span>
-      </p>
+        <div className="text-lg font-medium">
+        <div className="text-xl  mr-2">À partir {tour.latesPrice} <div className="text-xs pr-3" >MAD </div>par pesonne</div>
+      </div>
         ):(
            
             <div className="flex items-start text-lg font-medium space-x-4">
             <div>
-              <span className="text-xl line-through mr-2">À partir {tour.latesPrice} MAD</span>
-              <span className="text-red-500 block">
-                À partir de {tour.newPrice} <span className="text-xs pr-3">MAD</span>
-              </span>
+              <div className="text-xl line-through mr-2">À partir {tour.latesPrice} MAD</div>
+              <div className="text-red-500 block">
+                À partir de {tour.newPrice} <div className="text-xs pr-3">MAD</div>
+              </div>
             </div>
             <div>
               <p>&nbsp;</p> {/* Espace visuel si nécessaire */}
