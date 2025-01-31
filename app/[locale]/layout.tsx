@@ -17,16 +17,15 @@ export const metadata: Metadata = {
   keywords: "Ocean connecting tours, ocean sports, ocean sports tours, etc."
 };
 
-export default async function RootLayout({
-  children,
-  params,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
   params: { locale: string };
-}>) {
-  const { locale } = await params; // Attendre params avant d'extraire locale
+}
 
-  const messages = await getMessages();
+export default async function RootLayout({ children, params }: RootLayoutProps) {
+  const { locale } = params; // No need for `await` here
+
+  const messages = await getMessages({ locale }); // Pass locale explicitly
   const validLocales = ["fr", "en", "ar", "du", "es"];
 
   if (!validLocales.includes(locale)) {
