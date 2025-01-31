@@ -18,7 +18,7 @@ function Navbar() {
       link: "/#about",
     },
     {
-      title: "Features",
+      title: t("features"),
       link: "/#features"
     },
     {
@@ -26,7 +26,7 @@ function Navbar() {
       link: "/#activities"
     },
     {
-      title: "services",
+      title: t("services"),
       link: "/#services",
     },
     {
@@ -38,7 +38,7 @@ function Navbar() {
       link: "/#downloads",
     },
     {
-      title: "gallery",
+      title: t("gallery"),
       link: `/${locale}/gallery`
     },
     {

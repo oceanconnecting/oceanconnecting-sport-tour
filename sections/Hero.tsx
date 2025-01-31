@@ -11,7 +11,7 @@ function Hero() {
     const t = useTranslations("homepage.hero")
     const locale = useLocale()
 
-    const textList = ['Learn', 'Travel', 'Grow']
+    const textList = [t("grand_title.txt_1"), t("grand_title.txt_2"), t("grand_title.txt_3")]
 
   return (
     <section id='main' className='w-full h-screen relative'>
@@ -34,7 +34,7 @@ function Hero() {
                     {t("descr")}
                 </p>
                 <div className='flex mt-7 gap-3 flex-col md:flex-row'>
-                    <Button href={`/${locale}/contact`} variant='primary'>Get In touch</Button>
+                    <Button href={`/${locale}/contact`} variant='primary'>{t("contact_button")}</Button>
                 </div>
             </div>
         </div>

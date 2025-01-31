@@ -2,9 +2,10 @@
 
 import Tag from "@/Components/Tag";
 import { animate } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { twMerge } from "tailwind-merge";
 interface CounterProps {
   from: number;
   to: number;
@@ -63,6 +64,9 @@ const Counter: React.FC<CounterProps> = ({ from, to }) => {
 function About() {
   const t = useTranslations("homepage.about")
 
+  const locale = useLocale()
+  const isArabic = locale == "ar"
+
   return (
     <section id="about">
       <div className="w-full bg-background-950 gap-6 py-16 px-10 flex items-center flex-col">
@@ -70,10 +74,10 @@ function About() {
         <div className="grid lg:grid-cols-2 gap-4 h-full justify-center items-center">
           <div className="flex flex-col items-center lg:items-start">
             <div className="text-md md:text-xl lg:text-3xl flex gap-2 text-text-200 rounded-full font-bold bg-primary-900 w-fit px-6 py-3">
-              +<Counter from={0} to={3}/> Years of experience
+              +<Counter from={0} to={3}/> {t("about_tag")}
             </div>
             <div className="flex items-center flex-col">
-              <p className="mt-6 text-center lg:text-left text-slate-800 sm:text-lg/relaxed max-w-lg">
+              <p className={twMerge("mt-6 text-center text-slate-800 sm:text-lg/relaxed max-w-lg", isArabic ? "lg:text-right" : "lg:text-left")}>
                 {t("about_text")}
               </p>
             </div>
