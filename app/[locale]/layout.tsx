@@ -4,9 +4,10 @@ import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { Poppins, Tajawal } from "next/font/google";
 import BackToTopButton from "@/Components/BackToTopButton";
+
 
 const poppins = Poppins({ subsets: ["latin"], weight: "300" });
 const tajawal = Tajawal({ subsets: ["arabic"], weight: "400" });
@@ -23,12 +24,12 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  const locale = params?.locale ?? "fr";
+  const locale = params.locale;
   const messages = await getMessages({ locale });
-
+  
   const validLocales = ["fr", "en", "ar", "du", "es"];
   if (!validLocales.includes(locale)) {
-    notFound();
+    redirect("/fr");
   }
 
   const direction = locale === "ar" ? "rtl" : "ltr";
