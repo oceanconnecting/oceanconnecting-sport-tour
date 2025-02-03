@@ -1,4 +1,4 @@
 
 export default function Custom404() {
-  return <p>Page not found. Redirecting...</p>;
+  return <p>Page not found</p>;
 }

@@ -40,7 +40,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <BackToTopButton />
-          <main>{children}</main>
+          {children}
           <Footer />
         </NextIntlClientProvider>
       </body>
