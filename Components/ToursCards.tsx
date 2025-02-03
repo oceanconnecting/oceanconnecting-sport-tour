@@ -2,7 +2,7 @@
 import { GoDotFill } from "react-icons/go";
 import { LuDot } from "react-icons/lu";
 import { FaStar, FaRegStar } from 'react-icons/fa';
-
+import { useLocale } from "next-intl";
 import { useRouter } from 'next/navigation';
 interface Tour{
     id:number,
@@ -13,9 +13,10 @@ description:string ,
 arrival:string ,
 duration: string,
 type:string,
-rating: number,
+rating:number  ,
 newPrice:string,
-latesPrice:string
+latesPrice:string,
+route:number[][],
 }
 interface ToursCardProps{
     tour:Tour;
@@ -29,11 +30,16 @@ const ToursCard: React.FC<ToursCardProps> =({tour})=>{
     const fullStars = Math.floor(tour.rating); // Nombre d'étoiles pleines
   const halfStar = tour.rating % 1 >= 0.5 ? 1 : 0; // Gérer les demi-étoiles
     const router=useRouter();
-    const handleClick=()=>{
-        router.push(`/tours/${tour.id}`)
-    }
+    const locale=useLocale()
+    
+    const handleClick = () => {
+    // Utilise router.push pour naviguer vers la page de détail avec l'ID du tour
+    router.push(`/${locale}/Tours/${tour.id}`);  
+    };
+
+
     return (
-        <div   className=" group-hover:scale-110 cursor-pointer grid gap-6">
+        <div  onClick={handleClick} className=" group-hover:scale-110 cursor-pointer grid gap-6">
         
           <div  className="rounded shadow-md p-4 bg-white">
             <img src={tour.image} alt={tour.title} className="w-full h-48 object-cover rounded-md" />
@@ -46,9 +52,9 @@ const ToursCard: React.FC<ToursCardProps> =({tour})=>{
             <p>
                 <strong>Arrival:</strong> {tour.arrival}
             </p>
-            <p className="flex">
+            <div className="flex">
               {tour.duration}  hours  <span> <GoDotFill size={7} />   </span>
-            </p>
+            </div>
             <div className="flex items-center">
       {/* Affichage des étoiles pleines */}
       {Array.from({ length: fullStars }).map((_, index) => (
@@ -65,19 +71,19 @@ const ToursCard: React.FC<ToursCardProps> =({tour})=>{
     </div>
     <div>
 
-        {tour.newPrice===""?(
+        {tour.newPrice===" "?(
             
-        <p className="text-lg font-medium">
-        <span className="text-xl  mr-2">À partir {tour.latesPrice} <span className="text-xs pr-3" >MAD </span>par pesonne</span>
-      </p>
+        <div className="text-lg font-medium">
+        <div className="text-xl  mr-2">À partir {tour.latesPrice} <div className="text-xs pr-3" >MAD </div>par pesonne</div>
+      </div>
         ):(
            
             <div className="flex items-start text-lg font-medium space-x-4">
             <div>
-              <span className="text-xl line-through mr-2">À partir {tour.latesPrice} MAD</span>
-              <span className="text-red-500 block">
-                À partir de {tour.newPrice} <span className="text-xs pr-3">MAD</span>
-              </span>
+              <div className="text-xl line-through mr-2">À partir {tour.latesPrice} MAD</div>
+              <div className="text-red-500 block">
+                À partir de {tour.newPrice} <div className="text-xs pr-3">MAD</div>
+              </div>
             </div>
             <div>
               <p>&nbsp;</p> {/* Espace visuel si nécessaire */}

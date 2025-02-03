@@ -3,36 +3,31 @@ import react from 'react';
 import ToursCards from '@/Components/ToursCards'
 import { GiGalaxy } from "react-icons/gi";
 import Tag from '@/Components/Tag';
-interface TourProps{
-    tours:{
-        id:number,
-        title:string ,
-        image:string ,
-        description:string ,
-        departure: string ,
-        arrival:string ,
-        duration: string,
-        type:string,
-        newPrice:string ,
-        latesPrice:string,
-        rating:number,
-        
-    }[];
-    };
-const Tours = ()=>{
-    const ToursData = [
-        {id:1,title: "Voyage d'Agadir à Marrakech",image: "/places/Agadir/agadir-oufella.jpg",description: "Découvrez les paysages pittoresques entre Agadir et Marrakech avec des escales fascinantes.",rating: 4.5,departure: "Agadir",arrival: "Marrakech",type: "Aventure",duration: "10 - 12 hours",latesPrice: "300", newPrice: "250"},
-        {id:2, title: "Excursion Marrakech - Essaouira",image: "/places/Marrakech/Jemaa-el-Fna.jpg",description: "Un parcours magique à travers les collines et forêts d'arganiers jusqu'à la côte atlantique.",rating: 4.8,departure: "Marrakech",arrival: "Essaouira",type: "Découverte",duration: "2 hours 30 minutes", latesPrice: "400",newPrice: ""},
-        {id:3,title: "Road Trip Essaouira - Agadir",image: "/places/Essaouira/Kasbah.jpg",description: "Partez à la découverte des plages sauvages et des charmants villages côtiers.",rating: 4.3,departure: "Essaouira",arrival: "Agadir",type: "Relaxation",duration: "3 days",latesPrice: "350",newPrice: ""},
-        {id:4,title: "Aventure d'une journée Agadir - Essaouira",image: "/places/Agadir/medina-museum.jpg",description: "Profitez d'une route panoramique jusqu'à la célèbre ville bleue, Essaouira.", rating: 4.6,departure: "Agadir",arrival: "Essaouira",type: "visite guid",duration: "4 hours",latesPrice: "450", newPrice: "400"},
-        {id:5,title: "Circuit Marrakech, Essaouira et Agadir",image: "/places/Marrakech/Menara-marrakech.jpg",description: "Explorez les merveilles de trois villes emblématiques du Maroc.",rating: 4.9,departure: "Marrakech",arrival: "Agadir",type: "excursion",duration: "5 hours",latesPrice: "600",newPrice: "500"}
-      ];
-      
-    
-      
+import DataTours from '@/app/[locale]/Tours/[id]/ToursData';
+import getToursData from '@/app/[locale]/Tours/[id]/ToursData';
+interface Tour{
+   
+  id:number,
+  title:string ,
+  image:string ,
+  description:string ,
+  departure: string ,
+  arrival:string ,
+  duration: string,
+  type:string,
+  newPrice:string ,
+  latesPrice:string,
+  rating:number,
+  route: number[][],
+  passBy: string[];
+  
+
+};
+const Tours=()=>{
+  const ToursData: Tour[] = getToursData();
       
 return(
-    <div id="Tous" className="  py-8 my-3 bg-zinc-100">
+    <div id="Tours" className="  py-8 my-3 bg-zinc-100">
   {/* Section Header */}
   <div className="flex items-center font-sans text-slate-900 mb-6">
     <p className="text-xl font-semibold mr-2 px-5">Pour vous</p>
