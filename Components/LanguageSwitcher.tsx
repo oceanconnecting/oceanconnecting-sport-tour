@@ -9,7 +9,7 @@ import CustomSelect from "./languageCustomSelect";
 function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
-  const validLocales = ["fr", "en", "ar"];
+  const validLocales = ["fr", "en", "ar", "du", "es"];
 
   if (!validLocales.includes(locale)) {
     notFound();

@@ -61,19 +61,20 @@ export default function Carousel({ images }: CarouselProps) {
       >
         <IoIosArrowForward className="w-6 h-6 text-gray-800" />
       </button>
-
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-300 transition-all duration-200 ${
-              index === currentIndex ? "bg-primary-300" : "bg-gray-300"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+        {images.length <= 10 &&
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-300 transition-all duration-200 ${
+                index === currentIndex ? "bg-primary-300" : "bg-gray-300"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+        }
     </div>
   );
 }
