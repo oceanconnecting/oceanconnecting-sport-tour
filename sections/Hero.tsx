@@ -19,7 +19,7 @@ function Hero() {
             <source src="/8925443-hd_1920_1080_25fps.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
-        <div className='flex flex-col bg-primary-100/60 px-4 pt-5 w-full h-full'>
+        <div className='flex flex-col bg-primary-100/80 px-4 pt-5 w-full h-full'>
             <div className='w-full h-full flex flex-col justify-center items-center'>
                 <div className='px-5 mb-3 py-2 gap-3 text-white backdrop-blur-lg bg-white/10 border border-white/10 rounded-full flex items-center justify-center'>
                     <GiSevenPointedStar />
@@ -34,7 +34,8 @@ function Hero() {
                     {t("descr")}
                 </p>
                 <div className='flex mt-7 gap-3 flex-col md:flex-row'>
-                    <Button href={`/${locale}/contact`} variant='primary'>{t("contact_button")}</Button>
+                    <Button href='/#about' variant='primary'>get Started</Button>
+                    <Button href={`/${locale}/contact`} variant='secondary'>{t("contact_button")}</Button>
                 </div>
             </div>
         </div>

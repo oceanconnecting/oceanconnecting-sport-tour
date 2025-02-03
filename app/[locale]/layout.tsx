@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import "./[locale]/globals.css";
+import "./globals.css";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { Poppins, Tajawal } from "next/font/google";
 import BackToTopButton from "@/Components/BackToTopButton";
 
@@ -13,28 +13,30 @@ const tajawal = Tajawal({ subsets: ["arabic"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Ocean Sport Tours",
-  description: "Explore the best ocean sport tours!",
+  description: "Ocean Sport Tours",
+  keywords: "Ocean connecting tours, ocean sports, ocean sports tours, etc."
 };
 
 export default async function RootLayout({
   children,
   params,
-}: {
+}: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
-}) {
-  const locale = params?.locale ?? "fr";
-  const messages = await getMessages({ locale });
+}>) {
+  const { locale } = await params;
 
-  const validLocales = ["fr", "en", "ar", "du", "es"];
+  const messages = await getMessages();
+  const validLocales = ["fr", "en", "ar"];
+
   if (!validLocales.includes(locale)) {
-    notFound();
+    redirect("/fr")
   }
 
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html lang={locale} dir={direction}>
+    <html lang={locale} dir={direction} suppressHydrationWarning>
       <body className={locale === "ar" ? tajawal.className : poppins.className}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />

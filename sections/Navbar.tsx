@@ -1,14 +1,18 @@
 "use client";
 import Link from "next/link";
 import { useTranslations } from "use-intl";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import LanguageSwitcher from "@/Components/LanguageSwitcher";
 import { twMerge } from "tailwind-merge";
 import {useLocale} from "use-intl";
-import { AnimatePresence, motion, useScroll } from "motion/react";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
+
+const parentVariants = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: "-4rem" },
+};
 
 function Navbar() {
-  const { scrollYProgress } = useScroll()
   const t = useTranslations("homepage.navbar");
   const locale = useLocale()
 
@@ -53,21 +57,34 @@ function Navbar() {
     setOpenSubMenu(openSubMenu === index ? null : index);
   };
 
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+  const [prevScroll, setPrevScroll] = useState(0);
+
+  function update(latest: number, prev: number): void {
+    if (latest < prev) {
+      setHidden(false);
+      // console.log("visible");
+    } else if (latest > 100 && latest > prev) {
+      setHidden(true);
+      // console.log("hidden");
+    }
+  }
+
+  useMotionValueEvent(scrollY, "change", (latest: number) => {
+    update(latest, prevScroll);
+    setPrevScroll(latest);
+  });
+
   return (
-    <section className="fixed z-50 bg-white shadow-md backdrop-blur-2xl bg-opacity-90">
-      <motion.div
-                id="scroll-indicator"
-                className="bg-primary-800"
-                style={{
-                    scaleX: scrollYProgress,
-                    position: "fixed",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    height: 2,
-                    originX: 0,
-                }}
-            />
+    <motion.section
+      variants={parentVariants}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{
+        ease: [0.1, 0.25, 0.3, 1],
+        duration: 0.3,
+      }}
+    className="fixed z-50 shadow-md backdrop-blur-2xl bg-white bg-opacity-90">
       <div className="flex w-screen h-fit min-h-16 items-center px-5 lg:px-10">
         <div className="flex-1 flex gap-3 items-center">
           <div className="">
@@ -92,7 +109,6 @@ function Navbar() {
           <LanguageSwitcher />
         </div>
 
-        {/* style responsive */}
         <div className="flex gap-3 lg:hidden">
           <LanguageSwitcher />
           <div
@@ -170,7 +186,7 @@ function Navbar() {
         </motion.div>
       )}
       </AnimatePresence>
-    </section>
+    </motion.section>
   );
 }
 

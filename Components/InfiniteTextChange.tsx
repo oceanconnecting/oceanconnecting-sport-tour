@@ -27,20 +27,22 @@ function InfiniteTextChange({ textArray }: InfiniteTextChangeProps) {
   }
   const t = useTranslations("homepage.hero")
   return (
-    <div className="h-10 lg:h-16 gap-3 w-auto overflow-hidden flex items-center justify-center">
+    <div className="h-16 lg:h-20 gap-3 w-auto flex items-center justify-center">
+      <div className="h-16 lg:h-20">
       <AnimatePresence mode="popLayout">
         <motion.div
           key={currentIndex}
-          initial={{ y: "100%", opacity: 0, }}
-          animate={{ y: "0%", opacity: 1, }}
-          exit={{ y: "-100%", opacity: 0, }}
+          initial={{ opacity: 0, }}
+          animate={{ opacity: 1, }}
+          exit={{ opacity: 0, }}
           transition={{ duration: 0.2 }}
-          className="h-10 lg:h-16 w-fit text-center"
+          className="w-fit text-center"
         >
           {textArray[currentIndex]}
         </motion.div>
       </AnimatePresence>
-      <motion.h1 className=" h-10 lg:h-16" layout>{t("grand_title.end_txt")}</motion.h1>
+      </div>
+      <motion.h1 className="h-full" layout>{t("grand_title.end_txt")}</motion.h1>
     </div>
   );
 }

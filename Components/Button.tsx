@@ -5,8 +5,8 @@ import Link, { LinkProps } from "next/link";
 const classes = cva("", {
   variants: {
     variant: {
-      primary: "text-text-50 py-3 px-5 rounded-2xl border-t shadow-md active:shadow-sm border-primary-600 focus:outline outline-primary-400/50 text-white bg-primary-500 active:bg-primary-300 hover:bg-primary-400 transition duration-300",
-      secondary: "text-text-950 py-3 px-5 rounded-full border border-white bg-opacity-0 bg-white hover:bg-opacity-25 active:bg-opacity-90 active:text-text-50 transition duration-300",
+      primary: "text-text-50 py-3 px-8 rounded-2xl shadow-md active:shadow-none border-primary-600 focus:ring-2 ring-primary-400/50 text-white bg-primary-500 active:bg-primary-300 hover:bg-primary-400 transition duration-300",
+      secondary: "text-text-50 py-3 px-8 rounded-2xl border border-transparent hover:border-white/20 active:shadow-none focus:ring-2 ring-primary-400/50 text-white bg-white/10 active:bg-white/20 hover:bg-transparent transition duration-300",
     },
   },
 });
