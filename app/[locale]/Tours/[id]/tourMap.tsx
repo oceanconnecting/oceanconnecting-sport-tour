@@ -12,17 +12,16 @@ L.Icon.Default.mergeOptions({
   iconUrl: require("leaflet/dist/images/marker-icon.png"),
   shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
 });
+interface TourMapsProps{
+    route:[number,number][]
+}
 
 // Définition de l'itinéraire avec une structure correcte pour Polyline
 const route: [number, number][] = [
-    [30.4278, -9.5981],  // Agadir
-    [30.6464, -9.2121],  // Amskroud
-    [30.8456, -8.6938],  // Imi n'Tanout
-    [31.5339, -8.7653],  // Chichaoua
-    [31.6295, -7.9811],  // Marrakech
+   
 ];
 
-export default function TourMap() {
+export default function TourMap({route}:TourMapsProps) {
   return (
     <div className="w-full h-[500px] rounded-xl shadow-lg">
       <MapContainer

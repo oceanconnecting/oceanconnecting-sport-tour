@@ -1,52 +1,88 @@
 "use client";
 
 import React from "react";
-import { IoLocationSharp } from "react-icons/io5";
-import { RiNumber1 } from "react-icons/ri";
+import { FaRegHeart, FaStar } from "react-icons/fa";
+interface ItineraryProps{
+  passBy:string[],
+  image:string,
+  title:string
 
-const Itinerary = () => {
+}
+
+  
+export default function Itinerary({ passBy, image ,title}:ItineraryProps) {
+  
+
   return (
-    <div className="space-y-6 py-8">
-      <div className="flex items-center space-x-4">
-        <div className="text-lg font-semibold text-center flex-1">
-          Itinerary
-        </div>
+    <div className="max-w-4xl mx-auto px-4 py-8 space-y-6 text-gray-800">
+      {/* Titre principal */}
+      <h2 className="text-2xl font-bold">Itinerary</h2>
 
-        {/* Icône avec cercle */}
-        <div className="w-12 h-12 border border-black rounded-full flex justify-center items-center bg-gray-100">
-          <IoLocationSharp size={25} className="text-black" />
-        </div>
-        <span className="text-gray-700 font-medium">Agadir-Marrakech</span>
-      </div>
+     
 
-      {/* Section du Titre */}
-      <div className="space-y-4">
-        <div className="flex items-center justify-center">
-          <div className="w-12 h-12 border border-black rounded-full flex justify-center items-center bg-black text-white">
-            <RiNumber1 />
+      {/* Bloc d'itinéraire */}
+      <div className="relative flex items-start space-x-4">
+        {/* Ligne verticale en pointillé */}
+        <div className="absolute left-2 top-0 bottom-0 border-l-2 border-dotted border-gray-300" />
+
+        {/* Numéro et cercle */}
+        <div className="relative z-10 flex flex-col items-center">
+          <div className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-semibold">
+            1
           </div>
-          <span className="ml-4 text-lg font-semibold text-gray-800">Paradise Valley Agadir</span>
         </div>
 
-        <div className="space-y-2 mt-4">
-          <p className="text-gray-600">Pass by:</p>
+        {/* Contenu principal de l'étape */}
+        <div className="flex-1 space-y-4 pt-1">
+          {/* Titre, durée, rating et favori */}
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-2 md:space-y-0">
+            <div>
+              <h3 className="text-lg font-semibold">{title}</h3>
+              <p className="text-sm text-gray-500">
+                Stop: 3 hours - Admission included
+              </p>
+            </div>
+            {/* Rating + Avis + Favori */}
+            <div className="flex items-center space-x-2">
+            
+              
+              
+              <button
+                title="Add to favorites"
+                className="text-gray-400 hover:text-red-500"
+              >
+                <FaRegHeart size={18} />
+              </button>
+            </div>
+          </div>
 
+          {/* Image + Description + Bouton */}
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-4">
+            {/* Image (exemple) */}
+            <div className="w-full md:w-1/2 h-48 rounded-md overflow-hidden mb-4 md:mb-0">
+              <img
+                src={image}
+                alt="Paradise Valley"
+                className="object-cover w-full h-full"
+              />
+            </div>
+
+           
+          </div>
+
+          {/* Pass by */}
           <div className="space-y-2">
-            <p className="text-gray-700">Souk El Had d'Agadir</p>
-            <p className="text-gray-700">Souk El Had d'Agadir</p>
-            <p className="text-gray-700">Souk El Had d'Agadir</p>
-            <p className="text-gray-700">Souk El Had d'Agadir</p>
-            <p className="text-gray-700">Souk El Had d'Agadir</p>
-            <p className="text-gray-700">Souk El Had d'Agadir</p>
-            <p className="text-gray-700">Souk El Had d'Agadir</p>
-            <p className="text-gray-700">Souk El Had d'Agadir</p>
-            <p className="text-gray-700">Souk El Had d'Agadir</p>
-            <p className="text-gray-700">Souk El Had d'Agadir</p>
+            <h4 className="font-semibold">Pass by</h4>
+            <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+             {passBy.map((location,index)=>(
+              <li key={index}>{location}</li>
+             ))}
+             
+            </ul>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default Itinerary;

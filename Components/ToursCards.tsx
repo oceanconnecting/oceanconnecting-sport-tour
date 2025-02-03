@@ -15,7 +15,8 @@ duration: string,
 type:string,
 rating:number  ,
 newPrice:string,
-latesPrice:string
+latesPrice:string,
+route:number[][],
 }
 interface ToursCardProps{
     tour:Tour;
