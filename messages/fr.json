@@ -1,255 +1,280 @@
 {
   "homepage": {
     "navbar": {
-      "title": "ocean sport tours",
+      "title": "Ocean Sports Tour",
       "about": "à propos",
+      "features":"fonctionnalités",
       "activities": "activités",
-      "places": "lieux",
-      "downloads": "téléchargements",
-      "galery": {
-        "title": "galerie",
-        "galery": {
-          "gal_1": "essaouira",
-          "gal_2": "imsouane",
-          "gal_3": "sidi bibi",
-          "gal_4": "tafraout",
-          "gal_5": "taroudant",
-          "gal_6": "tiznit"
-        }
+      "places":"lieux",
+      "services":"services",
+      "downloads":"téléchargements",
+      "gallery":"galerie",
+      "professional":"professionnel",
+      "contact":"contact"
+    },
+    "hero":{
+      "hero_tag":"Aventure adaptée pour les esprits curieux",
+      "grand_title" : {
+        "txt_1":"Apprendre",
+        "txt_2":"Voyager",
+        "txt_3":"et Grandir",
+        "end_txt":"avec"
       },
-      "professional": "professionnel",
-      "contact": "contact"
+      "highlighted":"Ocean Sports Tour",
+      "descr":"nous nous spécialisons dans la création d'expériences de tournée inoubliables pour les enfants ! Notre mission est d'inspirer la curiosité, de stimuler la créativité et de favoriser l'apprentissage à travers des aventures passionnantes adaptées aux jeunes explorateurs.",
+      "contact_button": "Contactez-nous"
     },
-    "hero": {
-      "hero_tag": "Aventure conçue pour les esprits curieux",
-      "grand_title": "Explorez, apprenez et grandissez avec",
-      "highlighted": "Tours de Sports Nautiques",
-      "descr": "Nous sommes spécialisés dans la création d'expériences de tours inoubliables pour les enfants ! Notre mission est d'inspirer la curiosité, de stimuler la créativité et de favoriser l'apprentissage à travers des aventures passionnantes conçues spécialement pour les jeunes explorateurs.",
-      "contact_button": "Contactez-nous",
-      "book_button": "Réservez une visite"
+    "about":{
+      "about_tag":"Années d'expérience",
+      "about_title":"à propos de nous",
+      "about_text":"Ocean Sport et Tours, entreprise de transport touristique et sportif basée à Agadir, a débuté ses activités en 2022. L'association propose une gamme diversifiée de services de qualité, alliant disponibilité, proactivité et qualité. Nous nous engageons à faire la différence dans tout ce que nous faisons, car notre principal objectif est de refléter une belle image du tourisme au Maroc en écoutant les besoins et les demandes des clients et en leur offrant une expérience perspicace et sans souci."
     },
-    "about": {
-      "about_title": "à propos de nous",
-      "about_text": "Ocean Sport et Tours, entreprise de transport touristique et de sport basée à Agadir, a commencé ses activités en 2022. L'association propose une gamme très diversifiée de services jugés de haute qualité, alliant disponibilité, proactivité et qualité. Nous nous engageons à faire la différence dans tout ce que nous faisons, notre objectif principal étant de refléter une excellente image du tourisme au Maroc en écoutant les besoins et les demandes des clients et en leur offrant une expérience perspicace et sans souci."
-    },
-    "choose": {
-      "title": "Pourquoi nous choisir",
+    "choose":{
+      "title":"Pourquoi nous choisir",
       "choose_1": {
-        "title": "Sûr et sécurisé",
-        "descr": "La sécurité de votre enfant est notre priorité absolue grâce à un personnel formé et des voyages sécurisés."
+        "title":"Sécuritaire et sûr",
+        "descr":"La sécurité de votre enfant est notre priorité, avec du personnel formé et des voyages sécurisés."
       },
       "choose_2": {
-        "title": "Activités amusantes",
-        "descr": "Des expériences engageantes et amusantes que les enfants apprécieront et se rappelleront."
+        "title":"Activités amusantes",
+        "descr":"Des expériences engageantes et amusantes que les enfants apprécieront et se souviendront."
       },
       "choose_3": {
-        "title": "Valeur éducative",
-        "descr": "Un mélange d'apprentissage et d'aventure pour élargir les horizons de votre enfant."
+        "title":"Valeur éducative",
+        "descr":"Un mélange d'apprentissage et d'aventure pour élargir les horizons de votre enfant."
       }
     },
-    "activities": {
-      "activities_title": "activités",
+    "activities":{
+      "activities_title":"activités",
       "activities": {
         "activity_1": {
-          "title": "Parc Aquatique",
-          "descr": "Profitez d'une journée remplie de toboggans aquatiques, de piscines à vagues et de rivières paresseuses au parc aquatique."
+          "title": "Parc aquatique",
+          "descr": "Profitez d'une journée de toboggans aquatiques, de piscines à vagues et de rivières paresseuses au parc aquatique."
         },
         "activity_2": {
           "title": "Balade à dos de chameau",
-          "descr": "Vivez une aventure traditionnelle dans le désert en chevauchant un chameau à travers des dunes pittoresques."
+          "descr": "Vivez une aventure traditionnelle dans le désert en montant un chameau à travers les dunes pittoresques."
         },
         "activity_3": {
           "title": "Montgolfière",
-          "descr": "Élevez-vous au-dessus du paysage et admirez des vues à couper le souffle lors d'une balade en montgolfière."
+          "descr": "Survolez le paysage et profitez de vues à couper le souffle lors d'un vol en montgolfière."
         },
         "activity_4": {
           "title": "Balade à cheval",
           "descr": "Embarquez pour un voyage paisible à travers des sentiers et des champs ouverts à cheval."
         },
         "activity_5": {
-          "title": "Jet Ski",
-          "descr": "Ressentez l'adrénaline en traversant l'eau à grande vitesse sur un jet ski puissant."
+          "title": "Jetski",
+          "descr": "Ressentez l'adrénaline en fonçant sur l'eau à bord d'un jetski puissant."
         },
         "activity_6": {
           "title": "Karting",
-          "descr": "Faites la course contre vos amis et votre famille sur une piste de karting pour une expérience pleine d'adrénaline."
+          "descr": "Faites la course contre vos amis et votre famille sur un circuit de karting pour une expérience pleine d'adrénaline."
         },
         "activity_7": {
           "title": "Parachute",
-          "descr": "Faites le grand saut et vivez l'excitation du parachutisme."
+          "descr": "Faites un saut dans le vide et vivez l'excitation du parachutisme."
         },
         "activity_8": {
           "title": "Quad et Buggy",
-          "descr": "Parcourez des terrains accidentés et des sentiers sablonneux avec un quad ou un buggy."
+          "descr": "Explorez les terrains accidentés et les sentiers sablonneux en quad ou en buggy."
         },
         "activity_9": {
-          "title": "Sandboarding",
-          "descr": "Descendez des dunes de sable imposantes sur une planche de sable pour une aventure unique dans le désert."
+          "title": "Sandboard",
+          "descr": "Glissez sur des dunes de sable géantes en pratiquant le sandboard pour une aventure unique dans le désert."
         },
         "activity_10": {
           "title": "Surf",
-          "descr": "Attrapez les vagues et profitez des sensations fortes du surf en pleine mer."
+          "descr": "Attrapez les vagues et vivez l'excitation du surf en mer."
         }
       }
     },
     "text_ticker": {
       "text_1": "Inspirer les jeunes esprits, une aventure à la fois.",
-      "text_2": "Chaque voyage est une chance d'éveiller la curiosité et la joie.",
-      "text_3": "Créez des souvenirs qui durent toute une vie grâce à l'exploration et au jeu.",
+      "text_2": "Chaque voyage est une chance de susciter la curiosité et la joie.",
+      "text_3": "Créez des souvenirs qui dureront toute une vie grâce à l'exploration et au jeu.",
       "text_4": "Organiser des aventures, façonner des rêves et apporter des sourires.",
       "text_5": "Chaque enfant mérite la magie de la découverte et du plaisir.",
       "text_6": "L'exploration nourrit l'imagination, et les activités donnent vie aux rêves.",
       "text_7": "Planifiez-le. Explorez-le. Chérissez-le.",
-      "text_8": "Transformer de simples voyages en aventures extraordinaires pour les enfants.",
-      "text_9": "Les organisateurs attentionnés créent les souvenirs que les enfants chérissent.",
-      "text_10": "Un tour bien planifié est plus qu'un voyage, c'est une porte vers la merveille."
+      "text_8": "Transformer des voyages simples en aventures extraordinaires pour les enfants.",
+      "text_9": "Les organisateurs qui se soucient créent les souvenirs que les enfants chérissent.",
+      "text_10": "Une tournée bien planifiée est plus qu'un voyage, c'est une porte vers l'émerveillement."
     },
     "places": {
-      "title": "lieux",
+      "title":"lieux",
+      
       "place_1": {
         "title": "Agadir Oufella",
         "city":"Agadir",
-        "descr": "Une forteresse historique au sommet d'une colline offrant une vue panoramique sur Agadir et sa côte. Un endroit parfait pour les amateurs d'histoire et les photographes."
+        "descr": "Une forteresse historique située sur une colline offrant des vues panoramiques d'Agadir et de sa côte. C'est un endroit parfait pour les passionnés d'histoire et les photographes."
       },
       "place_2": {
         "title": "Corniche",
         "city":"Agadir",
-        "descr": "Une promenade animée en bord de mer bordée de cafés, de restaurants et de boutiques, idéale pour des balades tranquilles et profiter de la brise océanique."
+        "descr": "Une promenade animée en bord de mer bordée de cafés, restaurants et magasins, idéale pour des promenades tranquilles et profiter de la brise de l'océan."
       },
       "place_3": {
-        "title": "Parc aux Crocodiles",
+        "title": "Croco Park",
         "city":"Agadir",
-        "descr": "Un parc unique de crocodiles avec des jardins luxuriants et plus de 300 crocodiles du Nil. Une expérience amusante et éducative pour les familles."
+        "descr": "Un parc unique avec des jardins luxuriants et plus de 300 crocodiles du Nil. Une expérience amusante et éducative pour les familles."
       },
       "place_4": {
-        "title": "Monde des Dauphins Agadir",
+        "title": "Dolphin World Agadir",
         "city":"Agadir",
         "descr": "Un centre de divertissement où les visiteurs peuvent profiter de spectacles de dauphins et interagir avec ces animaux marins intelligents."
       },
       "place_5": {
         "title": "Imi Ouaddar",
         "city":"Agadir",
-        "descr": "Un village côtier pittoresque connu pour ses plages immaculées et son atmosphère détendue, parfait pour une escapade relaxante."
+        "descr": "Un village côtier pittoresque connu pour ses plages immaculées et son atmosphère détendue, parfait pour une escapade reposante."
       },
       "place_6": {
         "title": "Legzira",
         "city":"Agadir",
-        "descr": "Célèbre pour ses impressionnantes arches rocheuses rouges sur la plage, ce site naturel est un incontournable pour les amoureux de la nature et les photographes."
+        "descr": "Célèbre pour ses arches de roche rouge sur la plage, cette merveille naturelle est un incontournable pour les amoureux de la nature et les photographes."
       },
       "place_7": {
         "title": "Marina",
         "city":"Agadir",
-        "descr": "Une zone portuaire moderne avec des yachts de luxe, des boutiques haut de gamme et des options de restauration en bord de mer."
+        "descr": "Une zone portuaire moderne avec des yachts de luxe, des magasins haut de gamme et des options de restauration en bord de mer."
       },
       "place_8": {
-        "title": "Médina et Musée du Patrimoine Amazigh",
+        "title": "Medina et Musée du Patrimoine Amazigh",
         "city":"Agadir",
-        "descr": "Un centre culturel mettant en valeur l'architecture traditionnelle marocaine, l'art et les artefacts, célébrant le patrimoine amazigh."
+        "descr": "Un centre culturel présentant l'architecture, l'art et les artefacts traditionnels marocains, célébrant le patrimoine amazigh."
       },
       "place_9": {
-        "title": "Vallée du Paradis",
+        "title": "Paradise Valley",
         "city":"Agadir",
-        "descr": "Une oasis luxuriante avec des piscines naturelles et des cascades, entourée de palmiers et de falaises spectaculaires. Idéal pour la randonnée et la baignade."
+        "descr": "Un oasis luxuriant avec des bassins naturels et des cascades, entouré de palmiers et de falaises dramatiques. Idéal pour la randonnée et la baignade."
       },
       "place_10": {
         "title": "Souss Massa",
         "city":"Agadir",
-        "descr": "Un parc national connu pour sa faune diversifiée, notamment des flamants roses et des espèces rares d'oiseaux, ainsi que ses paysages pittoresques."
+        "descr": "Un parc national connu pour sa faune diversifiée, y compris des flamants roses et des espèces d'oiseaux rares, ainsi que ses paysages pittoresques."
       },
       "place_11": {
         "title": "Souk El Had",
         "city":"Agadir",
-        "descr": "Un marché traditionnel animé offrant une grande variété de produits, des épices et textiles aux objets artisanaux et produits frais."
+        "descr": "Un marché traditionnel animé offrant une large variété de biens, des épices et des textiles aux produits artisanaux et aux produits frais."
       },
       "place_12": {
         "title": "Taghazout",
         "city":"Agadir",
-        "descr": "Un charmant village de pêcheurs devenu un havre pour les surfeurs, connu pour ses vagues de classe mondiale, son ambiance détendue et ses couchers de soleil spectaculaires."
+        "descr": "Un charmant village de pêcheurs devenu un havre de surf, connu pour ses vagues de classe mondiale, son ambiance décontractée et ses superbes couchers de soleil."
       },
       "place_13": {
         "title": "Kasbah",
-        "city":"Essaouira",
-        "descr": "est l'un des sites historiques emblématiques d'Essaouira, située sur la côte atlantique du Maroc. "
+        "city": "Essaouira",
+        "descr": "L'un des sites historiques emblématiques d'Essaouira, situé sur la côte atlantique du Maroc."
       },
       "place_14": {
-        "title": "medina",
-        "city":"Essaouira",
-        "descr": "située sur la côte atlantique du Maroc, est un site historique et culturel inscrit au patrimoine mondial de l'UNESCO depuis 2001. Fondée au XVIIIe siècle par le sultan Mohammed ben Abdallah, elle reflète un mélange unique d'architecture islamique et européenne, témoignant de son rôle en tant que carrefour commercial et culturel. "
+        "title": "Medina",
+        "city": "Essaouira",
+        "descr": "Située sur la côte atlantique du Maroc, c'est un site historique et culturel inscrit au patrimoine mondial de l'UNESCO depuis 2001. Fondée au 18e siècle par le sultan Mohammed ben Abdallah, elle reflète un mélange unique d'architecture islamique et européenne, mettant en valeur son rôle de carrefour commercial et culturel."
       },
       "place_15": {
-        "title": "remparts d'Essaouira",
-        "city":"Essaouira",
-        "descr": "Visitez les murailles de la médina pour découvrir des vues époustouflantes—couchers de soleil pittoresques, panoramas sur la mer, et ses falaises sauvages—ou rendez-vous vers les anciens canons qui protègent cette forteresse. Atmosphère calme et romantique, n'oubliez surtout pas votre appareil photo. "
+        "title": "Ramparts d'Essaouira",
+        "city": "Essaouira",
+        "descr": "Visitez les murs de la médina pour découvrir des vues à couper le souffle—couchers de soleil pittoresques, vues panoramiques sur la mer, et falaises sauvages—ou dirigez-vous vers les anciens canons protégeant cette forteresse. Atmosphère calme et romantique; n'oubliez pas votre appareil photo."
       },
       "place_16": {
         "title": "Le Jardin Majorelle",
-        "city":"Marrakech",
-        "descr": "Ce jardin botanique enchanteur, créé par Jacques Majorelle et restauré par Yves Saint Laurent, offre un havre de paix avec des plantes exotiques et des bâtiments bleu Majorelle. "
+        "city": "Marrakech",
+        "descr": "Ce jardin botanique enchanteur, créé par Jacques Majorelle et restauré par Yves Saint Laurent, offre un havre de paix avec des plantes exotiques et des bâtiments peints en bleu Majorelle."
       },
       "place_17": {
-        "title": " Jemaa el-Fna",
-        "city":"Marrakech",
-        "descr": "Cœur battant de Marrakech, cette place animée regorge de charme. Pendant la journée, on y trouve des marchands, des charmeurs de serpents et des conteurs. La nuit, elle se transforme en un grand restaurant en plein air. "
+        "title": "Jemaa el-Fna",
+        "city": "Marrakech",
+        "descr": "Le cœur battant de Marrakech, cette place animée est pleine de charme. Pendant la journée, elle accueille des marchands, des charmeurs de serpents et des conteurs. La nuit, elle se transforme en un grand restaurant en plein air."
       },
-      
       "place_18": {
-        "title": "  La Ménara",
-        "city":"Marrakech",
-        "descr": " Ce vaste jardin avec son bassin central est un lieu idéal pour une promenade relaxante avec une vue magnifique sur les montagnes de l'Atlas. "
-      }},
-     
-      "services": {
-        "title": "services",
-        "services": {
-          "service6": {
-            "title": "Excursions, voyages et aventures",
-            "desc": "Explorez des destinations uniques et embarquez pour des aventures inoubliables."
-          },
-          "service5": {
-            "title": "Programmes sportifs et camps d'entraînement",
-            "desc": "Participez à des activités sportives et améliorez vos performances."
-          },
-          "service4": {
-            "title": "Navette et transfert aéroport",
-            "desc": "Services de navette pratiques et transferts aéroport pour des déplacements faciles."
-          },
-          "service3": {
-            "title": "Événements et fêtes",
-            "desc": "Organisez et assistez à des événements et fêtes pour des expériences mémorables."
-          },
-          "service2": {
-            "title": "Hébergement et location de voiture",
-            "desc": "Réservez des hébergements et louez des voitures pour des déplacements pratiques."
-          },
-          "service1": {
-            "title": "Transport et logistique",
-            "desc": "Des solutions de transport et de logistique efficaces pour vos besoins."
-          }
-        }
-    
+        "title": "La Ménara",
+        "city": "Marrakech",
+        "descr": "Ce vaste jardin avec son bassin central est un endroit idéal pour une promenade relaxante avec une vue magnifique sur les montagnes de l'Atlas."
       },
-      "show_more": "voir plus",
-      "city":{
-        "All":"Tous",
-        "Agadir":"Agadir",
-        "Marrakech":"Marrakech",
-        "Essaouira":"Essaouira"
-  
-      },
-    "downloads": {
-      "title": "Téléchargements",
-      "descr": "Notre entreprise vous propose toutes les informations dont vous aurez besoin pour votre visite unique avec nous. Tout au long, Ocean Sport et Tours s'occupe de tout, depuis le jour de votre arrivée jusqu'au moment où nous vous disons au revoir à l'aéroport. Ici, vous trouverez tout ce qui concerne les tarifs et le programme de vos visites, voyages, hébergements... que vous pouvez télécharger facilement et rapidement.",
-      "text_1": "Télécharger le planning 7 jours",
-      "text_2": "Télécharger le planning 10 jours",
-      "button": "Télécharger"
+      "show_more":"voir plus"
     },
-    "footer": {
-  "tanks": "Merci de visiter notre site web et bienvenue à",
-  "Rights": "Tous droits réservés",
-  "Copyright": "Droit d'auteur"
-}
-
-}
-
+    "services": {
+      "title": "services",
+      "services": {
+        "service6": {
+          "title": "Excursions, voyages et aventures",
+          "desc": "Explorez des destinations uniques et embarquez pour des aventures inoubliables."
+        },
+        "service5": {
+          "title": "Programmes sportifs et camps d'entraînement",
+          "desc": "Participez à des activités sportives et améliorez vos performances."
+        },
+        "service4": {
+          "title": "Navette et transfert aéroport",
+          "desc": "Services de navette pratiques et transferts aéroport pour des déplacements faciles."
+        },
+        "service3": {
+          "title": "Événements et fêtes",
+          "desc": "Organisez et participez à des événements et des fêtes pour des expériences mémorables."
+        },
+        "service2": {
+          "title": "Hébergement et location de voitures",
+          "desc": "Réservez des hébergements et louez des voitures pour des déplacements pratiques."
+        },
+        "service1": {
+          "title": "Transport et logistique",
+          "desc": "Solutions efficaces de transport et de logistique pour vos besoins."
+        }
+      }
+    },
+    "city":{
+      "All":"Tout",
+      "Agadir":"Agadir",
+      "Marrakech":"Marrakech",
+      "Essaouira":"Essaouira"
+    },
+    "downloads":{
+      "title":"Téléchargements",
+      "descr":"Notre entreprise vous offre toutes les informations dont vous aurez besoin pour votre tour unique avec nous, tout au long de votre expérience, Ocean Sport et Tours prend soin de tout, du jour de votre arrivée jusqu'à celui où nous nous disons au revoir à l'aéroport. Ici, vous trouverez tout ce qui concerne les tarifs et les horaires de vos tournées, voyages, hébergement… que vous pouvez télécharger facilement et rapidement.",
+      "text_1":"Télécharger le planning 7 jours",
+      "text_2":"Télécharger le planning 10 jours",
+      "button":"Télécharger"
+    },
+    "opinion":{
+      "title": "Ce que nos clients disent de nous",
+      "opinions": {
+        "opinion_1": {
+          "name": "Alex Smith",
+          "opinion": "Expérience incroyable ! Mes enfants se sont éclatés lors de la tournée aventure. Les guides étaient sympathiques et bien préparés. Je recommande vivement !"
+        },
+        "opinion_2": {
+          "name": "Mark Johnson",
+          "opinion": "Super activités sportives ! Mon fils a adoré le camp de foot. Tout était bien organisé et les entraîneurs étaient professionnels."
+        },
+        "opinion_3": {
+          "name": "Juan Lee",
+          "opinion": "La tournée était amusante, mais l'emploi du temps était un peu serré. Un peu plus de temps libre pour les enfants serait super. Globalement, une bonne expérience !"
+        },
+        "opinion_4": {
+          "name": "David Brown",
+          "opinion": "Excellent service ! Ma fille a adoré les activités en plein air. C'était sûr, engageant et éducatif. Je réserverai à nouveau !"
+        },
+        "opinion_5": {
+          "name": "Emmanual Wilson",
+          "opinion": "Le personnel était très attentionné, et mes enfants se sont sentis à l'aise tout au long du voyage. Ils ont particulièrement apprécié les jeux de cohésion d'équipe !"
+        },
+        "opinion_6": {
+          "name": "James Carter",
+          "opinion": "Une tournée bien organisée avec une variété d'activités. Mon fils a adoré l'entraînement de basket, mais les options de repas pourraient être améliorées."
+        },
+        "opinion_7": {
+          "name": "Oliver Martinez",
+          "opinion": "Fantastique programme sportif ! Ma fille a beaucoup appris et s'est fait de nouveaux amis. Elle demande déjà à revenir l'année prochaine."
+        }
+      }
+    },
+    "footer":{
+      "tanks":"Merci de visiter notre site Web et bienvenue à",
+      "Rights":"Tous droits réservés",
+      "Copyright":"Droits d'auteur"
+    }
   }
-
+}

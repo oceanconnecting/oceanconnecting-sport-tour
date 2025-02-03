@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import Button from "./Button";
+import { FaRegImages } from "react-icons/fa";
 
 function ImageCard(props: any) {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,9 +21,9 @@ function ImageCard(props: any) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 z-10" />
         <div className="relative h-full flex flex-col justify-end z-10">
-          <div className="p-6 bg-black bg-opacity-50 flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-white mb-2">{title}</h2>
-          <Button variant="primary">open</Button>
+          <div className="px-6 py-3 flex items-center gap-4">
+            <FaRegImages size={27} className="text-white mb-1"/>
+            <h2 className="text-2xl font-bold text-white mb-2">{title}</h2>
           </div>
         </div>
       </div>

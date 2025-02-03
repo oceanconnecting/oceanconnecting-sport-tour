@@ -3,32 +3,29 @@
     "navbar": {
       "title": "Ocean Sports Tour",
       "about": "about",
+      "features":"features",
       "activities": "activities",
       "places":"places",
+      "services":"services",
       "downloads":"downloads",
-      "galery":{
-        "title":"galery",
-        "galery":{
-          "gal_1":"essaouira",
-          "gal_2":"imsouane",
-          "gal_3":"sidi bibi",
-          "gal_4":"tafraout",
-          "gal_5":"taroudant",
-          "gal_6":"tiznit"
-        }
-      },
+      "gallery":"gallery",
       "professional":"professional",
       "contact":"contact"
     },
     "hero":{
       "hero_tag":"Adventure Tailored for Curious Minds",
-      "grand_title":"Explore, Learn, and Grow with",
+      "grand_title" : {
+        "txt_1":"Learn",
+        "txt_2":"Travel",
+        "txt_3":"and Grow",
+        "end_txt":"with"
+      },
       "highlighted":"Ocean Sports Tour",
       "descr":"we specialize in creating unforgettable tour experiences for kids! Our mission is to inspire curiosity, spark creativity, and foster learning through exciting adventures tailored just for young explorers.",
-      "contact_button": "Contact Us",
-      "book_button": "Book A Tour"
+      "contact_button": "Get in Touch"
     },
     "about":{
+      "about_tag":"Years of experience",
       "about_title":"about us",
       "about_text":"ocean sport et tours, company of tourist transport and sport based in Agadir, began operation in 2022. The association operates a very diversified range of services who deemed to be of high quality, they combine availability, proactivity and quality. We are committed to make difference in everything we do, as our main goal is to reflect a great image to tourism in Morocco by listening to the needs and requests of customers and offer them insightful and worry-free experience"
     },
@@ -197,9 +194,6 @@
           "city": "Marrakech",
           "descr": "This vast garden with its central basin is an ideal place for a relaxing stroll with a magnificent view of the Atlas Mountains."
         },
-      
-      
-      
       "show_more":"show more"
     }
     ,
@@ -246,6 +240,39 @@
       "text_1":"Download 7days planning",
       "text_2":"Download 10days planning",
       "button":"Download"
+    },
+    "opinion":{
+      "title": "What Our Customers Said About Us",
+      "opinions": {
+        "opinion_1": {
+          "name": "Alex Smith",
+          "opinion": "Amazing experience! My kids had a blast on the adventure tour. The guides were friendly and well-prepared. Highly recommended!"
+        },
+        "opinion_2": {
+          "name": "Mark Johnson",
+          "opinion": "Great sports activities! My son enjoyed the soccer camp. Everything was well-organized, and the coaches were professional."
+        },
+        "opinion_3": {
+          "name": "Juan Lee",
+          "opinion": "The tour was fun, but the schedule was a bit tight. More free time for kids would be great. Overall, a good experience!"
+        },
+        "opinion_4": {
+          "name": "David Brown",
+          "opinion": "Excellent service! My daughter loved the outdoor activities. It was safe, engaging, and educational. Will book again!"
+        },
+        "opinion_5": {
+          "name": "Emmanual Wilson",
+          "opinion": "The staff was very caring, and my kids felt comfortable throughout the trip. They especially enjoyed the team-building games!"
+        },
+        "opinion_6": {
+          "name": "James Carter",
+          "opinion": "A well-organized tour with a variety of activities. My son loved the basketball training, but the food options could be improved."
+        },
+        "opinion_7": {
+          "name": "Oliver Martinez",
+          "opinion": "Fantastic sports program! My daughter learned so much and made new friends. She's already asking to join again next year."
+        }
+      }
     },
     "footer":{
       "tanks":"Thank you for visiting our website and welcome to",

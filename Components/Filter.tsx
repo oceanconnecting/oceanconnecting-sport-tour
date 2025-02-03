@@ -25,7 +25,7 @@ const Filter: React.FC<FilterProps> = ({places, activeTag, handleTag, tagList })
  
     const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex flex-wrap justify-between gap-4 max-w-3xl mx-auto">
+    <div className="flex flex-wrap justify-center gap-4 w-full">
     <FilterTag places={places} activeTag={activeTag} handleTag={handleTag} tagList={tagList} />
         </div>
       )}

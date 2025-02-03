@@ -57,8 +57,8 @@ const Places: React.FC = () => {
       <section id="places">
         {/* Filter Component */}
 
-        <div  className="w-full bg-background-950 py-16 px-10 flex flex-col items-center gap-6">
-          <Tag icon={<FaPlaceOfWorship />}>{t('title')}</Tag>
+        <div  className="w-full bg-background-950 py-16 px-5 flex flex-col justify-center overflow-hidden items-center gap-6">
+          <Tag>{t('title')}</Tag>
           <Filter places={allplaces} activeTag={activeTag} handleTag={handleTag} tagList={tagList} />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-full max-w-7xl">
           {activeTag === ''? displayedPlaces.slice(0, 6).map((place, index) => (

@@ -33,6 +33,8 @@ function choose() {
   return ( 
     <section id='features' className="py-44 px-4 h-fit gap-5 flex flex-col justify-center items-center">
       <Tag icon={<GiSevenPointedStar />}>{t("title")}</Tag>
+      <div className='size-96 bg-orange-50 absolute right-4 -z-10 blur-3xl'/>
+      <div className='size-96 bg-blue-50 absolute left-4 -z-10 blur-3xl'/>
       <div className="grid flex-1 grid-cols-1 justify-center items-center lg:grid-cols-3 gap-6">
         {ChooseData.map((item: any, index: any) => (
             <div key={index} className="w-full transition-all duration-200 group hover:bg-secondary-950 max-w-xs border-black rounded-xl border-opacity-35">
