@@ -24,7 +24,7 @@ function InfiniteText() {
   return (
 
     <section id="infinteTicker">
-        <div className="overflow-x-clip my-16 flex bg-secondary-950">
+        <div className="overflow-x-clip my-16 flex bg-secondary-100">
         <motion.div
         animate={
             {x: isArabic ? "50%" : "-50%"}
@@ -41,8 +41,8 @@ function InfiniteText() {
             {Array.from({length : 2}).map((_, i) => (
                 quotes.map((quote, index) => (
                     <div key={index} className="py-4 flex items-center">
-                        <h1 className="text-primary-100 sora text-3xl w-full font-bold text-nowrap">{quote}</h1>
-                        <PiBeachBallDuotone className="mx-8 text-primary-200 text-5xl"/>
+                        <h1 className="text-primary-900 text-3xl w-full font-bold text-nowrap">{quote}</h1>
+                        <PiBeachBallDuotone className="mx-8 text-primary-800 text-5xl"/>
                     </div>
                 ))
             ))}

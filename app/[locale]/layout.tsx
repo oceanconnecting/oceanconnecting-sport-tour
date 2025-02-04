@@ -4,7 +4,8 @@ import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { notFound, redirect } from "next/navigation";
+import { redirect } from "next/navigation";
+import { ThemeProvider } from "next-themes"
 import { Poppins, Tajawal } from "next/font/google";
 import BackToTopButton from "@/Components/BackToTopButton";
 
@@ -38,12 +39,14 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning>
       <body className={locale === "ar" ? tajawal.className : poppins.className}>
+      <ThemeProvider attribute="class">
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <BackToTopButton />
           <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

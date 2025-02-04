@@ -17,7 +17,7 @@ function Tag(props : any) {
     const { icon, children} = props
 
   return (
-    <div className="px-6 py-4 flex text-primary-200 items-center justify-center gap-3 w-fit">
+    <div className="px-6 py-4 flex text-primary-800 items-center justify-center gap-3 w-fit">
 
         <span className="text-5xl text-center font-semibold">{children}</span>
 

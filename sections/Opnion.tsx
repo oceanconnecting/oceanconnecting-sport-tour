@@ -17,7 +17,7 @@ interface CardProps {
 
 function Card({ image, name, descr, starRate }: CardProps) {
     return (
-        <div className="bg-white shadow-md p-6 min-h-64 w-[500px] rounded-lg flex-shrink-0">
+        <div className="bg-background-50 shadow-md p-6 min-h-64 w-[500px] rounded-lg flex-shrink-0">
             <div className="flex gap-4 items-center">
                 <Image className="w-16 h-16 shadow-md rounded-full object-cover" src={image} width={300} height={300} alt={name} />
                 <h1 className="text-xl font-semibold">{name}</h1>
@@ -28,11 +28,11 @@ function Card({ image, name, descr, starRate }: CardProps) {
                         <FaStar key={i} className="text-yellow-500" />
                     ))}
                     {Array.from({ length: 5 - starRate }).map((_, i) => (
-                        <FaStar key={i} className="text-gray-400" />
+                        <FaStar key={i} className="text-text-200" />
                     ))}
                 </div>
             </div>
-            <div className="flex-1 mt-4 text-slate-600">{descr}</div>
+            <div className="flex-1 mt-4 text-text-800">{descr}</div>
         </div>
     );
 }
@@ -89,7 +89,7 @@ function Opinion() {
     return controls?.stop;
   }, [rerender, xTranslation, duration, width]);
     return (
-        <section className="bg-slate-50">
+        <section className="bg-background-100">
             <div className="flex flex-col overflow-hidden items-center p-6 w-full h-fit">
                 <Tag>{t("title")}</Tag>
                 <div className="overflow-hidden mt-6 w-full">
