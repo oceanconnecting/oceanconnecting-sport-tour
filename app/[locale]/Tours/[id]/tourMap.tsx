@@ -1,4 +1,4 @@
-"use client"; // Ensures this file runs only on the client side
+"use client";
 
 import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
