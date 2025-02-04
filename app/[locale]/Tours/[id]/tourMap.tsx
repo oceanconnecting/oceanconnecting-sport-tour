@@ -3,29 +3,40 @@
 import { MapContainer, TileLayer, Polyline, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import { useState } from "react";
 // Correction pour icônes Leaflet
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
-  iconUrl: require("leaflet/dist/images/marker-icon.png"),
-  shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
+    iconRetinaUrl: markerIcon2x,
+    iconUrl: markerIcon,
+    shadowUrl: markerShadow,
 });
 interface TourMapsProps{
     route:[number,number][]
 }
 
 // Définition de l'itinéraire avec une structure correcte pour Polyline
-const route: [number, number][] = [
-   
-];
+
 
 export default function TourMap({route}:TourMapsProps) {
-  return (
+    const [isClient, setIsClient] = useState(false);
+    if (!route || route.length === 0) {
+        return <div className="text-center p-4">No route data available</div>;
+      }
+
+      const centerPoint:[number , number] = [
+        route.reduce((sum, [lat]) => sum + lat, 0) / route.length,
+        route.reduce((sum, [, lng]) => sum + lng, 0) / route.length,
+      ];
+    return (
     <div className="w-full h-[500px] rounded-xl shadow-lg">
       <MapContainer
-        center={[30.4278, -9.5981]} 
+      
+        center={centerPoint} 
         zoom={7} 
         scrollWheelZoom 
         className="h-full"

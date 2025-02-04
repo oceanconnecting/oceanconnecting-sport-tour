@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "class-variance-authority": "^0.7.1",
@@ -18,10 +20,12 @@
     "next": "15.1.4",
     "next-intl": "^3.26.3",
     "nodemailer": "^6.9.16",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.9.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.4.0",
-    "react-leaflet": "^5.0.0",
+    "react-leaflet": "^4.2.0",
     "react-toastify": "^11.0.3",
     "react-use-measure": "^2.1.1",
     "reactstrap": "^9.2.3",
