@@ -1,8 +1,5 @@
 'use client';
 import React,{useState, useTransition} from "react";
-import { FaPlaceOfWorship } from "react-icons/fa";
-import { MdNavigateNext } from "react-icons/md";
-import { FaAngleLeft } from "react-icons/fa6";
 import CardServices from "@/Components/CardServices";
 import ModalServices from "@/Components/modalServices";
 import Tag from "@/Components/Tag";
@@ -77,7 +74,7 @@ const closeModal = () => setIsOpen(false);
   return (
     <div>
       <section id="services" >
-        <div className="text-center flex justify-center items-center">
+        <div className="text-center flex bg-background-50 justify-center items-center">
         <Tag>{t('title')}</Tag>
         </div>
         <div className="grid  lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 w-full max-w-7xl mx-auto px-4 py-8">

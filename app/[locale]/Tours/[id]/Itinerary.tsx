@@ -85,4 +85,3 @@ export default function Itinerary({ passBy, image ,title}:ItineraryProps) {
     </div>
   );
 }
-

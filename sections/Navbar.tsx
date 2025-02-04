@@ -1,11 +1,12 @@
 "use client";
 import Link from "next/link";
 import { useTranslations } from "use-intl";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import LanguageSwitcher from "@/Components/LanguageSwitcher";
 import { twMerge } from "tailwind-merge";
 import {useLocale} from "use-intl";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
+import ThemeToggle from "@/Components/ThemeToggle";
 
 const parentVariants = {
   visible: { opacity: 1, y: 0 },
@@ -64,10 +65,8 @@ function Navbar() {
   function update(latest: number, prev: number): void {
     if (latest < prev) {
       setHidden(false);
-      // console.log("visible");
     } else if (latest > 100 && latest > prev) {
       setHidden(true);
-      // console.log("hidden");
     }
   }
 
@@ -84,21 +83,21 @@ function Navbar() {
         ease: [0.1, 0.25, 0.3, 1],
         duration: 0.3,
       }}
-    className="fixed z-50 shadow-md backdrop-blur-2xl bg-white bg-opacity-90">
+    className="fixed z-50 shadow-md backdrop-blur-2xl bg-background-50 bg-opacity-90">
       <div className="flex w-screen h-fit min-h-16 items-center px-5 lg:px-10">
         <div className="flex-1 flex gap-3 items-center">
           <div className="">
             {/* logo */}
-            
+
           </div>
-          <Link className="transition text-sm lg:text-lg duration-300 font-semibold hover:text-primary-200" href='/#main'>{t("title")}</Link>
+          <Link className="transition text-sm lg:text-lg duration-300 font-semibold hover:text-primary-800" href='/#main'>{t("title")}</Link>
         </div>
         <div className="lg:gap-8 md:gap-4 font-medium hidden lg:flex items-center">
           {navbarLink.map((link, idx) =>
             (
               <div key={idx}>
                 <Link
-                  className="hover:text-primary-300 border-b-2 duration-150 border-opacity-0 hover:border-opacity-100 border-primary-300 pb-5 transition-all"
+                  className="hover:text-primary-700 border-b-2 duration-150 border-transparent hover:border-primary-700 pb-5 transition-all"
                   href={link.link}
                 >
                   {link.title}
@@ -106,6 +105,7 @@ function Navbar() {
               </div>
               )
             )}
+          <ThemeToggle/>
           <LanguageSwitcher />
         </div>
 

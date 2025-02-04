@@ -1,13 +1,19 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FaRegImages } from "react-icons/fa";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import Counter from "yet-another-react-lightbox/plugins/counter";
+import "yet-another-react-lightbox/plugins/counter.css";
 
 function ImageCard(props: any) {
   const [isOpen, setIsOpen] = useState(false);
+  const thumbnailsRef = useRef(null);
 
-  const { title, image, children } = props;
+  const { title, image, Images } = props;
 
   return (
     <div>
@@ -27,24 +33,12 @@ function ImageCard(props: any) {
           </div>
         </div>
       </div>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsOpen(false)} // Closes modal on backdrop click
-            className="fixed top-0 left-0 z-30 bg-black px-5 bg-opacity-75 backdrop-blur-lg h-screen w-full flex justify-center items-center"
-          >
-            <div
-              onClick={(e) => e.stopPropagation()} // Prevents modal from closing when interacting with content
-              className="overflow-hidden shadow-lg max-w-md w-full"
-            >
-              {children}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <Lightbox
+      plugins={[Thumbnails, Counter]}
+      close={() => setIsOpen(false)}
+      open={isOpen}
+      slides={Images}
+      />
     </div>
   );
 }

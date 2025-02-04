@@ -14,14 +14,14 @@ interface DownloadCardProps {
 export default function DownloadCard({ title, description, fileSize, downloadUrl }: DownloadCardProps) {
     const t = useTranslations("homepage.downloads")
   return (
-    <div className="w-full max-w-sm rounded-3xl bg-primary-950 overflow-hidden">
+    <div className="w-full max-w-sm rounded-3xl bg-primary-100 overflow-hidden">
       <div className="p-5">
         <div className="flex items-center gap-2 mb-2">
           <CiFileOn className="h-6 w-6 text-primary-300" />
-          <h2 className="text-xl font-bold text-text-200">{title}</h2>
+          <h2 className="text-xl font-bold text-text-800">{title}</h2>
         </div>
-        <p className="text-gray-600 text-sm mb-2">{description}</p>
-        <p className="text-sm text-gray-500">File size: {fileSize}</p>
+        <p className="text-primary-600 text-sm mb-2">{description}</p>
+        <p className="text-sm text-text-500">File size: {fileSize}</p>
       </div>
       <div className="px-5 mb-4">
         <button 

@@ -50,7 +50,7 @@ function Footer() {
 
 return (
 
-    <footer className="p-4 bg-white md:p-8 lg:p-10">
+    <footer className="p-4 bg-background-100 md:p-8 lg:p-10">
     <div className="mx-auto max-w-screen-xl text-center">
     <div className="col-span-2 m-5 flex items-center justify-start gap-6 lg:col-span-5 ">
         <p  className='ml-5'>
@@ -62,7 +62,7 @@ return (
             </svg>
         </p>
         <Link  href="#hero" className="justify-center flex-1 items-center text-xl font-semibold text-gray-900">
-        <span className="mt-4 text-gray-900">
+        <span className="mt-4 text-text-900">
         <h1 className='text-xl lg:text-2xl text-start'>{th("highlighted")}</h1>
         </span>
         </Link>
@@ -72,7 +72,7 @@ return (
             href="https:www.facebook.com/the.ocean.connecting/"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-700 transition hover:opacity-75"
+            className="text-text-900 transition hover:opacity-75"
             >
             <span className="sr-only">Facebook</span>
 
@@ -91,7 +91,7 @@ return (
             href="https:www.instagram.com/oceanconnecting.ma/"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-700 transition hover:opacity-75"
+            className="text-text-900 transition hover:opacity-75"
             >
             <span className="sr-only">Instagram</span>
 
@@ -110,7 +110,7 @@ return (
             href="https:twitter.com/connectionocean"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-700 transition hover:opacity-75"
+            className="text-text-900 transition hover:opacity-75"
             >
             <span className="sr-only">Twitter</span>
 
@@ -127,7 +127,7 @@ return (
             href="https:github.com/port-labs/ocean"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-700 transition hover:opacity-75"
+            className="text-text-900 transition hover:opacity-75"
             >
             <span className="sr-only">GitHub</span>
 
@@ -146,7 +146,7 @@ return (
             href="https://www.oceanconnecting.ma/"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-700 transition hover:opacity-75"
+            className="text-text-900 transition hover:opacity-75"
             >
             <span className="sr-only">Dribbble</span>
 
@@ -167,7 +167,7 @@ return (
             href="https:www.facebook.com/the.ocean.connecting/"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-700 transition hover:opacity-75"
+            className="text-text-900 transition hover:opacity-75"
             >
             <span className="sr-only">Facebook</span>
 
@@ -186,7 +186,7 @@ return (
             href="https:www.instagram.com/oceanconnecting.ma/"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-700 transition hover:opacity-75"
+            className="text-text-900 transition hover:opacity-75"
             >
             <span className="sr-only">Instagram</span>
 
@@ -205,7 +205,7 @@ return (
             href="https:twitter.com/connectionocean"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-700 transition hover:opacity-75"
+            className="text-text-900 transition hover:opacity-75"
             >
             <span className="sr-only">Twitter</span>
 
@@ -222,7 +222,7 @@ return (
             href="https:github.com/port-labs/ocean"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-700 transition hover:opacity-75"
+            className="text-text-900 transition hover:opacity-75"
             >
             <span className="sr-only">GitHub</span>
 
@@ -241,7 +241,7 @@ return (
             href="https://www.oceanconnecting.ma/"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-700 transition hover:opacity-75"
+            className="text-text-900 transition hover:opacity-75"
             >
             <span className="sr-only">Dribbble</span>
 
@@ -259,7 +259,7 @@ return (
 
 
     <p className="my-6 text-black-500  text-gray-400">{tf("tanks")}<a   className='text-blue-900 mx-2' href="https://www.oceanconnecting.ma/">Ocean Connecting</a> .</p>
-    <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900">
+    <ul className="flex flex-wrap justify-center items-center mb-6 text-text-900">
         {
             navbarLink.map((link, idx) => (
                 <li key={idx} className='flex justify-center'>
