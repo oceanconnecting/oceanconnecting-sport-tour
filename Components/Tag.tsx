@@ -3,24 +3,10 @@ import { useEffect ,useState} from "react";
 
 
 
-function Tag(props : any) {
-
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true); // Une fois le composant monté côté client
-  }, []);
-
-  if (!isClient) {
-    return null; // Rendre rien pendant le rendu initial
-  }
-    const { icon, children} = props
-
+function Tag({className, children} : {className?: string, children: React.ReactNode}) {
   return (
-    <div className="px-6 py-4 flex text-primary-800 items-center justify-center gap-3 w-fit">
-
+    <div className="px-6 flex text-primary-800 items-center justify-center gap-3 w-fit">
         <span className="text-5xl text-center font-semibold">{children}</span>
-
     </div>
   )
 }
