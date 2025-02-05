@@ -83,7 +83,7 @@ function Navbar() {
         ease: [0.1, 0.25, 0.3, 1],
         duration: 0.3,
       }}
-    className="fixed z-50 shadow-md backdrop-blur-2xl bg-background-50 bg-opacity-90">
+    className="fixed z-50 shadow-md backdrop-blur-2xl border-b border-background-100 bg-background-50 bg-opacity-90">
       <div className="flex w-screen h-fit min-h-16 items-center px-5 lg:px-10">
         <div className="flex-1 flex gap-3 items-center">
           <div className="">
@@ -111,6 +111,7 @@ function Navbar() {
 
         <div className="flex gap-3 lg:hidden">
           <LanguageSwitcher />
+          <ThemeToggle/>
           <div
             onClick={() => setIsOpen(!isOpen)}
             className="flex gap-5 lg:hidden flex-col cursor-pointer">
@@ -170,12 +171,12 @@ function Navbar() {
           {navbarLink.map((link, idx) =>
             (
               <div
-              key={idx} className="pl-5 py-3 flex justify-center hover:text-primary-100">
+              key={idx} className="pl-5 py-3 flex justify-center hover:text-primary-900">
                 <Link
                   onClick={() => (
                     setIsOpen(false)
                   )}
-                  className="px-3 text-primary-100 hover:text-primary-300 transition duration-300"
+                  className="px-3 text-primary-900 hover:text-primary-300 transition duration-300"
                   href={link.link}
                 >
                   {link.title}

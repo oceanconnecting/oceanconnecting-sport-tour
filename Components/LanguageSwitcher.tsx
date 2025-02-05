@@ -1,15 +1,23 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { notFound } from "next/navigation";
-import { useRouter } from "next/navigation";
-import { useTransition } from "react";
-import CustomSelect from "./languageCustomSelect";
+import { notFound } from "next/navigation"
+import { useRouter } from "next/navigation"
+import { useTransition } from "react"
+import CustomSelect from "./languageCustomSelect"
+import ReactCountryFlag from "react-country-flag"
 
 function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const validLocales = ["fr", "en", "ar", "du", "es"];
+  const Locales = [
+    { code: "fr", label: "French", flag: "FR" },
+    { code: "en", label: "English", flag: "GB" },
+    { code: "ar", label: "Arabic", flag: "SA" },
+    { code: "du", label: "Dutch", flag: "NL" },
+    { code: "es", label: "Spanish", flag: "ES" }
+  ];
 
   if (!validLocales.includes(locale)) {
     notFound();
@@ -27,7 +35,12 @@ function LanguageSwitcher() {
     }
   };
 
-  const options = validLocales.map((lang) => ({ value: lang, label: lang }));
+  const options = Locales.map((lang) => ({ value: lang.code, label: lang.code, flag: <ReactCountryFlag 
+    style={{
+      width: '1.2em',
+      borderRadius: '2px',
+    }}
+    countryCode={lang.flag} svg/> }));
 
   return (
     <CustomSelect
