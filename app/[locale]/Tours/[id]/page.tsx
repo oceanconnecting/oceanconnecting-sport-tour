@@ -10,7 +10,7 @@ import TourMap from "./tourMap";
 import Itinerary from "./Itinerary";
 import getToursData from "./ToursData";
 import FormTour from "./Form";
-
+import { LayoutGridDemo } from "./image"; 
 const TourDetails = () => {
   const ToursData: Tour[] = getToursData();
   const params = useParams();
@@ -55,10 +55,8 @@ const TourDetails = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 p-10 gap-4">
-        {tour.image && (
-          <img src={tour.image} alt={tour.title} className="rounded-lg shadow-md" />
-        )}
+      <div className="grid grid-cols-1 p-10 gap-4">
+      {/* <LayoutGridDemo/> */}
       </div>
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
         <div className="rounded-lg flex justify-center items-center">

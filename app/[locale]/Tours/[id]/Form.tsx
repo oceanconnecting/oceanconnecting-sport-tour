@@ -72,7 +72,7 @@ const FormTour: React.FC<FormProps> = ({ tour }) => {
           <Button
             type="submit"
             className={`w-full mt-4 ${
-              (adults === 0 && children === 0 && babies === 0) || !formDate ? "bg-gray-300 text-gray-600 cursor-not-allowed" : "bg-green-500 hover:bg-green-600"
+              (adults === 0 && children === 0 && babies === 0) || !formDate ? "bg-gray-300 text-gray-600 cursor-not-allowed" : "bg-slate-300 hover:bg-slate-700 hover:text-white"
             }`}
             disabled={(adults === 0 && children === 0 && babies === 0) || !formDate}
           >
@@ -86,17 +86,31 @@ const FormTour: React.FC<FormProps> = ({ tour }) => {
       </div>
          {/* Résultat après réservation */}
          {reservationDetails && (
-          <div className="mt-8 w-full p-6 bg-slate-100 border border-zinc-600 rounded-lg shadow-lg">
+          <div className="mt-8 w-4/5 p-6 bg-slate-100 border border-zinc-600 rounded-lg shadow-lg">
   <div className="flex justify-start items-start border-b-4 border-b-slate-700 pb-4">
     <h4 className="text-lg font-semibold text-gray-900">{tour.title}</h4>
   </div>
   
   <div className="mt-4 text-gray-700">
     <p className="mb-2">Duration: <span className="font-medium">{tour.duration}</span></p>
-    <p className="mb-2 grid grid-cols-2">Prix Adults: <span className="font-medium">{adults}×{tour.newPrice?.priceAdults} {priceAdults} €</span></p>
-    <p className="mb-2">Prix Children: <span className="font-medium"> {children}×{tour.newPrice?.priceChildren} {priceChildren} €</span></p>
-    <p className="mb-2">Prix Babies: <span className="font-medium" > {babies}×{tour.newPrice?.pricebabies} {pricebabies} €</span></p>
-    <p className="mt-4 text-lg font-semibold">Total Price: {priceAdults + priceChildren+pricebabies }<span className="font-bold text-xl">{/* Calculate total price here */}</span></p>
+    <div>
+          <p>Detail Tarif :</p>
+          {adults >0 &&(
+            <p className="mb-2 grid grid-cols-2">Prix Adults: <span className="font-medium text-start">{adults}×{tour.newPrice?.priceAdults} {priceAdults} €</span></p>
+
+          )}
+          {children>0 &&(
+
+    <p className="mb-2 grid grid-cols-2">Prix Children: <span className="font-medium text-start "> {children}×{tour.newPrice?.priceChildren} {priceChildren} €</span></p>
+          )}
+          {babies>0 &&(
+
+    <p className="mb-2 grid grid-cols-2">Prix Babies: <span className="font-medium text-start" > {babies}×{tour.newPrice?.pricebabies} {pricebabies} €</span></p>
+          )}
+    </div>
+         
+
+    <p className="mt-4 text-lg font-semibold">Total Price: {priceAdults + priceChildren+pricebabies }<span className="font-bold text-xl  text-start">{/* Calculate total price here */}</span></p>
   </div>
   
   <div className="mt-4">
