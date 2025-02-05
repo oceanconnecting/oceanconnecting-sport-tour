@@ -1,11 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import FilterTag from '@/app/[locale]/places/filterTag';
 import PlacesDetail from '@/app/[locale]/places/detail';
 import Tag from '@/Components/Tag';
-import Button from '@/Components/Button';
-import { FaPlaceOfWorship } from 'react-icons/fa';
 import { useLocale, useTranslations } from 'use-intl';
 import Filter from '@/Components/Filter';
 import Allplaces from '@/app/[locale]/places/Allplaces';

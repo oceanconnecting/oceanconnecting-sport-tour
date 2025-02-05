@@ -66,8 +66,6 @@ export default function Itinerary({ passBy, image ,title}:ItineraryProps) {
                 className="object-cover w-full h-full"
               />
             </div>
-
-           
           </div>
 
           {/* Pass by */}
@@ -77,7 +75,6 @@ export default function Itinerary({ passBy, image ,title}:ItineraryProps) {
              {passBy.map((location,index)=>(
               <li key={index}>{location}</li>
              ))}
-             
             </ul>
           </div>
         </div>

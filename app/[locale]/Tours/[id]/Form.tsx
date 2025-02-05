@@ -43,11 +43,10 @@ const FormTour: React.FC<FormProps> = ({ tour }) => {
   };
 
   return (
-    <div className="grid grid-cols-1 items-center mt-16 text-center">
-      <div className="max-w-md mx-auto bg-white p-6 rounded-3xl shadow-md">
+    <div className="items-center mt-16 text-center w-full">
+      <div className="bg-white p-6 rounded-3xl shadow-md">
         <h3 className="text-lg font-bold mb-6">Choisissez les participants et la date</h3>
-
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="flex gap-7 items-center justify-center">
           {/* Adultes */}
           <ParticipantCounter label="Nombre d'Adultes" value={adults} onDecrement={() => decrement(setAdults, adults)} onIncrement={() => increment(setAdults, adults)} />
           
@@ -68,17 +67,16 @@ const FormTour: React.FC<FormProps> = ({ tour }) => {
               className="w-full p-2 border rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
-
+        </form>
           <Button
             type="submit"
-            className={`w-full mt-4 ${
+            className={`w-full mt-4 max-w-sm ${
               (adults === 0 && children === 0 && babies === 0) || !formDate ? "bg-gray-300 text-gray-600 cursor-not-allowed" : "bg-green-500 hover:bg-green-600"
             }`}
             disabled={(adults === 0 && children === 0 && babies === 0) || !formDate}
           >
             Confirmer la réservation
           </Button>
-        </form>
        
             
 
@@ -125,12 +123,12 @@ interface ParticipantCounterProps {
 const ParticipantCounter: React.FC<ParticipantCounterProps> = ({ label, value, onDecrement, onIncrement }) => (
   <div>
     <label className="block text-sm font-medium mb-2">{label}</label>
-    <div className="flex items-center justify-between">
-      <button type="button" onClick={onDecrement} className="p-2 font-medium bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">
+    <div className="flex items-center justify-center gap-4">
+      <button type="button" onClick={onDecrement} className="p-2 font-medium size-10 bg-gray-200 aspect-square text-gray-700 rounded-full hover:bg-gray-300">
         -
       </button>
-      <span className="px-6 font-semibold">{value}</span>
-      <button type="button" onClick={onIncrement} className="p-2 font-medium bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">
+      <span className="font-semibold">{value}</span>
+      <button type="button" onClick={onIncrement} className="p-2 font-medium size-10 bg-gray-200 aspect-square text-gray-700 rounded-full hover:bg-gray-300">
         +
       </button>
     </div>
