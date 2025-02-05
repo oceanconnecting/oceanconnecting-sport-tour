@@ -4,20 +4,8 @@ import { LuDot } from "react-icons/lu";
 import { FaStar, FaRegStar } from 'react-icons/fa';
 import { useLocale } from "next-intl";
 import { useRouter } from 'next/navigation';
-interface Tour{
-    id:number,
-title:string ,
-image:string ,
-departure: string ,
-description:string ,
-arrival:string ,
-duration: string,
-type:string,
-rating:number  ,
-newPrice:string,
-latesPrice:string,
-route:number[][],
-}
+import { Tour } from '@/types';
+
 interface ToursCardProps{
     tour:Tour;
 }
@@ -71,7 +59,7 @@ const ToursCard: React.FC<ToursCardProps> =({tour})=>{
     </div>
     <div>
 
-        {tour.newPrice===" "?(
+        {tour.newPrice?.priceAdults===0?(
             
         <div className="text-lg font-medium">
         <div className="text-xl  mr-2">À partir {tour.latesPrice} <div className="text-xs pr-3" >MAD </div>par pesonne</div>
@@ -82,7 +70,7 @@ const ToursCard: React.FC<ToursCardProps> =({tour})=>{
             <div>
               <div className="text-xl line-through mr-2">À partir {tour.latesPrice} MAD</div>
               <div className="text-red-500 block">
-                À partir de {tour.newPrice} <div className="text-xs pr-3">MAD</div>
+                À partir de {tour.newPrice?.priceAdults} <div className="text-xs pr-3">MAD</div>
               </div>
             </div>
             <div>

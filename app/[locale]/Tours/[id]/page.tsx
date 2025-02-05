@@ -72,22 +72,11 @@ const TourDetails = () => {
       {/* Itinerary and Form */}
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
         <Itinerary title={tour.title} passBy={tour.passBy} image={tour.image} />
-        <FormTour  />
+        <FormTour tour={tour}  />
       </div>
-      {/* newPrice={String(tour.newPrice ?? "0")} */}
+     
       {/* Tour Information */}
-      <div>
-        <p>{tour.description}</p>
-        <div><strong>Durée:</strong> {tour.duration}</div>
-        <div><strong>Type:</strong> {tour.type}</div>
-        <div><strong>Départ:</strong> {tour.departure}</div>
-        <div><strong>Arrivée:</strong> {tour.arrival}</div>
-        <div>
-          <strong>Prix:</strong> {tour.newPrice
-            ? `${tour.newPrice} MAD (au lieu de ${tour.latesPrice} MAD)`
-            : `${tour.latesPrice} MAD`}
-        </div>
-      </div>
+      
     </section>
   );
 };

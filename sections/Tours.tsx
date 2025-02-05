@@ -5,24 +5,8 @@ import { GiGalaxy } from "react-icons/gi";
 import Tag from '@/Components/Tag';
 import DataTours from '@/app/[locale]/Tours/[id]/ToursData';
 import getToursData from '@/app/[locale]/Tours/[id]/ToursData';
-interface Tour{
-   
-  id:number,
-  title:string ,
-  image:string ,
-  description:string ,
-  departure: string ,
-  arrival:string ,
-  duration: string,
-  type:string,
-  newPrice:string ,
-  latesPrice:string,
-  rating:number,
-  route: number[][],
-  passBy: string[];
-  
+import { Tour } from '@/types';
 
-};
 const Tours=()=>{
   const ToursData: Tour[] = getToursData();
       

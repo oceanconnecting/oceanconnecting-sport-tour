@@ -8,7 +8,12 @@ export interface Tour {
     departure: string;
     arrival: string;
     rating: number;
-    newPrice?: number;
+    newPrice?: {
+      priceAdults:number,
+      priceChildren:number,
+      pricebabies:number
+
+    };
     latesPrice: number;
     route: [number, number][];
     passBy: string[];

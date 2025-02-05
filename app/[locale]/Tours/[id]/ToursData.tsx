@@ -21,7 +21,12 @@ const ToursData: Tour[] = [
     type: "Aventure",
     duration: "10 - 12 hours",
     latesPrice: 300,
-    newPrice: 250,
+    newPrice: {
+      priceAdults:240,
+      priceChildren:200,
+      pricebabies:150
+
+    },
   },
   {
     id: 2,
@@ -43,7 +48,12 @@ const ToursData: Tour[] = [
     type: "Découverte",
     duration: "2 hours 30 minutes",
     latesPrice: 400,
-    newPrice: undefined,
+    newPrice: {
+      priceAdults:240,
+      priceChildren:200,
+      pricebabies:150
+
+    },
   },
   {
     id: 3,
@@ -65,7 +75,12 @@ const ToursData: Tour[] = [
     type: "Relaxation",
     duration: "3 days",
     latesPrice: 350,
-    newPrice: undefined,
+    newPrice: {
+      priceAdults:240,
+      priceChildren:200,
+      pricebabies:150
+
+    },
   },
   {
     id: 4,
@@ -87,7 +102,12 @@ const ToursData: Tour[] = [
     type: "Visite guidée",
     duration: "4 hours",
     latesPrice: 450,
-    newPrice: 400,
+    newPrice: {
+      priceAdults:240,
+      priceChildren:200,
+      pricebabies:150
+
+    },
   },
   {
     id: 5,
@@ -109,7 +129,12 @@ const ToursData: Tour[] = [
     type: "Excursion",
     duration: "5 hours",
     latesPrice: 600,
-    newPrice: 500,
+    newPrice: {
+      priceAdults:240,
+      priceChildren:200,
+      pricebabies:150
+
+    },
   },
 ];
 
