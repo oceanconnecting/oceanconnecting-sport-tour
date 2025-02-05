@@ -19,9 +19,8 @@ interface Tour{
   rating:number,
   route: number[][],
   passBy: string[];
-  
+} 
 
-};
 const Tours=()=>{
   const t = useTranslations("homepage.tours")
   const ToursData: Tour[] = [

@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
-
+import BannerImg from './public/BannerImg.jpg'
 export default {
-  content: [
+    darkMode: ["class"],
+    content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./Components/**/*.{js,ts,jsx,tsx,mdx}",
     "./sections/**/*.{js,ts,jsx,tsx,mdx}",
@@ -82,5 +83,5 @@ export default {
        },              
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
