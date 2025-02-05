@@ -31,7 +31,7 @@ export const AnimatedTestimonials = ({
   };
   return (
     <div className="max-w-sm md:max-w-4xl mx-auto px-4 md:px-8 lg:px-12 py-20">
-      <div className="relative grid grid-cols-1 md:grid-cols-2  gap-10">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 lg:gap-20">
         <div>
           <div className="relative h-40 md:h-64 lg:h-70 w-full">
             <AnimatePresence>
