@@ -238,6 +238,42 @@
       "text_2":"Télécharger le planning 10 jours",
       "button":"Télécharger"
     },
+    "tours": {
+  "heading": "Visites",
+  "tour": {
+    "tour_1": {
+      "title": "Voyage d'Agadir à Marrakech",
+      "description": "Découvrez les paysages pittoresques entre Agadir et Marrakech avec des escales fascinantes.",
+      "type": "Aventure",
+      "duration": "4 jours"
+    },
+    "tour_2": {
+      "title": "Excursion Marrakech - Essaouira",
+      "description": "Un parcours magique à travers les collines et forêts d'arganiers jusqu'à la côte atlantique.",
+      "type": "Découverte",
+      "duration": "1 journée"
+    },
+    "tour_3": {
+      "title": "Road Trip Essaouira - Agadir",
+      "description": "Partez à la découverte des plages sauvages et des charmants villages côtiers.",
+      "type": "Relaxation",
+      "duration": "3 jours"
+    },
+    "tour_4": {
+      "title": "Aventure d'une journée Agadir - Essaouira",
+      "description": "Profitez d'une route panoramique jusqu'à la célèbre ville bleue, Essaouira.",
+      "type": "Visite guidée",
+      "duration": "1 journée"
+    },
+    "tour_5": {
+      "title": "Circuit Marrakech, Essaouira et Agadir",
+      "description": "Explorez les merveilles de trois villes emblématiques du Maroc.",
+      "type": "Excursion",
+      "duration": "5 jours"
+    }
+  }
+},
+
     "opinion":{
       "title": "Ce que nos clients disent de nous",
       "opinions": {

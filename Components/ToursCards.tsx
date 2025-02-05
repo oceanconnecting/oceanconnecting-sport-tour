@@ -6,6 +6,7 @@ import { useLocale } from "next-intl"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import type React from "react" // Added import for React
+import Button from "./Button"
 
 interface Tour {
   id: number
@@ -61,16 +62,16 @@ const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
 
         <p className="text-text-700 mb-4 line-clamp-2">{tour.description}</p>
 
-        <div className="flex items-center mb-4 text-sm text-text-500">
-          <span className="mr-3">{tour.departure}</span>
-          <GoDotFill size={8} className="text-text-950" />
-          <span className="ml-3">{tour.arrival}</span>
+        <div className="flex items-center mb-4 text-sm text-text-700">
+          <span>{tour.departure}</span>
+          <GoDotFill size={8} className="text-text-700 mx-3" />
+          <span>{tour.arrival}</span>
         </div>
 
         <div className="flex items-center mb-4">
-          <span className="text-primary-600 font-medium mr-2">{tour.duration} hours</span>
-          <GoDotFill size={8} className="text-primary-500" />
-          <div className="flex ml-2">
+          <span className="text-primary-600 font-medium">{tour.duration}</span>
+          <GoDotFill size={8} className="text-primary-500 mx-3" />
+          <div className="flex">
             {[...Array(5)].map((_, index) => (
               <span key={index}>
                 {index < fullStars ? (
@@ -92,11 +93,13 @@ const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
               <span className="text-sm text-gray-500"> MAD per person</span>
             </div>
           ) : (
-            <div className="flex items-end space-x-2">
+            <div className="flex items-end justify-between space-x-2">
               <div className="text-lg line-through text-gray-400">{tour.latesPrice} MAD</div>
-              <div>
-                <span className="text-2xl font-bold text-red-500">From {tour.newPrice}</span>
-                <span className="text-sm text-gray-500"> MAD per person</span>
+              <div className="flex items-end gap-1 justify-center">
+                <Button variant="primary">
+                  From {tour.newPrice} MAD
+                </Button>
+                
               </div>
             </div>
           )}

@@ -234,6 +234,41 @@
       "Essaouira":"Essaouira"
 
     },
+    "tours": {
+      "heading": "Tours",
+      "tour": {
+        "tour_1": {
+          "title": "Voyage d'Agadir à Marrakech",
+          "description": "Découvrez les paysages pittoresques entre Agadir et Marrakech avec des escales fascinantes.",
+          "type": "Aventure",
+          "duration": "4 jours"
+        },
+        "tour_2": {
+          "title": "Excursion Marrakech - Essaouira",
+          "description": "Un parcours magique à travers les collines et forêts d'arganiers jusqu'à la côte atlantique.",
+          "type": "Découverte",
+          "duration": "1 journée"
+        },
+        "tour_3": {
+          "title": "Road Trip Essaouira - Agadir",
+          "description": "Partez à la découverte des plages sauvages et des charmants villages côtiers.",
+          "type": "Relaxation",
+          "duration": "3 jours"
+        },
+        "tour_4": {
+          "title": "Aventure d'une journée Agadir - Essaouira",
+          "description": "Profitez d'une route panoramique jusqu'à la célèbre ville bleue, Essaouira.",
+          "type": "Visite guidée",
+          "duration": "1 journée"
+        },
+        "tour_5": {
+          "title": "Circuit Marrakech, Essaouira et Agadir",
+          "description": "Explorez les merveilles de trois villes emblématiques du Maroc.",
+          "type": "Excursion",
+          "duration": "5 jours"
+        }
+      }
+    },
     "downloads":{
       "title":"Downloads",
       "descr":"Our company offer for you all the information you're going to need for your unique tour with us, Throughout, ocean sport and tours takes care of everything, from the day you land, until the moment we say goodbye at the airport. About here, you will come across Everything concerning Tariff and schedule of your tours, trips, travels, accommodation… that you can download easy and fast.",
