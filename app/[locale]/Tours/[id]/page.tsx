@@ -41,11 +41,11 @@ const TourDetails = () => {
         <div className="flex items-center gap-2">
           <span className="text-gray-700 font-medium">Très bien</span>
           {Array.from({ length: fullStars }).map((_, index) => (
-            <FaStar key={star-${index}} className="text-yellow-500" />
+            <FaStar key={`star-${index}`} className="text-yellow-500" />
           ))}
           {halfStar > 0 && <FaStar className="text-yellow-500" style={{ clipPath: "inset(0 50% 0 0)" }} />}
           {Array.from({ length: 5 - fullStars - halfStar }).map((_, index) => (
-            <FaRegStar key={empty-star-${index}} className="text-yellow-500" />
+            <FaRegStar key={`empty-star-${index}`} className="text-yellow-500" />
           ))}
         </div>
         <div className="flex justify-center items-center gap-6">
@@ -72,9 +72,9 @@ const TourDetails = () => {
       {/* Itinerary and Form */}
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
         <Itinerary title={tour.title} passBy={tour.passBy} image={tour.image} />
-        <FormTour newPrice={String(tour.newPrice ?? "0")} />
+        <FormTour  />
       </div>
-
+      {/* newPrice={String(tour.newPrice ?? "0")} */}
       {/* Tour Information */}
       <div>
         <p>{tour.description}</p>
@@ -84,8 +84,8 @@ const TourDetails = () => {
         <div><strong>Arrivée:</strong> {tour.arrival}</div>
         <div>
           <strong>Prix:</strong> {tour.newPrice
-            ? ${tour.newPrice} MAD (au lieu de ${tour.latesPrice} MAD)
-            : ${tour.latesPrice} MAD}
+            ? `${tour.newPrice} MAD (au lieu de ${tour.latesPrice} MAD)`
+            : `${tour.latesPrice} MAD`}
         </div>
       </div>
     </section>

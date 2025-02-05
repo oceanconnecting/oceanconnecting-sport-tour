@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import BannerImg from './public/BannerImg.jpg'
 export default {
     darkMode: ["class"],
     content: [
@@ -12,7 +12,7 @@ export default {
   theme: {
   	extend: {
   		backgroundImage: {
-  			bannerImg: 'url('/BannerImg.jpg')'
+  			bannerImg: 'url(BannerImg)'
   		},
   		colors: {
   			text: {

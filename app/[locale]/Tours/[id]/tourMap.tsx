@@ -64,5 +64,5 @@ export default function TourMap({ route }: TourMapsProps) {
         ))}
       </MapContainer>
     </div>
-  ) : null;
+  ) : null;
 }
