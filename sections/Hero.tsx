@@ -1,14 +1,14 @@
 "use client";
 
 import Button from '@/Components/Button';
-import InfiniteTextChange from '@/Components/InfiniteTextChange';
+import { FlipWords } from "@/Components/flip-words.tsx";
 import { useLocale, useTranslations } from 'next-intl';
 import { GiSevenPointedStar } from "react-icons/gi";
 
 function Hero() {
     const t = useTranslations("homepage.hero");
     const locale = useLocale();
-
+    const isArabic = locale === "ar";
     const textList = [t("grand_title.txt_1"), t("grand_title.txt_2"), t("grand_title.txt_3")];
 
     return (
@@ -28,7 +28,8 @@ function Hero() {
                     </div>
 
                     <h1 className="text-4xl text-center mt-5 font-extrabold text-white sm:text-6xl">
-                        <InfiniteTextChange textArray={textList} />
+                        <FlipWords duration={2000} isArabic={isArabic} words={textList} />
+                        {t("grand_title.end_txt")}
                         <strong className="font-extrabold text-sky-200 sm:block">{t("highlighted")}</strong>
                     </h1>
 
