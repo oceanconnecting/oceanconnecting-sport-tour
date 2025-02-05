@@ -10,8 +10,6 @@ import { Images } from './images'
 function page() {
 
     const images = Images
-    
-
     const fadeInAnimations = {
         initial : {
           opacity: 0,
@@ -28,7 +26,7 @@ function page() {
         <Tag>Gallery</Tag>
         <div className=' mt-16 grid w-full px-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
             {
-                images.map((collection, idx) => (
+                images.map((collection : any, idx : number) => (
                     <motion.div
                     key={idx}
                     variants={fadeInAnimations}
@@ -37,9 +35,7 @@ function page() {
                     viewport={{once:true}}
                     transition={{ duration: 0.5, delay: idx * 0.05 }}
                     >
-                        <ModalCard title={collection.title} image={collection.images[0]}>
-                            <Carousel images={collection.images}/>
-                        </ModalCard>
+                        <ModalCard title={collection.title} image={collection.images[0].src} Images={collection.images}/>
                     </motion.div>
                 ))
             }

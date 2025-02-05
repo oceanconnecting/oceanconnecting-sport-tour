@@ -53,15 +53,15 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, placeholder = "Sel
       </button>
       {isOpen && (
         <ul
-          className="absolute gap-1 flex flex-col z-50 w-full py-1 mt-1 overflow-auto bg-white rounded-lg shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none"
+          className="absolute gap-1 flex flex-col z-50 w-full py-1 mt-1 overflow-auto bg-background-50 rounded-lg shadow-lg max-h-60 ring-1 ring-background-100 ring-opacity-5 focus:outline-none"
           role="listbox"
         >
           {options.map((option) => (
             <li
               key={option.value}
               className={`${
-                selectedOption?.value === option.value ? "text-text-100 mx-1 rounded-lg bg-primary-900" : "text-gray-900"
-              } cursor-pointer select-none text-center relative py-2 mx-1 rounded-lg hover:bg-primary-950`}
+                selectedOption?.value === option.value ? "text-text-100 mx-1 rounded-lg bg-primary-900" : "text-text-950"
+              } cursor-pointer select-none text-center relative py-2 mx-1 rounded-lg hover:bg-primary-100`}
               role="option"
               aria-selected={selectedOption?.value === option.value}
               onClick={() => handleSelect(option)}

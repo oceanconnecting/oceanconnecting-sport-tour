@@ -9,12 +9,13 @@ import Downloads from "@/sections/Downloads";
 import Services from "@/sections/Services";
 import Tours from "@/sections/Tours";
 import Opnion from "@/sections/Opnion";
+import Features from "@/sections/Features";
 
-const LoadingFallback = () => <p>Loading...</p>;
+const LoadingFallback = () => <p className="w-full h-screen">Loading...</p>;
 
 export default function Home() {
   return (
-    <div className="space-y-10">
+    <div className="bg-background-50">
       <Suspense fallback={<LoadingFallback />}>
         <Hero />
       </Suspense>
@@ -22,7 +23,7 @@ export default function Home() {
         <About />
       </Suspense>
       <Suspense fallback={<LoadingFallback />}>
-        <Choose />
+        <Features/>
       </Suspense>
       <Suspense fallback={<LoadingFallback />}>
         <Activities />

@@ -230,6 +230,42 @@
         "Marrakech": "Marrakech",
         "Essaouira": "Essaouira"
       },
+      "tours": {
+      "heading": "Rondleidingen",
+      "tour": {
+        "tour_1": {
+          "title": "Reis van Agadir naar Marrakech",
+          "description": "Ontdek het schilderachtige landschap tussen Agadir en Marrakech met fascinerende tussenstops.",
+          "type": "Avontuur",
+          "duration": "4 dagen"
+        },
+        "tour_2": {
+          "title": "Excursie Marrakech - Essaouira",
+          "description": "Een magische route door de heuvels en arganbossen naar de Atlantische kust.",
+          "type": "Ontdekking",
+          "duration": "1 dag"
+        },
+        "tour_3": {
+          "title": "Roadtrip Essaouira - Agadir",
+          "description": "Ga op ontdekkingstocht naar de wilde stranden en charmante kustdorpjes.",
+          "type": "Ontspanning",
+          "duration": "3 dagen"
+        },
+        "tour_4": {
+          "title": "Eendaagse Avontuur Agadir - Essaouira",
+          "description": "Geniet van een panoramische route naar de beroemde blauwe stad, Essaouira.",
+          "type": "Rondleiding",
+          "duration": "1 dag"
+        },
+        "tour_5": {
+          "title": "Rondreis Marrakech, Essaouira en Agadir",
+          "description": "Ontdek de wonderen van drie iconische steden in Marokko.",
+          "type": "Excursie",
+          "duration": "5 dagen"
+        }
+      }
+    },
+
       "downloads": {
         "title": "Downloads",
         "descr": "Ons bedrijf biedt alles wat je nodig hebt voor je unieke tour bij ons. Ocean sport en tours zorgt voor alles, vanaf het moment dat je landt tot het moment dat we afscheid nemen op de luchthaven. Hier vind je alles over tarieven en schema's voor je tours, reizen, accommodaties... die je gemakkelijk en snel kunt downloaden.",

@@ -5,9 +5,9 @@ function ImageCard(props: any) {
 
   const { title, descr, image, } = props;
   return (
-    <div className="relative overflow-hidden w-full min-w-sm h-64 rounded-lg shadow-lg">
+    <div className="relative group overflow-hidden w-full min-w-sm h-64 rounded-lg shadow-lg">
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0" 
+        className="absolute group-hover:scale-105 transition-all duration-300 inset-0 bg-cover bg-center z-0" 
         style={{ backgroundImage: `url(${image})` }}/>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900      z-9" />
         <div className="relative h-full flex flex-col justify-end p-6 z-9">

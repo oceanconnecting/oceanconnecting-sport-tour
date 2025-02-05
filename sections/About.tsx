@@ -69,21 +69,21 @@ function About() {
 
   return (
     <section id="about">
-      <div className="w-full bg-background-950 gap-6 py-16 px-10 flex items-center flex-col">
+      <div className="w-full bg-background-50 gap-6 py-16 px-10 flex items-center flex-col">
         <Tag>{t("about_title")}</Tag>
         <div className="grid lg:grid-cols-2 gap-4 h-full justify-center items-center">
           <div className="flex flex-col items-center lg:items-start">
-            <div className="text-md md:text-xl lg:text-3xl flex gap-2 text-text-200 rounded-full font-bold bg-primary-900 w-fit px-6 py-3">
+            <div className="text-md md:text-xl lg:text-3xl flex gap-2 text-text-800 rounded-full font-bold bg-primary-100 w-fit px-6 py-3">
               +<Counter from={0} to={3}/> {t("about_tag")}
             </div>
             <div className="flex items-center flex-col">
-              <p className={twMerge("mt-6 text-center text-slate-800 sm:text-lg/relaxed max-w-lg", isArabic ? "lg:text-right" : "lg:text-left")}>
+              <p className={twMerge("mt-6 text-center text-text-800 sm:text-lg/relaxed max-w-lg", isArabic ? "lg:text-right" : "lg:text-left")}>
                 {t("about_text")}
               </p>
             </div>
           </div>
           <div className="lg:flex hidden justify-center items-center">
-            <div className="bg-primary-700 -z-0 w-64 h-64 absolute blur-3xl rounded-full"></div>
+            <div className="bg-primary-600/70 -z-0 w-64 h-64 absolute blur-3xl rounded-full"></div>
             <Image className="rounded-2xl z-10" src={"/aboutImg.jpg"} alt={"img sportif kid"} width={280} height={360} />
           </div>
         </div>

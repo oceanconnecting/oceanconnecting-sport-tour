@@ -9,7 +9,7 @@ import { Tour } from "@/types";
 import TourMap from "./tourMap";
 import Itinerary from "./Itinerary";
 import getToursData from "./ToursData";
-import FormTour from "./FormTour";
+import FormTour from "./Form";
 
 const TourDetails = () => {
   const ToursData: Tour[] = getToursData();
