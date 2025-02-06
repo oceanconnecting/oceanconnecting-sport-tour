@@ -2,6 +2,7 @@
 
 import Button from '@/Components/Button';
 import { FlipWords } from "@/Components/flip-words.tsx";
+import { motion } from 'motion/react';
 import { useLocale, useTranslations } from 'next-intl';
 import { GiSevenPointedStar } from "react-icons/gi";
 
@@ -19,7 +20,11 @@ function Hero() {
             </video>
 
             <div className='absolute top-0 left-0 w-full h-full bg-[#080f12] bg-opacity-70 z-10'></div>
-            <div className='flex flex-col px-4 pt-5 w-full h-full relative z-20'>
+            <motion.div 
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className='flex flex-col px-4 pt-5 w-full h-full relative z-20'>
                 <div className='w-full h-full flex flex-col justify-center items-center'>
                     <div className='px-5 mb-3 py-2 gap-3 text-white backdrop-blur-lg bg-white/10 border border-white/10 rounded-full flex items-center justify-center'>
                         <GiSevenPointedStar />
@@ -38,11 +43,11 @@ function Hero() {
                     </p>
 
                     <div className='flex mt-7 gap-3 flex-col md:flex-row'>
-                        <Button href='/#about' variant='primary'>Get Started</Button>
+                        <Button href='/#about' variant='primary'>{t("start_button")}</Button>
                         <Button href={`/${locale}/contact`} variant='secondary'>{t("contact_button")}</Button>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }
