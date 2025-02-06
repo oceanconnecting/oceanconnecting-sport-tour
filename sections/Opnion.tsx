@@ -90,7 +90,7 @@ function Opinion() {
   }, [rerender, xTranslation, duration, width]);
     return (
         <section className="bg-background-100">
-            <div className="flex flex-col overflow-hidden items-center p-6 w-full h-fit">
+            <div className="flex flex-col [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_2%,rgba(0,0,0,1)_4%,rgba(0,0,0,1)_96%,rgba(0,0,0,0)_98%)] overflow-hidden items-center p-6 w-full h-fit">
                 <Tag>{t("title")}</Tag>
                 <div className="overflow-hidden mt-12 w-full">
                 <motion.div
