@@ -27,7 +27,7 @@ function page() {
 
     <div>
       <div className="w-full bg-background-950 py-16 px-10 flex flex-col items-center gap-6">
-      <Tag icon={<FaPlaceOfWorship  />}>Places</Tag>
+      <Tag>Places</Tag>
       
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-full max-w-7xl">
         {places.map((places, index) => (
