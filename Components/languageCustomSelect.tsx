@@ -41,7 +41,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, placeholder = "Sel
   }
 
   return (
-    <div className="relative w-20" ref={dropdownRef}>
+    <div className=" relative w-10 flex flex-col items-center" ref={dropdownRef}>
       <button
         type="button"
         className="w-fit flex items-center justify-center gap-1 px-1 py-2"
@@ -54,7 +54,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, placeholder = "Sel
       </button>
       {isOpen && (
         <ul
-          className="absolute gap-1 flex flex-col z-50 w-full py-1 mt-1 overflow-auto bg-background-50 rounded-lg shadow-lg max-h-60 ring-1 ring-background-100 ring-opacity-5 focus:outline-none"
+          className="absolute gap-1 flex flex-col z-50 w-20 py-1 mt-12 overflow-auto bg-background-50 rounded-lg shadow-lg max-h-60 ring-1 ring-background-100 ring-opacity-5 focus:outline-none"
           role="listbox"
         >
           {options.map((option) => (
