@@ -83,7 +83,7 @@ function Navbar() {
         ease: [0.1, 0.25, 0.3, 1],
         duration: 0.3,
       }}
-    className="fixed z-50 shadow-md backdrop-blur-2xl border-b border-background-100 bg-background-50 bg-opacity-90">
+    className="fixed z-50 shadow-md backdrop-blur-2xl border-b border-background-100 bg-background-50 bg-opacity-60">
       <div className="flex w-screen h-fit min-h-16 items-center px-5 lg:px-10">
         <div className="flex-1 flex gap-3 items-center">
           <div className="">
