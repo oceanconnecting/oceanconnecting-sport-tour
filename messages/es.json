@@ -312,6 +312,22 @@
         "Rights": "Todos los derechos reservados",
         "Copyright": "Derechos de autor"
       }
+    },
+    "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Ponte en contacto con nosotros para más información o para reservar un tour.",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "send": "Enviar mensaje",
+      "success": "Tu mensaje ha sido enviado con éxito.",
+      "error": "Ocurrió un error. Por favor, intenta de nuevo.",
+      "sending": "Enviando..."
+    },
+    "details": {
+      "title": "Detalles de contacto"
     }
   }
+}
   

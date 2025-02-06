@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Toaster, { handleSubmitTour } from './actions';
 import Image from 'next/image';
 import { useRef, useState } from 'react';
@@ -30,6 +31,9 @@ export default function SubmitTourForm() {
     }
   };
 
+  const t = useTranslations("contact");
+  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
@@ -38,16 +42,15 @@ export default function SubmitTourForm() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
         <div className="flex-1 space-y-8">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-text-900 sm:text-4xl">Get in touch</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-text-900 sm:text-4xl">{t("title")}</h2>
             <p className="mt-4 text-lg text-text-800 max-w-[600px]">
-              We'd love to hear from you. Please fill out this form or shoot us an email.
+              {t("subtitle")}
             </p>
           </div>
-
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block pl-4 text-sm font-medium text-text-900">
-                Name
+                {t("form.name")}
               </label>
               <input
                 ref={nameInput}
@@ -60,7 +63,7 @@ export default function SubmitTourForm() {
             </div>
             <div>
               <label htmlFor="email" className="block pl-4 text-sm font-medium text-text-900">
-                Email
+                {t("form.email")}
               </label>
               <input
                 ref={emailInput}
@@ -73,7 +76,7 @@ export default function SubmitTourForm() {
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-text-900">
-                Message
+                {t("form.message")}
               </label>
               <textarea
                 ref={messageInput}
@@ -92,27 +95,27 @@ export default function SubmitTourForm() {
               {isSubmitting ? (
                 <>
                   <div className="animate-spin -ml-1 mr-3 h-5 w-5 text-white border-t-2 border-white rounded-full"></div>
-                  Sending...
+                  {t("form.sending")}
                 </>
               ) : (
-                'Send Message'
+                t("form.send")
               )}
             </button>
           </form>
 
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-text-900">Contact Information</h3>
+            <h3 className="text-lg font-semibold text-text-900">{t("details.title")}</h3>
             <div className="flex items-center space-x-3 text-text-600">
               <input className="h-5 w-5" />
-              <span>123 Main St, Anytown, USA 12345</span>
+              <span>Address <br/> Immeubles Coralia, 2ème étage, ISLAN, Hay Mohammadi, AGADIR</span>
             </div>
             <div className="flex items-center space-x-3 text-text-600">
               <input className="h-5 w-5" />
-              <span>+212 6969 666 69</span>
+              <span>+212 704-309787</span>
             </div>
             <div className="flex items-center space-x-3 text-text-600">
               <input className="h-5 w-5" />
-              <span>oceantours@gamiiil.com</span>
+              <span>oceanconnecting.ma@gmail.com</span>
             </div>
           </div>
         </div>

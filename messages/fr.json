@@ -313,5 +313,21 @@
       "Rights":"Tous droits réservés",
       "Copyright":"Droits d'auteur"
     }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Contactez-nous pour plus d’informations ou pour réserver une visite.",
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Message",
+      "send": "Envoyer le message",
+      "success": "Votre message a été envoyé avec succès.",
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "sending": "Envoi en cours..."
+    },
+    "details": {
+      "title": "Détails du contact"
+    }
   }
 }

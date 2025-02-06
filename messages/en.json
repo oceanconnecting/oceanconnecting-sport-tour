@@ -315,5 +315,22 @@
       "Rights":"All Rights Reserved",
       "Copyright":"Copyright"
     }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us for more information or to book a tour.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message",
+      "success": "Your message has been sent successfully.",
+      "error": "An error occurred. Please try again.",
+      "sending": "Sending..."
+    },
+    "details": {
+      "title":"Contact Details"
+    }
+
   }
 }

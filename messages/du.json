@@ -312,6 +312,22 @@
         "Rights": "Alle rechten voorbehouden",
         "Copyright": "Copyright"
       }
+    },
+    "contact": {
+    "title": "Contacteer Ons",
+    "subtitle": "Neem contact met ons op voor meer informatie of om een rondleiding te boeken.",
+    "form": {
+      "name": "Naam",
+      "email": "E-mail",
+      "message": "Bericht",
+      "send": "Bericht verzenden",
+      "success": "Je bericht is succesvol verzonden.",
+      "error": "Er is een fout opgetreden. Probeer het opnieuw.",
+      "sending": "Bezig met verzenden..."
+    },
+    "details": {
+      "title": "Contactgegevens"
     }
   }
+}
   
