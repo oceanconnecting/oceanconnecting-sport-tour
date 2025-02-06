@@ -92,7 +92,7 @@ function Opinion() {
         <section className="bg-background-100">
             <div className="flex flex-col overflow-hidden items-center p-6 w-full h-fit">
                 <Tag>{t("title")}</Tag>
-                <div className="overflow-hidden mt-6 w-full">
+                <div className="overflow-hidden mt-12 w-full">
                 <motion.div
                     className="flex gap-6 w-max flex-nowrap"
                     style={{ x: xTranslation }}

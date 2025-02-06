@@ -46,7 +46,7 @@ export default function Features() {
 
   return (
     <section>
-      <div className="sticky top-14 flex flex-col items-center">
+      <div className="sticky h-screen top-14 flex justify-center flex-col items-center">
         <Tag>{t("title")}</Tag>
         <AnimatedTestimonials value={CardIdx} testimonials={data} />
       </div>

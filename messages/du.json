@@ -22,7 +22,8 @@
         },
         "highlighted": "Ocean Sports Tour",
         "descr": "We zijn gespecialiseerd in het creëren van onvergetelijke tourervaringen voor kinderen! Onze missie is om nieuwsgierigheid te inspireren, creativiteit te prikkelen en leren te bevorderen door spannende avonturen die speciaal voor jonge ontdekkingsreizigers zijn afgestemd.",
-        "contact_button": "Neem contact op"
+        "contact_button": "Neem contact op",
+        "start_button": "Begin met verkennen"
       },
       "about": {
         "about_tag": "Jarenlange ervaring",
@@ -311,6 +312,22 @@
         "Rights": "Alle rechten voorbehouden",
         "Copyright": "Copyright"
       }
+    },
+    "contact": {
+    "title": "Contacteer Ons",
+    "subtitle": "Neem contact met ons op voor meer informatie of om een rondleiding te boeken.",
+    "form": {
+      "name": "Naam",
+      "email": "E-mail",
+      "message": "Bericht",
+      "send": "Bericht verzenden",
+      "success": "Je bericht is succesvol verzonden.",
+      "error": "Er is een fout opgetreden. Probeer het opnieuw.",
+      "sending": "Bezig met verzenden..."
+    },
+    "details": {
+      "title": "Contactgegevens"
     }
   }
+}
   

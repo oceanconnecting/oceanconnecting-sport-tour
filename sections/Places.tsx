@@ -62,11 +62,10 @@ const Places: React.FC = () => {
       <div 
         key={index} 
         className="cursor-pointer flex justify-center" 
-        onClick={() => openModal(place)}
       >
         <ImageCard  title={place.title} descr={place.descr} image={place.image}  /></div> ))
   : displayedPlaces.map((place, index) => (
-     <div key={index} className="cursor-pointer flex justify-center" onClick={() => openModal(place)}>
+     <div key={index} className="cursor-pointer flex justify-center">
         <ImageCard title={place.title} descr={place.descr}  image={place.image} /> </div>
     ))
 }

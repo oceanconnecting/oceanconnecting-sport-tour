@@ -22,7 +22,8 @@
         },
         "highlighted": "Ocean Sports Tour",
         "descr": "¡Nos especializamos en crear experiencias de tour inolvidables para niños! Nuestra misión es inspirar la curiosidad, despertar la creatividad y fomentar el aprendizaje a través de aventuras emocionantes diseñadas especialmente para jóvenes exploradores.",
-        "contact_button": "Póngase en contacto"
+        "contact_button": "Póngase en contacto",
+        "start_button": "Comenzar a explorar"
       },
       "about": {
         "about_tag": "Años de experiencia",
@@ -311,6 +312,22 @@
         "Rights": "Todos los derechos reservados",
         "Copyright": "Derechos de autor"
       }
+    },
+    "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Ponte en contacto con nosotros para más información o para reservar un tour.",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "send": "Enviar mensaje",
+      "success": "Tu mensaje ha sido enviado con éxito.",
+      "error": "Ocurrió un error. Por favor, intenta de nuevo.",
+      "sending": "Enviando..."
+    },
+    "details": {
+      "title": "Detalles de contacto"
     }
   }
+}
   

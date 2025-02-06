@@ -162,7 +162,7 @@ const Tours=()=>{
   
       
 return(
-    <div id="Tours" className="py-8 my-3 flex flex-col items-center bg-background-100">
+    <div id="Tours" className="py-16 flex flex-col items-center bg-background-100">
   {/* Tag Section */}
   <div className="mb-6">
     <Tag>

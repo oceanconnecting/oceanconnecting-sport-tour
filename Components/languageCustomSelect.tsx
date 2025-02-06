@@ -41,7 +41,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, placeholder = "Sel
   }
 
   return (
-    <div className="relative w-[90px]" ref={dropdownRef}>
+    <div className="relative w-20" ref={dropdownRef}>
       <button
         type="button"
         className="w-fit flex items-center justify-center gap-1 px-1 py-2"
@@ -49,7 +49,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, placeholder = "Sel
         aria-haspopup="listbox"
         aria-expanded={isOpen}
         >
-        <CiGlobe/>
+        <CiGlobe className="w-5 h-5" />
         {selectedOption ? selectedOption.label : placeholder}
       </button>
       {isOpen && (
@@ -67,9 +67,9 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, placeholder = "Sel
               aria-selected={selectedOption?.value === option.value}
               onClick={() => handleSelect(option)}
             >
-              <div className="flex items-center mx-3 justify-between gap-4">
-                <span className="block truncate">{option.label}</span>
+              <div className="flex items-center mx-3 gap-2">
                 <span>{option.flag}</span>
+                <span className="block">{option.label}</span>
               </div>
             </li>
           ))}

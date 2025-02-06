@@ -8,6 +8,7 @@ import { redirect } from "next/navigation";
 import { ThemeProvider } from "next-themes"
 import { Poppins, Tajawal } from "next/font/google";
 import BackToTopButton from "@/Components/BackToTopButton";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const poppins = Poppins({ subsets: ["latin"], weight: "300" });
 const tajawal = Tajawal({ subsets: ["arabic"], weight: "400" });
@@ -31,7 +32,7 @@ export default async function RootLayout({
   const validLocales = ["fr", "en", "ar", "es", "du"];
 
   if (!validLocales.includes(locale)) {
-    redirect("/fr")
+    redirect("/en")
   }
 
   const direction = locale === "ar" ? "rtl" : "ltr";
@@ -39,6 +40,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning>
       <body className={locale === "ar" ? tajawal.className : poppins.className}>
+      <GoogleAnalytics gaId={`${process.env.GOOGLE_ANALYTICS_ID}`} />
       <ThemeProvider attribute="class">
         <NextIntlClientProvider messages={messages}>
           <Navbar />
