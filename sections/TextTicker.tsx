@@ -24,7 +24,7 @@ function InfiniteText() {
   return (
 
     <section id="infinteTicker">
-        <div className="overflow-x-clip my-16 flex bg-secondary-100">
+        <div className="overflow-x-clip [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_10%,rgba(0,0,0,1)_90%,rgba(0,0,0,0)_100%)] my-16 flex bg-secondary-100">
         <motion.div
         animate={
             {x: isArabic ? "50%" : "-50%"}
