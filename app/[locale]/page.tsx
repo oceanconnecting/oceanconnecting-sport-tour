@@ -9,8 +9,9 @@ import Services from "@/sections/Services";
 import Tours from "@/sections/Tours";
 import Opnion from "@/sections/Opnion";
 import Features from "@/sections/Features";
+import Loading from "@/Components/Loading";
 
-const LoadingFallback = () => <p className="w-full h-screen flex justify-center items-center">Loading...</p>;
+const LoadingFallback = () => <Loading/>;
 
 export default function Home() {
   return (

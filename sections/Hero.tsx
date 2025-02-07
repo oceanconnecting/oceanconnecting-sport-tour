@@ -18,7 +18,7 @@ function Hero() {
                 <source src="/herovideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <div className='absolute top-0 left-0 w-full h-full bg-[#080f12] bg-opacity-70 z-10'></div>
+            <div className='absolute top-0 left-0 w-full h-full bg-[#080f12] bg-opacity-85 z-10'></div>
             <motion.div 
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}

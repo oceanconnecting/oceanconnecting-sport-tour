@@ -10,12 +10,12 @@ import ReactCountryFlag from "react-country-flag"
 function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
-  const validLocales = ["fr", "en", "ar", "du", "es"];
+  const validLocales = ["fr", "en", "ar", "de", "es"];
   const Locales = [
     { code: "fr", label: "French", flag: "FR" },
     { code: "en", label: "English", flag: "GB" },
     { code: "ar", label: "Arabic", flag: "SA" },
-    { code: "du", label: "Dutch", flag: "NL" },
+    { code: "de", label: "Dutch", flag: "NL" },
     { code: "es", label: "Spanish", flag: "ES" }
   ];
 

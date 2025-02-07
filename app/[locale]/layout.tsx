@@ -3,9 +3,9 @@ import "./globals.css";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { redirect } from "next/navigation";
-import { ThemeProvider } from "next-themes"
+import Providers from "@/Components/Providers";
 import { Poppins, Tajawal } from "next/font/google";
 import BackToTopButton from "@/Components/BackToTopButton";
 import { GoogleAnalytics } from '@next/third-parties/google'
@@ -13,11 +13,23 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 const poppins = Poppins({ subsets: ["latin"], weight: "300" });
 const tajawal = Tajawal({ subsets: ["arabic"], weight: "400" });
 
-export const metadata: Metadata = {
-  title: "Ocean Sport Tours",
-  description: "Ocean Sport Tours",
-  keywords: "Ocean connecting tours, ocean sports, ocean sports tours, etc."
-};
+export async function generateMetadata({
+  params,
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  const {locale} = await params;
+  const t = await getTranslations({locale, namespace: 'metadata'});
+ 
+  return {
+    title: {
+      default: t('title'),
+      template: `%s | ${t('title')}`,
+    },
+    description: t('description'),
+    keywords: t('keywords'),
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -29,7 +41,7 @@ export default async function RootLayout({
   const { locale } = await params;
 
   const messages = await getMessages();
-  const validLocales = ["fr", "en", "ar", "es", "du"];
+  const validLocales = ["fr", "en", "ar", "es", "de"];
 
   if (!validLocales.includes(locale)) {
     redirect("/en")
@@ -41,14 +53,14 @@ export default async function RootLayout({
     <html lang={locale} dir={direction} suppressHydrationWarning>
       <body className={locale === "ar" ? tajawal.className : poppins.className}>
       <GoogleAnalytics gaId={`${process.env.GOOGLE_ANALYTICS_ID}`} />
-      <ThemeProvider attribute="class">
         <NextIntlClientProvider messages={messages}>
+        <Providers>
           <Navbar />
           <BackToTopButton />
           <main>{children}</main>
           <Footer />
+        </Providers>
         </NextIntlClientProvider>
-        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,12 +1,16 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "use-intl";
 import { useState } from "react";
 import LanguageSwitcher from "@/Components/LanguageSwitcher";
 import { twMerge } from "tailwind-merge";
 import {useLocale} from "use-intl";
+import { useTheme } from "next-themes";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import ThemeToggle from "@/Components/ThemeToggle";
+import Logo from "@/public/Logo 12cm.svg";
+import { cn } from "@/lib/utils";
 
 const parentVariants = {
   visible: { opacity: 1, y: 0 },
@@ -16,6 +20,7 @@ const parentVariants = {
 function Navbar() {
   const t = useTranslations("homepage.navbar");
   const locale = useLocale()
+  const isDark = useTheme().theme === "dark";
 
   const navbarLink = [
     {
@@ -88,7 +93,7 @@ function Navbar() {
         <div className="flex-1 flex gap-3 items-center">
           <div className="">
             {/* logo */}
-
+            <Image src={Logo} alt="" width={56} height={56} className={cn("w-14 h-14",isDark && "invert")} />
           </div>
           <Link className="transition text-sm lg:text-lg duration-300 font-semibold hover:text-primary-800" href='/#main'>{t("title")}</Link>
         </div>
