@@ -9,8 +9,8 @@ import { Tour } from "@/types";
 import TourMap from "./tourMap";
 import Itinerary from "./Itinerary";
 import getToursData from "./ToursData";
-import FormTour from "./Form";
 
+import { FormTour } from "./test";
 const TourDetails = () => {
   const ToursData: Tour[] = getToursData();
   const params = useParams();
@@ -36,7 +36,7 @@ const TourDetails = () => {
   return (
     <section className="py-20">
       <Tag>{tour.title}</Tag>
-    <FormTour tour={tour}  />
+     
       <div className="grid grid-cols-2 items-center gap-4 py-4 px-8 bg-gray-50 rounded-xl shadow-sm w-full">
         <div className="flex items-center gap-2">
           <span className="text-gray-700 font-medium">Très bien</span>
@@ -55,12 +55,14 @@ const TourDetails = () => {
           </div>
         </div>
       </div>
+
       <div className="grid grid-cols-2 p-10 gap-4">
         {tour.image && (
           <img src={tour.image} alt={tour.title} className="rounded-lg shadow-md" />
         )}
         <div className="rounded-lg flex justify-center items-center">
           <Propose />
+          
         </div>
       </div>
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
@@ -72,10 +74,13 @@ const TourDetails = () => {
       {/* Itinerary and Form */}
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
         <Itinerary title={tour.title} passBy={tour.passBy} image={tour.image} />
+       <FormTour  />
       </div>
      
-      {/* Tour Information */}
+     
       
+   
+
     </section>
   );
 };
