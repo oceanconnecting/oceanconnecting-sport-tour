@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 return [
     {
         url: 'https://ocean-connecting-sport-tour.vercel.app/',
+        priority: 1.0,
         alternates: {
             languages: {
                 en: 'https://ocean-connecting-sport-tour.vercel.app/en',
@@ -16,6 +17,7 @@ return [
     },
     {
         url: 'https://ocean-connecting-sport-tour.vercel.app/contact',
+        priority: 0.8,
         alternates: {
             languages: {
                 en: 'https://ocean-connecting-sport-tour.vercel.app/en/contact',
@@ -28,6 +30,7 @@ return [
     },
     {
         url: 'https://ocean-connecting-sport-tour.vercel.app/gallery',
+        priority: 0.6,
         alternates: {
             languages: {
                 en: 'https://ocean-connecting-sport-tour.vercel.app/en/gallery',
