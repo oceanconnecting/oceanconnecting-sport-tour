@@ -258,7 +258,7 @@ return (
     
 
 
-    <p className="my-6 text-black-500  text-gray-400">{tf("tanks")}<a   className='text-blue-900 mx-2' href="https://www.oceanconnecting.ma/">Ocean Connecting</a> .</p>
+    <p className="my-6 text-black-500  text-gray-400">{tf("tanks")}<a   className=' text-primary-600 mx-2' href="https://www.oceanconnecting.ma/">Ocean Connecting</a> .</p>
     <ul className="flex flex-wrap justify-center items-center mb-6 text-text-900">
         {
             navbarLink.map((link, idx) => (
