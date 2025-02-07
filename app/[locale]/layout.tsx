@@ -9,6 +9,7 @@ import Providers from "@/Components/Providers";
 import { Poppins, Tajawal } from "next/font/google";
 import BackToTopButton from "@/Components/BackToTopButton";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import WhatsappContact from "@/Components/WhatsappContact";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "300" });
 const tajawal = Tajawal({ subsets: ["arabic"], weight: "400" });
@@ -57,6 +58,7 @@ export default async function RootLayout({
         <Providers>
           <Navbar />
           <BackToTopButton />
+          <WhatsappContact />
           <main>{children}</main>
           <Footer />
         </Providers>
