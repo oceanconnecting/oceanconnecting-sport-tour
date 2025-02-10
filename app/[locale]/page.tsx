@@ -9,9 +9,13 @@ import Services from "@/sections/Services";
 import Tours from "@/sections/Tours";
 import Opnion from "@/sections/Opnion";
 import Features from "@/sections/Features";
-import Loading from "@/Components/Loading";
+import Loading from "@/Components/LoadingSpinner";
 
-const LoadingFallback = () => <Loading />;
+const LoadingFallback = () => (
+  <div className="flex items-center justify-center h-screen">
+    <Loading />
+  </div>
+);
 
 export default function Home() {
   return (

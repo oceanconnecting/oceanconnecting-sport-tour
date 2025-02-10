@@ -1,10 +1,18 @@
 "use client";
 
+import { Suspense } from "react";
 import ModalCard from "@/Components/modalCard";
 import Tag from "@/Components/Tag";
 import React from "react";
 import { motion } from "motion/react";
 import { Images } from "./images";
+import LoadingSpinner from "@/Components/LoadingSpinner";
+
+const LoadingFallback = () => (
+  <div className="flex items-center justify-center w-full h-full rounded-lg bg-background-100">
+    <LoadingSpinner />
+  </div>
+);
 
 function Gallery() {
   const images = Images;
@@ -32,11 +40,13 @@ function Gallery() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.05 }}
           >
-            <ModalCard
-              title={collection.title}
-              image={collection.images[0].src}
-              Images={collection.images}
-            />
+            <Suspense fallback={<LoadingFallback />}>
+              <ModalCard
+                title={collection.title}
+                image={collection.images[0].src}
+                Images={collection.images}
+              />
+            </Suspense>
           </motion.div>
         ))}
       </div>

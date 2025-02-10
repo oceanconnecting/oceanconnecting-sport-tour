@@ -22,12 +22,12 @@ export const AnimatedTestimonials = ({
     return index === active;
   };
 
-    useEffect(() => {
-        setActive(value);
-    }, [value]);
+  useEffect(() => {
+    setActive(value);
+  }, [value]);
 
   const randomRotateY = (i: number) => {
-    return i * 5
+    return i * 5;
   };
   return (
     <div className="max-w-sm md:max-w-4xl mx-auto px-4 md:px-8 lg:px-12 py-8">
@@ -80,6 +80,9 @@ export const AnimatedTestimonials = ({
           </div>
         </div>
         <div className="flex justify-center flex-col py-4">
+          <p className="text-center bg-background-200 mb-6 w-fit rounded-full px-6 py-2 text-lg font-semibold text-background-600">
+            {value + 1} / {testimonials.length}
+          </p>
           <motion.div
             key={active}
             initial={{
