@@ -47,7 +47,8 @@ export default function PlacesDetail({
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
-            className="flex items-center justify-center w-full px-6 pt-11 inset-0 z-10 overflow-y-auto h-full">
+            className="flex items-center justify-center w-full px-6 pt-11 inset-0 z-10 overflow-y-auto h-full"
+          >
             <div className="flex items-center justify-center min-h-full p-4 text-center sm:p-0">
               <DialogPanel className="relative h-fit bg-white rounded-lg shadow-xl sm:max-w-4xl lg:max-w-5xl w-full">
                 {/* Close Button */}

@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import About from "@/sections/About";
 import Hero from "@/sections/Hero";
 import Activities from "@/sections/Activities";
-import Places from "@/sections/Places";
+import Places from "@/sections/places/Places";
 import TextTicker from "@/sections/TextTicker";
 import Downloads from "@/sections/Downloads";
 import Services from "@/sections/Services";
@@ -11,7 +11,7 @@ import Opnion from "@/sections/Opnion";
 import Features from "@/sections/Features";
 import Loading from "@/Components/Loading";
 
-const LoadingFallback = () => <Loading/>;
+const LoadingFallback = () => <Loading />;
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <About />
       </Suspense>
       <Suspense fallback={<LoadingFallback />}>
-        <Features/>
+        <Features />
       </Suspense>
       <Suspense fallback={<LoadingFallback />}>
         <Activities />
