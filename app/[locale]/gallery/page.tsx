@@ -1,46 +1,23 @@
-"use client"
+import { Metadata } from 'next';
+import Gallery from './gallery'
+import { getTranslations } from "next-intl/server"
 
-import Carousel from '@/Components/Carousel'
-import ModalCard from '@/Components/modalCard'
-import Tag from '@/Components/Tag'
-import React from 'react'
-import { motion } from 'motion/react'
-import { Images } from './images'
+export async function generateMetadata({ params }: any) : Promise<Metadata> {
+  const {locale} = await params;
+  const t = await getTranslations({
+    namespace: 'homepage.navbar',
+    locale
+  });
+  return {
+     title: t('gallery'),
+  }
+}
 
 function page() {
-
-    const images = Images
-    const fadeInAnimations = {
-        initial : {
-          opacity: 0,
-          y:100
-        },
-        animate : {
-          opacity: 1,
-          y:0
-        },
-      }
-
   return (
-    <section className='pt-20 flex flex-col w-full justify-center items-center'>
-        <Tag>Gallery</Tag>
-        <div className=' mt-16 grid w-full px-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
-            {
-                images.map((collection : any, idx : number) => (
-                    <motion.div
-                    key={idx}
-                    variants={fadeInAnimations}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{once:true}}
-                    transition={{ duration: 0.5, delay: idx * 0.05 }}
-                    >
-                        <ModalCard title={collection.title} image={collection.images[0].src} Images={collection.images}/>
-                    </motion.div>
-                ))
-            }
-        </div>
-    </section>
+    <div>
+      <Gallery/>
+    </div>
   )
 }
 

@@ -10,7 +10,7 @@ import TourMap from "./tourMap";
 import Itinerary from "./Itinerary";
 import getToursData from "./ToursData";
 import FormTour from "./Form";
-import { LayoutGridDemo } from "./image"; 
+
 const TourDetails = () => {
   const ToursData: Tour[] = getToursData();
   const params = useParams();
@@ -23,7 +23,7 @@ const TourDetails = () => {
       const foundTour = ToursData.find((t) => t.id.toString() === id);
       setTour(foundTour || null);
     }
-  }, [id, ToursData]);
+  }, [id]);
 
   const handleFavoritClick = () => setIsFavorited(!isFavorited);
 
@@ -31,7 +31,7 @@ const TourDetails = () => {
   if (!tour) return <div><p>Tour non trouvé.</p></div>;
 
   const fullStars = Math.floor(tour.rating);
-  const halfStar = tour.rating % 1 >= 0.5 ? 1 : 0;
+  const hasHalfStar = tour.rating % 1 >= 0.5;
 
   return (
     <section className="py-20">
@@ -43,11 +43,12 @@ const TourDetails = () => {
           {Array.from({ length: fullStars }).map((_, index) => (
             <FaStar key={`star-${index}`} className="text-yellow-500" />
           ))}
-          {halfStar > 0 && <FaStar className="text-yellow-500" style={{ clipPath: "inset(0 50% 0 0)" }} />}
-          {Array.from({ length: 5 - fullStars - halfStar }).map((_, index) => (
+          {hasHalfStar && <FaStar className="text-yellow-500" />}
+          {Array.from({ length: 5 - fullStars - (hasHalfStar ? 1 : 0) }).map((_, index) => (
             <FaRegStar key={`empty-star-${index}`} className="text-yellow-500" />
           ))}
         </div>
+
         <div className="flex justify-center items-center gap-6">
           <div onClick={handleFavoritClick} className="cursor-pointer flex items-center gap-2">
             {isFavorited ? <FaHeart size={20} className="text-red-500" /> : <FaRegHeart size={20} className="text-gray-700" />}
@@ -55,9 +56,7 @@ const TourDetails = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 p-10 gap-4">
-      {/* <LayoutGridDemo/> */}
-      </div>
+
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
         <div className="rounded-lg flex justify-center items-center">
           <Propose />
@@ -70,11 +69,8 @@ const TourDetails = () => {
       {/* Itinerary and Form */}
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
         <Itinerary title={tour.title} passBy={tour.passBy} image={tour.image} />
-        <FormTour tour={tour}  />
+        <FormTour tour={tour} />
       </div>
-     
-      {/* Tour Information */}
-      
     </section>
   );
 };

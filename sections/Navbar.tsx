@@ -1,12 +1,16 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "use-intl";
 import { useState } from "react";
 import LanguageSwitcher from "@/Components/LanguageSwitcher";
 import { twMerge } from "tailwind-merge";
 import {useLocale} from "use-intl";
+import { useTheme } from "next-themes";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import ThemeToggle from "@/Components/ThemeToggle";
+import Logo from "@/public/Logo 12cm.svg";
+import { cn } from "@/lib/utils";
 
 const parentVariants = {
   visible: { opacity: 1, y: 0 },
@@ -16,6 +20,7 @@ const parentVariants = {
 function Navbar() {
   const t = useTranslations("homepage.navbar");
   const locale = useLocale()
+  const isDark = useTheme().theme === "dark";
 
   const navbarLink = [
     {
@@ -83,12 +88,12 @@ function Navbar() {
         ease: [0.1, 0.25, 0.3, 1],
         duration: 0.3,
       }}
-    className="fixed z-50 shadow-md backdrop-blur-2xl bg-background-50 bg-opacity-90">
+    className="fixed z-50 shadow-md backdrop-blur-2xl border-b border-background-100 bg-background-50 bg-opacity-60">
       <div className="flex w-screen h-fit min-h-16 items-center px-5 lg:px-10">
         <div className="flex-1 flex gap-3 items-center">
           <div className="">
             {/* logo */}
-
+            <Image src={Logo} alt="" width={56} height={56} className={cn("w-14 h-14",isDark && "invert")} />
           </div>
           <Link className="transition text-sm lg:text-lg duration-300 font-semibold hover:text-primary-800" href='/#main'>{t("title")}</Link>
         </div>
@@ -111,6 +116,7 @@ function Navbar() {
 
         <div className="flex gap-3 lg:hidden">
           <LanguageSwitcher />
+          <ThemeToggle/>
           <div
             onClick={() => setIsOpen(!isOpen)}
             className="flex gap-5 lg:hidden flex-col cursor-pointer">
@@ -170,12 +176,12 @@ function Navbar() {
           {navbarLink.map((link, idx) =>
             (
               <div
-              key={idx} className="pl-5 py-3 flex justify-center hover:text-primary-100">
+              key={idx} className="pl-5 py-3 flex justify-center hover:text-primary-900">
                 <Link
                   onClick={() => (
                     setIsOpen(false)
                   )}
-                  className="px-3 text-primary-100 hover:text-primary-300 transition duration-300"
+                  className="px-3 text-primary-900 hover:text-primary-300 transition duration-300"
                   href={link.link}
                 >
                   {link.title}

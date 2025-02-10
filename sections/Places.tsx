@@ -1,11 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import FilterTag from '@/app/[locale]/places/filterTag';
 import PlacesDetail from '@/app/[locale]/places/detail';
 import Tag from '@/Components/Tag';
-import Button from '@/Components/Button';
-import { FaPlaceOfWorship } from 'react-icons/fa';
 import { useLocale, useTranslations } from 'use-intl';
 import Filter from '@/Components/Filter';
 import Allplaces from '@/app/[locale]/places/Allplaces';
@@ -65,11 +62,10 @@ const Places: React.FC = () => {
       <div 
         key={index} 
         className="cursor-pointer flex justify-center" 
-        onClick={() => openModal(place)}
       >
         <ImageCard  title={place.title} descr={place.descr} image={place.image}  /></div> ))
   : displayedPlaces.map((place, index) => (
-     <div key={index} className="cursor-pointer flex justify-center" onClick={() => openModal(place)}>
+     <div key={index} className="cursor-pointer flex justify-center">
         <ImageCard title={place.title} descr={place.descr}  image={place.image} /> </div>
     ))
 }

@@ -1,26 +1,9 @@
-'use client'
-import { useEffect ,useState} from "react";
+import { cn } from "@/lib/utils"
 
-
-
-function Tag(props : any) {
-
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true); // Une fois le composant monté côté client
-  }, []);
-
-  if (!isClient) {
-    return null; // Rendre rien pendant le rendu initial
-  }
-    const { icon, children} = props
-
+function Tag({className, children} : {className?: string, children: React.ReactNode}) {
   return (
-    <div className="px-6 py-4 flex text-primary-800 items-center justify-center gap-3 w-fit">
-
-        <span className="text-5xl text-center font-semibold">{children}</span>
-
+    <div className={cn("px-6 py-6 text-center flex text-primary-800 items-center justify-center gap-3 text-5xl font-semibold w-fit", className)}>
+        {children}
     </div>
   )
 }

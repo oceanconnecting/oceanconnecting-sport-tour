@@ -1,7 +1,7 @@
 "use client"
 
 import { PiDownloadSimpleBold } from "react-icons/pi";
-import { CiFileOn } from "react-icons/ci";
+import { IoMdDownload } from "react-icons/io";
 import { useTranslations } from "next-intl";
 
 interface DownloadCardProps {
@@ -14,13 +14,13 @@ interface DownloadCardProps {
 export default function DownloadCard({ title, description, fileSize, downloadUrl }: DownloadCardProps) {
     const t = useTranslations("homepage.downloads")
   return (
-    <div className="w-full max-w-sm rounded-3xl bg-primary-100 overflow-hidden">
+    <div className="w-full p-2 max-w-md rounded-3xl bg-background-100 overflow-hidden">
       <div className="p-5">
         <div className="flex items-center gap-2 mb-2">
-          <CiFileOn className="h-6 w-6 text-primary-300" />
+          <IoMdDownload className="h-6 w-6 text-background-600" />
           <h2 className="text-xl font-bold text-text-800">{title}</h2>
         </div>
-        <p className="text-primary-600 text-sm mb-2">{description}</p>
+        <p className="text-text-600 text-sm mb-2">{description}</p>
         <p className="text-sm text-text-500">File size: {fileSize}</p>
       </div>
       <div className="px-5 mb-4">

@@ -1,4 +1,9 @@
 {
+  "metadata": {
+    "title": "Ocean Sport Tours",
+    "description": "Explore unforgettable adventure tours for kids with Ocean Sports Tour. From exciting activities to cultural explorations, we offer safe, educational, and fun experiences.",
+    "keywords": "ocean sports tour, adventure tours, kids travel, Morocco tourism, Agadir tours, Marrakech excursions, Essaouira travel, kids activities, sports camps, guided tours, safe travel for children, outdoor adventure, cultural experiences, travel agency Morocco"
+  },
   "homepage": {
     "navbar": {
       "title": "Ocean Sports Tour",
@@ -22,7 +27,8 @@
       },
       "highlighted":"Ocean Sports Tour",
       "descr":"we specialize in creating unforgettable tour experiences for kids! Our mission is to inspire curiosity, spark creativity, and foster learning through exciting adventures tailored just for young explorers.",
-      "contact_button": "Get in Touch"
+      "contact_button": "Get in Touch",
+      "start_button": "Start Exploring"
     },
     "about":{
       "about_tag":"Years of experience",
@@ -314,5 +320,22 @@
       "Rights":"All Rights Reserved",
       "Copyright":"Copyright"
     }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us for more information or to book a tour.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message",
+      "success": "Your message has been sent successfully.",
+      "error": "An error occurred. Please try again.",
+      "sending": "Sending..."
+    },
+    "details": {
+      "title":"Contact Details"
+    }
+
   }
 }

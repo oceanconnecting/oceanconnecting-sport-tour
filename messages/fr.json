@@ -1,4 +1,9 @@
 {
+  "metadata": {
+    "title": "Tours de Sports Nautiques",
+    "description": "Découvrez des aventures inoubliables pour les enfants avec Tours de Sports Nautiques. Des activités excitantes aux explorations culturelles, nous offrons des expériences sûres, éducatives et amusantes.",
+    "keywords": "tours de sports nautiques, aventures, voyages pour enfants, tourisme au Maroc, excursions à Agadir, excursions à Marrakech, voyage à Essaouira, activités pour enfants, camps sportifs, visites guidées, voyages sécurisés pour enfants, aventures en plein air, expériences culturelles, agence de voyage Maroc"
+  },
   "homepage": {
     "navbar": {
       "title": "Ocean Sports Tour",
@@ -22,7 +27,8 @@
       },
       "highlighted":"Ocean Sports Tour",
       "descr":"nous nous spécialisons dans la création d'expériences de tournée inoubliables pour les enfants ! Notre mission est d'inspirer la curiosité, de stimuler la créativité et de favoriser l'apprentissage à travers des aventures passionnantes adaptées aux jeunes explorateurs.",
-      "contact_button": "Contactez-nous"
+      "contact_button": "Contactez-nous",
+      "start_button": "Commencer l'exploration"
     },
     "about":{
       "about_tag":"Années d'expérience",
@@ -311,6 +317,22 @@
       "tanks":"Merci de visiter notre site Web et bienvenue à",
       "Rights":"Tous droits réservés",
       "Copyright":"Droits d'auteur"
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Contactez-nous pour plus d’informations ou pour réserver une visite.",
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Message",
+      "send": "Envoyer le message",
+      "success": "Votre message a été envoyé avec succès.",
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "sending": "Envoi en cours..."
+    },
+    "details": {
+      "title": "Détails du contact"
     }
   }
 }

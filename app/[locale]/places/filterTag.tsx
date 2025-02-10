@@ -1,5 +1,4 @@
 import React from 'react';
-import ImageCard from '@/Components/ImageCard';
 
 interface FilterTagProps {
   places: Place[];
@@ -18,12 +17,12 @@ const FilterTag: React.FC<FilterTagProps> = ({ places, activeTag, handleTag, tag
   
   const filteredPlaces = activeTag === 'All' ? places : places.filter((place) => place.city === activeTag);
   return (
-    <div className="w-full justify-center flex flex-row flex-wrap">
+    <div className="lg:border lg:border-background-200 lg:bg-background-100 lg:shadow-lg w-fit p-2 rounded-full justify-center gap-2 flex flex-row flex-wrap">
       {tagList.map((tag, i) => (
         <div
           onClick={() => handleTag(tag)}
           className={`py-1 px-4 cursor-pointer rounded-full ${
-            activeTag === tag ? 'bg-primary-200 transition-all duration-300 text-text-900' : 'hover:bg-primary-100 transition-all duration-300'
+            activeTag === tag ? 'bg-background-200 transition-all duration-300 text-text-900' : 'hover:bg-background-200 transition-all duration-300'
           }`}
           key={i}>
           {tag}
