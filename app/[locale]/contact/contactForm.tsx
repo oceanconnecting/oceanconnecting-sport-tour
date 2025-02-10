@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
-import Toaster, { handleSubmitTour } from './actions';
-import Image from 'next/image';
-import { useRef, useState } from 'react';
+import { useTranslations } from "next-intl";
+import Toaster, { handleSubmitTour } from "./actions";
+import Image from "next/image";
+import { useRef, useState } from "react";
 import { FaLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
 
 export default function contactForm() {
@@ -12,9 +12,9 @@ export default function contactForm() {
   const messageInput = useRef<HTMLTextAreaElement>(null);
 
   const clearInputs = () => {
-    if (nameInput.current) nameInput.current.value = '';
-    if (emailInput.current) emailInput.current.value = '';
-    if (messageInput.current) messageInput.current.value = '';
+    if (nameInput.current) nameInput.current.value = "";
+    if (emailInput.current) emailInput.current.value = "";
+    if (messageInput.current) messageInput.current.value = "";
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -26,14 +26,13 @@ export default function contactForm() {
       await handleSubmitTour(formData);
       clearInputs();
     } catch (error) {
-      console.error('Error during form submission:', error);
+      console.error("Error during form submission:", error);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const t = useTranslations("contact");
-  
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -43,14 +42,19 @@ export default function contactForm() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
         <div className="flex-1 space-y-8">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-text-900 sm:text-4xl">{t("title")}</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-text-900 sm:text-4xl">
+              {t("title")}
+            </h2>
             <p className="mt-4 text-lg text-text-800 max-w-[600px]">
               {t("subtitle")}
             </p>
           </div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="block pl-4 text-sm font-medium text-text-900">
+              <label
+                htmlFor="name"
+                className="block pl-4 text-sm font-medium text-text-900"
+              >
                 {t("form.name")}
               </label>
               <input
@@ -63,7 +67,10 @@ export default function contactForm() {
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label htmlFor="email" className="block pl-4 text-sm font-medium text-text-900">
+              <label
+                htmlFor="email"
+                className="block pl-4 text-sm font-medium text-text-900"
+              >
                 {t("form.email")}
               </label>
               <input
@@ -76,7 +83,10 @@ export default function contactForm() {
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label htmlFor="message" className="block text-sm font-medium text-text-900">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-text-900"
+              >
                 {t("form.message")}
               </label>
               <textarea
@@ -105,10 +115,15 @@ export default function contactForm() {
           </form>
 
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-text-900">{t("details.title")}</h3>
+            <h3 className="text-lg font-semibold text-text-900">
+              {t("details.title")}
+            </h3>
             <div className="flex items-center gap-6 text-text-600">
               <FaLocationDot className="h-5 w-5" />
-              <span>Address Immeubles Coralia, 2ème étage, ISLAN, Hay Mohammadi, AGADIR</span>
+              <span>
+                Address Immeubles Coralia, 2ème étage, ISLAN, Hay Mohammadi,
+                AGADIR
+              </span>
             </div>
             <div className="flex items-center gap-6 text-text-600">
               <FaPhone className="h-5 w-5" />
@@ -121,7 +136,13 @@ export default function contactForm() {
           </div>
         </div>
         <div className="flex-1 flex justify-center relative h-[400px]">
-          <Image className='rounded-xl object-cover' src={'/ContactImg.jpg'} alt={''} width={400} height={300}></Image>
+          <Image
+            className="rounded-xl object-cover"
+            src={"/ContactImg.jpg"}
+            alt={""}
+            width={400}
+            height={300}
+          ></Image>
         </div>
       </div>
     </section>
