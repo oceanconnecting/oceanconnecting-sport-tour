@@ -11,7 +11,7 @@ export interface Tour {
     newPrice?: {
       priceAdults:number,
       priceChildren:number,
-      pricebabies:number
+      priceBabies:number
 
     };
     latesPrice: number;

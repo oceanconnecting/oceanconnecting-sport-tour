@@ -24,8 +24,7 @@ const ToursData: Tour[] = [
     newPrice: {
       priceAdults:240,
       priceChildren:200,
-      pricebabies:150
-
+      priceBabies:150
     },
   },
   {
@@ -51,7 +50,7 @@ const ToursData: Tour[] = [
     newPrice: {
       priceAdults:240,
       priceChildren:200,
-      pricebabies:150
+      priceBabies:150
 
     },
   },
@@ -78,7 +77,7 @@ const ToursData: Tour[] = [
     newPrice: {
       priceAdults:240,
       priceChildren:200,
-      pricebabies:150
+      priceBabies:150
 
     },
   },
@@ -105,7 +104,7 @@ const ToursData: Tour[] = [
     newPrice: {
       priceAdults:240,
       priceChildren:200,
-      pricebabies:150
+      priceBabies:150
 
     },
   },
@@ -132,7 +131,7 @@ const ToursData: Tour[] = [
     newPrice: {
       priceAdults:240,
       priceChildren:200,
-      pricebabies:150
+      priceBabies:150
 
     },
   },
