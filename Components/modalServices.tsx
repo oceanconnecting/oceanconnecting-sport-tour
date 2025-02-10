@@ -26,7 +26,7 @@ function ModalServices(props: any) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 z-10" />
         <div className="relative h-full flex flex-col justify-end z-10">
-          <div className="px-6 py-3 flex justify-center flex-col gap-4">
+          <div className="px-6 py-3 flex justify-center flex-col gap-2">
             <h2 className="text-2xl font-bold text-white mb-2">{title}</h2>
             <p className="text-sm text-white">{descr}</p>
           </div>
