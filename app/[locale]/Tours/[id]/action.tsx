@@ -5,6 +5,7 @@ interface EmailData {
   email: string;
   subject: string;
   message: string;
+  notre: string[];
 }
 
 export async function handleSubmitTour(emailData: EmailData) {
@@ -14,22 +15,19 @@ export async function handleSubmitTour(emailData: EmailData) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(emailData),
     });
-
-    // Handling non-2xx HTTP status codes
-   
+  
     if (!response.ok) {
-        const errorDetails = await response.json();
-        console.error("Detailed Error:", errorDetails);
-        toast.error(`Failed: ${errorDetails.message}`);
-        return;
-      }
-      
-
-    toast.success("Reservation confirmed!");
+      const errorDetails = await response.json().catch(() => ({ message: "Unknown error" }));
+      // console.error("Detailed Error:", errorDetails);
+      toast.error(`Failed: ${errorDetails.message || "Unexpected error."}`);
+    } else {
+      toast.success("Reservation confirmed!");
+    }
   } catch (error) {
-    console.error('Error submitting form:', error);
-    toast.error("An error occurred. Please try again.");
+    console.error("Error submitting form:", error);
+    toast.error("An unexpected error occurred.");
   }
+  
 }
 
 export default function Toaster() {

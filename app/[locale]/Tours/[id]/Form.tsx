@@ -17,7 +17,7 @@ interface FormProps {
   tour: Tour;
 }
 
-const FormTour: React.FC<FormProps> = ({ tour }) => {
+  const FormTour: React.FC<FormProps> = ({ tour }) => {
   const [adults, setAdults] = useState<number>(0);
   const [children, setChildren] = useState<number>(0);
   const [babies, setBabies] = useState<number>(0);
@@ -78,7 +78,7 @@ const FormTour: React.FC<FormProps> = ({ tour }) => {
       from_name: "Tour Reservation", // Your name or company name
       email: "elbrikifatima19@gmail.com", // User email or static recipient
       subject: "Confirmation de Réservation de Tour",
-      
+      notre: ['positronna029@gmail.com'],
       message: `
         Détails de la réservation:
   
@@ -107,7 +107,7 @@ const FormTour: React.FC<FormProps> = ({ tour }) => {
  
 
   return (
-    <div className="grid grid-cols-1 items-center mt-16 text-center">
+    <div className="grid grid-cols-1 items-center w-full mt-16 text-center">
       <div className="max-w-md mx-auto bg-white p-6 rounded-3xl shadow-md">
         <h3 className="text-lg font-bold mb-6">Choisissez les participants et la date</h3>
 
@@ -179,7 +179,7 @@ const FormTour: React.FC<FormProps> = ({ tour }) => {
           <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-xl shadow-2xl z-50">
             <div className="flex justify-between items-center border-b-4 border-b-slate-700 pb-4">
               <h4 className="text-xl font-bold text-gray-900">{tour.title}</h4>
-              <Button onClick={handleCloseReservation} className="text-gray-600 hover:text-gray-900">
+              <Button onClick={handleCloseReservation} className="text-gray-600 font-bold hover:text-gray-900">
                 X
               </Button>
             </div>
