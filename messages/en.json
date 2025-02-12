@@ -333,5 +333,65 @@
     "details": {
       "title": "Contact Details"
     }
+  },
+  "offlineChat": {
+    "title": "Chat Support",
+    "choose": "choose a question",
+    "question1": {
+      "question": "How can I help you?",
+      "answer": "Ocean Sport Tours is a company that offers exciting ocean-related activities and tours."
+    },
+    "question2": {
+      "question": "What is Ocean Sport Tours?",
+      "answer": "Ocean Sport Tours is a company that offers exciting ocean-related activities and tours."
+    },
+    "question3": {
+      "question": "What activities do you offer?",
+      "answer": "We offer a variety of activities including snorkeling, scuba diving, and boat tours."
+    },
+    "question4": {
+      "question": "Where are you located?",
+      "answer": "We operate in multiple locations including tropical islands and coastal cities."
+    },
+    "question5": {
+      "question": "How much does it cost?",
+      "answer": "The pricing varies depending on the activity and location. Please check our website for details."
+    },
+    "question6": {
+      "question": "Do I need prior experience?",
+      "answer": "No prior experience is required for most activities. We provide training for beginners."
+    },
+    "question7": {
+      "question": "What safety measures do you have?",
+      "answer": "We follow strict safety protocols, including certified guides, safety equipment, and emergency procedures."
+    },
+    "question8": {
+      "question": "Can I book a private tour?",
+      "answer": "Yes, private tours are available upon request. Contact us for more details."
+    },
+    "question9": {
+      "question": "Do you offer group discounts?",
+      "answer": "Yes, we offer group discounts for large parties. Reach out to our support team for details."
+    },
+    "question10": {
+      "question": "What should I bring for the tour?",
+      "answer": "We recommend bringing swimwear, sunscreen, a towel, and any necessary personal items."
+    },
+    "question11": {
+      "question": "Are children allowed on the tours?",
+      "answer": "Yes, children are welcome! Some activities may have age restrictions for safety reasons."
+    },
+    "question12": {
+      "question": "Do you provide life jackets and safety gear?",
+      "answer": "Yes, all safety equipment, including life jackets, is provided for each activity."
+    },
+    "question13": {
+      "question": "How do I book a tour?",
+      "answer": "You can book a tour online through our website or contact our customer service team."
+    },
+    "question14": {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept credit cards, PayPal, and bank transfers."
+    }
   }
 }

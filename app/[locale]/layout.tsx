@@ -10,7 +10,7 @@ import { Poppins, Tajawal } from "next/font/google";
 import BackToTopButton from "@/Components/BackToTopButton";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import WhatsappContact from "@/Components/WhatsappContact";
-import OfflineChat from "@/Components/OfflineChat/OfflineChat";
+import OfflineChat from "@/Components/OfflineChat";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "300" });
 const tajawal = Tajawal({ subsets: ["arabic"], weight: "400" });
@@ -57,10 +57,10 @@ export default async function RootLayout({
         <GoogleAnalytics gaId={`${process.env.GOOGLE_ANALYTICS_ID}`} />
         <NextIntlClientProvider messages={messages}>
           <Providers>
+            <OfflineChat />
             <Navbar />
             <BackToTopButton />
             <WhatsappContact />
-            <OfflineChat />
             <main>{children}</main>
             <Footer />
           </Providers>

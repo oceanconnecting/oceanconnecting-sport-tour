@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import {
   LuSend,
   LuChevronDown,
@@ -8,8 +9,9 @@ import {
   LuRotateCw,
 } from "react-icons/lu";
 import { useState, useRef, useEffect } from "react";
-import offlineChatbotDataArray from "./Data";
-import Button from "../Button";
+import Button from "./Button";
+import { useLocale } from "next-intl";
+import { cn } from "@/lib/utils";
 
 interface DropdownOption {
   value: string;
@@ -17,6 +19,94 @@ interface DropdownOption {
 }
 
 function OfflineChat() {
+  const t = useTranslations("offlineChat");
+  const offlineChatbotDataArray = [
+    {
+      id: 1,
+      question: t("question1.question"),
+      answer: t("question1.answer"),
+      followUp: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    },
+    {
+      id: 2,
+      question: t("question2.question"),
+      answer: t("question2.answer"),
+      followUp: [3, 4],
+    },
+    {
+      id: 3,
+      question: t("question3.question"),
+      answer: t("question3.answer"),
+      followUp: [5, 6],
+    },
+    {
+      id: 4,
+      question: t("question4.question"),
+      answer: t("question4.answer"),
+      followUp: [7, 8],
+    },
+    {
+      id: 5,
+      question: t("question5.question"),
+      answer: t("question5.answer"),
+      followUp: [9],
+    },
+    {
+      id: 6,
+      question: t("question6.question"),
+      answer: t("question6.answer"),
+      followUp: [10],
+    },
+    {
+      id: 7,
+      question: t("question7.question"),
+      answer: t("question7.answer"),
+      followUp: [11, 12],
+    },
+    {
+      id: 8,
+      question: t("question8.question"),
+      answer: t("question8.answer"),
+      followUp: [13],
+    },
+    {
+      id: 9,
+      question: t("question9.question"),
+      answer: t("question9.answer"),
+      followUp: [],
+    },
+    {
+      id: 10,
+      question: t("question10.question"),
+      answer: t("question10.answer"),
+      followUp: [],
+    },
+    {
+      id: 11,
+      question: t("question11.question"),
+      answer: t("question11.answer"),
+      followUp: [],
+    },
+    {
+      id: 12,
+      question: t("question12.question"),
+      answer: t("question12.answer"),
+      followUp: [],
+    },
+    {
+      id: 13,
+      question: t("question13.question"),
+      answer: t("question13.answer"),
+      followUp: [14],
+    },
+    {
+      id: 14,
+      question: t("question14.question"),
+      answer: t("question14.answer"),
+      followUp: [],
+    },
+  ];
+  const isRtl = useLocale() === "ar";
   const [availableQuestions, setAvailableQuestions] = useState<
     DropdownOption[]
   >(
@@ -27,26 +117,28 @@ function OfflineChat() {
   );
   const [conversation, setConversation] = useState<
     { type: "bot" | "user"; content: string }[]
-  >([{ type: "bot", content: "Hello! How can I help you today?" }]);
+  >([{ type: "bot", content: t("question1.question") }]);
   const [toggle, setToggle] = useState(false);
   const [selectedQuestion, setSelectedQuestion] = useState<string | null>(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const chatRef = useRef<HTMLDivElement>(null);
   const chatEndRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [chatEndRef]); //Corrected dependency
+  }, [conversation]);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setIsDropdownOpen(false);
+      if (!chatRef.current?.contains(event.target as Node)) {
+        setToggle(false); // Close chat if clicked outside it
+      } else if (!dropdownRef.current?.contains(event.target as Node)) {
+        setIsDropdownOpen(false); // Close dropdown if clicked outside it but inside chatbox
       }
     }
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -80,9 +172,7 @@ function OfflineChat() {
   }
 
   function resetChat() {
-    setConversation([
-      { type: "bot", content: "Hello! How can I help you today?" },
-    ]);
+    setConversation([{ type: "bot", content: t("question1.question") }]);
     setAvailableQuestions(
       offlineChatbotDataArray.map((q) => ({
         value: q.id.toString(),
@@ -102,9 +192,7 @@ function OfflineChat() {
       { type: "user", content: selectedQuestion.question },
       {
         type: "bot",
-        content:
-          selectedQuestion.answer ||
-          "I'm sorry, I don't have an answer for that.",
+        content: selectedQuestion.answer,
       },
     ]);
 
@@ -123,14 +211,20 @@ function OfflineChat() {
   return (
     <div className="fixed bottom-12 gap-2 justify-center flex flex-col -right-1 z-50 m-6">
       {toggle && (
-        <div className="w-80 h-[32rem] flex flex-col rounded-lg shadow-lg bg-background-50 overflow-hidden">
+        <div
+          ref={chatRef}
+          className="w-80 h-[32rem] flex flex-col rounded-lg shadow-lg bg-background-50 overflow-hidden"
+        >
           <div className="bg-primary-600 flex gap-2 items-center text-text-50 p-4">
-            <h2 className="text-xl flex-1 font-semibold">Chat Support</h2>
-            <div className="group" onClick={() => resetChat()}>
-              <LuRotateCw size={25} className="group-hover:rotate-180" />
+            <h2 className="text-xl flex-1 font-semibold">{t("title")}</h2>
+            <div className="group cursor-pointer" onClick={() => resetChat()}>
+              <LuRotateCw
+                size={25}
+                className="group-hover:rotate-180 transition-all duration-200"
+              />
             </div>
-            <div onClick={() => setToggle(false)}>
-              <LuCornerLeftDown size={25} className=" cursor-pointer" />
+            <div onClick={() => setToggle(false)} className="cursor-pointer">
+              <LuCornerLeftDown size={25} />
             </div>
           </div>
           <div className="flex-1 overflow-y-auto p-4">
@@ -157,7 +251,7 @@ function OfflineChat() {
                       }`}
                     />
                     <span className="text-text-700 truncate">
-                      {selectedQuestion || "Choose a question..."}
+                      {selectedQuestion || t("choose")}
                     </span>
                   </button>
                   {isDropdownOpen && (
@@ -178,7 +272,10 @@ function OfflineChat() {
                   )}
                 </div>
                 <button
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-primary-500 p-3 bg-background-50 bg-opacity-65 hover:text-primary-600 transition-colors duration-200"
+                  className={cn(
+                    "absolute top-1/2 transform -translate-y-1/2 text-primary-500 p-3 bg-background-50 bg-opacity-65 hover:text-primary-600 transition-colors duration-200",
+                    isRtl ? "left-2" : "right-2"
+                  )}
                   onClick={() =>
                     selectedQuestion && addQuestion(selectedQuestion)
                   }
@@ -189,7 +286,7 @@ function OfflineChat() {
             ) : (
               <Button variant="primary" onClick={() => resetChat()}>
                 <LuRotateCw />
-                new chat
+                New Chat
               </Button>
             )}
           </div>
