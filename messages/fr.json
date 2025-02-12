@@ -8,50 +8,50 @@
     "navbar": {
       "title": "Ocean Sports Tour",
       "about": "à propos",
-      "features":"fonctionnalités",
+      "features": "fonctionnalités",
       "activities": "activités",
-      "places":"lieux",
-      "services":"services",
-      "downloads":"téléchargements",
-      "gallery":"galerie",
-      "professional":"professionnel",
-      "contact":"contact"
+      "places": "lieux",
+      "services": "services",
+      "downloads": "téléchargements",
+      "gallery": "galerie",
+      "professional": "professionnel",
+      "contact": "contact"
     },
-    "hero":{
-      "hero_tag":"Aventure adaptée pour les esprits curieux",
-      "grand_title" : {
-        "txt_1":"Apprendre",
-        "txt_2":"Voyager",
-        "txt_3":"et Grandir",
-        "end_txt":"avec"
+    "hero": {
+      "hero_tag": "Aventure adaptée pour les esprits curieux",
+      "grand_title": {
+        "txt_1": "Apprendre",
+        "txt_2": "Voyager",
+        "txt_3": "et Grandir",
+        "end_txt": "avec"
       },
-      "highlighted":"Ocean Sports Tour",
-      "descr":"nous nous spécialisons dans la création d'expériences de tournée inoubliables pour les enfants ! Notre mission est d'inspirer la curiosité, de stimuler la créativité et de favoriser l'apprentissage à travers des aventures passionnantes adaptées aux jeunes explorateurs.",
+      "highlighted": "Ocean Sports Tour",
+      "descr": "nous nous spécialisons dans la création d'expériences de tournée inoubliables pour les enfants ! Notre mission est d'inspirer la curiosité, de stimuler la créativité et de favoriser l'apprentissage à travers des aventures passionnantes adaptées aux jeunes explorateurs.",
       "contact_button": "Contactez-nous",
       "start_button": "Commencer l'exploration"
     },
-    "about":{
-      "about_tag":"Années d'expérience",
-      "about_title":"à propos de nous",
-      "about_text":"Ocean Sport et Tours, entreprise de transport touristique et sportif basée à Agadir, a débuté ses activités en 2022. L'association propose une gamme diversifiée de services de qualité, alliant disponibilité, proactivité et qualité. Nous nous engageons à faire la différence dans tout ce que nous faisons, car notre principal objectif est de refléter une belle image du tourisme au Maroc en écoutant les besoins et les demandes des clients et en leur offrant une expérience perspicace et sans souci."
+    "about": {
+      "about_tag": "Années d'expérience",
+      "about_title": "à propos de nous",
+      "about_text": "Ocean Sport et Tours, entreprise de transport touristique et sportif basée à Agadir, a débuté ses activités en 2022. L'association propose une gamme diversifiée de services de qualité, alliant disponibilité, proactivité et qualité. Nous nous engageons à faire la différence dans tout ce que nous faisons, car notre principal objectif est de refléter une belle image du tourisme au Maroc en écoutant les besoins et les demandes des clients et en leur offrant une expérience perspicace et sans souci."
     },
-    "choose":{
-      "title":"Pourquoi nous choisir",
+    "choose": {
+      "title": "Pourquoi nous choisir",
       "choose_1": {
-        "title":"Sécuritaire et sûr",
-        "descr":"La sécurité de votre enfant est notre priorité, avec du personnel formé et des voyages sécurisés."
+        "title": "Sécuritaire et sûr",
+        "descr": "La sécurité de votre enfant est notre priorité, avec du personnel formé et des voyages sécurisés."
       },
       "choose_2": {
-        "title":"Activités amusantes",
-        "descr":"Des expériences engageantes et amusantes que les enfants apprécieront et se souviendront."
+        "title": "Activités amusantes",
+        "descr": "Des expériences engageantes et amusantes que les enfants apprécieront et se souviendront."
       },
       "choose_3": {
-        "title":"Valeur éducative",
-        "descr":"Un mélange d'apprentissage et d'aventure pour élargir les horizons de votre enfant."
+        "title": "Valeur éducative",
+        "descr": "Un mélange d'apprentissage et d'aventure pour élargir les horizons de votre enfant."
       }
     },
-    "activities":{
-      "activities_title":"activités",
+    "activities": {
+      "activities_title": "activités",
       "activities": {
         "activity_1": {
           "title": "Parc aquatique",
@@ -108,66 +108,66 @@
       "text_10": "Une tournée bien planifiée est plus qu'un voyage, c'est une porte vers l'émerveillement."
     },
     "places": {
-      "title":"lieux",
-      
+      "title": "lieux",
+
       "place_1": {
         "title": "Agadir Oufella",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Une forteresse historique située sur une colline offrant des vues panoramiques d'Agadir et de sa côte. C'est un endroit parfait pour les passionnés d'histoire et les photographes."
       },
       "place_2": {
         "title": "Corniche",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Une promenade animée en bord de mer bordée de cafés, restaurants et magasins, idéale pour des promenades tranquilles et profiter de la brise de l'océan."
       },
       "place_3": {
         "title": "Croco Park",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Un parc unique avec des jardins luxuriants et plus de 300 crocodiles du Nil. Une expérience amusante et éducative pour les familles."
       },
       "place_4": {
         "title": "Dolphin World Agadir",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Un centre de divertissement où les visiteurs peuvent profiter de spectacles de dauphins et interagir avec ces animaux marins intelligents."
       },
       "place_5": {
         "title": "Imi Ouaddar",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Un village côtier pittoresque connu pour ses plages immaculées et son atmosphère détendue, parfait pour une escapade reposante."
       },
       "place_6": {
         "title": "Legzira",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Célèbre pour ses arches de roche rouge sur la plage, cette merveille naturelle est un incontournable pour les amoureux de la nature et les photographes."
       },
       "place_7": {
         "title": "Marina",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Une zone portuaire moderne avec des yachts de luxe, des magasins haut de gamme et des options de restauration en bord de mer."
       },
       "place_8": {
         "title": "Medina et Musée du Patrimoine Amazigh",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Un centre culturel présentant l'architecture, l'art et les artefacts traditionnels marocains, célébrant le patrimoine amazigh."
       },
       "place_9": {
         "title": "Paradise Valley",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Un oasis luxuriant avec des bassins naturels et des cascades, entouré de palmiers et de falaises dramatiques. Idéal pour la randonnée et la baignade."
       },
       "place_10": {
         "title": "Souss Massa",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Un parc national connu pour sa faune diversifiée, y compris des flamants roses et des espèces d'oiseaux rares, ainsi que ses paysages pittoresques."
       },
       "place_11": {
         "title": "Souk El Had",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Un marché traditionnel animé offrant une large variété de biens, des épices et des textiles aux produits artisanaux et aux produits frais."
       },
       "place_12": {
         "title": "Taghazout",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Un charmant village de pêcheurs devenu un havre de surf, connu pour ses vagues de classe mondiale, son ambiance décontractée et ses superbes couchers de soleil."
       },
       "place_13": {
@@ -200,7 +200,7 @@
         "city": "Marrakech",
         "descr": "Ce vaste jardin avec son bassin central est un endroit idéal pour une promenade relaxante avec une vue magnifique sur les montagnes de l'Atlas."
       },
-      "show_more":"voir plus"
+      "show_more": "voir plus"
     },
     "services": {
       "title": "services",
@@ -231,56 +231,56 @@
         }
       }
     },
-    "city":{
-      "All":"Tout",
-      "Agadir":"Agadir",
-      "Marrakech":"Marrakech",
-      "Essaouira":"Essaouira"
+    "city": {
+      "All": "Tout",
+      "Agadir": "Agadir",
+      "Marrakech": "Marrakech",
+      "Essaouira": "Essaouira"
     },
-    "downloads":{
-      "title":"Téléchargements",
-      "descr":"Notre entreprise vous offre toutes les informations dont vous aurez besoin pour votre tour unique avec nous, tout au long de votre expérience, Ocean Sport et Tours prend soin de tout, du jour de votre arrivée jusqu'à celui où nous nous disons au revoir à l'aéroport. Ici, vous trouverez tout ce qui concerne les tarifs et les horaires de vos tournées, voyages, hébergement… que vous pouvez télécharger facilement et rapidement.",
-      "text_1":"Télécharger le planning 7 jours",
-      "text_2":"Télécharger le planning 10 jours",
-      "button":"Télécharger"
+    "downloads": {
+      "title": "Téléchargements",
+      "descr": "Notre entreprise vous offre toutes les informations dont vous aurez besoin pour votre tour unique avec nous, tout au long de votre expérience, Ocean Sport et Tours prend soin de tout, du jour de votre arrivée jusqu'à celui où nous nous disons au revoir à l'aéroport. Ici, vous trouverez tout ce qui concerne les tarifs et les horaires de vos tournées, voyages, hébergement… que vous pouvez télécharger facilement et rapidement.",
+      "text_1": "Télécharger le planning 7 jours",
+      "text_2": "Télécharger le planning 10 jours",
+      "button": "Télécharger"
     },
     "tours": {
-  "heading": "Visites",
-  "tour": {
-    "tour_1": {
-      "title": "Voyage d'Agadir à Marrakech",
-      "description": "Découvrez les paysages pittoresques entre Agadir et Marrakech avec des escales fascinantes.",
-      "type": "Aventure",
-      "duration": "4 jours"
+      "heading": "Visites",
+      "tour": {
+        "tour_1": {
+          "title": "Voyage d'Agadir à Marrakech",
+          "description": "Découvrez les paysages pittoresques entre Agadir et Marrakech avec des escales fascinantes.",
+          "type": "Aventure",
+          "duration": "4 jours"
+        },
+        "tour_2": {
+          "title": "Excursion Marrakech - Essaouira",
+          "description": "Un parcours magique à travers les collines et forêts d'arganiers jusqu'à la côte atlantique.",
+          "type": "Découverte",
+          "duration": "1 journée"
+        },
+        "tour_3": {
+          "title": "Road Trip Essaouira - Agadir",
+          "description": "Partez à la découverte des plages sauvages et des charmants villages côtiers.",
+          "type": "Relaxation",
+          "duration": "3 jours"
+        },
+        "tour_4": {
+          "title": "Aventure d'une journée Agadir - Essaouira",
+          "description": "Profitez d'une route panoramique jusqu'à la célèbre ville bleue, Essaouira.",
+          "type": "Visite guidée",
+          "duration": "1 journée"
+        },
+        "tour_5": {
+          "title": "Circuit Marrakech, Essaouira et Agadir",
+          "description": "Explorez les merveilles de trois villes emblématiques du Maroc.",
+          "type": "Excursion",
+          "duration": "5 jours"
+        }
+      }
     },
-    "tour_2": {
-      "title": "Excursion Marrakech - Essaouira",
-      "description": "Un parcours magique à travers les collines et forêts d'arganiers jusqu'à la côte atlantique.",
-      "type": "Découverte",
-      "duration": "1 journée"
-    },
-    "tour_3": {
-      "title": "Road Trip Essaouira - Agadir",
-      "description": "Partez à la découverte des plages sauvages et des charmants villages côtiers.",
-      "type": "Relaxation",
-      "duration": "3 jours"
-    },
-    "tour_4": {
-      "title": "Aventure d'une journée Agadir - Essaouira",
-      "description": "Profitez d'une route panoramique jusqu'à la célèbre ville bleue, Essaouira.",
-      "type": "Visite guidée",
-      "duration": "1 journée"
-    },
-    "tour_5": {
-      "title": "Circuit Marrakech, Essaouira et Agadir",
-      "description": "Explorez les merveilles de trois villes emblématiques du Maroc.",
-      "type": "Excursion",
-      "duration": "5 jours"
-    }
-  }
-},
 
-    "opinion":{
+    "opinion": {
       "title": "Ce que nos clients disent de nous",
       "opinions": {
         "opinion_1": {
@@ -313,10 +313,10 @@
         }
       }
     },
-    "footer":{
-      "tanks":"Merci de visiter notre site Web et bienvenue à",
-      "Rights":"Tous droits réservés",
-      "Copyright":"Droits d'auteur"
+    "footer": {
+      "tanks": "Merci de visiter notre site Web et bienvenue à",
+      "Rights": "Tous droits réservés",
+      "Copyright": "Droits d'auteur"
     }
   },
   "contact": {
@@ -333,6 +333,66 @@
     },
     "details": {
       "title": "Détails du contact"
+    }
+  },
+  "offlineChat": {
+    "title": "Support Chat",
+    "choose": "Choisissez une question",
+    "question1": {
+      "question": "Comment puis-je vous aider ?",
+      "answer": "Ocean Sport Tours est une entreprise qui propose des activités et des excursions passionnantes liées à l'océan."
+    },
+    "question2": {
+      "question": "Qu'est-ce que Ocean Sport Tours ?",
+      "answer": "Ocean Sport Tours est une entreprise qui propose des activités et des excursions passionnantes liées à l'océan."
+    },
+    "question3": {
+      "question": "Quelles activités proposez-vous ?",
+      "answer": "Nous proposons une variété d'activités, notamment la plongée en apnée, la plongée sous-marine et des excursions en bateau."
+    },
+    "question4": {
+      "question": "Où êtes-vous situés ?",
+      "answer": "Nous opérons dans plusieurs lieux, y compris des îles tropicales et des villes côtières."
+    },
+    "question5": {
+      "question": "Combien cela coûte-t-il ?",
+      "answer": "Les tarifs varient en fonction de l'activité et du lieu. Veuillez consulter notre site Web pour plus de détails."
+    },
+    "question6": {
+      "question": "Ai-je besoin d'une expérience préalable ?",
+      "answer": "Aucune expérience préalable n'est requise pour la plupart des activités. Nous offrons une formation pour les débutants."
+    },
+    "question7": {
+      "question": "Quelles mesures de sécurité avez-vous ?",
+      "answer": "Nous suivons des protocoles de sécurité stricts, y compris des guides certifiés, du matériel de sécurité et des procédures d'urgence."
+    },
+    "question8": {
+      "question": "Puis-je réserver une visite privée ?",
+      "answer": "Oui, des visites privées sont disponibles sur demande. Contactez-nous pour plus de détails."
+    },
+    "question9": {
+      "question": "Proposez-vous des réductions pour les groupes ?",
+      "answer": "Oui, nous offrons des réductions pour les groupes nombreux. Contactez notre équipe de support pour plus d'informations."
+    },
+    "question10": {
+      "question": "Que dois-je apporter pour la visite ?",
+      "answer": "Nous vous recommandons d'apporter un maillot de bain, de la crème solaire, une serviette et tout autre article personnel nécessaire."
+    },
+    "question11": {
+      "question": "Les enfants sont-ils autorisés lors des visites ?",
+      "answer": "Oui, les enfants sont les bienvenus ! Certaines activités peuvent avoir des restrictions d'âge pour des raisons de sécurité."
+    },
+    "question12": {
+      "question": "Fournissez-vous des gilets de sauvetage et du matériel de sécurité ?",
+      "answer": "Oui, tout le matériel de sécurité, y compris les gilets de sauvetage, est fourni pour chaque activité."
+    },
+    "question13": {
+      "question": "Comment réserver une visite ?",
+      "answer": "Vous pouvez réserver une visite en ligne sur notre site Web ou contacter notre équipe de service client."
+    },
+    "question14": {
+      "question": "Quels modes de paiement acceptez-vous ?",
+      "answer": "Nous acceptons les cartes de crédit, PayPal et les virements bancaires."
     }
   }
 }

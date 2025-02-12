@@ -1,11 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  MapContainer,
-  TileLayer,
-  Polyline,
-  Marker,
-  Popup,
-} from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
@@ -35,14 +29,14 @@ const TourMap = () => {
       zoom={13}
       style={{ height: "400px", width: "600px" }}
       className="rounded-lg border border-background-200 z-0"
+      scrollWheelZoom={true}
+      dragging={true}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[30.435881, -9.55593]}>
-        <Popup>hello</Popup>
-      </Marker>
+      <Marker position={[30.435881, -9.55593]}></Marker>
     </MapContainer>
   );
 };

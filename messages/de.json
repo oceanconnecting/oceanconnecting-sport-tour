@@ -3,240 +3,240 @@
     "title": "Ocean Sport Tours",
     "description": "Beleef onvergetelijke avontuurlijke reizen voor kinderen met Ocean Sport Tours. Van spannende activiteiten tot culturele ontdekkingen, wij bieden veilige, educatieve en leuke ervaringen.",
     "keywords": "ocean sport tours, avontuurlijke reizen, kinderreizen, toerisme in Marokko, Agadir tours, Marrakech excursies, Essaouira reizen, kinderactiviteiten, sportkampen, begeleide tours, veilig reizen voor kinderen, buitenavonturen, culturele ervaringen, reisbureau Marokko"
+  },
+  "homepage": {
+    "navbar": {
+      "title": "Ocean Sports Tour",
+      "about": "over",
+      "features": "kenmerken",
+      "activities": "activiteiten",
+      "places": "plaatsen",
+      "services": "diensten",
+      "downloads": "downloads",
+      "gallery": "galerij",
+      "professional": "professioneel",
+      "contact": "contact"
     },
-    "homepage": {
-      "navbar": {
-        "title": "Ocean Sports Tour",
-        "about": "over",
-        "features": "kenmerken",
-        "activities": "activiteiten",
-        "places": "plaatsen",
-        "services": "diensten",
-        "downloads": "downloads",
-        "gallery": "galerij",
-        "professional": "professioneel",
-        "contact": "contact"
+    "hero": {
+      "hero_tag": "Avontuur op maat voor nieuwsgierige geesten",
+      "grand_title": {
+        "txt_1": "Leer",
+        "txt_2": "Reis",
+        "txt_3": "en Groeien",
+        "end_txt": "met"
       },
-      "hero": {
-        "hero_tag": "Avontuur op maat voor nieuwsgierige geesten",
-        "grand_title": {
-          "txt_1": "Leer",
-          "txt_2": "Reis",
-          "txt_3": "en Groeien",
-          "end_txt": "met"
-        },
-        "highlighted": "Ocean Sports Tour",
-        "descr": "We zijn gespecialiseerd in het creëren van onvergetelijke tourervaringen voor kinderen! Onze missie is om nieuwsgierigheid te inspireren, creativiteit te prikkelen en leren te bevorderen door spannende avonturen die speciaal voor jonge ontdekkingsreizigers zijn afgestemd.",
-        "contact_button": "Neem contact op",
-        "start_button": "Begin met verkennen"
+      "highlighted": "Ocean Sports Tour",
+      "descr": "We zijn gespecialiseerd in het creëren van onvergetelijke tourervaringen voor kinderen! Onze missie is om nieuwsgierigheid te inspireren, creativiteit te prikkelen en leren te bevorderen door spannende avonturen die speciaal voor jonge ontdekkingsreizigers zijn afgestemd.",
+      "contact_button": "Neem contact op",
+      "start_button": "Begin met verkennen"
+    },
+    "about": {
+      "about_tag": "Jarenlange ervaring",
+      "about_title": "over ons",
+      "about_text": "Ocean sport en tours, een bedrijf voor toeristisch vervoer en sport gevestigd in Agadir, begon zijn activiteiten in 2022. De vereniging biedt een zeer gediversifieerd scala aan diensten die van hoge kwaliteit worden geacht. Ze combineren beschikbaarheid, proactiviteit en kwaliteit. We zetten ons in om een verschil te maken in alles wat we doen, omdat ons belangrijkste doel is om een groot imago van toerisme in Marokko te weerspiegelen door te luisteren naar de behoeften en verzoeken van klanten en hen een zorgeloze ervaring te bieden."
+    },
+    "choose": {
+      "title": "Waarom ons kiezen",
+      "choose_1": {
+        "title": "Veilig en beveiligd",
+        "descr": "De veiligheid van uw kind is onze hoogste prioriteit met getraind personeel en beveiligde reizen."
       },
-      "about": {
-        "about_tag": "Jarenlange ervaring",
-        "about_title": "over ons",
-        "about_text": "Ocean sport en tours, een bedrijf voor toeristisch vervoer en sport gevestigd in Agadir, begon zijn activiteiten in 2022. De vereniging biedt een zeer gediversifieerd scala aan diensten die van hoge kwaliteit worden geacht. Ze combineren beschikbaarheid, proactiviteit en kwaliteit. We zetten ons in om een verschil te maken in alles wat we doen, omdat ons belangrijkste doel is om een groot imago van toerisme in Marokko te weerspiegelen door te luisteren naar de behoeften en verzoeken van klanten en hen een zorgeloze ervaring te bieden."
+      "choose_2": {
+        "title": "Leuke activiteiten",
+        "descr": "Betrokken en leuke ervaringen die kinderen zullen genieten en zich zullen herinneren."
       },
-      "choose": {
-        "title": "Waarom ons kiezen",
-        "choose_1": {
-          "title": "Veilig en beveiligd",
-          "descr": "De veiligheid van uw kind is onze hoogste prioriteit met getraind personeel en beveiligde reizen."
-        },
-        "choose_2": {
-          "title": "Leuke activiteiten",
-          "descr": "Betrokken en leuke ervaringen die kinderen zullen genieten en zich zullen herinneren."
-        },
-        "choose_3": {
-          "title": "Educatieve waarde",
-          "descr": "Een mix van leren en avontuur om de horizon van uw kind te verbreden."
-        }
-      },
+      "choose_3": {
+        "title": "Educatieve waarde",
+        "descr": "Een mix van leren en avontuur om de horizon van uw kind te verbreden."
+      }
+    },
+    "activities": {
+      "activities_title": "activiteiten",
       "activities": {
-        "activities_title": "activiteiten",
-        "activities": {
-          "activity_1": {
-            "title": "Aqua Park",
-            "descr": "Geniet van een dag vol plezier met waterglijbanen, golfslagbaden en rustige rivieren in het aqua park."
-          },
-          "activity_2": {
-            "title": "Kameelrit",
-            "descr": "Ervaar een traditioneel woestijnavontuur door een kameel te rijden door schilderachtige duinen."
-          },
-          "activity_3": {
-            "title": "Luchtballon",
-            "descr": "Vlieg hoog boven het landschap en geniet van adembenemende uitzichten tijdens een luchtballonvaart."
-          },
-          "activity_4": {
-            "title": "Paardrijden",
-            "descr": "Maak een vredige reis door paden en open velden te paard."
-          },
-          "activity_5": {
-            "title": "Jetski",
-            "descr": "Voel de opwinding van het versnellen over het water op een krachtige jetski."
-          },
-          "activity_6": {
-            "title": "Karting",
-            "descr": "Rijd tegen vrienden en familie op een kartcircuit voor een adrenalinerijke ervaring."
-          },
-          "activity_7": {
-            "title": "Parachute",
-            "descr": "Maak een sprong van vertrouwen en ervaar de opwinding van parachutespringen."
-          },
-          "activity_8": {
-            "title": "Quad & Buggy",
-            "descr": "Navigeer door ruige terreinen en zandpaden met een quad of buggy."
-          },
-          "activity_9": {
-            "title": "Sandboarding",
-            "descr": "Glijd van torenhoge zandduinen op een sandboard voor een uniek woestijnavontuur."
-          },
-          "activity_10": {
-            "title": "Surfen",
-            "descr": "Pak de golven en geniet van de spanning van het surfen op de open zee."
-          }
+        "activity_1": {
+          "title": "Aqua Park",
+          "descr": "Geniet van een dag vol plezier met waterglijbanen, golfslagbaden en rustige rivieren in het aqua park."
+        },
+        "activity_2": {
+          "title": "Kameelrit",
+          "descr": "Ervaar een traditioneel woestijnavontuur door een kameel te rijden door schilderachtige duinen."
+        },
+        "activity_3": {
+          "title": "Luchtballon",
+          "descr": "Vlieg hoog boven het landschap en geniet van adembenemende uitzichten tijdens een luchtballonvaart."
+        },
+        "activity_4": {
+          "title": "Paardrijden",
+          "descr": "Maak een vredige reis door paden en open velden te paard."
+        },
+        "activity_5": {
+          "title": "Jetski",
+          "descr": "Voel de opwinding van het versnellen over het water op een krachtige jetski."
+        },
+        "activity_6": {
+          "title": "Karting",
+          "descr": "Rijd tegen vrienden en familie op een kartcircuit voor een adrenalinerijke ervaring."
+        },
+        "activity_7": {
+          "title": "Parachute",
+          "descr": "Maak een sprong van vertrouwen en ervaar de opwinding van parachutespringen."
+        },
+        "activity_8": {
+          "title": "Quad & Buggy",
+          "descr": "Navigeer door ruige terreinen en zandpaden met een quad of buggy."
+        },
+        "activity_9": {
+          "title": "Sandboarding",
+          "descr": "Glijd van torenhoge zandduinen op een sandboard voor een uniek woestijnavontuur."
+        },
+        "activity_10": {
+          "title": "Surfen",
+          "descr": "Pak de golven en geniet van de spanning van het surfen op de open zee."
         }
+      }
+    },
+    "text_ticker": {
+      "text_1": "Inspireren van jonge geesten, één avontuur tegelijk.",
+      "text_2": "Elke reis is een kans om nieuwsgierigheid en vreugde te prikkelen.",
+      "text_3": "Creëer herinneringen die een leven lang meegaan door verkenning en spel.",
+      "text_4": "Avonturen organiseren, dromen vormgeven en glimlachen brengen.",
+      "text_5": "Elk kind verdient de magie van ontdekking en plezier.",
+      "text_6": "Verkenning voedt verbeelding, en activiteiten brengen dromen tot leven.",
+      "text_7": "Plan het. Verken het. Koester het.",
+      "text_8": "Van eenvoudige reizen buitengewone avonturen maken voor kinderen.",
+      "text_9": "De organisatoren die zich om je zorgen, creëren de herinneringen die kinderen koesteren.",
+      "text_10": "Een goed geplande tour is meer dan een reis, het is een toegangspoort naar verwondering."
+    },
+    "places": {
+      "title": "plaatsen",
+      "place_1": {
+        "title": "Agadir Oufella",
+        "city": "Agadir",
+        "descr": "Een historische vesting op een heuveltop met panoramisch uitzicht over Agadir en de kustlijn. Het is een perfecte plek voor geschiedenisliefhebbers en fotografen."
       },
-      "text_ticker": {
-        "text_1": "Inspireren van jonge geesten, één avontuur tegelijk.",
-        "text_2": "Elke reis is een kans om nieuwsgierigheid en vreugde te prikkelen.",
-        "text_3": "Creëer herinneringen die een leven lang meegaan door verkenning en spel.",
-        "text_4": "Avonturen organiseren, dromen vormgeven en glimlachen brengen.",
-        "text_5": "Elk kind verdient de magie van ontdekking en plezier.",
-        "text_6": "Verkenning voedt verbeelding, en activiteiten brengen dromen tot leven.",
-        "text_7": "Plan het. Verken het. Koester het.",
-        "text_8": "Van eenvoudige reizen buitengewone avonturen maken voor kinderen.",
-        "text_9": "De organisatoren die zich om je zorgen, creëren de herinneringen die kinderen koesteren.",
-        "text_10": "Een goed geplande tour is meer dan een reis, het is een toegangspoort naar verwondering."
+      "place_2": {
+        "title": "Corniche",
+        "city": "Agadir",
+        "descr": "Een levendige zeezijde promenade met cafés, restaurants en winkels, ideaal voor ontspannen wandelingen en genieten van de oceaanbries."
       },
-      "places": {
-        "title": "plaatsen",
-        "place_1": {
-          "title": "Agadir Oufella",
-          "city": "Agadir",
-          "descr": "Een historische vesting op een heuveltop met panoramisch uitzicht over Agadir en de kustlijn. Het is een perfecte plek voor geschiedenisliefhebbers en fotografen."
-        },
-        "place_2": {
-          "title": "Corniche",
-          "city": "Agadir",
-          "descr": "Een levendige zeezijde promenade met cafés, restaurants en winkels, ideaal voor ontspannen wandelingen en genieten van de oceaanbries."
-        },
-        "place_3": {
-          "title": "Croco Park",
-          "city": "Agadir",
-          "descr": "Een uniek krokodillenpark met weelderige tuinen en meer dan 300 Nijl krokodillen. Een leuke en educatieve ervaring voor gezinnen."
-        },
-        "place_4": {
-          "title": "Dolphin World Agadir",
-          "city": "Agadir",
-          "descr": "Een entertainmentcentrum waar bezoekers kunnen genieten van dolfijnenshows en interactie met deze intelligente zeedieren."
-        },
-        "place_5": {
-          "title": "Imi Ouaddar",
-          "city": "Agadir",
-          "descr": "Een pittoresk kustdorp bekend om zijn ongerepte stranden en ontspannen sfeer, perfect voor een rustige vakantie."
-        },
-        "place_6": {
-          "title": "Legzira",
-          "city": "Agadir",
-          "descr": "Beroemd om zijn indrukwekkende rode rotsbogen op het strand, is dit natuurwonder een must-see voor natuurliefhebbers en fotografen."
-        },
-        "place_7": {
-          "title": "Marina",
-          "city": "Agadir",
-          "descr": "Een modern havengebied met luxe jachten, chique winkels en eetgelegenheden aan het water."
-        },
-        "place_8": {
-          "title": "Medina en Amazigh Heritage Museum",
-          "city": "Agadir",
-          "descr": "Een cultureel centrum dat traditionele Marokkaanse architectuur, kunst en artefacten toont, ter viering van het Amazigh-erfgoed."
-        },
-        "place_9": {
-          "title": "Paradise Valley",
-          "city": "Agadir",
-          "descr": "Een weelderige oase met natuurlijke zwembaden en watervallen, omgeven door palmbomen en dramatische kliffen. Ideaal voor wandelen en zwemmen."
-        },
-        "place_10": {
-          "title": "Souss Massa",
-          "city": "Agadir",
-          "descr": "Een nationaal park bekend om zijn diverse wilde dieren, waaronder flamingo's en zeldzame vogelsoorten, evenals het schilderachtige landschap."
-        },
-        "place_11": {
-          "title": "Souk El Had",
-          "city": "Agadir",
-          "descr": "Een bruisende traditionele markt die een breed scala aan goederen biedt, van specerijen en textiel tot handwerk en verse producten."
-        },
-        "place_12": {
-          "title": "Taghazout",
-          "city": "Agadir",
-          "descr": "Een charmant vissersdorp dat een surfparadijs is geworden, bekend om zijn wereldberoemde golven, ontspannen sfeer en prachtige zonsondergangen."
-        },
-        "place_13": {
-          "title": "Kasbah",
-          "city": "Essaouira",
-          "descr": "Een van de iconische historische locaties van Essaouira, gelegen aan de Atlantische kust van Marokko."
-        },
-        "place_14": {
-          "title": "Medina",
-          "city": "Essaouira",
-          "descr": "Gelegen aan de Atlantische kust van Marokko, het is een historische en culturele site die sinds 2001 op de UNESCO Werelderfgoedlijst staat. Het werd in de 18e eeuw opgericht door Sultan Mohammed ben Abdallah en weerspiegelt een unieke mix van islamitische en Europese architectuur, die zijn rol als commercieel en cultureel kruispunt toont."
-        },
-        "place_15": {
-          "title": "Essaouira Ramparts",
-          "city": "Essaouira",
-          "descr": "Bezoek de muren van de medina voor adembenemende uitzichten: schilderachtige zonsondergangen, panoramische zeezichten en wilde kliffen. Of ga naar de oude kanonnen die dit fort beschermen. Rustige en romantische sfeer, vergeet je camera niet."
-        },
-        "place_16": {
-          "title": "Le Jardin Majorelle",
-          "city": "Marrakech",
-          "descr": "Deze betoverende botanische tuin, gecreëerd door Jacques Majorelle en gerestaureerd door Yves Saint Laurent, biedt een oase van rust met exotische planten en gebouwen in Majorelle-blauw."
-        },
-        "place_17": {
-          "title": "Jemaa el-Fna",
-          "city": "Marrakech",
-          "descr": "Het kloppend hart van Marrakech, dit levendige plein zit vol charme. Overdag herbergt het verkopers, slangenbezweerders en verhalenvertellers. 's Nachts verandert het in een groot openluchtrestaurant."
-        },
-        "place_18": {
-          "title": "La Ménara",
-          "city": "Marrakech",
-          "descr": "Deze uitgestrekte tuin met zijn centrale bassin is de ideale plek voor een ontspannen wandeling met een prachtig uitzicht op het Atlasgebergte."
-        },
-        "show_more": "meer tonen"
+      "place_3": {
+        "title": "Croco Park",
+        "city": "Agadir",
+        "descr": "Een uniek krokodillenpark met weelderige tuinen en meer dan 300 Nijl krokodillen. Een leuke en educatieve ervaring voor gezinnen."
       },
+      "place_4": {
+        "title": "Dolphin World Agadir",
+        "city": "Agadir",
+        "descr": "Een entertainmentcentrum waar bezoekers kunnen genieten van dolfijnenshows en interactie met deze intelligente zeedieren."
+      },
+      "place_5": {
+        "title": "Imi Ouaddar",
+        "city": "Agadir",
+        "descr": "Een pittoresk kustdorp bekend om zijn ongerepte stranden en ontspannen sfeer, perfect voor een rustige vakantie."
+      },
+      "place_6": {
+        "title": "Legzira",
+        "city": "Agadir",
+        "descr": "Beroemd om zijn indrukwekkende rode rotsbogen op het strand, is dit natuurwonder een must-see voor natuurliefhebbers en fotografen."
+      },
+      "place_7": {
+        "title": "Marina",
+        "city": "Agadir",
+        "descr": "Een modern havengebied met luxe jachten, chique winkels en eetgelegenheden aan het water."
+      },
+      "place_8": {
+        "title": "Medina en Amazigh Heritage Museum",
+        "city": "Agadir",
+        "descr": "Een cultureel centrum dat traditionele Marokkaanse architectuur, kunst en artefacten toont, ter viering van het Amazigh-erfgoed."
+      },
+      "place_9": {
+        "title": "Paradise Valley",
+        "city": "Agadir",
+        "descr": "Een weelderige oase met natuurlijke zwembaden en watervallen, omgeven door palmbomen en dramatische kliffen. Ideaal voor wandelen en zwemmen."
+      },
+      "place_10": {
+        "title": "Souss Massa",
+        "city": "Agadir",
+        "descr": "Een nationaal park bekend om zijn diverse wilde dieren, waaronder flamingo's en zeldzame vogelsoorten, evenals het schilderachtige landschap."
+      },
+      "place_11": {
+        "title": "Souk El Had",
+        "city": "Agadir",
+        "descr": "Een bruisende traditionele markt die een breed scala aan goederen biedt, van specerijen en textiel tot handwerk en verse producten."
+      },
+      "place_12": {
+        "title": "Taghazout",
+        "city": "Agadir",
+        "descr": "Een charmant vissersdorp dat een surfparadijs is geworden, bekend om zijn wereldberoemde golven, ontspannen sfeer en prachtige zonsondergangen."
+      },
+      "place_13": {
+        "title": "Kasbah",
+        "city": "Essaouira",
+        "descr": "Een van de iconische historische locaties van Essaouira, gelegen aan de Atlantische kust van Marokko."
+      },
+      "place_14": {
+        "title": "Medina",
+        "city": "Essaouira",
+        "descr": "Gelegen aan de Atlantische kust van Marokko, het is een historische en culturele site die sinds 2001 op de UNESCO Werelderfgoedlijst staat. Het werd in de 18e eeuw opgericht door Sultan Mohammed ben Abdallah en weerspiegelt een unieke mix van islamitische en Europese architectuur, die zijn rol als commercieel en cultureel kruispunt toont."
+      },
+      "place_15": {
+        "title": "Essaouira Ramparts",
+        "city": "Essaouira",
+        "descr": "Bezoek de muren van de medina voor adembenemende uitzichten: schilderachtige zonsondergangen, panoramische zeezichten en wilde kliffen. Of ga naar de oude kanonnen die dit fort beschermen. Rustige en romantische sfeer, vergeet je camera niet."
+      },
+      "place_16": {
+        "title": "Le Jardin Majorelle",
+        "city": "Marrakech",
+        "descr": "Deze betoverende botanische tuin, gecreëerd door Jacques Majorelle en gerestaureerd door Yves Saint Laurent, biedt een oase van rust met exotische planten en gebouwen in Majorelle-blauw."
+      },
+      "place_17": {
+        "title": "Jemaa el-Fna",
+        "city": "Marrakech",
+        "descr": "Het kloppend hart van Marrakech, dit levendige plein zit vol charme. Overdag herbergt het verkopers, slangenbezweerders en verhalenvertellers. 's Nachts verandert het in een groot openluchtrestaurant."
+      },
+      "place_18": {
+        "title": "La Ménara",
+        "city": "Marrakech",
+        "descr": "Deze uitgestrekte tuin met zijn centrale bassin is de ideale plek voor een ontspannen wandeling met een prachtig uitzicht op het Atlasgebergte."
+      },
+      "show_more": "meer tonen"
+    },
+    "services": {
+      "title": "diensten",
       "services": {
-        "title": "diensten",
-        "services": {
-          "service6": {
-            "title": "Excursies, reizen en avonturen",
-            "desc": "Ontdek unieke bestemmingen en ga op onvergetelijke avonturen."
-          },
-          "service5": {
-            "title": "Sportprogramma's en trainingskampen",
-            "desc": "Deelname aan sportactiviteiten en verbeter je prestaties."
-          },
-          "service4": {
-            "title": "Shuttle en luchthaventransfer",
-            "desc": "Gemakkelijke shuttle- en luchthaventransfers voor eenvoudig reizen."
-          },
-          "service3": {
-            "title": "Evenementen en feesten",
-            "desc": "Organiseer en woon evenementen en feesten bij voor onvergetelijke ervaringen."
-          },
-          "service2": {
-            "title": "Accommodatie en autoverhuur",
-            "desc": "Boek accommodaties en huur auto's voor gemak tijdens het reizen."
-          },
-          "service1": {
-            "title": "Vervoer en logistiek",
-            "desc": "Efficiënte transport- en logistieke oplossingen voor jouw behoeften."
-          }
+        "service6": {
+          "title": "Excursies, reizen en avonturen",
+          "desc": "Ontdek unieke bestemmingen en ga op onvergetelijke avonturen."
+        },
+        "service5": {
+          "title": "Sportprogramma's en trainingskampen",
+          "desc": "Deelname aan sportactiviteiten en verbeter je prestaties."
+        },
+        "service4": {
+          "title": "Shuttle en luchthaventransfer",
+          "desc": "Gemakkelijke shuttle- en luchthaventransfers voor eenvoudig reizen."
+        },
+        "service3": {
+          "title": "Evenementen en feesten",
+          "desc": "Organiseer en woon evenementen en feesten bij voor onvergetelijke ervaringen."
+        },
+        "service2": {
+          "title": "Accommodatie en autoverhuur",
+          "desc": "Boek accommodaties en huur auto's voor gemak tijdens het reizen."
+        },
+        "service1": {
+          "title": "Vervoer en logistiek",
+          "desc": "Efficiënte transport- en logistieke oplossingen voor jouw behoeften."
         }
-      },
-      "city": {
-        "All": "Alle",
-        "Agadir": "Agadir",
-        "Marrakech": "Marrakech",
-        "Essaouira": "Essaouira"
-      },
-      "tours": {
+      }
+    },
+    "city": {
+      "All": "Alle",
+      "Agadir": "Agadir",
+      "Marrakech": "Marrakech",
+      "Essaouira": "Essaouira"
+    },
+    "tours": {
       "heading": "Rondleidingen",
       "tour": {
         "tour_1": {
@@ -272,53 +272,53 @@
       }
     },
 
-      "downloads": {
-        "title": "Downloads",
-        "descr": "Ons bedrijf biedt alles wat je nodig hebt voor je unieke tour bij ons. Ocean sport en tours zorgt voor alles, vanaf het moment dat je landt tot het moment dat we afscheid nemen op de luchthaven. Hier vind je alles over tarieven en schema's voor je tours, reizen, accommodaties... die je gemakkelijk en snel kunt downloaden.",
-        "text_1": "Download 7-dagen planning",
-        "text_2": "Download 10-dagen planning",
-        "button": "Download"
-      },
-      "opinion": {
-        "title": "Wat onze klanten over ons zeggen",
-        "opinions": {
-          "opinion_1": {
-            "name": "Alex Smith",
-            "opinion": "Geweldige ervaring! Mijn kinderen hebben genoten van de avontuurlijke tour. De gidsen waren vriendelijk en goed voorbereid. Zeer aanbevolen!"
-          },
-          "opinion_2": {
-            "name": "Mark Johnson",
-            "opinion": "Geweldige sportactiviteiten! Mijn zoon genoot van het voetbalkamp. Alles was goed georganiseerd en de coaches waren professioneel."
-          },
-          "opinion_3": {
-            "name": "Juan Lee",
-            "opinion": "De tour was leuk, maar het schema was een beetje strak. Meer vrije tijd voor kinderen zou geweldig zijn. Over het algemeen een goede ervaring!"
-          },
-          "opinion_4": {
-            "name": "David Brown",
-            "opinion": "Uitstekende service! Mijn dochter hield van de buitensportactiviteiten. Het was veilig, boeiend en educatief. We zullen zeker weer boeken!"
-          },
-          "opinion_5": {
-            "name": "Emmanual Wilson",
-            "opinion": "Het personeel was erg zorgzaam en mijn kinderen voelden zich comfortabel tijdens de reis. Ze genoten vooral van de team-building spellen!"
-          },
-          "opinion_6": {
-            "name": "James Carter",
-            "opinion": "Een goed georganiseerde tour met een verscheidenheid aan activiteiten. Mijn zoon hield van de basketbaltraining, maar de voedselopties konden beter."
-          },
-          "opinion_7": {
-            "name": "Oliver Martinez",
-            "opinion": "Fantastisch sportprogramma! Mijn dochter leerde zoveel en maakte nieuwe vrienden. Ze vraagt al om volgend jaar weer mee te doen."
-          }
+    "downloads": {
+      "title": "Downloads",
+      "descr": "Ons bedrijf biedt alles wat je nodig hebt voor je unieke tour bij ons. Ocean sport en tours zorgt voor alles, vanaf het moment dat je landt tot het moment dat we afscheid nemen op de luchthaven. Hier vind je alles over tarieven en schema's voor je tours, reizen, accommodaties... die je gemakkelijk en snel kunt downloaden.",
+      "text_1": "Download 7-dagen planning",
+      "text_2": "Download 10-dagen planning",
+      "button": "Download"
+    },
+    "opinion": {
+      "title": "Wat onze klanten over ons zeggen",
+      "opinions": {
+        "opinion_1": {
+          "name": "Alex Smith",
+          "opinion": "Geweldige ervaring! Mijn kinderen hebben genoten van de avontuurlijke tour. De gidsen waren vriendelijk en goed voorbereid. Zeer aanbevolen!"
+        },
+        "opinion_2": {
+          "name": "Mark Johnson",
+          "opinion": "Geweldige sportactiviteiten! Mijn zoon genoot van het voetbalkamp. Alles was goed georganiseerd en de coaches waren professioneel."
+        },
+        "opinion_3": {
+          "name": "Juan Lee",
+          "opinion": "De tour was leuk, maar het schema was een beetje strak. Meer vrije tijd voor kinderen zou geweldig zijn. Over het algemeen een goede ervaring!"
+        },
+        "opinion_4": {
+          "name": "David Brown",
+          "opinion": "Uitstekende service! Mijn dochter hield van de buitensportactiviteiten. Het was veilig, boeiend en educatief. We zullen zeker weer boeken!"
+        },
+        "opinion_5": {
+          "name": "Emmanual Wilson",
+          "opinion": "Het personeel was erg zorgzaam en mijn kinderen voelden zich comfortabel tijdens de reis. Ze genoten vooral van de team-building spellen!"
+        },
+        "opinion_6": {
+          "name": "James Carter",
+          "opinion": "Een goed georganiseerde tour met een verscheidenheid aan activiteiten. Mijn zoon hield van de basketbaltraining, maar de voedselopties konden beter."
+        },
+        "opinion_7": {
+          "name": "Oliver Martinez",
+          "opinion": "Fantastisch sportprogramma! Mijn dochter leerde zoveel en maakte nieuwe vrienden. Ze vraagt al om volgend jaar weer mee te doen."
         }
-      },
-      "footer": {
-        "tanks": "Bedankt voor het bezoeken van onze website en welkom bij",
-        "Rights": "Alle rechten voorbehouden",
-        "Copyright": "Copyright"
       }
     },
-    "contact": {
+    "footer": {
+      "tanks": "Bedankt voor het bezoeken van onze website en welkom bij",
+      "Rights": "Alle rechten voorbehouden",
+      "Copyright": "Copyright"
+    }
+  },
+  "contact": {
     "title": "Contacteer Ons",
     "subtitle": "Neem contact met ons op voor meer informatie of om een rondleiding te boeken.",
     "form": {
@@ -333,6 +333,65 @@
     "details": {
       "title": "Contactgegevens"
     }
+  },
+  "offlineChat": {
+    "title": "Chat-Unterstützung",
+    "choose": "Wählen Sie eine Frage",
+    "question1": {
+      "question": "Wie kann ich Ihnen helfen?",
+      "answer": "Ocean Sport Tours ist ein Unternehmen, das aufregende Aktivitäten und Touren im Zusammenhang mit dem Ozean anbietet."
+    },
+    "question2": {
+      "question": "Was ist Ocean Sport Tours?",
+      "answer": "Ocean Sport Tours ist ein Unternehmen, das aufregende Aktivitäten und Touren im Zusammenhang mit dem Ozean anbietet."
+    },
+    "question3": {
+      "question": "Welche Aktivitäten bieten Sie an?",
+      "answer": "Wir bieten eine Vielzahl von Aktivitäten an, darunter Schnorcheln, Tauchen und Bootstouren."
+    },
+    "question4": {
+      "question": "Wo sind Sie ansässig?",
+      "answer": "Wir sind an mehreren Standorten tätig, darunter tropische Inseln und Küstenstädte."
+    },
+    "question5": {
+      "question": "Wie viel kostet es?",
+      "answer": "Die Preise variieren je nach Aktivität und Standort. Bitte besuchen Sie unsere Website für Details."
+    },
+    "question6": {
+      "question": "Benötige ich vorherige Erfahrung?",
+      "answer": "Für die meisten Aktivitäten ist keine vorherige Erfahrung erforderlich. Wir bieten Schulungen für Anfänger an."
+    },
+    "question7": {
+      "question": "Welche Sicherheitsmaßnahmen haben Sie?",
+      "answer": "Wir befolgen strenge Sicherheitsprotokolle, einschließlich zertifizierter Führer, Sicherheitsausrüstung und Notfallverfahren."
+    },
+    "question8": {
+      "question": "Kann ich eine private Tour buchen?",
+      "answer": "Ja, private Touren sind auf Anfrage verfügbar. Kontaktieren Sie uns für weitere Details."
+    },
+    "question9": {
+      "question": "Bieten Sie Gruppenermäßigungen an?",
+      "answer": "Ja, wir bieten Gruppenermäßigungen für große Gruppen an. Wenden Sie sich an unser Support-Team für Details."
+    },
+    "question10": {
+      "question": "Was sollte ich für die Tour mitbringen?",
+      "answer": "Wir empfehlen, Badebekleidung, Sonnencreme, ein Handtuch und alle notwendigen persönlichen Dinge mitzubringen."
+    },
+    "question11": {
+      "question": "Sind Kinder auf den Touren erlaubt?",
+      "answer": "Ja, Kinder sind willkommen! Einige Aktivitäten können aus Sicherheitsgründen Altersbeschränkungen haben."
+    },
+    "question12": {
+      "question": "Stellen Sie Rettungswesten und Sicherheitsausrüstung zur Verfügung?",
+      "answer": "Ja, alle Sicherheitsausrüstungen, einschließlich Rettungswesten, werden für jede Aktivität zur Verfügung gestellt."
+    },
+    "question13": {
+      "question": "Wie buche ich eine Tour?",
+      "answer": "Sie können eine Tour online über unsere Website buchen oder unser Kundenserviceteam kontaktieren."
+    },
+    "question14": {
+      "question": "Welche Zahlungsmethoden akzeptieren Sie?",
+      "answer": "Wir akzeptieren Kreditkarten, PayPal und Banküberweisungen."
+    }
   }
 }
-  
