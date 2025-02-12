@@ -43,7 +43,7 @@ const TourMap: React.FC<TourMapProps> = ({ route }) => {
 
   return (
  
-    <MapContainer id="map" center={polylinePositions[0]} zoom={13} style={{ height: '400px', width: '600px' }}>
+    <MapContainer id="map" center={polylinePositions[0]} zoom={7} style={{ height: '800px', width: '900px' }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

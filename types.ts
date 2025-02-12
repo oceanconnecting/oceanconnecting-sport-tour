@@ -1,8 +1,11 @@
+
 export interface Tour {
   id: number;
   title: string;
   image: string;
-  images: string[];
+  images: {
+    src: string,
+    alt: string}[];
   route: {
     lat: number;
     lng: number;
