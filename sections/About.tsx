@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Tag from "@/Components/Tag";
 import { animate } from "motion/react";
@@ -60,12 +60,11 @@ const Counter: React.FC<CounterProps> = ({ from, to }) => {
   return <p ref={nodeRef}>0</p>;
 };
 
-
 function About() {
-  const t = useTranslations("homepage.about")
+  const t = useTranslations("homepage.about");
 
-  const locale = useLocale()
-  const isArabic = locale == "ar"
+  const locale = useLocale();
+  const isArabic = locale == "ar";
 
   return (
     <section id="about">
@@ -74,17 +73,28 @@ function About() {
         <div className="grid lg:grid-cols-2 gap-4 h-full justify-center items-center">
           <div className="flex flex-col items-center lg:items-start">
             <div className="text-md md:text-xl lg:text-3xl flex gap-2 text-text-800 rounded-full font-bold bg-primary-100 w-fit px-6 py-3">
-              +<Counter from={0} to={3}/> {t("about_tag")}
+              +<Counter from={0} to={3} /> {t("about_tag")}
             </div>
             <div className="flex items-center flex-col">
-              <p className={twMerge("mt-6 text-center text-text-800 sm:text-lg/relaxed max-w-lg", isArabic ? "lg:text-right" : "lg:text-left")}>
+              <p
+                className={twMerge(
+                  "mt-6 text-center text-text-800 sm:text-md/relaxed leading-8 max-w-lg",
+                  isArabic ? "lg:text-right" : "lg:text-left"
+                )}
+              >
                 {t("about_text")}
               </p>
             </div>
           </div>
           <div className="lg:flex hidden justify-center items-center">
             <div className="bg-primary-600/70 -z-0 w-64 h-64 absolute blur-3xl rounded-full"></div>
-            <Image className="rounded-2xl z-10" src={"/aboutImg.jpg"} alt={"img sportif kid"} width={280} height={360} />
+            <Image
+              className="rounded-2xl z-10"
+              src={"/aboutImg.jpg"}
+              alt={"img sportif kid"}
+              width={280}
+              height={360}
+            />
           </div>
         </div>
       </div>

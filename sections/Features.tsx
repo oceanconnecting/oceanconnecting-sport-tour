@@ -24,7 +24,6 @@ export default function Features() {
       src: "/Features/education.jpg",
     },
   ];
-
   const scrollTarget = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollTarget,

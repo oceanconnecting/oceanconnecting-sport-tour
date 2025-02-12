@@ -1,41 +1,41 @@
-"use client"
+"use client";
 
-import { GoDotFill } from "react-icons/go"
-import { FaStar, FaRegStar } from "react-icons/fa"
-import { useLocale } from "next-intl"
-import { useRouter } from "next/navigation"
-import Image from "next/image"
-import type React from "react" // Added import for React
-import Button from "./Button"
+import { GoDotFill } from "react-icons/go";
+import { FaStar, FaRegStar } from "react-icons/fa";
+import { useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+import type React from "react"; // Added import for React
+import Button from "./Button";
 
 interface Tour {
-  id: number
-  title: string
-  image: string
-  departure: string
-  description: string
-  arrival: string
-  duration: string
-  type: string
-  rating: number
-  newPrice: string
-  latesPrice: string
-  route: number[][]
+  id: number;
+  title: string;
+  image: string;
+  departure: string;
+  description: string;
+  arrival: string;
+  duration: string;
+  type: string;
+  rating: number;
+  newPrice: string;
+  latesPrice: string;
+  route: number[][];
 }
 
 interface ToursCardProps {
-  tour: Tour
+  tour: Tour;
 }
 
 const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
-  const fullStars = Math.floor(tour.rating)
-  const halfStar = tour.rating % 1 >= 0.5 ? 1 : 0
-  const router = useRouter()
-  const locale = useLocale()
+  const fullStars = Math.floor(tour.rating);
+  const halfStar = tour.rating % 1 >= 0.5 ? 1 : 0;
+  const router = useRouter();
+  const locale = useLocale();
 
   const handleClick = () => {
-    router.push(`/${locale}/Tours/${tour.id}`)
-  }
+    router.push(`/${locale}/Tours/${tour.id}`);
+  };
 
   return (
     <div
@@ -77,7 +77,10 @@ const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
                 {index < fullStars ? (
                   <FaStar className="text-yellow-400" />
                 ) : index < fullStars + halfStar ? (
-                  <FaStar className="text-yellow-400" style={{ clipPath: "inset(0 50% 0 0)" }} />
+                  <FaStar
+                    className="text-yellow-400"
+                    style={{ clipPath: "inset(0 50% 0 0)" }}
+                  />
                 ) : (
                   <FaRegStar className="text-yellow-400" />
                 )}
@@ -86,27 +89,29 @@ const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
           </div>
         </div>
 
-        <div className="border-t pt-4">
+        <div className="border-t pt-4 border-background-300">
           {tour.newPrice === " " ? (
             <div className="text-lg font-medium text-gray-800">
-              From <span className="text-2xl text-blue-600">{tour.latesPrice}</span>
+              From{" "}
+              <span className="text-2xl text-blue-600">{tour.latesPrice}</span>
               <span className="text-sm text-gray-500"> MAD per person</span>
             </div>
           ) : (
             <div className="flex items-end justify-between space-x-2">
-              <div className="text-lg line-through text-gray-400">{tour.latesPrice} MAD</div>
+              <div className="text-lg line-through text-gray-400">
+                {tour.latesPrice} MAD
+              </div>
               <div className="flex items-end gap-1 justify-center">
-                <Button variant="primary">
+                <Button variant="primary" onClick={handleClick}>
                   From {tour.newPrice} MAD
                 </Button>
-                
               </div>
             </div>
           )}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ToursCard
+export default ToursCard;

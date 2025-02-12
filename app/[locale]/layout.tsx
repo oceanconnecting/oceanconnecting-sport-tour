@@ -8,8 +8,9 @@ import { redirect } from "next/navigation";
 import Providers from "@/Components/Providers";
 import { Poppins, Tajawal } from "next/font/google";
 import BackToTopButton from "@/Components/BackToTopButton";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
 import WhatsappContact from "@/Components/WhatsappContact";
+import OfflineChat from "@/Components/OfflineChat/OfflineChat";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "300" });
 const tajawal = Tajawal({ subsets: ["arabic"], weight: "400" });
@@ -19,16 +20,16 @@ export async function generateMetadata({
 }: Readonly<{
   params: { locale: string };
 }>) {
-  const {locale} = await params;
-  const t = await getTranslations({locale, namespace: 'metadata'});
- 
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
   return {
     title: {
-      default: t('title'),
-      template: `%s | ${t('title')}`,
+      default: t("title"),
+      template: `%s | ${t("title")}`,
     },
-    description: t('description'),
-    keywords: t('keywords'),
+    description: t("description"),
+    keywords: t("keywords"),
   };
 }
 
@@ -45,7 +46,7 @@ export default async function RootLayout({
   const validLocales = ["fr", "en", "ar", "es", "de"];
 
   if (!validLocales.includes(locale)) {
-    redirect("/en")
+    redirect("/en");
   }
 
   const direction = locale === "ar" ? "rtl" : "ltr";
@@ -53,15 +54,16 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning>
       <body className={locale === "ar" ? tajawal.className : poppins.className}>
-      <GoogleAnalytics gaId={`${process.env.GOOGLE_ANALYTICS_ID}`} />
+        <GoogleAnalytics gaId={`${process.env.GOOGLE_ANALYTICS_ID}`} />
         <NextIntlClientProvider messages={messages}>
-        <Providers>
-          <Navbar />
-          <BackToTopButton />
-          <WhatsappContact />
-          <main>{children}</main>
-          <Footer />
-        </Providers>
+          <Providers>
+            <Navbar />
+            <BackToTopButton />
+            <WhatsappContact />
+            <OfflineChat />
+            <main>{children}</main>
+            <Footer />
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>

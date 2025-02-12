@@ -8,50 +8,50 @@
     "navbar": {
       "title": "Ocean Sports Tour",
       "about": "about",
-      "features":"features",
+      "features": "features",
       "activities": "activities",
-      "places":"places",
-      "services":"services",
-      "downloads":"downloads",
-      "gallery":"gallery",
-      "professional":"professional",
-      "contact":"contact"
+      "places": "places",
+      "services": "services",
+      "downloads": "downloads",
+      "gallery": "gallery",
+      "professional": "professional",
+      "contact": "contact"
     },
-    "hero":{
-      "hero_tag":"Adventure Tailored for Curious Minds",
-      "grand_title" : {
-        "txt_1":"Learn",
-        "txt_2":"Travel",
-        "txt_3":"and Grow",
-        "end_txt":"with"
+    "hero": {
+      "hero_tag": "Adventure Tailored for Curious Minds",
+      "grand_title": {
+        "txt_1": "Learn",
+        "txt_2": "Travel",
+        "txt_3": "and Grow",
+        "end_txt": "with"
       },
-      "highlighted":"Ocean Sports Tour",
-      "descr":"we specialize in creating unforgettable tour experiences for kids! Our mission is to inspire curiosity, spark creativity, and foster learning through exciting adventures tailored just for young explorers.",
+      "highlighted": "Ocean Sports Tour",
+      "descr": "we specialize in creating unforgettable tour experiences for kids! Our mission is to inspire curiosity, spark creativity, and foster learning through exciting adventures tailored just for young explorers.",
       "contact_button": "Get in Touch",
       "start_button": "Start Exploring"
     },
-    "about":{
-      "about_tag":"Years of experience",
-      "about_title":"about us",
-      "about_text":"ocean sport et tours, company of tourist transport and sport based in Agadir, began operation in 2022. The association operates a very diversified range of services who deemed to be of high quality, they combine availability, proactivity and quality. We are committed to make difference in everything we do, as our main goal is to reflect a great image to tourism in Morocco by listening to the needs and requests of customers and offer them insightful and worry-free experience"
+    "about": {
+      "about_tag": "Years of experience",
+      "about_title": "about us",
+      "about_text": "ocean sport et tours, company of tourist transport and sport based in Agadir, began operation in 2022. The association operates a very diversified range of services who deemed to be of high quality, they combine availability, proactivity and quality. We are committed to make difference in everything we do, as our main goal is to reflect a great image to tourism in Morocco by listening to the needs and requests of customers and offer them insightful and worry-free experience"
     },
-    "choose":{
-      "title":"Why to Choose Us",
-      "choose_1":{
-        "title":"Safe and Secure",
-        "descr":"Your child's safety is our top priority with trained staff and secure trips."
+    "choose": {
+      "title": "Why to Choose Us",
+      "choose_1": {
+        "title": "Safe and Secure",
+        "descr": "Your child's safety is our top priority with trained staff and secure trips."
       },
-      "choose_2":{
-        "title":"Fun Activities",
-        "descr":"Engaging and fun experiences that kids will enjoy and remember."
+      "choose_2": {
+        "title": "Fun Activities",
+        "descr": "Engaging and fun experiences that kids will enjoy and remember."
       },
-      "choose_3":{
-        "title":"Educational Value",
-        "descr":"A mix of learning and adventure to expand your child's horizons."
+      "choose_3": {
+        "title": "Educational Value",
+        "descr": "A mix of learning and adventure to expand your child's horizons."
       }
     },
-    "activities":{
-      "activities_title":"activities",
+    "activities": {
+      "activities_title": "activities",
       "activities": {
         "activity_1": {
           "title": "Aqua Park",
@@ -108,101 +108,100 @@
       "text_10": "A well-planned tour is more than a trip, it's a gateway to wonder."
     },
     "places": {
-      "title":"places",
-      
+      "title": "places",
+
       "place_1": {
         "title": "Agadir Oufella",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "A historic hilltop fortress offering panoramic views of Agadir and its coastline. It's a perfect spot for history enthusiasts and photographers."
       },
       "place_2": {
         "title": "Corniche",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "A lively seaside promenade lined with cafes, restaurants, and shops, ideal for leisurely walks and enjoying the ocean breeze."
       },
       "place_3": {
         "title": "Croco Park",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "A unique crocodile park featuring lush gardens and over 300 Nile crocodiles. A fun and educational experience for families."
       },
       "place_4": {
         "title": "Dolphin World Agadir",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "An entertainment center where visitors can enjoy dolphin shows and interact with these intelligent marine animals."
       },
       "place_5": {
         "title": "Imi Ouaddar",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "A picturesque coastal village known for its pristine beaches and laid-back atmosphere, perfect for a relaxing getaway."
       },
       "place_6": {
         "title": "Legzira",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "Famous for its stunning red rock arches on the beach, this natural wonder is a must-visit for nature lovers and photographers."
       },
       "place_7": {
         "title": "Marina",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "A modern harbor area featuring luxury yachts, upscale shops, and waterfront dining options."
       },
       "place_8": {
         "title": "Medina and Amazigh Heritage Museum",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "A cultural hub showcasing traditional Moroccan architecture, art, and artifacts, celebrating Amazigh heritage."
       },
       "place_9": {
         "title": "Paradise Valley",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "A lush oasis with natural pools and waterfalls, surrounded by palm trees and dramatic cliffs. Ideal for hiking and swimming."
       },
       "place_10": {
         "title": "Souss Massa",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "A national park known for its diverse wildlife, including flamingos and rare bird species, as well as its scenic landscapes."
       },
       "place_11": {
         "title": "Souk El Had",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "A bustling traditional market offering a wide variety of goods, from spices and textiles to handicrafts and fresh produce."
       },
       "place_12": {
         "title": "Taghazout",
-        "city":"Agadir",
+        "city": "Agadir",
         "descr": "A charming fishing village turned surf haven, known for its world-class waves, relaxed vibe, and stunning sunsets."
       },
-        "place_13": {
-          "title": "Kasbah",
-          "city": "Essaouira",
-          "descr": "One of the iconic historical sites of Essaouira, located on Morocco's Atlantic coast."
-        },
-        "place_14": {
-          "title": "Medina",
-          "city": "Essaouira",
-          "descr": "Located on Morocco's Atlantic coast, it is a historical and cultural site inscribed as a UNESCO World Heritage Site since 2001. Founded in the 18th century by Sultan Mohammed ben Abdallah, it reflects a unique blend of Islamic and European architecture, showcasing its role as a commercial and cultural crossroads."
-        },
-        "place_15": {
-          "title": "Essaouira Ramparts",
-          "city": "Essaouira",
-          "descr": "Visit the medina's walls to discover breathtaking views—picturesque sunsets, panoramic sea views, and wild cliffs—or head to the old cannons that protect this fortress. Calm and romantic atmosphere; don't forget your camera."
-        },
-        "place_16": {
-          "title": "Le Jardin Majorelle",
-          "city": "Marrakech",
-          "descr": "This enchanting botanical garden, created by Jacques Majorelle and restored by Yves Saint Laurent, offers a haven of peace with exotic plants and buildings painted in Majorelle blue."
-        },
-        "place_17": {
-          "title": "Jemaa el-Fna",
-          "city": "Marrakech",
-          "descr": "The beating heart of Marrakech, this lively square is full of charm. During the day, it hosts vendors, snake charmers, and storytellers. At night, it transforms into a large open-air restaurant."
-        },
-        "place_18": {
-          "title": "La Ménara",
-          "city": "Marrakech",
-          "descr": "This vast garden with its central basin is an ideal place for a relaxing stroll with a magnificent view of the Atlas Mountains."
-        },
-      "show_more":"show more"
-    }
-    ,
+      "place_13": {
+        "title": "Kasbah",
+        "city": "Essaouira",
+        "descr": "One of the iconic historical sites of Essaouira, located on Morocco's Atlantic coast."
+      },
+      "place_14": {
+        "title": "Medina",
+        "city": "Essaouira",
+        "descr": "Located on Morocco's Atlantic coast, it is a historical and cultural site inscribed as a UNESCO World Heritage Site since 2001. Founded in the 18th century by Sultan Mohammed ben Abdallah, it reflects a unique blend of Islamic and European architecture, showcasing its role as a commercial and cultural crossroads."
+      },
+      "place_15": {
+        "title": "Essaouira Ramparts",
+        "city": "Essaouira",
+        "descr": "Visit the medina's walls to discover breathtaking views—picturesque sunsets, panoramic sea views, and wild cliffs—or head to the old cannons that protect this fortress. Calm and romantic atmosphere; don't forget your camera."
+      },
+      "place_16": {
+        "title": "Le Jardin Majorelle",
+        "city": "Marrakech",
+        "descr": "This enchanting botanical garden, created by Jacques Majorelle and restored by Yves Saint Laurent, offers a haven of peace with exotic plants and buildings painted in Majorelle blue."
+      },
+      "place_17": {
+        "title": "Jemaa el-Fna",
+        "city": "Marrakech",
+        "descr": "The beating heart of Marrakech, this lively square is full of charm. During the day, it hosts vendors, snake charmers, and storytellers. At night, it transforms into a large open-air restaurant."
+      },
+      "place_18": {
+        "title": "La Ménara",
+        "city": "Marrakech",
+        "descr": "This vast garden with its central basin is an ideal place for a relaxing stroll with a magnificent view of the Atlas Mountains."
+      },
+      "show_more": "show more"
+    },
     "services": {
       "title": "services",
       "services": {
@@ -231,14 +230,12 @@
           "desc": "Efficient transport and logistics solutions for your needs."
         }
       }
-    }
-    ,
-    "city":{
-      "All":"All",
-      "Agadir":"Agadir",
-      "Marrakech":"Marrakech",
-      "Essaouira":"Essaouira"
-
+    },
+    "city": {
+      "All": "All",
+      "Agadir": "Agadir",
+      "Marrakech": "Marrakech",
+      "Essaouira": "Essaouira"
     },
     "tours": {
       "heading": "Tours",
@@ -275,14 +272,14 @@
         }
       }
     },
-    "downloads":{
-      "title":"Downloads",
-      "descr":"Our company offer for you all the information you're going to need for your unique tour with us, Throughout, ocean sport and tours takes care of everything, from the day you land, until the moment we say goodbye at the airport. About here, you will come across Everything concerning Tariff and schedule of your tours, trips, travels, accommodation… that you can download easy and fast.",
-      "text_1":"Download 7days planning",
-      "text_2":"Download 10days planning",
-      "button":"Download"
+    "downloads": {
+      "title": "Downloads",
+      "descr": "Our company offer for you all the information you're going to need for your unique tour with us, Throughout, ocean sport and tours takes care of everything, from the day you land, until the moment we say goodbye at the airport. About here, you will come across Everything concerning Tariff and schedule of your tours, trips, travels, accommodation… that you can download easy and fast.",
+      "text_1": "Download 7days planning",
+      "text_2": "Download 10days planning",
+      "button": "Download"
     },
-    "opinion":{
+    "opinion": {
       "title": "What Our Customers Said About Us",
       "opinions": {
         "opinion_1": {
@@ -315,10 +312,10 @@
         }
       }
     },
-    "footer":{
-      "tanks":"Thank you for visiting our website and welcome to",
-      "Rights":"All Rights Reserved",
-      "Copyright":"Copyright"
+    "footer": {
+      "tanks": "Thank you for visiting our website and welcome to",
+      "Rights": "All Rights Reserved",
+      "Copyright": "Copyright"
     }
   },
   "contact": {
@@ -334,8 +331,7 @@
       "sending": "Sending..."
     },
     "details": {
-      "title":"Contact Details"
+      "title": "Contact Details"
     }
-
   }
 }
