@@ -5,6 +5,7 @@ import Toaster, { handleSubmitTour } from "./actions";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { FaLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
+import MyMap from "@/Components/MyMap";
 
 export default function contactForm() {
   const nameInput = useRef<HTMLInputElement>(null);
@@ -135,14 +136,8 @@ export default function contactForm() {
             </div>
           </div>
         </div>
-        <div className="flex-1 flex justify-center relative h-[400px]">
-          <Image
-            className="rounded-xl object-cover"
-            src={"/ContactImg.jpg"}
-            alt={""}
-            width={400}
-            height={300}
-          ></Image>
+        <div className="flex-1 flex items-center lg:pt-16 justify-center relative h-[400px]">
+          <MyMap />
         </div>
       </div>
     </section>
