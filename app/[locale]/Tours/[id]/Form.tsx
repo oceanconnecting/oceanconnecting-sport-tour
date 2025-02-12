@@ -108,7 +108,7 @@ interface FormProps {
 
   return (
     <div className="grid grid-cols-1 items-center w-full mt-16 text-center">
-      <div className="max-w-md mx-auto bg-white p-6 rounded-3xl shadow-md">
+      <div className="w-4/5 bg-white p-6 rounded-3xl shadow-md">
         <h3 className="text-lg font-bold mb-6">Choisissez les participants et la date</h3>
 
         <form onSubmit={handleSubmit} className="space-y-4">

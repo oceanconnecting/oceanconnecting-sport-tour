@@ -2,15 +2,11 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight, Heart } from "lucide-react";
 import Image from "next/image";
 
-const images = [
-  "/path-to-image1.jpg",
-  "/path-to-image2.jpg",
-  "/path-to-image3.jpg",
-  "/path-to-image4.jpg",
-  "/path-to-image5.jpg",
-];
+interface Images {
+  images: string[];
+}
 
-export default function ImageCarousel() {
+export default function ImageCarousel({images}: Images) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [liked, setLiked] = useState(false);
 
@@ -27,7 +23,7 @@ export default function ImageCarousel() {
   };
 
   return (
-    <div className="relative w-full max-w-md mx-auto overflow-hidden rounded-xl shadow-lg">
+    <div className="relative w-4/5   overflow-hidden rounded-xl shadow-lg">
       {/* Image Container */}
       <div className="relative w-full h-64">
         <Image

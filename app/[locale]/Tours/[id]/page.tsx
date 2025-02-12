@@ -58,19 +58,19 @@ const TourDetails = () => {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
+      <div className="grid lg:grid-cols-2 w-full md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
         <div className="rounded-lg flex justify-center items-center">
           <Propose />
         </div>
-        <div className="bg-slate-300  rounded-lg  justify-center items-center">
-          {/* <TourMap route={tour.route} /> */}
-          <ImageCarousel />
+        <div className=" rounded-lg flex justify-center items-center">
+          <TourMap route={tour.route} />
+          <ImageCarousel  images={tour.images}/>
         </div>
       </div>
 
       {/* Itinerary and Form */}
       
-      <div className="grid lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
+      <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
         <div className=" p-6 rounded-lg flex justify-center items-start">
           
         <Itinerary title={tour.title} passBy={tour.passBy} image={tour.image} />

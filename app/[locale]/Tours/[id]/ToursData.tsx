@@ -5,6 +5,11 @@ const ToursData: Tour[] = [
     "id": 1,
     "title": "Voyage d'Agadir à Marrakech",
     "image": "/places/Agadir/agadir-oufella.jpg",
+    "images": [ "/places/Agadir/agadir-beach.jpg",
+                  "/places/Agadir/agadir-oufella.jpg",
+                  "/places/Marrakech/jemaa-el-fna.jpg",
+                  "/places/Marrakech/koutoubia-mosque.jpg",
+                  "/places/Marrakech/majorelle-garden.jpg",],
     "route": [
       { "lat": 30.4278, "lng": -9.5981, "name": "Amskroud" },
       { "lat": 30.55, "lng": -9.4, "name": "Imi n'Tanout" },
@@ -31,6 +36,10 @@ const ToursData: Tour[] = [
     "id": 2,
     "title": "Excursion Marrakech - Essaouira",
     "image": "/places/Marrakech/Jemaa-el-Fna.jpg",
+    "images": [ "/places/Agadir/agadir-beach.jpg",
+      "/places/Agadir/agadir-oufella.jpg",
+      "/places/Agadir/souk-el-had.jpg",
+      "/places/Agadir/medina-museum.jpg", ],
     "route": [
       { "lat": 31.6295, "lng": -7.9811, "name": "Chichaoua" },
       { "lat": 31.55, "lng": -8.3, "name": "Argan Oil Cooperative" },
@@ -42,6 +51,7 @@ const ToursData: Tour[] = [
     "passBy": ["Chichaoua", "Argan Oil Cooperative", "Sidi Lmokhtar", "Ounara", "Bab Doukkala (Essaouira)"],
     "description": "Un parcours magique à travers les collines et forêts d'arganiers jusqu'à la côte atlantique.",
     "rating": 4,
+    
     "departure": "Marrakech",
     "arrival": "Essaouira",
     "type": "Découverte",
@@ -57,6 +67,10 @@ const ToursData: Tour[] = [
     "id": 3,
     "title": "Road Trip Essaouira - Agadir",
     "image": "/places/Essaouira/Kasbah.jpg",
+    "images": [ "/places/Essaouira/Kasbah.jpg",
+      "/places/Essaouira/essaouira-beach.jpg",
+      "/places/Essaouira/essaouira-medina.jpg",
+      "/places/Essaouira/essaouira-port.jpg", ],
     "route": [
       { "lat": 31.5085, "lng": -9.7595, "name": "Sidi Kaouki" },
       { "lat": 31.45, "lng": -9.3, "name": "Tamri (Banana Village)" },
@@ -83,6 +97,10 @@ const ToursData: Tour[] = [
     "id": 4,
     "title": "Aventure d'une journée Agadir - Essaouira",
     "image": "/places/Agadir/medina-museum.jpg",
+    "images": [ "/places/Agadir/agadir-beach.jpg",
+      "/places/Agadir/agadir-oufella.jpg",
+      "/places/Agadir/souk-el-had.jpg",
+      "/places/Agadir/medina-museum.jpg", ],
     "route": [
       { "lat": 30.4278, "lng": -9.5981, "name": "Tamri" },
       { "lat": 30.6, "lng": -9.7, "name": "Taghazout" },
@@ -109,6 +127,10 @@ const ToursData: Tour[] = [
     "id": 5,
     "title": "Circuit Marrakech, Essaouira et Agadir",
     "image": "/places/Marrakech/Menara-marrakech.jpg",
+    "images": [ "/places/Marrakech/Menara-marrakech.jpg",
+      "/places/Marrakech/jemaa-el-fna.jpg",
+      "/places/Marrakech/koutoubia-mosque.jpg",
+      "/places/Marrakech/majorelle-garden.jpg", ],
     "route": [
       { "lat": 31.6295, "lng": -7.9811, "name": "Place Jemaa el-Fna (Marrakech)" },
       { "lat": 31.45, "lng": -8.1, "name": "Argan Cooperative (en route)" },

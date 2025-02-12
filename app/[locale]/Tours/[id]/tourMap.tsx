@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { MapContainer, TileLayer, Polyline, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
+import "leaflet/dist/leaflet.css";
 
 // Définir le type pour les points de la route
 interface Point {

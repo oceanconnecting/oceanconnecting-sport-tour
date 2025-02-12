@@ -2,6 +2,7 @@ export interface Tour {
   id: number;
   title: string;
   image: string;
+  images: string[];
   route: {
     lat: number;
     lng: number;
