@@ -248,20 +248,40 @@
       "heading": "Visites",
       "show_map": "Afficher la carte",
       "Itinerary": "Itinéraire",
+      "propose":{
+
+      
+        "propose1":{
+          "title":"Annulation gratuite",
+          "descr":"Annulation jusqu'à 24 heures à l'avance pour un remboursement intégral."
+        },
+        "propose2":{
+          "title":"Sécurité maximale",
+          "descr":"Mesures de sécurité renforcées pour garantir votre tranquillité d'esprit."
+        },"propose3":{
+          "title":"Support 24/7",
+          "descr":"Assistance disponible à tout moment pour répondre à vos questions."
+        },"propose4":{
+          "title":"Groupes réduits",
+          "descr":"Profitez d'une expérience plus personnelle avec des groupes de petite taille."
+        }
+      },
       "tour": {
         "tour_1": {
           "title": "Voyage d'Agadir à Marrakech",
           "route": {
+            
                     "amskroud": "Amskroud",
-                    "imi_n_tanout": "Imi n'Tanout",
-                    "sidi_mokhtar": "Sidi Mokhtar",
+                    "Imi n'Tanout": "Imi n'Tanout",
+                    "sidi mokhtar": "Sidi Mokhtar",
                     "chichaoua": "Chichaoua",
-                    "lalla_takerkoust": "Lalla Takerkoust",
-                    "point_6": "Point 6"
-          },
+                    "lalla takerkoust": "Lalla Takerkoust",
+                    "point 6": "Point 6"
+                    
+                  },
           "passBy": {
             "passBy": "Passer par",
-            "location":{
+            "pass":{
               "Amskroud":"Amskroud",
               "Imi n'Tanout":" Imi n'Tanout",
               "Sidi Mokhtar":"Sidi Mokhtar",

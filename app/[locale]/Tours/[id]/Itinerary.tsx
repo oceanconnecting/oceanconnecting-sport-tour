@@ -56,6 +56,7 @@ export default function Itinerary({ passBy, image, title, id }: ItineraryProps) 
           <div className="flex flex-col md:flex-row md:items-start md:space-x-4">
             {/* Image (exemple) */}
             <div className="w-full md:w-1/2 h-48 rounded-md overflow-hidden mb-4 md:mb-0">
+           
               <img
                 src={image}
                 alt="Paradise Valley"
@@ -66,11 +67,12 @@ export default function Itinerary({ passBy, image, title, id }: ItineraryProps) 
 
           {/* Pass by */}
           <div className="space-y-2">
-            <h4 className="font-semibold">Pass by</h4>
+            <h4 className="font-semibold">{tt(`tour.tour_${id}.passBy.passBy`)}
+                </h4>
             <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
               {passBy.map((location, index) => (
                 <li key={index}>
-                  {tt(`tour_${id}.passBy.location.${location}`)} {/* Ensure `id` is a number */}
+                  {tt(`tour.tour_${id}.passBy.pass.${location}`)} {/* Ensure `id` is a number */}
                 </li>
               ))}
             </ul>

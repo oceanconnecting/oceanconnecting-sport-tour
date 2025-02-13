@@ -43,7 +43,7 @@ const TourDetails = () => {
   return (
     <section className="py-20">
       
-      <Tag>{tt(`tour.tour_${{id:numericId}}.title`)}</Tag>
+      <Tag>{tt(`tour.tour_${numericId}.title`)}</Tag>
 
       <div className="grid grid-cols-2 items-center gap-4 py-4 px-8 bg-gray-50 rounded-xl shadow-sm w-full">
         <div className="flex items-center gap-2">

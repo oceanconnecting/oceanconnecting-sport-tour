@@ -48,7 +48,7 @@ export default  function AnimatedModalDemo({id, route}: TourMapProps) {
         </ModalTrigger>
         <ModalBody className="   bg-opacity-75 flex items-center justify-center">
           <ModalContent    className="bg-white h-full  dark:bg-black dark:text-white rounded-xl p-4">
-                <TourMap route={route} />
+                <TourMap id={id} route={route} />
           </ModalContent>
          
         </ModalBody>
