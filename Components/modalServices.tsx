@@ -34,6 +34,7 @@ function ModalServices(props: any) {
       </div>
       <Lightbox
         plugins={[Thumbnails, Counter]}
+        counter={{ container: { style: { top: "unset", bottom: 0 } } }}
         close={() => setIsOpen(false)}
         open={isOpen}
         slides={Images}
