@@ -10,8 +10,13 @@ import TourMap from "./tourMap";
 import Itinerary from "./Itinerary";
 import getToursData from "./ToursData";
 import FormTour from "./Form";
-
+import ImageCarousel from "./images";
+import Button from "@/Components/Button";
+import AnimatedModalDemo from "./modalMaps";
+import { useTranslations } from "next-intl";
 const TourDetails = () => {
+
+  const t = useTranslations("homepage.tours");
   const ToursData: Tour[] = getToursData();
   const params = useParams();
   const { id } = params as { id: string };
@@ -23,7 +28,7 @@ const TourDetails = () => {
       const foundTour = ToursData.find((t) => t.id.toString() === id);
       setTour(foundTour || null);
     }
-  }, [id, ToursData]);
+  }, [id]);
 
   const handleFavoritClick = () => setIsFavorited(!isFavorited);
 
@@ -31,23 +36,24 @@ const TourDetails = () => {
   if (!tour) return <div><p>Tour non trouvé.</p></div>;
 
   const fullStars = Math.floor(tour.rating);
-  const halfStar = tour.rating % 1 >= 0.5 ? 1 : 0;
+  const hasHalfStar = tour.rating % 1 >= 0.5;
 
   return (
     <section className="py-20">
       <Tag>{tour.title}</Tag>
-    <FormTour tour={tour}  />
+
       <div className="grid grid-cols-2 items-center gap-4 py-4 px-8 bg-gray-50 rounded-xl shadow-sm w-full">
         <div className="flex items-center gap-2">
           <span className="text-gray-700 font-medium">Très bien</span>
           {Array.from({ length: fullStars }).map((_, index) => (
             <FaStar key={`star-${index}`} className="text-yellow-500" />
           ))}
-          {halfStar > 0 && <FaStar className="text-yellow-500" style={{ clipPath: "inset(0 50% 0 0)" }} />}
-          {Array.from({ length: 5 - fullStars - halfStar }).map((_, index) => (
+          {hasHalfStar && <FaStar className="text-yellow-500" />}
+          {Array.from({ length: 5 - fullStars - (hasHalfStar ? 1 : 0) }).map((_, index) => (
             <FaRegStar key={`empty-star-${index}`} className="text-yellow-500" />
           ))}
         </div>
+
         <div className="flex justify-center items-center gap-6">
           <div onClick={handleFavoritClick} className="cursor-pointer flex items-center gap-2">
             {isFavorited ? <FaHeart size={20} className="text-red-500" /> : <FaRegHeart size={20} className="text-gray-700" />}
@@ -55,27 +61,36 @@ const TourDetails = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 p-10 gap-4">
-        {tour.image && (
-          <img src={tour.image} alt={tour.title} className="rounded-lg shadow-md" />
-        )}
+
+      <div className="grid lg:grid-cols-2 w-full md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-2 rounded-lg shadow-lg">
         <div className="rounded-lg flex justify-center items-center">
           <Propose />
         </div>
-      </div>
-      <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
-        <div className="bg-red-50 p-6 rounded-lg flex justify-center items-center">
-          <TourMap route={tour.route} />
+        <div className=" rounded-lg flex justify-center items-center">
+          {/* <TourMap route={tour.route} /> */}
+          <ImageCarousel  images={tour.images}/>
         </div>
       </div>
 
-      {/* Itinerary and Form */}
-      <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-6 rounded-lg shadow-lg">
-        <Itinerary title={tour.title} passBy={tour.passBy} image={tour.image} />
+      {/* modal map  */}
+      <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-3 rounded-lg shadow-lg">
+        <div  className="  rounded-lg flex justify-center items-center">
+        <AnimatedModalDemo route={tour.route}   />
+          <div/>
+        </div>
       </div>
-     
-      {/* Tour Information */}
-      
+      {/* Itinerary and Form */}
+      <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-3 rounded-lg shadow-lg">
+        <div className=" p-6 rounded-lg flex justify-center items-start">
+          
+        <Itinerary title={tour.title} passBy={tour.passBy} image={tour.image} />
+        </div>
+       
+        <div className=" p-6 rounded-lg flex  justify-center items-end">
+          <FormTour tour={tour} />
+        </div>
+        
+      </div>
     </section>
   );
 };

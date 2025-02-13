@@ -1,68 +1,56 @@
-"use client"; // Ensures this file runs only on the client side
-
-import dynamic from "next/dynamic";
+import React, { useEffect } from 'react';
+import { MapContainer, TileLayer, Polyline, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
 import "leaflet/dist/leaflet.css";
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
-import { useEffect, useState, useRef } from "react";
 
-const MapContainer = dynamic(() => import("react-leaflet").then(mod => mod.MapContainer), { ssr: false });
-const TileLayer = dynamic(() => import("react-leaflet").then(mod => mod.TileLayer), { ssr: false });
-const Polyline = dynamic(() => import("react-leaflet").then(mod => mod.Polyline), { ssr: false });
-const Marker = dynamic(() => import("react-leaflet").then(mod => mod.Marker), { ssr: false });
-const Popup = dynamic(() => import("react-leaflet").then(mod => mod.Popup), { ssr: false });
-
-let L: any = null;
-
-if (typeof window !== "undefined") {
-  L = require("leaflet");
-  delete (L.Icon.Default.prototype as any)._getIconUrl;
-  L.Icon.Default.mergeOptions({
-    iconRetinaUrl: markerIcon2x,
-    iconUrl: markerIcon,
-    shadowUrl: markerShadow,
-  });
+// Définir le type pour les points de la route
+interface Point {
+  lat: number;
+  lng: number;
+  name: string;
 }
 
-interface TourMapsProps {
-  route: [number, number][];
+// Définir le type pour les props du composant
+interface TourMapProps {
+  route: Point[]; // Un tableau de points
 }
 
-export default function TourMap({ route }: TourMapsProps) {
-  const [isClient, setIsClient] = useState(false);
-  const mapRef = useRef<boolean>(false);
+// Fix for default marker icons in Leaflet
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+  iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+});
 
+const TourMap: React.FC<TourMapProps> = ({ route }) => {
   useEffect(() => {
-    setIsClient(true);
+    return () => {
+      const container = L.DomUtil.get('map');
+      if (container != null) {
+        (container as any)._leaflet_id = null; // Fix TypeScript issue
+      }
+    };
   }, []);
 
-  if (mapRef.current) return null;
-  mapRef.current = true;
+  // Convertir les coordonnées de la route en format attendu par Polyline
+  const polylinePositions: [number, number][] = route.map(point => [point.lat, point.lng]);
 
-  if (!route || route.length === 0) {
-    return <div className="text-center p-4">No route data available</div>;
-  }
+  return (
+    <MapContainer id="map" center={polylinePositions[0] as [number, number]} zoom={7} style={{ height: '800px', width: '900px' }}>
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      />
+      <Polyline positions={polylinePositions} color="blue" />
+      {route.map((point, index) => (
+        <Marker key={index} position={[point.lat, point.lng]}>
+          <Popup>
+            {point.name}: Latitude {point.lat}, Longitude {point.lng}
+          </Popup>
+        </Marker>
+      ))}
+    </MapContainer>
+  );
+};
 
-  const centerPoint: [number, number] = [
-    route.reduce((sum, [lat]) => sum + lat, 0) / route.length,
-    route.reduce((sum, [, lng]) => sum + lng, 0) / route.length,
-  ];
-
-  return isClient ? (
-    <div className="w-full h-[500px] rounded-xl shadow-lg">
-      <MapContainer center={centerPoint} zoom={7} scrollWheelZoom className="h-full">
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Polyline positions={route} color="blue" />
-        {route.map(([lat, lng], index) => (
-          <Marker key={index} position={[lat, lng]}>
-            <Popup>{`Point ${index + 1}`}</Popup>
-          </Marker>
-        ))}
-      </MapContainer>
-    </div>
-  ) : null;
-}
+export default TourMap;
