@@ -22,7 +22,7 @@ export default function ImageCarousel({images}: ImagesCarouselProps) {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  const handleDotClick = (index) => {
+  const handleDotClick = (index:any) => {
     setCurrentIndex(index);
   };
 

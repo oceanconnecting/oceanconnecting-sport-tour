@@ -13,8 +13,10 @@ import FormTour from "./Form";
 import ImageCarousel from "./images";
 import Button from "@/Components/Button";
 import AnimatedModalDemo from "./modalMaps";
-
+import { useTranslations } from "next-intl";
 const TourDetails = () => {
+
+  const t = useTranslations("homepage.tours");
   const ToursData: Tour[] = getToursData();
   const params = useParams();
   const { id } = params as { id: string };
