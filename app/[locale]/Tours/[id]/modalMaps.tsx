@@ -7,7 +7,7 @@ import {
   ModalContent,
   ModalFooter,
   ModalTrigger,
-} from "@/components/ui/animated-modal";
+} from "@/Components/ui/animated-modal";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import TourMap from "./tourMap";
@@ -29,7 +29,7 @@ interface Point {
   }
 
 
-export default  function AnimatedModalDemo({route}) {
+export default  function AnimatedModalDemo({route}: TourMapProps) {
 
   return (
     <div className="py-2  flex items-center justify-center">
