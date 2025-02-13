@@ -24,9 +24,6 @@ export default function Home() {
         <Hero />
       </Suspense>
       <Suspense fallback={<LoadingFallback />}>
-        <About />
-      </Suspense>
-      <Suspense fallback={<LoadingFallback />}>
         <Features />
       </Suspense>
       <Suspense fallback={<LoadingFallback />}>
@@ -46,6 +43,9 @@ export default function Home() {
       </Suspense>
       <Suspense fallback={<LoadingFallback />}>
         <Opnion />
+      </Suspense>
+      <Suspense fallback={<LoadingFallback />}>
+        <About />
       </Suspense>
       <Suspense fallback={<LoadingFallback />}>
         <Downloads />
