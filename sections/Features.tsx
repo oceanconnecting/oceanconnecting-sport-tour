@@ -24,33 +24,13 @@ export default function Features() {
       src: "/Features/education.jpg",
     },
   ];
-  const scrollTarget = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: scrollTarget,
-    offset: ["start end", "end end"],
-  });
-
-  const CardMotionValue = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, data.length - 1]
-  );
-
-  const [CardIdx, setCardIdx] = useState(0);
-
-  useEffect(() => {
-    return CardMotionValue.onChange((latestValue) => {
-      setCardIdx(Math.round(latestValue));
-    });
-  }, [CardMotionValue]);
 
   return (
     <section>
-      <div className="sticky h-screen top-5 flex justify-center flex-col items-center">
+      <div className="sticky min-h-screen top-5 flex justify-center flex-col items-center">
         <Tag>{t("title")}</Tag>
-        <AnimatedTestimonials value={CardIdx} testimonials={data} />
+        <AnimatedTestimonials testimonials={data} autoplay={true} />
       </div>
-      <div className="h-[150vh]" ref={scrollTarget}></div>
     </section>
   );
 }

@@ -286,7 +286,6 @@ function OfflineChat() {
             ) : (
               <Button variant="primary" onClick={() => resetChat()}>
                 <LuRotateCw />
-                New Chat
               </Button>
             )}
           </div>
