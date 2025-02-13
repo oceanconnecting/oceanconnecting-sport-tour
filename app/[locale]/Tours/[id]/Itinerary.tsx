@@ -2,23 +2,22 @@
 
 import React from "react";
 import { FaRegHeart, FaStar } from "react-icons/fa";
-interface ItineraryProps{
-  passBy:string[],
-  image:string,
-  title:string
+import { useTranslations } from "next-intl";
 
+interface ItineraryProps {
+  passBy: string[];
+  image: string;
+  title: string;
+  id: number; // Expecting 'id' to be a number directly
 }
 
-  
-export default function Itinerary({ passBy, image ,title}:ItineraryProps) {
-  
+export default function Itinerary({ passBy, image, title, id }: ItineraryProps) {
+  const tt = useTranslations("homepage.tours");
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 space-y-6 text-gray-800">
       {/* Titre principal */}
-      <h2 className="text-2xl font-bold">Itinerary</h2>
-
-     
+      <h2 className="text-2xl font-bold">{tt('Itinerary')}</h2>
 
       {/* Bloc d'itinéraire */}
       <div className="relative flex items-start space-x-4">
@@ -44,9 +43,6 @@ export default function Itinerary({ passBy, image ,title}:ItineraryProps) {
             </div>
             {/* Rating + Avis + Favori */}
             <div className="flex items-center space-x-2">
-            
-              
-              
               <button
                 title="Add to favorites"
                 className="text-gray-400 hover:text-red-500"
@@ -72,9 +68,11 @@ export default function Itinerary({ passBy, image ,title}:ItineraryProps) {
           <div className="space-y-2">
             <h4 className="font-semibold">Pass by</h4>
             <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-             {passBy.map((location,index)=>(
-              <li key={index}>{location}</li>
-             ))}
+              {passBy.map((location, index) => (
+                <li key={index}>
+                  {tt(`tour_${id}.passBy.location.${location}`)} {/* Ensure `id` is a number */}
+                </li>
+              ))}
             </ul>
           </div>
         </div>

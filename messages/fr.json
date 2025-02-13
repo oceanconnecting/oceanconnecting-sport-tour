@@ -246,12 +246,33 @@
     },
     "tours": {
       "heading": "Visites",
+      "show_map": "Afficher la carte",
+      "Itinerary": "Itinéraire",
       "tour": {
         "tour_1": {
           "title": "Voyage d'Agadir à Marrakech",
+          "route": {
+                    "amskroud": "Amskroud",
+                    "imi_n_tanout": "Imi n'Tanout",
+                    "sidi_mokhtar": "Sidi Mokhtar",
+                    "chichaoua": "Chichaoua",
+                    "lalla_takerkoust": "Lalla Takerkoust",
+                    "point_6": "Point 6"
+          },
+          "passBy": {
+            "passBy": "Passer par",
+            "location":{
+              "Amskroud":"Amskroud",
+              "Imi n'Tanout":" Imi n'Tanout",
+              "Sidi Mokhtar":"Sidi Mokhtar",
+              "Chichaoua":"Chichaoua",
+              "Lalla Takerkoust":"Lalla Takerkoust"
+                  }},
           "description": "Découvrez les paysages pittoresques entre Agadir et Marrakech avec des escales fascinantes.",
-          "type": "Aventure",
-          "duration": "4 jours"
+          "departure": "Marrakech",
+          "arrival": "Essaouira",
+          "type": "Découverte",
+          "duration": "2 hours 30 minutes"
         },
         "tour_2": {
           "title": "Excursion Marrakech - Essaouira",

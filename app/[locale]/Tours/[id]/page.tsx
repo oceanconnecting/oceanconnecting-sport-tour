@@ -16,16 +16,18 @@ import AnimatedModalDemo from "./modalMaps";
 import { useTranslations } from "next-intl";
 const TourDetails = () => {
 
-  const t = useTranslations("homepage.tours");
+  const tt = useTranslations("homepage.tours");
   const ToursData: Tour[] = getToursData();
   const params = useParams();
   const { id } = params as { id: string };
+   const numericId = parseInt(id, 10);//convert the string to a number
+
   const [isFavorited, setIsFavorited] = useState(false);
   const [tour, setTour] = useState<Tour | null>(null);
 
   useEffect(() => {
     if (id) {
-      const foundTour = ToursData.find((t) => t.id.toString() === id);
+      const foundTour = ToursData.find((t) => t.id=== numericId);
       setTour(foundTour || null);
     }
   }, [id]);
@@ -40,7 +42,8 @@ const TourDetails = () => {
 
   return (
     <section className="py-20">
-      <Tag>{tour.title}</Tag>
+      
+      <Tag>{tt(`tour.tour_${{id:numericId}}.title`)}</Tag>
 
       <div className="grid grid-cols-2 items-center gap-4 py-4 px-8 bg-gray-50 rounded-xl shadow-sm w-full">
         <div className="flex items-center gap-2">
@@ -75,7 +78,7 @@ const TourDetails = () => {
       {/* modal map  */}
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-3 rounded-lg shadow-lg">
         <div  className="  rounded-lg flex justify-center items-center">
-        <AnimatedModalDemo route={tour.route}   />
+        <AnimatedModalDemo id={{id:numericId}} route={tour.route}   />
           <div/>
         </div>
       </div>
@@ -83,7 +86,7 @@ const TourDetails = () => {
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-3 rounded-lg shadow-lg">
         <div className=" p-6 rounded-lg flex justify-center items-start">
           
-        <Itinerary title={tour.title} passBy={tour.passBy} image={tour.image} />
+        <Itinerary  id={numericId} title={tour.title} passBy={tour.passBy} image={tour.image} />
         </div>
        
         <div className=" p-6 rounded-lg flex  justify-center items-end">

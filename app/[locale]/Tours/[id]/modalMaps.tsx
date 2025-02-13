@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import { motion } from "framer-motion";
 import TourMap from "./tourMap";
+import { useTranslations } from "next-intl";
 
 // Définir le type pour les points de la route
 interface Point {
@@ -18,25 +19,28 @@ interface Point {
     lng: number;
     name: string;
   }
+  interface Id {
+    id:number
+  }
   
   // Définir le type pour les props du composant
   interface TourMapProps {
-    route: {
-      lat: number;
-      lng: number;
-      name: string;
-    }[]; // Un tableau de points
-  }
+    route: Point[];
+    id:Id;
+    }; // Un tableau de points
+  
 
 
-export default  function AnimatedModalDemo({route}: TourMapProps) {
+export default  function AnimatedModalDemo({id, route}: TourMapProps) {
 
+
+      const tt = useTranslations("homepage.tours");
   return (
     <div className="py-2  flex items-center justify-center">
       <Modal >
         <ModalTrigger className="bg-black  dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-2000">
-            show map
+          {tt('show_map')}
           </span>
           <div className="-translate-x-40    group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
           <CiMap size={25} />
