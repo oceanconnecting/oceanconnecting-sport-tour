@@ -94,11 +94,14 @@ const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
             <div className="text-lg font-medium text-gray-800">
               From{" "}
               <span className="text-2xl text-blue-600">{tour.latesPrice}</span>
-              <span className="text-sm text-gray-500"> MAD per person</span>
+              <span className="text-sm text-end text-gray-500">
+                {" "}
+                MAD per person
+              </span>
             </div>
           ) : (
             <div className="flex items-end justify-between space-x-2">
-              <div className="text-lg line-through text-gray-400">
+              <div className="text-sm text-end line-through text-gray-400">
                 {tour.latesPrice} MAD
               </div>
               <div className="flex items-end gap-1 justify-center">
