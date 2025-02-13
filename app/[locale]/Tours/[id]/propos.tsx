@@ -3,6 +3,8 @@
 import React from "react"
 import { BsCalendar2Check, BsClockHistory, BsPeople, BsShieldCheck } from "react-icons/bs";
 
+import { motion, useScroll, useTransform } from "framer-motion"; // Importez framer-motion
+
 const data: any = [
   {
     title: "Annulation gratuite",
@@ -27,6 +29,12 @@ const data: any = [
 ];
 
 const Propose = () => {
+   // Utilisez useScroll pour suivre le défilement de la page
+      const { scrollY } = useScroll();
+  
+      // Utilisez useTransform pour mapper la position du scroll à une valeur de translation
+      const y = useTransform(scrollY, [0, Infinity], [0, Infinity]); // Déplace de 0 à 100px lorsque l'utilisateur fait défiler 200px
+    
   return (
     <div className="propose-container">
       {data.map((item: any, index: number) => (
@@ -40,6 +48,11 @@ const Propose = () => {
           </div>
         </div>
       ))}
+      
+
+
+      
+      
     </div>
   );
 };
