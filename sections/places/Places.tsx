@@ -42,7 +42,7 @@ const Places: React.FC = () => {
       <section id="places">
         {/* Filter Component */}
 
-        <div className="w-full bg-background-50 py-16 px-5 flex flex-col justify-center overflow-hidden items-center gap-6">
+        <div className="w-full bg-background-50 py-16 px-16 flex flex-col justify-center overflow-hidden items-center gap-6">
           <Tag>{t("title")}</Tag>
           <Filter
             places={allplaces}
@@ -53,8 +53,7 @@ const Places: React.FC = () => {
           <div
             className={cn(
               "grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-full max-w-7xl",
-              displayedPlaces.length > 3 &&
-                "[mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_85%,rgba(0,0,0,0)_100%)] py-10 overflow-y-scroll max-h-svh"
+              displayedPlaces.length > 3 && "overflow-y-scroll max-h-[400]"
             )}
           >
             {displayedPlaces.map((place, index) => (

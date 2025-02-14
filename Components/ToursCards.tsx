@@ -40,7 +40,7 @@ const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
   return (
     <div
       onClick={handleClick}
-      className="group cursor-pointer transition-all duration-300 hover:shadow-xl rounded-lg overflow-hidden bg-background-50 hover:-translate-y-1"
+      className="group cursor-pointer flex flex-col transition-all duration-300 hover:shadow-xl rounded-lg overflow-hidden bg-background-50 hover:-translate-y-1"
     >
       <div className="relative">
         <Image
@@ -55,12 +55,14 @@ const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
         </div>
       </div>
 
-      <div className="p-6">
+      <div className="p-6 h-full flex flex-col">
         <h2 className="text-2xl font-bold mb-2 text-text-700 group-hover:text-primary-600 transition-colors duration-300">
           {tour.title}
         </h2>
 
-        <p className="text-text-700 mb-4 line-clamp-2">{tour.description}</p>
+        <p className="text-text-700 mb-4 line-clamp-2 flex-1">
+          {tour.description}
+        </p>
 
         <div className="flex items-center mb-4 text-sm text-text-700">
           <span>{tour.departure}</span>
@@ -100,7 +102,7 @@ const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
               </span>
             </div>
           ) : (
-            <div className="flex items-end justify-between space-x-2">
+            <div className="flex items-end gap-2 justify-end space-x-2">
               <div className="text-sm text-end line-through text-gray-400">
                 {tour.latesPrice} MAD
               </div>
