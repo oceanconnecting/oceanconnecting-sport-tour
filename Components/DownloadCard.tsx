@@ -7,14 +7,12 @@ import Button from "./Button";
 
 interface DownloadCardProps {
   title: string;
-  description: string;
   fileSize: string;
   downloadUrl: string;
 }
 
 export default function DownloadCard({
   title,
-  description,
   fileSize,
   downloadUrl,
 }: DownloadCardProps) {
@@ -26,7 +24,6 @@ export default function DownloadCard({
           <IoMdDownload className="h-6 w-6 text-background-600" />
           <h2 className="text-xl font-bold text-text-800">{title}</h2>
         </div>
-        <p className="text-text-600 text-sm mb-2">{description}</p>
         <p className="text-sm text-text-500">File size: {fileSize}</p>
       </div>
       <div className="px-5 mb-4">

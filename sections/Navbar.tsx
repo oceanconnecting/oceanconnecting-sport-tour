@@ -149,17 +149,17 @@ function Navbar() {
               className="feather feather-menu"
             >
               <line
-                x1="3"
-                y1="6"
+                x1="6"
+                y1="7"
                 x2="21"
-                y2="6"
+                y2="7"
                 className={twMerge(
                   "origin-left transition duration-100",
-                  isOpen && "rotate-45 -translate-y-1"
+                  isOpen && "rotate-45 -translate-y-[6px]"
                 )}
               ></line>
               <line
-                x1="3"
+                x1="6"
                 y1="12"
                 x2="21"
                 y2="12"
@@ -169,13 +169,13 @@ function Navbar() {
                 )}
               ></line>
               <line
-                x1="3"
-                y1="18"
+                x1="6"
+                y1="17"
                 x2="21"
-                y2="18"
+                y2="17"
                 className={twMerge(
                   "origin-left transition duration-100",
-                  isOpen && "-rotate-45 translate-y-1"
+                  isOpen && "-rotate-45 translate-y-[6px]"
                 )}
               ></line>
             </svg>

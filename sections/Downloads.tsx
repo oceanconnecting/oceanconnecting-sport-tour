@@ -13,16 +13,14 @@ function Downloads() {
           <p className="px-3 lg:px-16 leading-7 text-text-800 text-center text-pretty">
             {t("descr")}
           </p>
-          <div className="flex px-3 mt-5 flex-col lg:flex-row w-full justify-center items-center gap-10">
+          <div className="flex px-3 lg:px-40 mt-5 flex-col lg:flex-row w-full justify-center items-center gap-10">
             <DownloadCard
               title={t("text_1")}
-              description=""
               fileSize="249 kb"
               downloadUrl="/planning/7days planning watermark.pdf"
             />
             <DownloadCard
               title={t("text_2")}
-              description=""
               fileSize="242 kb"
               downloadUrl="/planning/10days planning watermark.pdf"
             />
