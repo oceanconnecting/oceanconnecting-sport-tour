@@ -19,19 +19,17 @@ interface Point {
     lng: number;
     name: string;
   }
-  interface Id {
-    id:number
-  }
+
   
   // Définir le type pour les props du composant
   interface TourMapProps {
-    route: Point[];
-    id:Id;
+    route: Point[]; // Un tableau de points
+    id:number;
     }; // Un tableau de points
   
 
 
-export default  function AnimatedModalDemo({id, route}: TourMapProps) {
+export default  function AnimatedModalDemo({route,id}: TourMapProps) {
 
 
       const tt = useTranslations("homepage.tours");

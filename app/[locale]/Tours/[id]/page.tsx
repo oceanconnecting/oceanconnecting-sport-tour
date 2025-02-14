@@ -14,6 +14,7 @@ import ImageCarousel from "./images";
 import Button from "@/Components/Button";
 import AnimatedModalDemo from "./modalMaps";
 import { useTranslations } from "next-intl";
+import Image from "./image";
 const TourDetails = () => {
 
   const tt = useTranslations("homepage.tours");
@@ -69,16 +70,18 @@ const TourDetails = () => {
         <div className="rounded-lg flex justify-center items-center">
           <Propose />
         </div>
-        <div className=" rounded-lg flex justify-center items-center">
+        <div className=" rounded-lg w-full flex justify-center items-center">
           {/* <TourMap route={tour.route} /> */}
-          <ImageCarousel  images={tour.images}/>
+          {/* <ImageCarousel  images={tour.images}/> */}
+          <Image images={tour.images}  />
+
         </div>
       </div>
 
       {/* modal map  */}
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-3 rounded-lg shadow-lg">
         <div  className="  rounded-lg flex justify-center items-center">
-        <AnimatedModalDemo id={{id:numericId}} route={tour.route}   />
+        <AnimatedModalDemo id={numericId} route={tour.route}   />
           <div/>
         </div>
       </div>

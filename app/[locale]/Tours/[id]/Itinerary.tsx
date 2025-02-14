@@ -36,7 +36,7 @@ export default function Itinerary({ passBy, image, title, id }: ItineraryProps) 
           {/* Titre, durée, rating et favori */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-2 md:space-y-0">
             <div>
-              <h3 className="text-lg font-semibold">{title}</h3>
+              <h3 className="text-lg font-semibold">{tt(`tour.tour_${id}.title`)}</h3>
               <p className="text-sm text-gray-500">
                 Stop: 3 hours - Admission included
               </p>

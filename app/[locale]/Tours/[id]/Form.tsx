@@ -13,11 +13,15 @@ import {
   PopoverTrigger,
 } from "@/Components/ui/popover";
 import Toaster, { handleSubmitTour } from './action';
+import { useTranslations } from "next-intl";
 interface FormProps {
   tour: Tour;
 }
 
   const FormTour: React.FC<FormProps> = ({ tour }) => {
+
+
+  const tt= useTranslations("homepage.tours");
   const [adults, setAdults] = useState<number>(0);
   const [children, setChildren] = useState<number>(0);
   const [babies, setBabies] = useState<number>(0);
@@ -53,7 +57,7 @@ interface FormProps {
     }
 
     if (!date) {
-      alert("Veuillez sélectionner une date.");
+      alert(tt('form.alert'));
       return;
     }
 
@@ -109,32 +113,31 @@ interface FormProps {
   return (
     <div className="grid grid-cols-1 items-center w-full mt-16 text-center">
       <div className="w-4/5 bg-white p-6 rounded-3xl shadow-md">
-        <h3 className="text-lg font-bold mb-6">Choisissez les participants et la date</h3>
+        <h3 className="text-lg font-bold mb-6">{tt('form.title')}</h3>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <ParticipantCounter
-            label="Nombre d'Adultes"
+            label={tt('form.Number_Adults')}
             value={adults}
             onDecrement={() => decrement(setAdults, adults)}
             onIncrement={() => increment(setAdults, adults)}
           />
 
           <ParticipantCounter
-            label="Nombre d'Enfants"
+            label={tt('form.Number_Children')}
             value={children}
             onDecrement={() => decrement(setChildren, children)}
             onIncrement={() => increment(setChildren, children)}
           />
 
           <ParticipantCounter
-            label="Nombre de Bébés"
+            label={tt('form.Number_Babies')}
             value={babies}
             onDecrement={() => decrement(setBabies, babies)}
             onIncrement={() => increment(setBabies, babies)}
           />
 
           <div>
-            <label className="block text-sm font-medium mb-2">Date de réservation</label>
             <Popover>
               <PopoverTrigger asChild>
                 <Button
@@ -145,7 +148,7 @@ interface FormProps {
                   )}
                 >
                   <CalendarIcon />
-                  {date ? format(date, "PPP") : <span>Select Date</span>}
+                  {date ? format(date, "PPP") : <span>{tt('form.select_Date')}</span>}
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0" align="start">
@@ -168,7 +171,7 @@ interface FormProps {
                 }`}
                 disabled={adults === 0 && children === 0 && babies === 0 && !date}
               >
-                Confirmer la réservation
+                {tt('form.Confirm_Reservation')}
               </Button>
 
         </form>
@@ -178,31 +181,31 @@ interface FormProps {
         <div className="fixed inset-0 bg-gray-900 bg-opacity-50 z-40 flex justify-center items-center">
           <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-xl shadow-2xl z-50">
             <div className="flex justify-between items-center border-b-4 border-b-slate-700 pb-4">
-              <h4 className="text-xl font-bold text-gray-900">{tour.title}</h4>
+              <h4 className="text-xl font-bold text-gray-900">{tt(`tour.tour_${tour.id}.title`)}</h4>
               <Button onClick={handleCloseReservation} className="text-gray-600 font-bold hover:text-gray-900">
                 X
               </Button>
             </div>
 
             <div className="mt-4 text-gray-700">
-              <p className="mb-2 text-sm font-medium text-gray-600">Duration: <span className="font-semibold text-gray-800">{tour.duration}</span></p>
+              <p className="mb-2 text-sm font-medium text-gray-600">{tt('form.Duration')}: <span className="font-semibold text-gray-800">{tour.duration}</span></p>
               <div>
-                <p className="font-semibold text-lg text-gray-800">Detail Tarif :</p>
+                <p className="font-semibold text-lg text-gray-800">{tt('form.Detail_Tariff')} :</p>
                 {adults > 0 && (
                   <p className="mb-2 grid grid-cols-3 gap-4">
-                    <span className="text-sm text-gray-600">Prix Adults:</span> 
+                    <span className="text-sm text-gray-600">{tt('form.Price_Adults')}:</span> 
                     <span className="text-sm text-gray-600">{adults}×{tour.newPrice?.priceAdults} </span> 
 
-                    <span className="font-medium text-gray-800"> {tour.newPrice?.priceAdults && adults > 0  ? (tour.newPrice.priceAdults * adults).toFixed(2) + ' €' : 'Price unavailable'}€</span>
+                    <span className="font-medium text-gray-800"> {tour.newPrice?.priceAdults && adults > 0  ? (tour.newPrice.priceAdults * adults).toFixed(2) + ' dh' : 'Price unavailable'}</span>
                   </p>
                 )}
                {children > 0 && (
                   <p className="mb-2 grid grid-cols-3 gap-4">
-                    <span className="text-sm text-gray-600">Prix Children:</span> 
+                    <span className="text-sm text-gray-600">{tt('form.Price_Children')}:</span> 
                     <span className="text-sm text-gray-600">{children}×{tour.newPrice?.priceChildren} </span> 
                     <span className="font-medium text-gray-800">
                       {tour.newPrice?.priceChildren && children > 0
-                        ? (tour.newPrice.priceChildren * children).toFixed(2) + ' €'
+                        ? (tour.newPrice.priceChildren * children).toFixed(2) + ' dh'
                         : 'Price unavailable'}
                     </span>
                   </p>
@@ -210,25 +213,25 @@ interface FormProps {
 
                 {babies > 0 && (
                   <p className="mb-2 grid grid-cols-3 gap-4">
-                    <span className="text-sm text-gray-600">Prix Babies:</span>
+                    <span className="text-sm text-gray-600">{tt('form.Price_Babies')}:</span>
                     <span className="text-sm text-gray-600">{babies}×{tour.newPrice?.priceBabies} </span> 
                     <span className="font-medium text-gray-800">
                       {tour.newPrice?.priceBabies && babies > 0
-                        ? (tour.newPrice.priceBabies * babies).toFixed(2) + ' €'
+                        ? (tour.newPrice.priceBabies * babies).toFixed(2) + ' dh'
                         : 'Price unavailable'}
                     </span>
                   </p>
                 )}
               </div>
 
-              <p className="mt-4 text-xl font-semibold text-gray-900">Total Price: <span className="text-2xl text-green-600">{totalPrice} €</span></p>
+              <p className="mt-4 text-xl font-semibold text-gray-900"> {tt('form.Total_Price')} : <span className="text-2xl text-green-600">{totalPrice} €</span></p>
             </div>
 
             <div className="mt-8 flex justify-center">
             <form onSubmit={handleSubmitReservation}>
   {/* Your form components for input */}
   <Button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
-    Confirmer la réservation
+    {tt('form.Confirm_Reservation')}
   </Button>
 </form>
 <Toaster />
