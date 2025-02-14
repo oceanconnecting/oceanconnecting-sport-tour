@@ -12,21 +12,12 @@ import { useState, useRef, useEffect } from "react";
 import Button from "./Button";
 import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface DropdownOption {
   value: string;
   label: string;
 }
-
-const fadeInAnimations = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-  },
-};
 
 function OfflineChat() {
   const t = useTranslations("offlineChat");
@@ -241,14 +232,22 @@ function OfflineChat() {
                 <LuX size={25} />
               </div>
             </div>
-            <div className="flex-1 border-r border-l border-background-200 overflow-y-auto p-4">
+            <div className="flex-1 overflow-x-clip border-background-200 overflow-y-auto p-4">
               {conversation.map((message, idx) => (
                 <motion.div
                   key={idx}
-                  variants={fadeInAnimations}
-                  initial="initial"
-                  animate="animate"
-                  transition={{ duration: 0.5 }}
+                  initial={{
+                    opacity: 0,
+                    x: message.type === "bot" ? -100 : 100,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  transition={{
+                    duration: 0.4,
+                    delay: message.type === "bot" ? 0.3 : 0,
+                  }}
                 >
                   <Message type={message.type} content={message.content} />
                 </motion.div>
@@ -323,9 +322,13 @@ function OfflineChat() {
             <LuMessageCircle size={24} />
             <div className="w-3 h-3 rounded-full bg-red-600 absolute left-0 top-0" />
             <motion.div
-              initial={{ scale: 1, opacity: 1 }}
-              animate={{ scale: 2, opacity: 0 }}
-              transition={{ duration: 1, repeat: Infinity }}
+              initial={{ scale: 1, opacity: 0 }}
+              animate={{ scale: 2, opacity: [0, 1, 0] }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                times: [0, 0.1, 1],
+              }}
               className="w-3 h-3 rounded-full bg-red-600 absolute left-0 top-0"
             />
           </motion.button>
