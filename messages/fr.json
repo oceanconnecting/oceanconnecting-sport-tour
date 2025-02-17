@@ -256,6 +256,7 @@
         "select_Date": "Selectionner Date",
         "Number_Babies": "Nombre Babies",
         "Confirm_Reservation": "Confirmer la reservation",
+        
         "Duration": "Duration",
         "Detail_Tariff": "Detail Tarif",
         "Price_Adults": "Prix Adults",
@@ -291,10 +292,10 @@
             
                   "Amskroud": "Amskroud",
                     "Imi n'Tanout": "Imi n'Tanout",
-                    "sidi mokhtar": "Sidi Mokhtar",
-                    "chichaoua": "Chichaoua",
-                    "lalla takerkoust": "Lalla Takerkoust",
-                    "point 6": "Point 6"
+                    "Sidi Mokhtar": "Sidi Mokhtar",
+                    "Chichaoua": "Chichaoua",
+                    "Lalla Takerkoust": "Lalla Takerkoust",
+                    "Point 6": "Point 6"
            
                     
                     

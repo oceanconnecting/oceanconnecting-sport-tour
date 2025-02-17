@@ -5,23 +5,9 @@ import { FaStar, FaRegStar } from "react-icons/fa";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import type React from "react"; // Added import for React
+import type React from "react";
 import Button from "./Button";
-
-interface Tour {
-  id: number;
-  title: string;
-  image: string;
-  departure: string;
-  description: string;
-  arrival: string;
-  duration: string;
-  type: string;
-  rating: number;
-  newPrice: string;
-  latesPrice: string;
-  route: number[][];
-}
+import { Tour } from "@/types";
 
 interface ToursCardProps {
   tour: Tour;
@@ -89,26 +75,6 @@ const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
           </div>
         </div>
 
-        <div className="border-t pt-4 border-background-300">
-          {tour.newPrice === " " ? (
-            <div className="text-lg font-medium text-gray-800">
-              From{" "}
-              <span className="text-2xl text-blue-600">{tour.latesPrice}</span>
-              <span className="text-sm text-gray-500"> MAD per person</span>
-            </div>
-          ) : (
-            <div className="flex items-end justify-between space-x-2">
-              <div className="text-lg line-through text-gray-400">
-                {tour.latesPrice} MAD
-              </div>
-              <div className="flex items-end gap-1 justify-center">
-                <Button variant="primary" onClick={handleClick}>
-                  From {tour.newPrice} MAD
-                </Button>
-              </div>
-            </div>
-          )}
-        </div>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import L from 'leaflet';
 import "leaflet/dist/leaflet.css";
 import { useTranslations } from "next-intl";
 // Définir le type pour les points de la route
-interface Point {
+interface RoutePoint {
   lat: number;
   lng: number;
   name: string;
@@ -13,7 +13,8 @@ interface Point {
 
 // Définir le type pour les props du composant
 interface TourMapProps {
-  route: Point[]; // Un tableau de points
+ route: RoutePoint[];
+  // Un tableau de points
   id:number;
   }; // Un tableau de points
 
