@@ -25,7 +25,7 @@ function Hero() {
             transition={{ duration: 1 }}
             className='flex flex-col px-4 pt-5 w-full h-full relative z-20'>
                 <div className='w-full h-full flex flex-col justify-center items-center'>
-                    <div className='px-5 mb-3 py-2 gap-3 text-white backdrop-blur-lg bg-white/10 border border-white/10 rounded-full flex items-center justify-center'>
+                    <div className='text-xs px-5 mb-3 py-1 gap-3 text-white backdrop-blur-lg bg-white/10 border border-white/10 rounded-full flex items-center justify-center'>
                         <GiSevenPointedStar />
                         <p className='text-sm lg:text-lg text-center'>{t("hero_tag")}</p>
                         <GiSevenPointedStar />
