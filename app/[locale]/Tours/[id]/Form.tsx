@@ -64,10 +64,12 @@ const FormTour: React.FC<FormProps> = ({ tour }) => {
       alert(tt('form.alert'));
       return;
     }
-
-    const totalPrice = (tour.newPrice?.priceAdults ?? 0) * adults +
-                      (tour.newPrice?.priceChildren ?? 0) * children +
-                      (tour.newPrice?.priceBabies ?? 0) * babies;
+const PA=tour.newPrice?.priceAdults ?? 0
+const PC=tour.newPrice?.priceChildren ?? 0
+const PB=tour.newPrice?.priceBabies ?? 0
+const totalPrice = PA * adults +
+                      PC* children +
+                      PB* babies;
 
     setReservationDetails(`Adultes: ${adults}, Enfants: ${children}, Bébés: ${babies}, Date: ${date ? format(date, "PPP") : "N/A"}`);
     setTotalPrice(totalPrice);
@@ -202,7 +204,8 @@ const handleCloseReservation = () => {
             </div>
                   
             <div className="mt-8 flex justify-center">
-              <TourReservationComponent id={tour.id.toString()} />
+              {date && <TourReservationComponent date={date} poeples={{ adults, children, babies }} id={tour.id } />}
+              
               <Toaster />
 
             </div>
