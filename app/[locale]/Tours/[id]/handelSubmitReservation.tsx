@@ -5,7 +5,7 @@ import { useLocale } from "next-intl";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 
-interface Poeples {
+interface Peoples {
     adults: number;
     children: number;
     babies: number;
@@ -13,28 +13,30 @@ interface Poeples {
 
 interface TourReservationProps {
     id: number;
-    poeples: Poeples;
+    peoples: Peoples;
     date: Date;
 }
 
-const TourReservationComponent: React.FC<TourReservationProps> = ({ id, poeples, date }) => {
+const TourReservationComponent: React.FC<TourReservationProps> = ({ id, peoples, date }) => {
     const locale = useLocale();
     const router = useRouter();
     const pathname = usePathname();
     const tt = useTranslations("homepage.tours");
 
+    
     const handleSubmitReservation = (e: React.FormEvent) => {
         e.preventDefault();
-
-        // 🔹 Formatage de la date en `YYYY-MM-DD`
+    
         const formattedDate = date.toISOString().split("T")[0];
-            console.log(poeples);
-        // 🔹 Encodage de `poeples` pour éviter les erreurs dans l’URL
-        const poeplesEncoded = encodeURIComponent(JSON.stringify(poeples));
-
-        // ✅ Redirection propre avec tous les paramètres bien formatés
+    
+        // 🔹 Encodage correct de `poeples`
+        const poeplesEncoded = encodeURIComponent(JSON.stringify(peoples));
+    
+        // ✅ Redirection avec les bons paramètres
         router.push(`/${locale}/Reservation_Tours/${id}?poeples=${poeplesEncoded}&date=${formattedDate}`);
     };
+    
+    
 
     return (
         <form onSubmit={handleSubmitReservation}>

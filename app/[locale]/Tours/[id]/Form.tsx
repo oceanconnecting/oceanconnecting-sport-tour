@@ -85,16 +85,6 @@ const handleCloseReservation = () => {
       };
 
 
-  // Ne pas exécuter immédiatement la redirection sans condition.
-  // const handleSubmitReservation = () => {
-  //   if (router) {
-  //     router.push(`/${locale}/Reservation_Tours/${tour.id}`);
-  //   }
-  // };
-
-  // Vérifier si le composant est monté avant de rendre quoi que ce soit
-
-
   return (
     <div className="grid grid-cols-1 items-center w-full mt-16 text-center">
       <div className="w-4/5 bg-white p-6 rounded-3xl shadow-md">
@@ -204,7 +194,7 @@ const handleCloseReservation = () => {
             </div>
                   
             <div className="mt-8 flex justify-center">
-              {date && <TourReservationComponent date={date} poeples={{ adults, children, babies }} id={tour.id } />}
+              {date && <TourReservationComponent date={date} peoples={{ adults, children, babies }} id={tour.id } />}
               
               <Toaster />
 
