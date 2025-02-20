@@ -147,7 +147,7 @@ const ReservationPage = () => {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">  
       <div className=" max-w-4xl">
         {/* ✅ Passer les bons paramètres à `TourCardReservation` */}
-        <TourCardReservation date={{ date: dateTour }} peoples={peoples} tour={tour} />
+        <TourCardReservation date={dateTour} peoples={peoples} tour={tour} />
       </div>
     </div>
   );
