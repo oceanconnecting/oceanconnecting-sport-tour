@@ -9,7 +9,7 @@ import { UsersIcon } from "@heroicons/react/24/solid";
 import { useTranslations } from "next-intl";
 import { Calendar as CalendarIcon } from "lucide-react"; // Icône du calendrier
 import { Calendar } from "@/Components/ui/calendar"; // Utilisation d'un vrai calendrier
-import Button  from "@/Components/Button";
+import {Button } from "@/Components/Button";
 import { format } from "path";
 
 interface Peoples {
@@ -50,22 +50,30 @@ const Edite: React.FC<{ peoples: Peoples }> = ({ peoples }) => {
 
 
 
-      <Popover>
-        <PopoverTrigger>
-          <Button variant="outline" className="w-full justify-start text-left font-normal">
-            <CalendarIcon />
-            {date ? format(date, "PPP") : <span>date</span>}
-          </Button>
-        </PopoverTrigger>
-        <PopoverContent className="w-auto p-0" align="start">
-          <Calendar
-            mode="single"
-            selected={date || undefined}
-            onSelect={handleDateSelect}
-            initialFocus
-          />
-        </PopoverContent>
-      </Popover>
+      <div>
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button
+                  variant={"outline"}
+                  className={cn(
+                    "w-[240px] justify-start text-left font-normal",
+                    !date && "text-muted-foreground"
+                  )}
+                >
+                  <CalendarIcon />
+                  {date ? format(date, "PPP") : <span>{tt('form.select_Date')}</span>}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0" align="start">
+                <Calendar
+                  mode="single"
+                  selected={date}
+                  onSelect={handleDateSelect}
+                  initialFocus
+                />
+              </PopoverContent>
+            </Popover>
+          </div>
 
 
 
