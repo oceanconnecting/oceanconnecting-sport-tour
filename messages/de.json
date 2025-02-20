@@ -236,15 +236,73 @@
       "Marrakech": "Marrakech",
       "Essaouira": "Essaouira"
     },
-    "tours": {
-      "heading": "Rondleidingen",
-      "tour": {
-        "tour_1": {
-          "title": "Reis van Agadir naar Marrakech",
-          "description": "Ontdek het schilderachtige landschap tussen Agadir en Marrakech met fascinerende tussenstops.",
-          "type": "Avontuur",
-          "duration": "4 dagen"
+    "tours": {  
+      "heading": "Touren",
+    "show_map": "Karte anzeigen",
+    "Itinerary": "Reiseroute",
+    "form": {
+      "title": "Buchen Sie Ihre Tour",
+      "Number_Adults": "Anzahl Erwachsene",
+      "Number_Children": "Anzahl Kinder",
+      "date of reservation": "Reservierungsdatum",
+      "select_Date": "Datum auswählen",
+      "Number_Babies": "Anzahl Babys",
+      "Confirm_Reservation": "Reservierung bestätigen",
+      "Duration": "Dauer",
+      "Detail_Tariff": "Tarifdetails",
+      "Price_Adults": "Preis Erwachsene",
+      "Price_Children": "Preis Kinder",
+      "Price_Babies": "Preis Babys",
+      "Total_Price": "Gesamtpreis",
+      "alert": "Bitte wählen Sie ein Datum, das später als heute liegt"
+    },
+    "propose": {
+      "propose1": {
+        "title": "Kostenlose Stornierung",
+        "descr": "Stornieren Sie bis zu 24 Stunden im Voraus für eine vollständige Rückerstattung."
+      },
+      "propose2": {
+        "title": "Maximale Sicherheit",
+        "descr": "Verstärkte Sicherheitsmaßnahmen, um Ihre Ruhe zu gewährleisten."
+      },
+      "propose3": {
+        "title": "24/7 Support",
+        "descr": "Hilfe jederzeit verfügbar, um Ihre Fragen zu beantworten."
+      },
+      "propose4": {
+        "title": "Kleine Gruppen",
+        "descr": "Genießen Sie eine persönlichere Erfahrung mit kleinen Gruppengrößen."
+      }
+    },
+    "tour": {
+      "tour_1": {
+        "title": "Reise von Agadir nach Marrakesch",
+        "route": {
+          "Amskroud": "Amskroud",
+          "Imi n'Tanout": "Imi n'Tanout",
+          "sidi mokhtar": "Sidi Mokhtar",
+          "chichaoua": "Chichaoua",
+          "lalla Takerkoust": "Lalla Takerkoust",
+          "point 6": "Punkt 6"
         },
+        "passBy": {
+          "passBy": "Vorbeifahren an",
+          "pass": {
+            "Amskroud": "Amskroud",
+            "Imi n'Tanout": "Imi n'Tanout",
+            "Sidi Mokhtar": "Sidi Mokhtar",
+            "Chichaoua": "Chichaoua",
+            "Lalla Takerkoust": "Lalla Takerkoust"
+          }
+        },
+        "description": "Entdecken Sie die malerische Landschaft zwischen Agadir und Marrakesch mit faszinierenden Zwischenstopps.",
+        "departure": "Marrakesch",
+        "arrival": "Essaouira",
+        "type": "Entdeckung",
+        "duration": "2 Stunden 30 Minuten"
+      },
+    
+  
         "tour_2": {
           "title": "Excursie Marrakech - Essaouira",
           "description": "Een magische route door de heuvels en arganbossen naar de Atlantische kust.",

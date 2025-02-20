@@ -1,5 +1,6 @@
 
 export interface Tour {
+  highlights: any;
   id: number;
   title: string;
   image: string;

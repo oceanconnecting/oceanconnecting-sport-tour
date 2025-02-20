@@ -246,12 +246,75 @@
     },
     "tours": {
       "heading": "Visites",
+      "show_map": "Afficher la carte",
+      "Itinerary": "Itinéraire",
+      "form": {
+        
+        "title": "Réservez votre visite",
+        "Number_Adults": "Nombre Adulte",
+        "Number_Children": "Nombre Enfants",
+        "date of reservation": "Date de reservation",
+        "select_Date": "Selectionner Date",
+        "Number_Babies": "Nombre Babies",
+        "Confirm_Reservation": "Confirmer la reservation",
+        
+        "Duration": "Duration",
+        "Detail_Tariff": "Detail Tarif",
+        "Price_Adults": "Prix Adults",
+        "Price_Children": "Prix Enfants",
+        "Price_Babies": "Prix Babies",
+        "Total_Price": "Total Price",
+        "alert": "Veuillez sélectionner une date ultérieure à aujourd'hui"
+      },
+      "propose":{
+
+      
+        "propose1":{
+          "title":"Annulation gratuite",
+          "descr":"Annulation jusqu'à 24 heures à l'avance pour un remboursement intégral."
+        },
+        "propose2":{
+          "title":"Sécurité maximale",
+          "descr":"Mesures de sécurité renforcées pour garantir votre tranquillité d'esprit."
+        },"propose3":{
+          "title":"Support 24/7",
+          "descr":"Assistance disponible à tout moment pour répondre à vos questions."
+        },"propose4":{
+          "title":"Groupes réduits",
+          "descr":"Profitez d'une expérience plus personnelle avec des groupes de petite taille."
+        }
+      },
+
       "tour": {
+       
         "tour_1": {
           "title": "Voyage d'Agadir à Marrakech",
+          "route": {
+            
+                  "Amskroud": "Amskroud",
+                    "Imi n'Tanout": "Imi n'Tanout",
+                    "Sidi Mokhtar": "Sidi Mokhtar",
+                    "Chichaoua": "Chichaoua",
+                    "Lalla Takerkoust": "Lalla Takerkoust",
+                    "Point 6": "Point 6"
+           
+                    
+                    
+                  },
+          "passBy": {
+            "passBy": "Passer par",
+            "pass":{
+              "Amskroud":"Amskroud",
+              "Imi n'Tanout":" Imi n'Tanout",
+              "Sidi Mokhtar":"Sidi Mokhtar",
+              "Chichaoua":"Chichaoua",
+              "Lalla Takerkoust":"Lalla Takerkoust"
+                  }},
           "description": "Découvrez les paysages pittoresques entre Agadir et Marrakech avec des escales fascinantes.",
-          "type": "Aventure",
-          "duration": "4 jours"
+          "departure": "Marrakech",
+          "arrival": "Essaouira",
+          "type": "Découverte",
+          "duration": "2 hours 30 minutes"
         },
         "tour_2": {
           "title": "Excursion Marrakech - Essaouira",

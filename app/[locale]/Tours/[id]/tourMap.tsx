@@ -2,18 +2,22 @@ import React, { useEffect } from 'react';
 import { MapContainer, TileLayer, Polyline, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import "leaflet/dist/leaflet.css";
-
+import { useTranslations } from "next-intl";
 // Définir le type pour les points de la route
-interface Point {
+interface RoutePoint {
   lat: number;
   lng: number;
   name: string;
 }
 
+
 // Définir le type pour les props du composant
 interface TourMapProps {
-  route: Point[]; // Un tableau de points
-}
+ route: RoutePoint[];
+  // Un tableau de points
+  id:number;
+  }; // Un tableau de points
+
 
 // Fix for default marker icons in Leaflet
 L.Icon.Default.mergeOptions({
@@ -22,7 +26,8 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
 });
 
-const TourMap: React.FC<TourMapProps> = ({ route }) => {
+const TourMap: React.FC<TourMapProps> = ({ id,route }) => {
+  const tt = useTranslations("homepage.tours");
   useEffect(() => {
     return () => {
       const container = L.DomUtil.get('map');
@@ -44,8 +49,10 @@ const TourMap: React.FC<TourMapProps> = ({ route }) => {
       <Polyline positions={polylinePositions} color="blue" />
       {route.map((point, index) => (
         <Marker key={index} position={[point.lat, point.lng]}>
-          <Popup>
-            {point.name}: Latitude {point.lat}, Longitude {point.lng}
+          <Popup className='text-center'>    
+          {tt(`tour.tour_${id}.route.${point.name}`)} <br/>{/* Ensure `id` is a number */}      
+           {/* Ensure `id` is a number */}
+          Latitude {point.lat},<br/> Longitude {point.lng}
           </Popup>
         </Marker>
       ))}

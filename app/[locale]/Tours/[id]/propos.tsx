@@ -2,39 +2,39 @@
 
 import React from "react"
 import { BsCalendar2Check, BsClockHistory, BsPeople, BsShieldCheck } from "react-icons/bs";
-
+import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion"; // Importez framer-motion
 
-const data: any = [
-  {
-    title: "Annulation gratuite",
-    description: "Annulation jusqu'à 24 heures à l'avance pour un remboursement intégral",
-    icon: <BsCalendar2Check size={24} className="text-slate-700" />
-  },
-  {
-    title: "Sécurité maximale",
-    description: "Mesures de sécurité renforcées pour garantir votre tranquillité d'esprit",
-    icon: <BsShieldCheck size={24} className="text-slate-700" />
-  },
-  {
-    title: "Support 24/7",
-    description: "Assistance disponible à tout moment pour répondre à vos questions",
-    icon: <BsClockHistory size={24} className="text-slate-700" />
-  },
-  {
-    title: "Groupes réduits",
-    description: "Profitez d'une expérience plus personnelle avec des groupes de petite taille",
-    icon: <BsPeople size={24} className="text-slate-700" />
-  }
-];
+
 
 const Propose = () => {
    // Utilisez useScroll pour suivre le défilement de la page
       const { scrollY } = useScroll();
-  
+    const tt= useTranslations("homepage.tours.propose");
       // Utilisez useTransform pour mapper la position du scroll à une valeur de translation
       const y = useTransform(scrollY, [0, Infinity], [0, Infinity]); // Déplace de 0 à 100px lorsque l'utilisateur fait défiler 200px
-    
+      const data: any = [
+        {
+          title: tt('propose1.title'),
+          description: tt('propose1.descr'),
+          icon: <BsCalendar2Check size={24} className="text-slate-700" />
+        },
+        {
+          title: tt('propose2.title'),
+          description: tt('propose2.descr'),
+          icon: <BsShieldCheck size={24} className="text-slate-700" />
+        },
+        {
+          title: tt('propose3.title'),
+          description: tt('propose3.descr'),
+          icon: <BsClockHistory size={24} className="text-slate-700" />
+        },
+        {
+          title: tt('propose4.title'),
+          description: tt('propose4.descr'),
+          icon: <BsPeople size={24} className="text-slate-700" />
+        }
+      ];
   return (
     <div className="propose-container">
       {data.map((item: any, index: number) => (

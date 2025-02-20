@@ -1,107 +1,92 @@
-"use client";
-import React, { useState, useRef, useEffect } from "react";
-import { LayoutGrid } from "@/Components/ui/layout-grid";
-export function LayoutGridDemo() {
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, Heart } from "lucide-react";
+import Image from "next/image";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Counter from "yet-another-react-lightbox/plugins/counter";
+interface ImagesProps {
+  src: string;
+  alt: string;
+}
+
+interface ImagesCarouselProps {
+  images: ImagesProps[];
+}
+
+export default function ImageCarousel({ images }: ImagesCarouselProps) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [liked, setLiked] = useState(false);
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleThumbnailClick = (index: number) => {
+    setCurrentIndex(index);
+  };
+
   return (
-    <div className="h-screen py-20 w-full">
-      <LayoutGrid cards={cards} />
+    <div className="relative w-4/5 overflow-hidden rounded-xl shadow-lg mx-auto">
+      {/* Image principale */}
+      <div className="relative w-full h-64">
+        <Image
+          src={images[currentIndex].src}
+          alt={images[currentIndex].alt}
+          layout="fill"
+          objectFit="cover"
+          className="rounded-xl"
+        />
+
+      
+
+      </div>
+
+      {/* Boutons de navigation */}
+      <button
+        onClick={goToPrevious}
+        className="absolute left-2 top-1/2 transform -translate-y-1/2 p-2 bg-white/70 rounded-full shadow-md"
+      >
+        <ChevronLeft className="w-5 h-5" />
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-white/70 rounded-full shadow-md"
+      >
+        <ChevronRight className="w-5 h-5" />
+      </button>
+
+      {/* Icône de like */}
+      <button
+        onClick={() => setLiked(!liked)}
+        className={`absolute right-4 top-4 p-2 bg-white/70 rounded-full shadow-md transition-colors ${
+          liked ? "text-red-500" : "text-gray-600"
+        }`}
+      >
+        <Heart className="w-5 h-5" fill={liked ? "currentColor" : "none"} />
+      </button>
+         {/* Miniatures des images */}
+      <div className="flex justify-center  bg-white/30 backdrop-blur-md p-4 rounded-lg shadow-lg   backdrop-invert backdrop-opacity-10  space-x-2 py-4 ">
+        {images.map((image, index) => (
+          <button key={index} onClick={() => handleThumbnailClick(index)} className="relative">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={50}  // Taille des miniatures
+              height={50}
+              className={`rounded-md cursor-pointer border-2 ${
+                currentIndex === index ? "border-black" : "border-transparent"
+              }`}
+            />
+            
+          </button>
+        ))}
+      </div>
+     
     </div>
   );
 }
-
-const SkeletonOne = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        House in the woods
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A serene and tranquil retreat, this house in the woods offers a peaceful
-        escape from the hustle and bustle of city life.
-      </p>
-    </div>
-  );
-};
-
-const SkeletonTwo = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        House above the clouds
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Perched high above the world, this house offers breathtaking views and a
-        unique living experience. It&apos;s a place where the sky meets home,
-        and tranquility is a way of life.
-      </p>
-    </div>
-  );
-};
-const SkeletonThree = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Greens all over
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house surrounded by greenery and nature&apos;s beauty. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
-      </p>
-    </div>
-  );
-};
-const SkeletonFour = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Rivers are serene
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
-      </p>
-    </div>
-  );
-};
-
-const cards = [
-  {
-    id: 1,
-    content: <SkeletonOne />,
-    className: "md:col-span-2",
-    thumbnail:
-      "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 2,
-    content: <SkeletonTwo />,
-    className: "col-span-1",
-    thumbnail:
-      "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 3,
-    content: <SkeletonThree />,
-    className: "col-span-1",
-    thumbnail:
-      "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 3,
-    content: <SkeletonThree />,
-    className: "col-span-1",
-    thumbnail:
-      "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 4,
-    content: <SkeletonFour />,
-    className: "md:col-span-2",
-    thumbnail:
-      "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-];
