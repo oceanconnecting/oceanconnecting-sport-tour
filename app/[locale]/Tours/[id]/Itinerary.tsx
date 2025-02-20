@@ -1,82 +1,69 @@
 "use client";
-
-import React from "react";
-import { FaRegHeart, FaStar } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import { Heart } from "lucide-react";
+import { FaLocationDot } from "react-icons/fa6";
+import Image from "next/image";
 
 interface ItineraryProps {
   passBy: string[];
   image: string;
   title: string;
-  id: number; // Expecting 'id' to be a number directly
+  id: number;
 }
 
-export default function Itinerary({ passBy, image, title, id }: ItineraryProps) {
+export default function Itinerary({
+  passBy,
+  image,
+  title,
+  id,
+}: ItineraryProps) {
   const tt = useTranslations("homepage.tours");
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 space-y-6 text-gray-800">
-      {/* Titre principal */}
-      <h2 className="text-2xl font-bold">{tt('Itinerary')}</h2>
+    <div className="max-w-6xl mx-auto px-4 py-12 text-gray-800">
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold">{tt(`tour.tour_${id}.title`)}</h2>
+      </div>
 
-      {/* Bloc d'itinéraire */}
-      <div className="relative flex items-start space-x-4">
-        {/* Ligne verticale en pointillé */}
-        <div className="absolute left-2 top-0 bottom-0 border-l-2 border-dotted border-gray-300" />
-
-        {/* Numéro et cercle */}
-        <div className="relative z-10 flex flex-col items-center">
-          <div className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-semibold">
-            1
-          </div>
+      <div className="flex items-center gap-6 mb-12">
+        <div className="w-1/3 aspect-video rounded-lg overflow-hidden shadow-lg">
+          <Image
+            width={200}
+            height={200}
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
         </div>
+        <div className="w-2/3">
+          <p className="text-lg text-gray-600 mb-4">
+            {tt(`tour.tour_${id}.description`)}
+          </p>
+          <p className="text-sm text-gray-500">
+            Duration: 3 hours - Admission included
+          </p>
+        </div>
+      </div>
 
-        {/* Contenu principal de l'étape */}
-        <div className="flex-1 space-y-4 pt-1">
-          {/* Titre, durée, rating et favori */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-2 md:space-y-0">
-            <div>
-              <h3 className="text-lg font-semibold">{tt(`tour.tour_${id}.title`)}</h3>
-              <p className="text-sm text-gray-500">
-                Stop: 3 hours - Admission included
-              </p>
+      <div className="relative">
+        <div className="absolute left-0 top-1/2 w-full border-t-2 border-gray-300" />
+        <div className="relative flex justify-between">
+          {passBy.map((location, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center bg-gray-50 p-2"
+            >
+              <div className="w-8 h-8 flex justify-center items-center bg-primary-700 rounded-full mb-2 z-10 text-white">
+                <FaLocationDot />
+              </div>
+              <span className="text-sm font-medium text-gray-700 text-center max-w-[120px]">
+                {tt(`tour.tour_${id}.passBy.pass.${location}`)}
+              </span>
+              <span className="text-xs text-gray-500 mt-1">
+                Stop {index + 1}
+              </span>
             </div>
-            {/* Rating + Avis + Favori */}
-            <div className="flex items-center space-x-2">
-              <button
-                title="Add to favorites"
-                className="text-gray-400 hover:text-red-500"
-              >
-                <FaRegHeart size={18} />
-              </button>
-            </div>
-          </div>
-
-          {/* Image + Description + Bouton */}
-          <div className="flex flex-col md:flex-row md:items-start md:space-x-4">
-            {/* Image (exemple) */}
-            <div className="w-full md:w-1/2 h-48 rounded-md overflow-hidden mb-4 md:mb-0">
-           
-              <img
-                src={image}
-                alt="Paradise Valley"
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
-
-          {/* Pass by */}
-          <div className="space-y-2">
-            <h4 className="font-semibold">{tt(`tour.tour_${id}.passBy.passBy`)}
-                </h4>
-            <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-              {passBy.map((location, index) => (
-                <li key={index}>
-                  {tt(`tour.tour_${id}.passBy.pass.${location}`)} {/* Ensure `id` is a number */}
-                </li>
-              ))}
-            </ul>
-          </div>
+          ))}
         </div>
       </div>
     </div>
