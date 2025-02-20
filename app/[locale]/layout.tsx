@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
@@ -12,8 +11,8 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import WhatsappContact from "@/Components/WhatsappContact";
 import OfflineChat from "@/Components/OfflineChat";
 
-const poppins = Poppins({ subsets: ["latin"], weight: "300" });
-const tajawal = Tajawal({ subsets: ["arabic"], weight: "400" });
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
+const tajawal = Tajawal({ subsets: ["arabic"], weight: "500" });
 
 export async function generateMetadata({
   params,

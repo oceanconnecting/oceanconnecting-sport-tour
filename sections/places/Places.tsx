@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import PlacesDetail from "@/sections/places/detail";
+import { LuChevronDown } from "react-icons/lu"; 
 import Tag from "@/Components/Tag";
 import { useLocale, useTranslations } from "use-intl";
 import Filter from "@/Components/Filter";
 import Data from "@/sections/places/data";
 import ImageCard from "@/Components/ImageCard";
 import { cn } from "@/lib/utils";
+import Button from "@/Components/Button";
 
 interface Place {
   title: string;
@@ -24,6 +25,9 @@ const Places: React.FC = () => {
   const tagList = [tc("All"), tc("Agadir"), tc("Marrakech"), tc("Essaouira")];
   const [activeTag, setActiveTag] = useState(tc("All"));
   const [displayedPlaces, setDisplayedPlaces] = useState<Place[]>(allplaces);
+  const [isOpen, setIsOpen] = useState(false)
+  const max_cards_shows = 3
+
 
   const handleTag = (tag: string) => {
     setActiveTag(tag);
@@ -42,7 +46,7 @@ const Places: React.FC = () => {
       <section id="places">
         {/* Filter Component */}
 
-        <div className="w-full bg-background-50 py-16 px-5 flex flex-col justify-center overflow-hidden items-center gap-6">
+        <div className="w-full bg-background-50 py-8 px-8 flex flex-col justify-center overflow-hidden items-center gap-6">
           <Tag>{t("title")}</Tag>
           <Filter
             places={allplaces}
@@ -53,8 +57,7 @@ const Places: React.FC = () => {
           <div
             className={cn(
               "grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-full max-w-7xl",
-              displayedPlaces.length > 3 &&
-                "[mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_85%,rgba(0,0,0,0)_100%)] py-10 overflow-y-scroll max-h-svh"
+              displayedPlaces.length > max_cards_shows && cn("overflow-y-hidden", !isOpen && "max-h-[360px] [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_90%,rgba(0,0,0,0)_100%)] transition-all")
             )}
           >
             {displayedPlaces.map((place, index) => (
@@ -67,6 +70,11 @@ const Places: React.FC = () => {
               </div>
             ))}
           </div>
+          {
+            displayedPlaces.length > max_cards_shows && (
+              <Button onClick={() => setIsOpen(!isOpen)} variant="primary"><LuChevronDown className={cn(isOpen && "rotate-180")}/></Button>
+            )
+          }
         </div>
       </section>
     </div>

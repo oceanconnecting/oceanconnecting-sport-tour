@@ -107,7 +107,7 @@ console.log("Tour:", tour);
           {!edite?(
             <button onClick={handelEdite} className="p-2 bg-gray-200 dark:bg-zinc-700 rounded-lg hover:bg-gray-300 dark:hover:bg-zinc-600 transition">
             
-              <Edit size={18} />
+              {/* <Edit size={18} /> */}
               
             </button>
             ):(

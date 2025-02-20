@@ -11,7 +11,7 @@ function WhatsappContact() {
       <motion.div
         initial={{ width: "3rem", height: "3rem" }}
         whileHover={{ width: "8.69rem", height: "3rem" }}
-        className="fixed overflow-hidden z-50 bottom-5 left-5 text-xl rounded-full flex shadow-lg active:shadow-sm text-white bg-green-500 hover:bg-opacity-80 items-center active:bg-background-300 hover:bg-green-600 transition duration-300"
+        className="fixed overflow-hidden z-50 bottom-5 left-5 text-xl rounded-full flex shadow-lg active:shadow-sm text-white bg-green-500 items-center active:bg-background-300 hover:bg-green-600 transition duration-300"
       >
         <Link
           className="w-full h-full gap-6 flex items-center justify-start"

@@ -4,14 +4,15 @@ import { useTranslations } from "next-intl";
 import {
   LuSend,
   LuChevronDown,
-  LuCornerLeftDown,
   LuMessageCircle,
   LuRotateCw,
+  LuX,
 } from "react-icons/lu";
 import { useState, useRef, useEffect } from "react";
 import Button from "./Button";
 import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface DropdownOption {
   value: string;
@@ -210,96 +211,129 @@ function OfflineChat() {
 
   return (
     <div className="fixed bottom-12 gap-2 justify-center flex flex-col -right-1 z-50 m-6">
-      {toggle && (
-        <div
-          ref={chatRef}
-          className="w-80 h-[32rem] flex flex-col rounded-lg shadow-lg bg-background-50 overflow-hidden"
-        >
-          <div className="bg-primary-600 flex gap-2 items-center text-text-50 p-4">
-            <h2 className="text-xl flex-1 font-semibold">{t("title")}</h2>
-            <div className="group cursor-pointer" onClick={() => resetChat()}>
-              <LuRotateCw
-                size={25}
-                className="group-hover:rotate-180 transition-all duration-200"
-              />
-            </div>
-            <div onClick={() => setToggle(false)} className="cursor-pointer">
-              <LuCornerLeftDown size={25} />
-            </div>
-          </div>
-          <div className="flex-1 overflow-y-auto p-4">
-            {conversation.map((message, idx) => (
-              <Message
-                key={idx}
-                type={message.type}
-                content={message.content}
-              />
-            ))}
-            <div ref={chatEndRef} />
-          </div>
-          <div className="p-4 border-t border-background-300">
-            {availableQuestions.length > 0 ? (
-              <div className="relative" ref={dropdownRef}>
-                <div className="relative">
-                  <button
-                    className="w-full p-2 border border-background-200 rounded-lg bg-background-50 flex items-center cursor-pointer"
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  >
-                    <LuChevronDown
-                      className={`text-text-500 mx-1 transition-transform duration-200 ${
-                        isDropdownOpen ? "transform rotate-180" : ""
-                      }`}
-                    />
-                    <span className="text-text-700 truncate">
-                      {selectedQuestion || t("choose")}
-                    </span>
-                  </button>
-                  {isDropdownOpen && (
-                    <div className="absolute bottom-full left-0 right-0 mb-1 bg-background-50 border border-background-200 rounded-lg shadow-lg max-h-40 overflow-y-auto">
-                      {availableQuestions.map((q) => (
-                        <div
-                          key={q.value}
-                          className="p-2 hover:bg-background-100 cursor-pointer"
-                          onClick={() => {
-                            setSelectedQuestion(q.label);
-                            setIsDropdownOpen(false);
-                          }}
-                        >
-                          {q.label}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                <button
-                  className={cn(
-                    "absolute top-1/2 transform -translate-y-1/2 text-primary-500 p-3 bg-background-50 bg-opacity-65 hover:text-primary-600 transition-colors duration-200",
-                    isRtl ? "left-2" : "right-2"
-                  )}
-                  onClick={() =>
-                    selectedQuestion && addQuestion(selectedQuestion)
-                  }
-                >
-                  <LuSend />
-                </button>
+      <AnimatePresence>
+        {toggle && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            ref={chatRef}
+            className="w-80 h-[26rem] flex flex-col rounded-lg shadow-lg bg-background-50 overflow-hidden"
+          >
+            <div className="bg-primary-600 flex gap-2 items-center text-text-50 p-4">
+              <h2 className="text-xl flex-1 font-semibold">{t("title")}</h2>
+              <div className="group cursor-pointer" onClick={() => resetChat()}>
+                <LuRotateCw
+                  size={25}
+                  className="group-hover:rotate-180 transition-all duration-200"
+                />
               </div>
-            ) : (
-              <Button variant="primary" onClick={() => resetChat()}>
-                <LuRotateCw />
-                New Chat
-              </Button>
-            )}
-          </div>
-        </div>
-      )}
-      {!toggle && (
-        <button
-          onClick={() => setToggle(!toggle)}
-          className="bg-primary-500 absolute right-0 bottom-0 hover:bg-primary-600 text-white w-12 h-12 flex justify-center items-center rounded-full shadow-lg transition-colors duration-200"
-        >
-          <LuMessageCircle size={24} />
-        </button>
-      )}
+              <div onClick={() => setToggle(false)} className="cursor-pointer">
+                <LuX size={25} />
+              </div>
+            </div>
+            <div className="flex-1 overflow-x-clip border-background-200 overflow-y-auto p-4">
+              {conversation.map((message, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{
+                    opacity: 0,
+                    x: message.type === "bot" ? -100 : 100,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  transition={{
+                    duration: 0.4,
+                    delay: message.type === "bot" ? 0.3 : 0,
+                  }}
+                >
+                  <Message type={message.type} content={message.content} />
+                </motion.div>
+              ))}
+              <div ref={chatEndRef} />
+            </div>
+            <div className="p-4 border-t border-background-300">
+              {availableQuestions.length > 0 ? (
+                <div className="relative" ref={dropdownRef}>
+                  <div className="relative">
+                    <button
+                      className="w-full p-2 border border-background-200 rounded-lg bg-background-50 flex items-center cursor-pointer"
+                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    >
+                      <LuChevronDown
+                        className={`text-text-500 mx-1 transition-transform duration-200 ${
+                          isDropdownOpen ? "transform rotate-180" : ""
+                        }`}
+                      />
+                      <span className="text-text-700 truncate">
+                        {selectedQuestion || t("choose")}
+                      </span>
+                    </button>
+                    {isDropdownOpen && (
+                      <div className="absolute bottom-full left-0 right-0 mb-1 bg-background-50 border border-background-200 rounded-lg shadow-lg max-h-40 overflow-y-auto">
+                        {availableQuestions.map((q) => (
+                          <div
+                            key={q.value}
+                            className="p-2 hover:bg-background-100 cursor-pointer"
+                            onClick={() => {
+                              setSelectedQuestion(q.label);
+                              setIsDropdownOpen(false);
+                            }}
+                          >
+                            {q.label}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <button
+                    className={cn(
+                      "absolute top-1/2 transform -translate-y-1/2 text-primary-500 p-3 bg-background-50 bg-opacity-65 hover:text-primary-600 transition-colors duration-200",
+                      isRtl ? "left-2" : "right-2"
+                    )}
+                    onClick={() =>
+                      selectedQuestion && addQuestion(selectedQuestion)
+                    }
+                  >
+                    <LuSend />
+                  </button>
+                </div>
+              ) : (
+                <Button variant="primary" onClick={() => resetChat()}>
+                  <LuRotateCw />
+                </Button>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {!toggle && (
+          <motion.button
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            exit={{ scale: 0 }}
+            onClick={() => setToggle(!toggle)}
+            className="bg-primary-500 absolute right-0 bottom-0 hover:bg-primary-600 text-white w-12 h-12 flex justify-center items-center rounded-full shadow-lg transition-colors duration-200"
+          >
+            <LuMessageCircle size={24} />
+            <div className="w-3 h-3 rounded-full bg-red-600 absolute left-0 top-0" />
+            <motion.div
+              initial={{ scale: 1, opacity: 0 }}
+              animate={{ scale: 2, opacity: [0, 1, 0] }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                times: [0, 0.1, 1],
+              }}
+              className="w-3 h-3 rounded-full bg-red-600 absolute left-0 top-0"
+            />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

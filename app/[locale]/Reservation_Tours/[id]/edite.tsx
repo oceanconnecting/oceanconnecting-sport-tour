@@ -9,7 +9,7 @@ import { UsersIcon } from "@heroicons/react/24/solid";
 import { useTranslations } from "next-intl";
 import { Calendar as CalendarIcon } from "lucide-react"; // Icône du calendrier
 import { Calendar } from "@/Components/ui/calendar"; // Utilisation d'un vrai calendrier
-import {Button } from "@/Components/Button";
+import Button  from "@/Components/Button";
 import { format } from "path";
 
 interface Peoples {
@@ -50,7 +50,7 @@ const Edite: React.FC<{ peoples: Peoples }> = ({ peoples }) => {
 
 
 
-      <div>
+      {/* <div>
             <Popover>
               <PopoverTrigger asChild>
                 <Button
@@ -73,7 +73,7 @@ const Edite: React.FC<{ peoples: Peoples }> = ({ peoples }) => {
                 />
               </PopoverContent>
             </Popover>
-          </div>
+          </div> */}
 
 
 

@@ -1,14 +1,14 @@
 import { cva } from "class-variance-authority";
-import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
-import Link, { LinkProps } from "next/link";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
+import Link, { type LinkProps } from "next/link";
 
 const classes = cva("", {
   variants: {
     variant: {
       primary:
-        "text-text-50 py-3 flex justify-center px-8 rounded-full focus:ring-2 ring-primary-400/50 items-center gap-3 text-text-50 bg-primary-500 active:bg-primary-400 hover:bg-primary-600 transition duration-300",
+        "relative overflow-hidden py-3 px-8 rounded-full flex gap-4 w-fit items-center justify-center text-white bg-gradient-to-r from-[#084d5e] to-[#0b748e] focus:ring-2 focus:ring-[#0b748e] focus:ring-offset-2 focus:outline-none transition-all duration-300 ease-out shadow-lg hover:shadow-xl active:shadow-inner transform hover:-translate-y-0.5 active:translate-y-0",
       secondary:
-        "text-text-50 py-3 justify-center flex px-8 rounded-full border border-white/20 backdrop-blur-md focus:ring-2 ring-primary-400/50 text-white bg-white/10 active:bg-white/20 hover:bg-transparent transition duration-300",
+        "relative py-3 px-8 rounded-full text-white bg-white border border-gray-200 border-opacity-10 hover:bg-opacity-20 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:outline-none transition-all bg-opacity-20  duration-300 ease-out shadow-md hover:shadow-lg active:shadow-inner transform hover:-translate-y-0.5 active:translate-y-0 backdrop-filter backdrop-blur-sm",
     },
   },
 });
