@@ -66,7 +66,7 @@ export default function ImageCarousel({ images }: ImagesCarouselProps) {
         <Heart className="w-5 h-5" fill={liked ? "currentColor" : "none"} />
       </button>
       {/* Miniatures des images */}
-      <div className="flex absolute z-50 bottom-0 bg-white/40 backdrop-blur-md justify-center w-full shadow-lg gap-2 p-2 ">
+      <div className="flex absolute z-10 bottom-0 bg-white/40 backdrop-blur-md justify-center w-full shadow-lg gap-2 p-2 ">
         {images.map((image, index) => (
           <button
             key={index}
