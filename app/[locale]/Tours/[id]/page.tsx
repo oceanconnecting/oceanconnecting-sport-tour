@@ -15,6 +15,7 @@ import Button from "@/Components/Button";
 import AnimatedModalDemo from "./modalMaps";
 import { useTranslations } from "next-intl";
 import Image from "./image";
+import FormReservation from "./FormReservation"
 const TourDetails = () => {
 
   const tt = useTranslations("homepage.tours");
@@ -94,6 +95,7 @@ const TourDetails = () => {
        
         <div className=" p-6 rounded-lg flex  justify-center items-end">
           <FormTour tour={tour} />
+          <FormReservation  />
         </div>
         
       </div>

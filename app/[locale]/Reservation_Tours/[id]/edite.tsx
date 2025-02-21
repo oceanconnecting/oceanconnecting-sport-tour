@@ -124,7 +124,7 @@ const Edite: React.FC<EditeProps> = ({ peoples, onSave }) => {
 
       {/* Bouton de validation */}
       <Button onClick={handleSave} className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md">
-        {tt("form.confirm")}
+        {tt("form.confirme_change")}
       </Button>
     </div>
   );

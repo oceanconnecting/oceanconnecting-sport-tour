@@ -6,7 +6,8 @@ import Image from "next/image";
 import { CalendarDays, Edit, Trash2, Users } from "lucide-react";
 import Rating from "./rating";
 import Edite from "./edite";
-import { Form } from "./form"
+import { Form } from "./form";
+import {handleSubmitTour}from "./action"
 interface Peoples {
   Adults: number;
   Children: number;
@@ -21,23 +22,23 @@ interface TourCardProps {
 
 const TourCardReservation: React.FC<TourCardProps> = ({ peoples, tour, date }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [isOpenModal,setIsOpenModal]=useState(false)
-  // État local pour stocker les données mises à jour
-  const [reservationData, setReservationData] = useState<{
+  const [formData, setFormData] = useState({ firstName: "", lastName: "", numberPhone: "", email: "" });
+  const [reservationpeoples, setReservationpeoples] = useState<{ 
     date: Date | null;
     Adults: number;
     Children: number;
     Babies: number;
   }>({
-    date: null, // Temporairement null pour éviter une erreur si la date est undefined
+    date: null,
     Adults: 0,
     Children: 0,
     Babies: 0,
   });
+  // État local pour stocker les données mises à jour
 
-  // Mettre à jour reservationData dès que peoples et date changent
+  // Mettre à jour reservationpeoples dès que peoples et date changent
   useEffect(() => {
-    setReservationData({
+    setReservationpeoples({
       date,
       Adults: peoples.Adults,
       Children: peoples.Children,
@@ -45,8 +46,32 @@ const TourCardReservation: React.FC<TourCardProps> = ({ peoples, tour, date }) =
     });
   }, [peoples, date]);
 
+  // Fonction pour recevoir les données du formulaire et les mettre à jour dans le parent
+  const handleFormSubmit = async (data: any) => {
+    setFormData(data);
+   
+
+
+
+  const formDataToSend = new FormData();
+  formDataToSend.append("data", JSON.stringify(data));
+  formDataToSend.append("reservationpeoples", JSON.stringify(reservationpeoples));
+  formDataToSend.append("tour", JSON.stringify(tour));
+  
+  console.log(formDataToSend);
+  
+  try {
+    await handleSubmitTour(formDataToSend);
+  } catch (error) {
+    console.error("Error during form submission:", error);
+  } finally {
+    // any final actions
+  }
+
+  };
+
   const handleSave = (updatedData: { date: Date | null; Adults: number; Children: number; Babies: number }) => {
-    setReservationData(updatedData);
+    setReservationpeoples(updatedData);
     setIsEditing(false);
   };
 
@@ -83,15 +108,15 @@ const TourCardReservation: React.FC<TourCardProps> = ({ peoples, tour, date }) =
         {/* Détails de réservation */}
         <div className="mt-4 p-4 bg-gray-100 dark:bg-zinc-800 rounded-lg">
           {isEditing ? (
-            <Edite peoples={reservationData} onSave={handleSave} />
+            <Edite peoples={reservationpeoples} onSave={handleSave} />
           ) : (
             <div>
               {/* Date sélectionnée */}
               <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                 <CalendarDays size={18} />
                 <span>
-                  {reservationData.date
-                    ? new Date(reservationData.date).toLocaleDateString()
+                  {reservationpeoples.date
+                    ? new Date(reservationpeoples.date).toLocaleDateString()
                     : "Date non disponible"}
                 </span>
               </div>
@@ -99,52 +124,33 @@ const TourCardReservation: React.FC<TourCardProps> = ({ peoples, tour, date }) =
               {/* Nombre de participants */}
               <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300 mt-2">
                 <Users size={18} />
-                <p>Adults: {reservationData.Adults} </p>
-                <p>Children: {reservationData.Children} </p>
-                <p>Babies: {reservationData.Babies}</p>
+                <p>Adults: {reservationpeoples.Adults} </p>
+                <p>Children: {reservationpeoples.Children} </p>
+                <p>Babies: {reservationpeoples.Babies}</p>
               </div>
+
+              {/* Formulaire pour la réservation */}
               <div>
-                <Form id={tour.id} peoples={peoples}/>
+                <Form onSubmitForm={handleFormSubmit} />
               </div>
             </div>
           )}
         </div>
 
         {/* Actions */}
-        <div className="mt-4 flex justify-between items-center">
-          <div>
-            <span className="text-xl font-bold text-red-600">
-              ${tour.newPrice.priceAdults}
-            </span>
-          </div>
-          <div className="flex gap-2">
-      {/* Bouton "Valider" (caché si isEditing est true) */}
-      {!isEditing && (
-        <button           onClick={() => setIsOpenModal(true)}
-        className="p-2 w-full bg-primary-300 dark:bg-zinc-700 rounded-lg hover:bg-gray-300 dark:hover:bg-zinc-600 transition">
-          Valider
-        </button>
-        
-      )}
-      
-       
+        <div className="mt-4 flex gap-2 justify-center p-2 rounded-lg">
+          {/* Bouton "Éditer" */}
+          <button
+            onClick={() => setIsEditing((prev) => !prev)}
+            className="p-2 flex items-center font-semibold justify-center w-1/5 bg-gray-200 dark:bg-zinc-700 rounded-lg hover:bg-gray-300 dark:hover:bg-zinc-600 transition"
+          >
+            {isEditing ? "Cancel" : <Edit size={25} />}
+          </button>
 
-      {/* Bouton "Éditer" (change en Cancel si isEditing est true) */}
-      <button
-        onClick={() => setIsEditing((prev) => !prev)}
-        className="p-2 bg-gray-200 dark:bg-zinc-700 rounded-lg hover:bg-gray-300 dark:hover:bg-zinc-600 transition"
-      >
-        {isEditing ? "Cancel" : <Edit size={18} />}
-      </button>
-
-      {/* Bouton "Supprimer" */}
-      <button className="p-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
-        <Trash2 size={18} />
-      </button>
-    </div>
-
-
-          
+          {/* Bouton "Supprimer" */}
+          <button className="p-2 flex items-center justify-center w-1/5 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
+            <Trash2 size={25} />
+          </button>
         </div>
       </BackgroundGradient>
     </div>

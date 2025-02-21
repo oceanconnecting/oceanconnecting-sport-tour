@@ -112,31 +112,7 @@ const handleCloseReservation = () => {
             onIncrement={() => increment(setBabies, babies)}
           />
 
-          <div>
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                  variant={"outline"}
-                  className={cn(
-                    "w-[240px] justify-start text-left font-normal",
-                    !date && "text-muted-foreground"
-                  )}
-                >
-                  <CalendarIcon />
-                  {date ? format(date, "PPP") : <span>{tt('form.select_Date')}</span>}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-0" align="start">
-                <Calendar
-                  mode="single"
-                  selected={date}
-                  onSelect={handleDateSelect}
-                  initialFocus
-                />
-              </PopoverContent>
-            </Popover>
-          </div>
-
+          
           <Button
             type="submit"
             className={`w-full mt-4  rounded-full  ${
