@@ -3,19 +3,16 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Tag from "@/Components/Tag";
-import { FaStar, FaRegStar, FaRegHeart, FaHeart } from "react-icons/fa";
+import {  FaRegHeart, FaHeart } from "react-icons/fa";
 import Propose from "./propos";
 import { Tour } from "@/types";
-import TourMap from "./tourMap";
 import Itinerary from "./Itinerary";
 import getToursData from "./ToursData";
-import FormTour from "./Form";
-import ImageCarousel from "./images";
-import Button from "@/Components/Button";
 import AnimatedModalDemo from "./modalMaps";
 import { useTranslations } from "next-intl";
 import Image from "./image";
 import FormReservation from "./FormReservation"
+import Rating from "./ratting"
 const TourDetails = () => {
 
   const tt = useTranslations("homepage.tours");
@@ -39,9 +36,6 @@ const TourDetails = () => {
   if (!id) return <div><p>Chargement...</p></div>;
   if (!tour) return <div><p>Tour non trouvé.</p></div>;
 
-  const fullStars = Math.floor(tour.rating);
-  const hasHalfStar = tour.rating % 1 >= 0.5;
-
   return (
     <section className="py-20">
       
@@ -50,13 +44,7 @@ const TourDetails = () => {
       <div className="grid grid-cols-2 items-center gap-4 py-4 px-8 bg-gray-50 rounded-xl shadow-sm w-full">
         <div className="flex items-center gap-2">
           <span className="text-gray-700 font-medium">Très bien</span>
-          {Array.from({ length: fullStars }).map((_, index) => (
-            <FaStar key={`star-${index}`} className="text-yellow-500" />
-          ))}
-          {hasHalfStar && <FaStar className="text-yellow-500" />}
-          {Array.from({ length: 5 - fullStars - (hasHalfStar ? 1 : 0) }).map((_, index) => (
-            <FaRegStar key={`empty-star-${index}`} className="text-yellow-500" />
-          ))}
+          <Rating rating={tour.rating}/>
         </div>
 
         <div className="flex justify-center items-center gap-6">
@@ -72,8 +60,7 @@ const TourDetails = () => {
           <Propose />
         </div>
         <div className=" rounded-lg w-full flex justify-center items-center">
-          {/* <TourMap route={tour.route} /> */}
-          {/* <ImageCarousel  images={tour.images}/> */}
+       
           <Image images={tour.images}  />
 
         </div>
@@ -87,15 +74,15 @@ const TourDetails = () => {
         </div>
       </div>
       {/* Itinerary and Form */}
-      <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-3 rounded-lg shadow-lg">
-        <div className=" p-6 rounded-lg flex justify-center items-start">
+      <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-3 rounded-lg shadow-lg">
+        {/* <div className=" p-6 rounded-lg flex justify-center items-start">
           
         <Itinerary  id={numericId} title={tour.title} passBy={tour.passBy} image={tour.image} />
         </div>
-       
+        */}
         <div className=" p-6 rounded-lg flex  justify-center items-end">
-          <FormTour tour={tour} />
-          <FormReservation  />
+       
+          <FormReservation  tour={tour}  />
         </div>
         
       </div>

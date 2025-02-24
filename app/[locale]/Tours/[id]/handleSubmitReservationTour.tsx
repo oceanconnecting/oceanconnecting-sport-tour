@@ -1,23 +1,21 @@
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-export async function handleSubmitTour(formData: FormData) {
+export async function handleSubmitReservationTour(formData: FormData) {
   console.log("🚀 Données brutes reçues :", Object.fromEntries(formData));
 
   // Vérifie que les valeurs existent avant de les parser
-  const dataRaw = formData.get("data");
-  const reservationRaw = formData.get("reservationpeoples");
+  const dataRaw = formData.get("formData");
   const tourRaw = formData.get("tour");
 
   
 
-  if (!dataRaw || !reservationRaw || !tourRaw) {
+  if (!dataRaw || !tourRaw) {
     console.error("❌ Erreur : Certaines données sont manquantes !");
     toast.error("Erreur lors de l'envoi des données !");
     return false;
   }
 
   const formDataValues = JSON.parse(dataRaw as string);
-  const reservationData = JSON.parse(reservationRaw as string);
   const tourData = JSON.parse(tourRaw as string);
 
   // Création de l'objet DataSend
@@ -36,20 +34,23 @@ export async function handleSubmitTour(formData: FormData) {
     <h3>📅 Détails de la réservation</h3>
     <p><strong>Tour :</strong> ${tourData.title}</p>
     <p><strong>Date de départ :</strong> ${tourData.startDate}</p>
-    <p><strong>Date de fin :</strong> ${tourData.endDate}</p>
+    
+    ${tourData.endDate && (
+  <p><strong>Date de fin :</strong> {tourData.endDate}</p>
+)}
+
     <p><strong>Lieu :</strong> ${tourData.location}</p>
     <p><strong>Prix :</strong> ${tourData.price} €</p>
     <p><strong>Description :</strong> ${tourData.description}</p>
 
     <h3>👥 Nombre de participants</h3>
     <ul>
-      <li><strong>Adultes :</strong> ${reservationData.Adults}</li>
-      <li><strong>Enfants :</strong> ${reservationData.Children}</li>
-      <li><strong>Bébés :</strong> ${reservationData.Babies}</li>
+      <li><strong>Adultes :</strong> ${formDataValues.adults}</li>
+      <li><strong>Enfants :</strong> ${formDataValues.children}</li>
+     
     </ul>
 
-    <h3>📩 Informations supplémentaires</h3>
-    <p><strong>Message :</strong> ${formDataValues.message || "Aucun message ajouté"}</p>
+    
 
     <hr/>
     <p style="color:gray; font-size: 12px;">Email envoyé automatiquement via le site de réservation.</p>

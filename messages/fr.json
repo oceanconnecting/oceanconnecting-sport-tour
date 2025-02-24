@@ -251,12 +251,17 @@
       "form": {
         
         "title": "Réservez votre visite",
+        "FirstName": "Nom",
+        "LastName": "Prénom",
+        "numberPhone":"numero de Telephone",       
+  "email":"email",
+        "hasAnimal":"Do you have an animal with you",
         "Number_Adults": "Nombre Adulte",
         "Number_Children": "Nombre Enfants",
         "date of reservation": "Date de reservation",
         "select_Date": "Selectionner Date",
         "select_person":"Selectionner personne",
-        "Number_Babies": "Nombre Babies",
+        
         "Confirm_Reservation": "Confirmer la reservation",
         "confirme_change":"Confirmer changement",
         "Duration": "Duration",
