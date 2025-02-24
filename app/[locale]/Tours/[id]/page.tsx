@@ -4,7 +4,6 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Tag from "@/Components/Tag";
 import {  FaRegHeart, FaHeart } from "react-icons/fa";
-import Propose from "./propos";
 import { Tour } from "@/types";
 import Itinerary from "./Itinerary";
 import getToursData from "./ToursData";
@@ -56,9 +55,10 @@ const TourDetails = () => {
       </div>
 
       <div className="grid lg:grid-cols-2 w-full md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-2 rounded-lg shadow-lg">
-        <div className="rounded-lg flex justify-center items-center">
-          <Propose />
-        </div>
+      <div className=" p-6 rounded-lg flex justify-center items-start">
+          
+          <Itinerary  tour={tour} />
+         </div>
         <div className=" rounded-lg w-full flex justify-center items-center">
        
           <Image images={tour.images}  />
@@ -75,11 +75,8 @@ const TourDetails = () => {
       </div>
       {/* Itinerary and Form */}
       <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-3 rounded-lg shadow-lg">
-        {/* <div className=" p-6 rounded-lg flex justify-center items-start">
-          
-        <Itinerary  id={numericId} title={tour.title} passBy={tour.passBy} image={tour.image} />
-        </div>
-        */}
+        
+       
         <div className=" p-6 rounded-lg flex  justify-center items-end">
        
           <FormReservation  tour={tour}  />

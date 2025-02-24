@@ -63,19 +63,19 @@ const FormReservation:React.FC<FormProps> = ({tour}) => {
 
     const newErrors: Partial<ReservationFormData> = {};
 
-    if (!formData.firstName) newErrors.firstName = "Le prénom est requis";
-    if (!formData.lastName) newErrors.lastName = "Le nom est requis";
+    if (!formData.firstName) newErrors.firstName =tt("form.errorFirstName");
+    if (!formData.lastName) newErrors.lastName = tt("form.errorLastName");
     if (!formData.email) {
-      newErrors.email = "L'email est requis";
+      newErrors.email = tt("form.errorEmail1");
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "L'email est invalide";
+      newErrors.email = tt("form.errorEmail2");
     }
 
     if (!formData.numberPhone) {
-      newErrors.numberPhone = "Le numéro de téléphone est obligatoire";
+      newErrors.numberPhone = tt("form.errornumberPhon1");
     } else if (!/^06\d{8}$/.test(formData.numberPhone)) {
-      newErrors.numberPhone =
-        "Le numéro de téléphone doit commencer par 06 et contenir 10 chiffres";
+      newErrors.numberPhone =tt("form.errornumberPhon2")
+;
     }
     // handleSubmitReservationTour(formData); // Envoyer les données au parent
     setErrors(newErrors);
@@ -151,7 +151,7 @@ const FormReservation:React.FC<FormProps> = ({tour}) => {
   {/* Input Fields */}
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
     <LabelInputContainer>
-      <Label htmlFor="firstName" className="text-sm font-medium text-gray-700">
+      <Label htmlFor="firstName" className=" text-xl  text-center  font-semibold text-gray-700">
         {tt("form.FirstName")}
       </Label>
       <Input
@@ -160,15 +160,15 @@ const FormReservation:React.FC<FormProps> = ({tour}) => {
         type="text"
         value={formData.firstName}
         onChange={handleInputChange}
-        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-      />
+        className="mt-1 block h-full w-full border bg-gray-50 rounded-xl border-background-200 shadow-xl py-3   px-5 outline-none focus:border-neutral-500  sm:text-xl"
+              />
       {errors.firstName && (
         <p className="mt-1 text-sm text-red-500">{errors.firstName}</p>
       )}
     </LabelInputContainer>
 
-    <LabelInputContainer>
-      <Label htmlFor="lastName" className="text-sm font-medium text-gray-700">
+   <LabelInputContainer>
+      <Label htmlFor="lastName" className="text-xl  text-center  font-semibold text-gray-700">
         {tt("form.LastName")}
       </Label>
       <Input
@@ -177,8 +177,8 @@ const FormReservation:React.FC<FormProps> = ({tour}) => {
         type="text"
         value={formData.lastName}
         onChange={handleInputChange}
-        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-      />
+        className="mt-1 block h-full w-full border bg-gray-50 rounded-xl border-background-200 shadow-xl py-3   px-5 outline-none focus:border-neutral-500  sm:text-xl"
+              />
       {errors.lastName && (
         <p className="mt-1 text-sm text-red-500">{errors.lastName}</p>
       )}
@@ -187,7 +187,7 @@ const FormReservation:React.FC<FormProps> = ({tour}) => {
 
   <div className="grid grid-cols-1 justify-center items-center  md:grid-cols-2 gap-6">
     <LabelInputContainer>
-      <Label htmlFor="numberPhone" className="text-sm font-medium text-gray-700">
+      <Label htmlFor="numberPhone" className="text-xl  text-center  font-semibold text-gray-700">
         {tt("form.numberPhone")}
       </Label>
       <Input
@@ -196,25 +196,25 @@ const FormReservation:React.FC<FormProps> = ({tour}) => {
         type="text"
         value={formData.numberPhone}
         onChange={handleInputChange}
-        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-      />
+        className="mt-1 block h-full w-full border bg-gray-50 rounded-xl border-background-200 shadow-xl py-3   px-5 outline-none focus:border-neutral-500  sm:text-xl"
+              />
       {errors.numberPhone && (
         <p className="mt-1 text-sm text-red-500">{errors.numberPhone}</p>
       )}
     </LabelInputContainer>
 
     <LabelInputContainer>
-      <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+      <Label htmlFor="email" className="text-xl  text-center  font-semibold text-gray-700">
         {tt("form.email")}
       </Label>
       <Input
         id="email"
         placeholder="name@gmail.com"
-        type="email"
+        type="text"
         value={formData.email}
         onChange={handleInputChange}
-        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-      />
+        className="mt-1 block h-full w-full border bg-gray-50 rounded-xl border-background-200 shadow-xl py-3   px-5 outline-none focus:border-neutral-500  sm:text-xl"
+             />
       {errors.email && (
         <p className="mt-1 text-sm text-red-500">{errors.email}</p>
       )}
@@ -226,7 +226,7 @@ const FormReservation:React.FC<FormProps> = ({tour}) => {
       <div className="flex justify-center">
         <button 
          type="submit"
-         className={`w-1/4 h-10 mt-4  rounded-full  ${
+         className={`w-1/4 h-12 mt-4 sm:w-4/5 md:w-1/2 lg:w-1/4 rounded-full  ${
            ((formData.adults === 0 || formData.children === 0) &&formData.firstName==="" &&formData.lastName===""&& formData.numberPhone==="" && formData.email==="")
              ? "bg-gray-300 text-gray-600 cursor-not-allowed"
              : "bg-slate-300 hover:bg-slate-700 hover:text-white"
@@ -262,5 +262,5 @@ const LabelInputContainer = ({
   children: React.ReactNode;
   className?: string;
 }) => {
-  return <div className={cn("flex flex-col space-y-2  w-4/5", className)}>{children}</div>;
+  return <div className={cn("flex flex-col space-y-6  ", className)}>{children}</div>;
 };
