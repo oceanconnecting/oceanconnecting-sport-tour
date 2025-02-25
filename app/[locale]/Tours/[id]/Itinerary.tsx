@@ -1,6 +1,5 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { Heart } from "lucide-react";
 import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
 import {Tour} from "@/types"
