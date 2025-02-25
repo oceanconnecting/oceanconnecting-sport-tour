@@ -245,99 +245,201 @@
       "text_2": "تحميل خطة 10 أيام",
       "button": "تحميل"
     },
-    "tours": {
-      "heading": "الجولات",
-      "show_map": "عرض الخريطة",
-      "Itinerary": "المسار",
-      "form": {
-        "title": "احجز جولتكم",
-        "Number_Adults": "عدد البالغين",
-        "Number_Children": "عدد الأطفال",
-        "date of reservation": "تاريخ الحجز",
-        "select_Date": "اختر التاريخ",
-        "Number_Babies": "عدد الرضع",
-        "Confirm_Reservation": "تأكيد الحجز",
-        "Duration": "المدة",
-        "Detail_Tariff": "تفاصيل التعريفة",
-        "Price_Adults": "سعر البالغين",
-        "Price_Children": "سعر الأطفال",
-        "Price_Babies": "سعر الرضع",
-        "Total_Price": "السعر الإجمالي",
-        "alert": "يرجى اختيار تاريخ لاحق لليوم"
+    
+      "tours": {
+        "heading": "الجولات",
+        "show_map": "عرض الخريطة",
+        "Itinerary": "المسار",
+        "Date_depart":"تاريخ المغادرة",
+        "Date_fin": "تاريخ الانتهاء",
+
+        "at": "في",
+        "stop":"توقف",
+        "form": {
+          "title": "احجز جولتك",
+          "FirstName": "الاسم",
+          "LastName": "اللقب",
+          "numberPhone": "رقم الهاتف",
+          "email": "البريد الإلكتروني",
+          "hasAnimal": "هل لديك حيوان معك؟",
+          "Number_Adults": "عدد البالغين",
+          "Number_Children": "عدد الأطفال",
+          "date of reservation": "تاريخ الحجز",
+          "select_Date": "اختر التاريخ",
+          "select_person": "اختر الشخص",
+          "errorFirstName": "الاسم مطلوب",
+          "errorLastName": "اللقب مطلوب",
+          "errornumberPhon1": "رقم الهاتف مطلوب",
+          "errornumberPhon2": "يجب أن يبدأ رقم الهاتف بـ 06 ويتكون من 10 أرقام",
+          "errorEmail1": "البريد الإلكتروني مطلوب",
+          "errorEmail2": "يرجى إدخال بريد إلكتروني صالح مثل 'name@gmail.com'",
+          "Confirm_Reservation": "تأكيد الحجز",
+          "confirme_change": "تأكيد التغيير",
+          "Duration": "المدة",
+          "Detail_Tariff": "تفاصيل التسعير",
+          "Price_Adults": "سعر البالغين",
+          "Price_Children": "سعر الأطفال",
+          "Price_Babies": "سعر الرضع",
+          "Total_Price": "السعر الإجمالي",
+          "alert": "يرجى اختيار تاريخ لاحق لليوم"
+        },
+        "propose": {
+          "propose1": {
+            "title": "إلغاء مجاني",
+            "descr": "إلغاء حتى 24 ساعة مسبقًا لاسترداد كامل المبلغ."
+          },
+          "propose2": {
+            "title": "أقصى درجات الأمان",
+            "descr": "إجراءات أمان معززة لضمان راحة بالك."
+          },
+          "propose3": {
+            "title": "دعم على مدار الساعة",
+            "descr": "مساعدة متاحة في أي وقت للإجابة على استفساراتك."
+          },
+          "propose4": {
+            "title": "مجموعات صغيرة",
+            "descr": "استمتع بتجربة شخصية أكثر مع مجموعات صغيرة الحجم."
+          }
+        },
+        "tour": {
+          "tour_1": {
+            "title": "رحلة من أغادير إلى مراكش",
+            "route": {
+              "Amskroud": "أمسكرود",
+              "Imi n'Tanout": "إيمي نتانوت",
+              "Sidi Mokhtar": "سيدي مختار",
+              "Chichaoua": "شيشاوة",
+              "Lalla Takerkoust": "لالة تاكركوست",
+              "Point 6": "النقطة 6"
+            },
+            "passBy": {
+              "passBy": "يمر عبر",
+              "pass": {
+                "Amskroud": "أمسكرود",
+                "Imi n'Tanout": "إيمي نتانوت",
+                "Sidi Mokhtar": "سيدي مختار",
+                "Chichaoua": "شيشاوة",
+                "Lalla Takerkoust": "لالة تاكركوست"
+              }
+            },
+            "description": "استمتع بالمناظر الخلابة بين أغادير ومراكش مع توقف في نقاط جذابة.",
+            "departure": "مراكش",
+            "arrival": "الصويرة",
+            "type": "استكشاف",
+            "duration": "المدة"
+          },
+          "tour_2": {
+            "title": "رحلة مراكش - الصويرة",
+            "description": "مسار سحري عبر التلال وغابات الأرغان حتى الساحل الأطلسي.",
+            "type": "استكشاف",
+            "duration": "يوم واحد",
+            "route": {
+              "Marrakech": "مراكش",
+              "Argan Oil Cooperative": "تعاونية زيت الأرغان",
+              "Sidi Mokhtar": "سيدي مختار",
+              "Chichaoua": "شيشاوة",
+              "Ounara": "أونارا",
+              "Bab Doukkala (Essaouira)": "باب دكالة (الصويرة)",
+              "Point 6": "النقطة 6"
+            },
+            "passBy": {
+              "passBy": "يمر عبر",
+              "pass": {
+                "Marrakech": "مراكش",
+                "Argan Oil Cooperative": "تعاونية زيت الأرغان",
+                "Sidi Mokhtar": "سيدي مختار",
+                "Chichaoua": "شيشاوة",
+                "Ounara": "أونارا",
+                "Bab Doukkala (Essaouira)": "باب دكالة (الصويرة)",
+                "Point 6": "النقطة 6"
+              }
+            },
+            "departure": "مراكش",
+            "arrival": "الصويرة"
+          },
+          "tour_3": {
+            "title": "رحلة برية من الصويرة إلى أغادير",
+            "description": "اكتشف الشواطئ البرية والقرى الساحلية الساحرة.",
+            "type": "استرخاء",
+            "duration": "3 أيام",
+            "route": {
+              "Essaouira": "الصويرة",
+              "Sidi Kaouki": "سيدي كاوكي",
+              "Tamri (Banana Village)": "تامري (قرية الموز)",
+              "Taghazout": "تاغازوت",
+              "Seafront Promenade (Agadir)": "الكورنيش (أغادير)",
+              "Kasbah Agadir Oufella": "قصبة أغادير أوفلا",
+              "Agadir": "أغادير"
+            },
+            "passBy": {
+              "passBy": "يمر عبر",
+              "pass": {
+               
+                "Sidi Kaouki": "سيدي كاوكي",
+                "Tamri (Banana Village)": "تمرّي (قرية الموز)",
+                "Taghazout": "تغازوت",
+                "Seafront Promenade (Agadir)": "كورنيش أكادير",
+                "Kasbah Agadir Oufella": "قصبة أكادير أوفلا"
+              
+              }
+            },
+            "departure": "الصويرة",
+            "arrival": "أغادير"
+          },
+          "tour_4": {
+            "title": "مغامرة ليوم واحد من أغادير إلى الصويرة",
+            "description": "استمتع بطريق بانورامي إلى المدينة الزرقاء الشهيرة، الصويرة.",
+            "type": "جولة إرشادية",
+            "duration": "يوم واحد",
+            "route": {
+              "Agadir": "أغادير",
+              "Tamri": "تامري",
+              "Taghazout": "تاغازوت",
+              "Cap Ghir": "رأس غير",
+              "Sidi Kaouki": "سيدي كاوكي",
+              "Bab Marrakech (Essaouira)": "باب مراكش (الصويرة)",
+              "Essaouira": "الصويرة"
+            },
+            "passBy": {
+              "passBy": "يمر عبر",
+              "pass": {
+                "Tamri": "تامري",
+                "Taghazout": "تاغازوت",
+                "Cap Ghir": "رأس غير",
+                "Sidi Kaouki": "سيدي كاوكي",
+                "Bab Marrakech (Essaouira)": "باب مراكش (الصويرة)"
+              }
+            },
+            "departure": "أغادير",
+            "arrival": "الصويرة"
+          },
+          "tour_5": {
+            "title": "جولة مراكش، الصويرة وأغادير",
+            "description": "اكتشف عجائب ثلاث مدن مغربية شهيرة.",
+            "type": "ثقافة",
+            "duration": "5 أيام",
+            "route": {
+              "Agadir": "أغادير",
+              "Marrakech": "مراكش",
+              "Essaouira": "الصويرة",
+              "Tamri": "تامري",
+              "Taghazout": "تاغازوت"
+            },
+            "passBy": {
+              "passBy": "يمر عبر",
+              "pass": {
+                "Marrakech": "مراكش",
+                "Essaouira": "الصويرة",
+                "Tamri": "تامري",
+                "Taghazout": "تاغازوت"
+              }
+            },
+            "departure": "أغادير",
+            "arrival": "مراكش"
+          }
+        }
       },
     
-      "propose": {
-        "propose1": {
-          "title": "إلغاء مجاني",
-          "descr": "إلغاء حتى 24 ساعة مسبقًا لاسترداد كامل المبلغ."
-        },
-        "propose2": {
-          "title": "أقصى درجات الأمان",
-          "descr": "تعزيز تدابير الأمان لضمان راحة بالك."
-        },
-        "propose3": {
-          "title": "دعم 24/7",
-          "descr": "المساعدة متاحة في أي وقت للإجابة على استفساراتك."
-        },
-        "propose4": {
-          "title": "مجموعات صغيرة",
-          "descr": "استمتع بتجربة أكثر خصوصية مع مجموعات صغيرة الحجم."
-        }
-      },
-      "tour": {
-"tour_1": {
-    "title": "رحلة من أكادير إلى مراكش",
-    "route": {
-      "Amskroud": "أمسكرود",
-      "Imi n'Tanout": "إيمي نتانوت",
-      "sidi mokhtar": "سيدي مختار",
-      "chichaoua": "شيشاوة",
-      "lalla Takerkoust": "لالة تكركوست",
-      "point 6": "النقطة 6"
-    },
-    "passBy": {
-      "passBy": "المرور عبر",
-      "pass": {
-        "Amskroud": "أمسكرود",
-        "Imi n'Tanout": "إيمي نتانوت",
-        "Sidi Mokhtar": "سيدي مختار",
-        "Chichaoua": "شيشاوة",
-        "Lalla Takerkoust": "لالة تكركوست"
-      }
-    },
-    "description": "اكتشف المناظر الطبيعية الخلابة بين أكادير ومراكش مع توقفات مثيرة.",
-    "departure": "مراكش",
-    "arrival": "الصويرة",
-    "type": "اكتشاف",
-    "duration": "ساعتان و 30 دقيقة"
-  },
-
-        "tour_2": {
-          "title": "جولة مراكش - الصويرة",
-          "description": "مسار سحري عبر التلال وغابات الأركان حتى الساحل الأطلسي.",
-          "type": "اكتشاف",
-          "duration": "يوم واحد"
-        },
-        "tour_3": {
-          "title": "رحلة على الطريق من الصويرة إلى أكادير",
-          "description": "انطلق لاكتشاف الشواطئ البرية والقرى الساحلية الساحرة.",
-          "type": "استرخاء",
-          "duration": "3 أيام"
-        },
-        "tour_4": {
-          "title": "مغامرة يوم واحد أكادير - الصويرة",
-          "description": "استمتع بالطريق البانورامي إلى المدينة الزرقاء الشهيرة، الصويرة.",
-          "type": "جولة سياحية",
-          "duration": "يوم واحد"
-        },
-        "tour_5": {
-          "title": "جولة مراكش، الصويرة وأكادير",
-          "description": "استكشف عجائب ثلاث مدن رمزية في المغرب.",
-          "type": "رحلة سياحية",
-          "duration": "5 أيام"
-        }
-      }
-    },
     "opinion": {
       "title": "ماذا قال عملاؤنا عنا",
       "opinions": {

@@ -11,7 +11,7 @@ import AnimatedModalDemo from "./modalMaps";
 import { useTranslations } from "next-intl";
 import Image from "./image";
 import FormReservation from "./FormReservation"
-import Rating from "./ratting"
+import Rating from "../../../../Components/ratting"
 const TourDetails = () => {
   const tt = useTranslations("homepage.tours");
   const ToursData: Tour[] = getToursData();

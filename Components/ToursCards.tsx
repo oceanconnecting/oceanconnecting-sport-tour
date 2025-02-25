@@ -8,14 +8,30 @@ import Image from "next/image";
 import type React from "react";
 import Button from "./Button";
 import { Tour } from "@/types";
+import Ratting from "@/Components/ratting";
 
 interface ToursCardProps {
   tour: Tour;
 }
 
 const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
-  const fullStars = Math.floor(tour.rating);
-  const halfStar = tour.rating % 1 >= 0.5 ? 1 : 0;
+  const calculDuration = (startDate: string, endDate?: string): string => {
+    if (!endDate) return "Durée inconnue"; // If endDate is missing
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    const diffMs = end.getTime() - start.getTime(); // Difference in milliseconds
+
+    // Convert milliseconds to hours
+    const diffHours = diffMs / (1000 * 60 * 60);
+    return diffHours < 24
+    ? `${Math.round(diffHours)}h`
+    : `${Math.round(diffHours / 24)} jours`;
+
+  };
+
+  const duration = calculDuration(tour.startDate, tour.endDate);
+  
+
   const router = useRouter();
   const locale = useLocale();
 
@@ -57,24 +73,12 @@ const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
         </div>
 
         <div className="flex items-center mb-4">
-          <span className="text-primary-600 font-medium">{tour.duration}</span>
+          <span className="text-primary-600 font-medium">
+
+          {duration}
+          </span>
           <GoDotFill size={8} className="text-primary-500 mx-3" />
-          <div className="flex">
-            {[...Array(5)].map((_, index) => (
-              <span key={index}>
-                {index < fullStars ? (
-                  <FaStar className="text-yellow-400" />
-                ) : index < fullStars + halfStar ? (
-                  <FaStar
-                    className="text-yellow-400"
-                    style={{ clipPath: "inset(0 50% 0 0)" }}
-                  />
-                ) : (
-                  <FaRegStar className="text-yellow-400" />
-                )}
-              </span>
-            ))}
-          </div>
+          <Ratting rating={tour.rating}/>
         </div>
 
         <div className="border-t pt-4 border-background-300">

@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 export async function handleSubmitReservationTour(formData: FormData) {
@@ -17,7 +18,17 @@ export async function handleSubmitReservationTour(formData: FormData) {
 
   const formDataValues = JSON.parse(dataRaw as string);
   const tourData = JSON.parse(tourRaw as string);
+ const { dateStart, timeStart, dateEnd, timeEnd } = useMemo(() => {
+    const dateEndObj = tourData.endDate ? new Date(tourData.endDate) : new Date();
+    const dateStartObj = tourData.startDate ? new Date(tourData.startDate) : new Date();
 
+    return {
+      dateStart: dateStartObj.toISOString().split("T")[0],
+      timeStart: dateStartObj.toISOString().split("T")[1].slice(0, 5),
+      dateEnd: dateEndObj.toISOString().split("T")[0],
+      timeEnd: dateEndObj.toISOString().split("T")[1].slice(0, 5),
+    };
+  }, [tourData.endDate, tourData.startDate]);
   // Création de l'objet DataSend
   const DataSend = {
 
@@ -31,17 +42,17 @@ export async function handleSubmitReservationTour(formData: FormData) {
     <p><strong>Email :</strong> ${formDataValues.email}</p>
     <p><strong>Téléphone :</strong> ${formDataValues.numberPhone}</p>
 
-    <h3>📅 Détails de la réservation</h3>
+    <h3>Détails de la réservation</h3>
     <p><strong>Tour :</strong> ${tourData.title}</p>
-    <p><strong>Date de départ :</strong> ${tourData.startDate}</p>
+    <p><strong>Date de départ :</strong> ${dateStart} at : ${timeStart}</p>
     
     ${tourData.endDate && (
-  <p><strong>Date de fin :</strong> {tourData.endDate}</p>
+  <p><strong>Date de fin :</strong> {dateEnd} at : {timeEnd}</p>
 )}
    
 
-    <p><strong>Lieu :</strong> ${tourData.location}</p>
-    <p><strong>Prix :</strong> ${tourData.price} €</p>
+    
+    
     <p><strong>Description :</strong> ${tourData.description}</p>
 
     <h3>👥 Nombre de participants</h3>
@@ -50,7 +61,11 @@ export async function handleSubmitReservationTour(formData: FormData) {
       <li><strong>Enfants :</strong> ${formDataValues.children}</li>
      
     </ul>
-
+<div>
+<p><strong>Prix Adultes :</strong>  ${formDataValues.adults ? `${tourData.newPrice* formDataValues.adults} DH`  : `${0} DH`} </p>
+<p><strong>Prix Children :</strong>  ${formDataValues.children ? `${tourData.newPrice* formDataValues.children} DH`  : `${0} DH`} </p>
+<p><strong>Prix Totale:</strong> ${formDataValues.adults || formDataValues.children ? `${tourData.newPrice * formDataValues.adults + tourData.newPrice * formDataValues.children} DH` : '0 DH'}</p>
+</div>
     
 
     <hr/>

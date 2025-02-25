@@ -73,10 +73,7 @@ const FormReservation:React.FC<FormProps> = ({tour}) => {
 
     if (!formData.numberPhone) {
       newErrors.numberPhone = tt("form.errornumberPhon1");
-    } else if (!/^06\d{8}$/.test(formData.numberPhone)) {
-      newErrors.numberPhone =tt("form.errornumberPhon2")
-;
-    }
+    } 
     // handleSubmitReservationTour(formData); // Envoyer les données au parent
     setErrors(newErrors);
 
@@ -102,15 +99,15 @@ const FormReservation:React.FC<FormProps> = ({tour}) => {
   return (
     <form onSubmit={handleSubmit} className="w-3/4 mx-auto bg-white p-6 rounded-3xl shadow-xl space-y-6">
       {/* Participants Section */}
-      <div className="grid lg:grid-cols-2 md:grid-cols-1   sm:grid-cols-1   gap-10  space-x-4">
-        <div className="">
+      <div className="grid lg:grid-cols-2 md:grid-cols-1  align-middle  text-center justify-center  sm:grid-cols-1   gap-10  space-x-4">
+        <div className="  ">
           
           <ParticipantCounter
             value={formData.adults}
             onDecrement={() => decrement("adults")}
             onIncrement={() => increment("adults")} label={tt("form.Number_Adults")}          />
         </div>
-        <div className="">
+        <div className=" ">
 
           <ParticipantCounter
             value={formData.children}
@@ -139,7 +136,7 @@ const FormReservation:React.FC<FormProps> = ({tour}) => {
         type="text"
         value={formData.firstName}
         onChange={handleInputChange}
-        className="mt-1 block h-full w-4/5 border bg-gray-50 rounded-md border-background-200 shadow-md py-3   px-5 outline-none focus:border-neutral-500  sm:text-base"
+        className="mt-1 block h-full w-4/5 border bg-gray-50 rounded-xl border-background-200 shadow-md py-3   px-5 outline-none focus:border-neutral-500  sm:text-base"
               />
       {errors.firstName && (
         <p className="mt-1 text-sm text-red-500">{errors.firstName}</p>
@@ -218,21 +215,19 @@ const FormReservation:React.FC<FormProps> = ({tour}) => {
 
       {/* Submit Button */}
       <div className="flex justify-center">
-        <button 
-         type="submit"
-         className={`w-1/4 h-12 mt-4 sm:w-4/5 md:w-2/3 lg:w-1/3 rounded-full  ${
-           ((formData.adults === 0 || formData.children === 0) &&formData.firstName==="" &&formData.lastName===""&& formData.numberPhone==="" && formData.email==="")
-             ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-             : "bg-slate-300 hover:bg-slate-700 hover:text-white"
-         }`}
-         disabled={formData.adults === 0 && formData.children === 0 &&formData.firstName==="" &&formData.lastName===""&& formData.numberPhone==="" && formData.email===""}
-        
-        
-        // className="bg-gradient-to-br from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 transition-all text-white font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-lg"
-        >
-        {tt('form.Confirm_Reservation')}
-          <BottomGradient />
-        </button>
+      <button 
+  type="submit"
+  className={`w-1/4 h-12 mt-4 sm:w-4/5 md:w-2/3 lg:w-1/3 rounded-full ${
+    (formData.adults === 0 && formData.children === 0)
+      ? "bg-gray-300 text-gray-600 cursor-not-allowed"
+      : "bg-slate-300 hover:bg-slate-700 hover:text-white"
+  }`}
+  disabled={formData.adults === 0 && formData.children === 0} 
+>
+  {tt('form.Confirm_Reservation')}
+  <BottomGradient />
+</button>
+
       </div>
     </form>
   );

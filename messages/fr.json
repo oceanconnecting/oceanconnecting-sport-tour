@@ -248,12 +248,18 @@
       "heading": "Visites",
       "show_map": "Afficher la carte",
       "Itinerary": "Itinéraire",
+      "Date_depart":"Date départ",
+      "Date_fin":"Date fin ",
+      "at":"à",
+      "stop":"stop",
+
       "form": {
         
         "title": "Réservez votre visite",
         "FirstName": "Nom",
         "LastName": "Prénom",
-        "numberPhone":"Numero de Telephone",       
+        "numberPhone":"Numero de Telephone", 
+             
         "email":"email",
         "hasAnimal":"Do you have an animal with you",
         "Number_Adults": "Nombre Adulte",
@@ -267,6 +273,7 @@
         "errornumberPhon2":        "Le numéro de téléphone doit commencer par 06 et contenir 10 chiffres",
 "errorEmail1": "L'adresse e-mail est requise.",
     "errorEmail2": "Veuillez entrer une adresse e-mail valide par exemple 'name@gmail.com'",
+    
 
         "Confirm_Reservation": "Confirmer la reservation",
         "confirme_change":"Confirmer changement",
@@ -326,31 +333,136 @@
           "departure": "Marrakech",
           "arrival": "Essaouira",
           "type": "Découverte",
-          "duration": "2 hours 30 minutes"
+          "duration": "Duration"
         },
         "tour_2": {
           "title": "Excursion Marrakech - Essaouira",
           "description": "Un parcours magique à travers les collines et forêts d'arganiers jusqu'à la côte atlantique.",
           "type": "Découverte",
-          "duration": "1 journée"
+          "duration": "1 journée",
+          "route": {
+            
+                    "Marrakech": "Marrakech",
+                    "Argan Oil Cooperative": "Argan Oil Cooperative",
+                    "Sidi Mokhtar": "Sidi Mokhtar",
+                    "Chichaoua": "Chichaoua",
+                     "Ounara": "Ounara",
+                    "Bab Doukkala (Essaouira)" :"Bab Doukkala (Essaouira)" ,
+                    "Point 6": "Point 6"
+                    
+                    
+                    
+                  },
+          "passBy": {
+            "passBy": "Passer par",
+            "pass":{
+             
+                  "Chichaoua":"Chichaoua",
+                  "Argan Oil Cooperative":"Argan Oil Cooperative", 
+                  "Sidi Lmokhtar":"Sidi Lmokhtar", 
+                  "Ounara":"Ounara", 
+                  "Bab Doukkala (Essaouira)":"Bab Doukkala (Essaouira)"
+
+              
+              
+                  }},
+          "departure": "Marrakech",
+          "arrival": "Essaouira"
+          
+         
+
         },
         "tour_3": {
           "title": "Road Trip Essaouira - Agadir",
           "description": "Partez à la découverte des plages sauvages et des charmants villages côtiers.",
           "type": "Relaxation",
-          "duration": "3 jours"
+          "duration": "3 jours",
+          
+          "route": {            
+               
+                "Sidi Kaouki": "Sidi Kaouki",
+                "Tamri (Banana Village)":"Tamri (Banana Village)",
+                "Taghazout": "Taghazout",
+                "Seafront Promenade (Agadir)" :"Seafront Promenade (Agadir)" ,
+                "Kasbah Agadir Oufella": "Kasbah Agadir Oufella"
+                
+                },
+          "passBy": {
+            "passBy": "Passer par",
+            "pass":{
+             "Essaouira":"Essaouira",
+                "Sidi Kaouki": "Sidi Kaouki",
+                "Tamri (Banana Village)":"Tamri (Banana Village)",
+                "Taghazout": "Taghazout",
+                "Seafront Promenade (Agadir)" :"Seafront Promenade (Agadir)" ,
+                "Kasbah Agadir Oufella": "Kasbah Agadir Oufella",
+                "Agadir" :"Agadir"
+                  }},
+                  "departure": "Essaouira",
+                  "arrival": "Agadir"
+                 
+          
         },
         "tour_4": {
           "title": "Aventure d'une journée Agadir - Essaouira",
           "description": "Profitez d'une route panoramique jusqu'à la célèbre ville bleue, Essaouira.",
           "type": "Visite guidée",
-          "duration": "1 journée"
+          "duration": "1 journée",
+
+          "route": {
+            
+                  "Agadir":"Agadir",
+"Tamri":"Tamri",
+ "Taghazout":"Taghazout",
+"Cap Ghir":"Cap Ghir",
+"Sidi Kaouki":"Sidi Kaouki",
+"Bab Marrakech (Essaouira)" :"Bab Marrakech (Essaouira)",
+"Essaouira":"Essaouira"
+           
+                    
+                    
+                  },
+          "passBy": {
+            "passBy": "Passer par",
+            "pass":{
+                  "Tamri":"Tamri",
+                  "Taghazout":"Taghazout",
+                  "Cap Ghir":"Cap Ghir",
+                  "Sidi Kaouki":"Sidi Kaouki",
+                  "Bab Marrakech (Essaouira)":"Bab Marrakech (Essaouira)"
+                  }},
+                  "departure": "Agadir",
+                  "arrival": "Essaouira"
+         
         },
         "tour_5": {
           "title": "Circuit Marrakech, Essaouira et Agadir",
           "description": "Explorez les merveilles de trois villes emblématiques du Maroc.",
-          "type": "Excursion",
-          "duration": "5 jours"
+          "type": "culture",
+          "duration": "5 jours",
+          
+          "route": {
+                            
+                "Agadir":"Agadir",
+                "Marrakech":"Marrakech",
+                "Essaouira":"Essaouira",
+                "Tamri" :"Tamri",
+                "Taghazout":"Taghazout"
+           
+                    
+                    
+                  },
+          "passBy": {
+            "passBy": "Passer par",
+            "pass":{
+                  "Marrakech":"Marrakech",
+                  "Essaouira":"Essaouira", 
+                  "Tamri":"Tamri",
+                  "Taghazout":"Taghazout"
+                  }},
+                  "departure": "Agadir",
+                  "arrival": "Marrakech"
+         
         }
       }
     },

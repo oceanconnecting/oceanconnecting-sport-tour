@@ -2,9 +2,9 @@
 import { useTranslations } from "next-intl";
 import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
-import {Tour} from "@/types"
+import { Tour } from "@/types";
 import AnimatedModalDemo from "./modalMaps";
-
+import { useMemo } from "react";
 
 interface ItineraryProps {
   tour: Tour;
@@ -13,21 +13,17 @@ interface ItineraryProps {
 export default function Itinerary({ tour }: ItineraryProps) {
   const tt = useTranslations("homepage.tours");
 
-  const dateEndObj = tour.endDate ? new Date(tour.endDate) : new Date();
-  const dateStartObj = tour.startDate ? new Date(tour.startDate) : new Date();
-    
-  // Extract Date (YYYY-MM-DD)
-  const dateStart = dateStartObj.toISOString().split("T")[0]; 
+  const { dateStart, timeStart, dateEnd, timeEnd } = useMemo(() => {
+    const dateEndObj = tour.endDate ? new Date(tour.endDate) : new Date();
+    const dateStartObj = tour.startDate ? new Date(tour.startDate) : new Date();
 
-  // Extract Time (HH:mm:ss)
-  const timeStart = dateStartObj.toISOString().split("T")[1].slice(0,5); 
-
-
-  // Extract Date (YYYY-MM-DD)
-  const dateEnd = dateEndObj.toISOString().split("T")[0]; 
-
-  // Extract Time (HH:mm:ss)
-  const timeEnd = dateEndObj.toISOString().split("T")[1].slice(0,5); 
+    return {
+      dateStart: dateStartObj.toISOString().split("T")[0],
+      timeStart: dateStartObj.toISOString().split("T")[1].slice(0, 5),
+      dateEnd: dateEndObj.toISOString().split("T")[0],
+      timeEnd: dateEndObj.toISOString().split("T")[1].slice(0, 5),
+    };
+  }, [tour.endDate, tour.startDate]);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12 text-gray-800">
@@ -41,24 +37,24 @@ export default function Itinerary({ tour }: ItineraryProps) {
             width={300}
             height={600}
             src={tour.image}
-            alt={tour.title}
+            alt={tt(`tour.tour_${tour.id}.title`)}
             className="w-full h-full object-cover"
+            priority
           />
         </div>
         <div className="w-1/2">
-  <p className="text-lg text-gray-600 mb-4">
-    {tt(`tour.tour_${tour.id}.description`)}
-  </p>
-  <div className="text-sm text-gray-500">
-    <p>
-      <strong>Date départ :</strong> {dateStart} à {timeStart}
-    </p>
-    <p>
-      <strong>Date fin :</strong> {dateEnd} à {timeEnd}
-    </p>
-  </div>
-</div>
-
+          <p className="text-lg text-gray-600 mb-4">
+            {tt(`tour.tour_${tour.id}.description`)}
+          </p>
+          <div className="text-sm text-gray-500">
+            <p>
+              <strong>{tt("Date_depart")} :</strong> {dateStart} {tt("at")}{timeStart}
+            </p>
+            <p>
+              <strong>{tt("Date_fin")} :</strong> {dateEnd} {tt("at")} {timeEnd}
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="relative">
@@ -67,7 +63,7 @@ export default function Itinerary({ tour }: ItineraryProps) {
           {tour.passBy.map((location, index) => (
             <div
               key={index}
-              className="flex flex-col items-center bg-gray-50 p-2"
+              className="flex flex-col items-center bg-gray-50 p-2 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <div className="w-8 h-8 flex justify-center items-center bg-primary-700 rounded-full mb-2 z-10 text-white">
                 <FaLocationDot />
@@ -76,17 +72,17 @@ export default function Itinerary({ tour }: ItineraryProps) {
                 {tt(`tour.tour_${tour.id}.passBy.pass.${location}`)}
               </span>
               <span className="text-xs text-gray-500 mt-1">
-                Stop {index + 1}
+                {tt("stop")} {index + 1}
               </span>
             </div>
           ))}
         </div>
       </div>
-            {/* modal map  */}
-      <div className="mt-[20px]">
-        <div className=" rounded-full flex justify-center items-center">
+
+      {/* Modal Map */}
+      <div className="mt-5">
+        <div className="rounded-full flex justify-center items-center">
           <AnimatedModalDemo id={tour.id} route={tour.route} />
-          <div />
         </div>
       </div>
     </div>

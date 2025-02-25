@@ -29,7 +29,7 @@ const ToursData: Tour[] = [
     departure: "Agadir",
     arrival: "Marrakech",
     type: "Aventure",
-    duration: "10 - 12 hours",
+   
     startDate: "2025-03-15T08:00:00Z", // Date de départ
     endDate: "2025-03-15T20:00:00Z", // Date de fin
     latesPrice: 300,
@@ -65,8 +65,9 @@ const ToursData: Tour[] = [
     departure: "Marrakech",
     arrival: "Essaouira",
     type: "Découverte",
-    duration: "2 hours 30 minutes",
+   
     startDate: "2025-03-16T09:00:00Z", // Date de départ
+    endDate:"2025-03-18T09:00:00Z",
     latesPrice: 400,
     newPrice: {
       priceAdults: 240,
@@ -100,7 +101,7 @@ const ToursData: Tour[] = [
     departure: "Essaouira",
     arrival: "Agadir",
     type: "Relaxation",
-    duration: "3 days",
+   
     startDate: "2025-03-17T08:00:00Z", // Date de départ
     endDate: "2025-03-19T18:00:00Z", // Date de fin
     latesPrice: 350,
@@ -138,8 +139,9 @@ const ToursData: Tour[] = [
     departure: "Agadir",
     arrival: "Essaouira",
     type: "Visite guidée",
-    duration: "4 hours",
-    startDate: "2025-03-20T08:00:00Z", // Date de départ
+   
+    startDate: "2025-04-20T08:00:00Z", // Date de départ
+    endDate:"2025-05-01T09:00:00Z",
     latesPrice: 450,
     newPrice: {
       priceAdults: 240,
@@ -171,7 +173,7 @@ const ToursData: Tour[] = [
     departure: "Agadir",
     arrival: "Marrakech",
     type: "Culture",
-    duration: "7 days",
+   
     startDate: "2025-04-01T09:00:00Z", // Date de départ
     endDate: "2025-04-07T18:00:00Z", // Date de fin
     latesPrice: 500,
