@@ -251,13 +251,25 @@
       "form": {
         
         "title": "Réservez votre visite",
+        "FirstName": "Nom",
+        "LastName": "Prénom",
+        "numberPhone":"Numero de Telephone",       
+        "email":"email",
+        "hasAnimal":"Do you have an animal with you",
         "Number_Adults": "Nombre Adulte",
         "Number_Children": "Nombre Enfants",
         "date of reservation": "Date de reservation",
         "select_Date": "Selectionner Date",
-        "Number_Babies": "Nombre Babies",
+        "select_person":"Selectionner personne",
+        "errorFirstName":"Le Nom est oubligatoire",
+        "errorLastName":"le prenom est oubligatoire",
+        "errornumberPhon1":"Le numéro de téléphone est obligatoire",
+        "errornumberPhon2":        "Le numéro de téléphone doit commencer par 06 et contenir 10 chiffres",
+"errorEmail1": "L'adresse e-mail est requise.",
+    "errorEmail2": "Veuillez entrer une adresse e-mail valide par exemple 'name@gmail.com'",
+
         "Confirm_Reservation": "Confirmer la reservation",
-        
+        "confirme_change":"Confirmer changement",
         "Duration": "Duration",
         "Detail_Tariff": "Detail Tarif",
         "Price_Adults": "Prix Adults",

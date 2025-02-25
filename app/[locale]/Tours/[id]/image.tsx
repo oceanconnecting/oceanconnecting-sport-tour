@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Heart } from "lucide-react";
 import Image from "next/image";
-import Lightbox from "yet-another-react-lightbox";
+
 import "yet-another-react-lightbox/styles.css";
-import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import Counter from "yet-another-react-lightbox/plugins/counter";
+
 interface ImagesProps {
   src: string;
   alt: string;
