@@ -17,7 +17,7 @@ interface ModalContextType {
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
-export  const ModalProvider = ({ children }: { children: ReactNode }) => {
+export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -109,7 +109,6 @@ export const ModalBody = ({
             initial={{
               opacity: 0,
               scale: 0.5,
-              rotateX: 40,
               y: 40,
             }}
             animate={{
@@ -121,12 +120,10 @@ export const ModalBody = ({
             exit={{
               opacity: 0,
               scale: 0.8,
-              rotateX: 10,
             }}
             transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 15,
+              ease: "easeOut",
+              duration: 0.3,
             }}
           >
             <CloseIcon />
@@ -146,7 +143,7 @@ export const ModalContent = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex flex-col flex-1   p-8 md:p-10", className)}>
+    <div className={cn("flex flex-col flex-1 p-8 md:p-10", className)}>
       {children}
     </div>
   );

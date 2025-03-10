@@ -265,7 +265,7 @@
         "Total_Price": "السعر الإجمالي",
         "alert": "يرجى اختيار تاريخ لاحق لليوم"
       },
-    
+
       "propose": {
         "propose1": {
           "title": "إلغاء مجاني",
@@ -285,32 +285,32 @@
         }
       },
       "tour": {
-"tour_1": {
-    "title": "رحلة من أكادير إلى مراكش",
-    "route": {
-      "Amskroud": "أمسكرود",
-      "Imi n'Tanout": "إيمي نتانوت",
-      "sidi mokhtar": "سيدي مختار",
-      "chichaoua": "شيشاوة",
-      "lalla Takerkoust": "لالة تكركوست",
-      "point 6": "النقطة 6"
-    },
-    "passBy": {
-      "passBy": "المرور عبر",
-      "pass": {
-        "Amskroud": "أمسكرود",
-        "Imi n'Tanout": "إيمي نتانوت",
-        "Sidi Mokhtar": "سيدي مختار",
-        "Chichaoua": "شيشاوة",
-        "Lalla Takerkoust": "لالة تكركوست"
-      }
-    },
-    "description": "اكتشف المناظر الطبيعية الخلابة بين أكادير ومراكش مع توقفات مثيرة.",
-    "departure": "مراكش",
-    "arrival": "الصويرة",
-    "type": "اكتشاف",
-    "duration": "ساعتان و 30 دقيقة"
-  },
+        "tour_1": {
+          "title": "رحلة من أكادير إلى مراكش",
+          "route": {
+            "Amskroud": "أمسكرود",
+            "Imi n'Tanout": "إيمي نتانوت",
+            "sidi mokhtar": "سيدي مختار",
+            "chichaoua": "شيشاوة",
+            "lalla Takerkoust": "لالة تكركوست",
+            "point 6": "النقطة 6"
+          },
+          "passBy": {
+            "passBy": "المرور عبر",
+            "pass": {
+              "Amskroud": "أمسكرود",
+              "Imi n'Tanout": "إيمي نتانوت",
+              "Sidi Mokhtar": "سيدي مختار",
+              "Chichaoua": "شيشاوة",
+              "Lalla Takerkoust": "لالة تكركوست"
+            }
+          },
+          "description": "اكتشف المناظر الطبيعية الخلابة بين أكادير ومراكش مع توقفات مثيرة.",
+          "departure": "مراكش",
+          "arrival": "الصويرة",
+          "type": "اكتشاف",
+          "duration": "ساعتان و 30 دقيقة"
+        },
 
         "tour_2": {
           "title": "جولة مراكش - الصويرة",

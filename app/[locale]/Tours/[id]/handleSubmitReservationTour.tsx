@@ -1,3 +1,5 @@
+"use server";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 export async function handleSubmitReservationTour(formData: FormData) {
@@ -6,8 +8,6 @@ export async function handleSubmitReservationTour(formData: FormData) {
   // Vérifie que les valeurs existent avant de les parser
   const dataRaw = formData.get("formData");
   const tourRaw = formData.get("tour");
-
-  
 
   if (!dataRaw || !tourRaw) {
     console.error("❌ Erreur : Certaines données sont manquantes !");
@@ -20,14 +20,14 @@ export async function handleSubmitReservationTour(formData: FormData) {
 
   // Création de l'objet DataSend
   const DataSend = {
-
-
     name: `${formDataValues.firstName} ${formDataValues.lastName}`,
     numberphone: formDataValues.numberPhone,
     email: `<p>${formDataValues.email}</p>`,
-    message:`
+    message: `
               <h2>📌 Nouvelle Réservation</h2>
-    <p><strong>Nom :</strong> ${formDataValues.firstName} ${formDataValues.lastName}</p>
+    <p><strong>Nom :</strong> ${formDataValues.firstName} ${
+      formDataValues.lastName
+    }</p>
     <p><strong>Email :</strong> ${formDataValues.email}</p>
     <p><strong>Téléphone :</strong> ${formDataValues.numberPhone}</p>
 
@@ -35,9 +35,13 @@ export async function handleSubmitReservationTour(formData: FormData) {
     <p><strong>Tour :</strong> ${tourData.title}</p>
     <p><strong>Date de départ :</strong> ${tourData.startDate}</p>
     
-    ${tourData.endDate && (
-  <p><strong>Date de fin :</strong> {tourData.endDate}</p>
-)}
+    ${
+      tourData.endDate && (
+        <p>
+          <strong>Date de fin :</strong> {tourData.endDate}
+        </p>
+      )
+    }
    
 
     <p><strong>Lieu :</strong> ${tourData.location}</p>
@@ -55,22 +59,20 @@ export async function handleSubmitReservationTour(formData: FormData) {
 
     <hr/>
      
-  <p><strong>has Animal :</strong>  ${formDataValues.hasAnimal ? 'oui' : 'Non'}</p>
+  <p><strong>has Animal :</strong>  ${
+    formDataValues.hasAnimal ? "oui" : "Non"
+  }</p>
 
     <p style="color:gray; font-size: 12px;">Email envoyé automatiquement via le site de réservation.</p>
   `,
 
-    
     notre: ["elbrikifatima19@gmail.com"],
-
-    
   };
 
   console.log("📨 Données envoyées :", DataSend);
 
   try {
     const response = await fetch(
-     
       "https://sendemail-indol.vercel.app/api/oceanreservation",
       {
         method: "POST",
