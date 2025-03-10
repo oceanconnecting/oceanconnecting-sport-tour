@@ -17,11 +17,11 @@ const ParticipantCounter: React.FC<ParticipantCounterProps> = ({
   onDecrement,
   onIncrement,
 }) => (
-  <div className="w-full max-w-xs">
-    <label className="block text-sm  items-center justify-center text-center font-medium text-gray-700 dark:text-gray-200 mb-2">
+  <div className="w-full">
+    <label className="text-base flex items-center justify-start text-center font-medium text-gray-700 dark:text-gray-200 mb-2">
       {label}
     </label>
-    <div className="flex items-center justify-between bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-2">
+    <div className="flex items-center justify-between bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-2">
       <motion.button
         type="button"
         onClick={onDecrement}
