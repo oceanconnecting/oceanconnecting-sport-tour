@@ -253,7 +253,11 @@
       "at":"a",
       "stop":"Alto",
         "form": {
-          "title": "Reserva tu visita",
+          "title": "Reserva tu tour aquí rellenando el formulario",
+          "loadingMessage": "Cargando... Por favor, espere",
+          "successMessage": "¡Reserva enviada con éxito!",
+          "errorMessage": "Ocurrió un error al enviar la reserva.",
+        
           "FirstName": "Nombre",
           "LastName": "Apellido",
           "numberPhone": "Número de teléfono",

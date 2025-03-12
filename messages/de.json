@@ -246,7 +246,11 @@
         "at":"um",
         "stop":"Stopp",
         "form": {
-          "title": "Buchen Sie Ihre Tour",
+          "loadingMessage": "Wird geladen... Bitte warten",
+  "successMessage": "Reservierung erfolgreich abgeschickt!",
+  "errorMessage": "Es ist ein Fehler beim Absenden der Reservierung aufgetreten."
+,
+          "title": "Buchen Sie Ihre Tour hier, indem Sie das Formular ausfüllen"          ,
           "FirstName": "Vorname",
           "LastName": "Nachname",
           "numberPhone": "Telefonnummer",

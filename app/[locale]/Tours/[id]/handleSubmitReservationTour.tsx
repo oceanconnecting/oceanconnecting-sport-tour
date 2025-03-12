@@ -1,16 +1,17 @@
 import { toast } from "react-toastify";
-
+import { useTranslations } from "next-intl";
 export async function handleSubmitReservationTour(formData: FormData) {
+  const tt=useTranslations("homepage.tours");
   console.log("🚀 Données brutes reçues :", Object.fromEntries(formData));
 
   const dataRaw = formData.get("formData");
   const tourRaw = formData.get("tour");
-  console.log("✅ dataRaw:", dataRaw);
-  console.log("✅ tourRaw:", tourRaw);
+  // console.log("✅ dataRaw:", dataRaw);
+  // console.log("✅ tourRaw:", tourRaw);
 
   if (!dataRaw || !tourRaw) {
-    console.error("❌ Erreur : Certaines données sont manquantes !");
-    toast.error("Erreur lors de l'envoi des données !");
+    // console.error(" Erreur : Certaines données sont manquantes !");
+    toast.error(`${tt("form.errorMessage")}`);
     return false;
   }
 
@@ -27,6 +28,7 @@ export async function handleSubmitReservationTour(formData: FormData) {
 
   // Création de l'objet DataSend
   const DataSend = {
+    
     name: `${formDataValues.firstName} ${formDataValues.lastName}`,
     numberphone: formDataValues.numberPhone,
     email: `<p>${formDataValues.email}</p>`,
@@ -56,14 +58,14 @@ export async function handleSubmitReservationTour(formData: FormData) {
       <p><strong>Avec un animal :</strong> ${formDataValues.hasAnimal ? "Oui" : "Non"}</p>
       <p style="color:gray; font-size: 12px;">Email envoyé automatiquement via le site de réservation.</p>
     `,
-    to: ["elbrikifatima19@gmail.com"],
+   
   };
 
   console.log("📨 Données envoyées :", DataSend);
 
   try {
     const response = await fetch(
-      "https://sendemail-indol.vercel.app/api/oceanreservation",
+      "https://sendemail-self.vercel.app/api/oceanreservation",
       {
         method: "POST",
         headers: {
@@ -77,11 +79,11 @@ export async function handleSubmitReservationTour(formData: FormData) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    toast.success("Formulaire soumis avec succès !");
+    toast.success(`${tt("form.successMessage")}`);
     return true;
   } catch (error) {
-    console.error("❌ Erreur lors de l'envoi du formulaire :", error);
-    toast.error("Échec de l'envoi du formulaire !");
+    // console.error("❌ Erreur lors de l'envoi du formulaire :", error);
+    toast.error(`${tt("form.errorMessage")}`);
     return false;
   }
 }

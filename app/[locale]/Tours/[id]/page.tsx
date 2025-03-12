@@ -12,6 +12,8 @@ import { useTranslations } from "next-intl";
 import Image from "./image";
 import FormReservation from "./FormReservation";
 import Rating from "../../../../Components/ratting";
+import { IoMdArrowRoundBack } from "react-icons/io";
+<IoMdArrowRoundBack />
 const TourDetails = () => {
   const tt = useTranslations("homepage.tours");
   const ToursData: Tour[] = getToursData();

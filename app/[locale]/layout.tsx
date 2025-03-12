@@ -10,6 +10,9 @@ import BackToTopButton from "@/Components/BackToTopButton";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import WhatsappContact from "@/Components/WhatsappContact";
 import OfflineChat from "@/Components/OfflineChat";
+// import { Toaster } from "@/Components/ui/sonner"
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 const tajawal = Tajawal({ subsets: ["arabic"], weight: "500" });
@@ -61,6 +64,9 @@ export default async function RootLayout({
             <BackToTopButton />
             <WhatsappContact />
             <main>{children}</main>
+              <ToastContainer /> 
+           
+
             <Footer />
           </Providers>
         </NextIntlClientProvider>

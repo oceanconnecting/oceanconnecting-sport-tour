@@ -6,7 +6,7 @@
   },
   "homepage": {
     "navbar": {
-      "title": "Ocean Sports Tour",
+      "title": "Réservez votre excursion ici en remplissant le formulaire",
       "about": "à propos",
       "features": "fonctionnalités",
       "activities": "activités",
@@ -271,7 +271,10 @@
         "errornumberPhon2": "Le numéro de téléphone doit commencer par 06 et contenir 10 chiffres",
         "errorEmail1": "L'adresse e-mail est requise.",
         "errorEmail2": "Veuillez entrer une adresse e-mail valide par exemple 'name@gmail.com'",
-
+        "loadingMessage": "Chargement...           ",
+        "successMessage": "✅Réservation envoyée avec succès !",
+        "errorMessage": "❌Une erreur s'est produite lors de l'envoi de la réservation.",
+       
         "Confirm_Reservation": "Confirmer la reservation",
         "confirme_change": "Confirmer changement",
         "Duration": "Duration",

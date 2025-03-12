@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { Checkbox } from "@/Components/ui/checkbox";
 import { handleSubmitReservationTour } from "./handleSubmitReservationTour";
 import type { Tour } from "@/types";
-
+import { toast } from "react-toastify";
 interface ReservationFormData {
   adults: number;
   children: number;
@@ -27,8 +27,8 @@ interface FormProps {
 
 const FormReservation: React.FC<FormProps> = ({ tour }) => {
   const tt = useTranslations("homepage.tours");
-
-  const [formData, setFormData] = useState<ReservationFormData>({
+  // Définir les valeurs initiales du formulaire
+  const initialFormData: ReservationFormData = {
     adults: 0,
     children: 0,
     firstName: "",
@@ -36,10 +36,11 @@ const FormReservation: React.FC<FormProps> = ({ tour }) => {
     numberPhone: "",
     email: "",
     hasAnimal: false,
-  });
+  };
+  const [formData, setFormData] = useState<ReservationFormData>(initialFormData);
 
   const [errors, setErrors] = useState<Partial<ReservationFormData>>({});
-
+const [loading, setLoading] = useState(false);
   const increment = (field: keyof ReservationFormData) =>
     setFormData((prev) => ({
       ...prev,
@@ -68,6 +69,7 @@ const FormReservation: React.FC<FormProps> = ({ tour }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true); // Afficher l'état de chargement
 
     const newErrors: Partial<ReservationFormData> = {};
 
@@ -106,26 +108,34 @@ const FormReservation: React.FC<FormProps> = ({ tour }) => {
       
 
         await handleSubmitReservationTour(formDataToSend);
-        alert("Réservation envoyée avec succès !");
+        // alert("Réservation envoyée avec succès !");
+        setFormData(initialFormData);
       } catch (error) {
-        console.error("Erreur lors de l'envoi de la réservation", error);
-        alert("Une erreur s'est produite lors de l'envoi.");
+        console.error(tt("form.errorMessage"), error);
+        toast.error("Une erreur s'est produite lors de l'envoi.");
       }
     }
+
+    setLoading(false); // Fin de l'état de chargement
+
   };
 
-  const isFormEmpty =
-    formData.adults === 0 &&
-    formData.children === 0 &&
-    formData.firstName === "" &&
-    formData.lastName === "" &&
-    formData.numberPhone === "" &&
-    formData.email === "";
+  const isFormEmpty = 
+  (!formData || 
+    formData.adults === 0 || 
+    // Validation spéciale pour les enfants (valide s'il y a 0 enfant)
+    formData.children < 0 || formData.children === undefined ||
+    formData.firstName.trim() === "" || 
+    formData.lastName.trim() === "" || 
+    formData.numberPhone.trim() === "" || 
+    formData.email.trim() === ""
+  );
+
 
   return (
     <div id="book" className="w-full max-w-4xl mx-auto sm:px-6">
-      <h1 className="text-white text-sm sm:text-lg md:text-xl lg:text-2xl text-center">
-        book your tour here by remplir the form
+      <h1 className="text-slate-500 text-sm sm:text-lg md:text-xl lg:text-2xl text-center">
+      {tt("form.title")}
       </h1>
       <form
         onSubmit={handleSubmit}
@@ -266,14 +276,15 @@ const FormReservation: React.FC<FormProps> = ({ tour }) => {
             type="submit"
             className={cn(
               "relative group/btn w-full sm:w-2/3 md:w-1/2 lg:w-1/3 h-12 rounded-full transition-all duration-300 overflow-hidden",
-              isFormEmpty
+              isFormEmpty || loading
+
                 ? "bg-gray-300 text-gray-600 cursor-not-allowed"
                 : "bg-primary-500 hover:bg-primary-400 hover:text-white"
             )}
-            disabled={isFormEmpty}
+            disabled={isFormEmpty || loading}
           >
             <span className="relative z-10">
-              {tt("form.Confirm_Reservation")}
+              { loading? tt("form.loadingMessage"): tt("form.Confirm_Reservation")}
             </span>
             <BottomGradient />
           </button>

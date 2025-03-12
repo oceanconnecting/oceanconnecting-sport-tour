@@ -250,7 +250,10 @@
       "show_map": "عرض الخريطة",
       "Itinerary": "المسار",
       "form": {
-        "title": "احجز جولتكم",
+        "loadingMessage": "جارٍ التحميل... يرجى الانتظار",
+        "successMessage": "تم إرسال الحجز بنجاح!",
+        "errorMessage": "حدث خطأ أثناء إرسال الحجز.",
+        "title": "احجز جولتك هنا عن طريق تعبئة النموذج",
         "Number_Adults": "عدد البالغين",
         "Number_Children": "عدد الأطفال",
         "date of reservation": "تاريخ الحجز",
