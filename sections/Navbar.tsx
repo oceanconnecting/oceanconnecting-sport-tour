@@ -53,6 +53,10 @@ function Navbar() {
       link: "/#downloads",
     },
     {
+      title: t("tours"),
+      link: "/#Tours",
+    },
+    {
       title: t("gallery"),
       link: `/${locale}/gallery`,
     },
