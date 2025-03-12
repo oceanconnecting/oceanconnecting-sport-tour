@@ -10,7 +10,7 @@ import BackToTopButton from "@/Components/BackToTopButton";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import WhatsappContact from "@/Components/WhatsappContact";
 import OfflineChat from "@/Components/OfflineChat";
-
+import { Analytics } from '@vercel/analytics/react';
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 const tajawal = Tajawal({ subsets: ["arabic"], weight: "500" });
 
@@ -63,6 +63,7 @@ export default async function RootLayout({
             <main>{children}</main>
             <Footer />
           </Providers>
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.oceantours.ma
+
+# Sitemaps
+Sitemap: https://www.oceantours.ma/sitemap.xml
