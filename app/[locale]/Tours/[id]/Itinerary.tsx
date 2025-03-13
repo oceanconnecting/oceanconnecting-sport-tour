@@ -37,10 +37,10 @@ export default function Itinerary({ tour }: ItineraryProps) {
           </p>
           <div className="text-sm text-text-500">
             <p>
-              <strong>Date départ :</strong> {dateStart} à {timeStart}
+              <strong>   {tt("Date_depart")}  :</strong> {dateStart} {tt("at")} {timeStart}
             </p>
             <p>
-              <strong>Date fin :</strong> {dateEnd} à {timeEnd}
+              <strong>   {tt("Date_fin")}  :</strong> {dateEnd} {tt("at")} {timeEnd}
             </p>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function Itinerary({ tour }: ItineraryProps) {
                   {tt(`tour.tour_${tour.id}.passBy.pass.${location}`)}
                 </span>
                 <span className="text-xs text-text-700 mt-1">
-                  Stop {index + 1}
+                  {tt("stop")} {index + 1}
                 </span>
               </div>
             ))}
@@ -88,7 +88,7 @@ export default function Itinerary({ tour }: ItineraryProps) {
                       {tt(`tour.tour_${tour.id}.passBy.pass.${location}`)}
                     </span>
                     <span className="text-xs text-text-700">
-                      Stop {index + 1}
+                    {tt("stop")}{index + 1}
                     </span>
                   </div>
                 </div>
