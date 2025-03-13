@@ -8,6 +8,7 @@
     "navbar": {
       "title": "Ocean Sports Tour",
       "about": "over",
+      "tours": "Touren",
       "features": "kenmerken",
       "activities": "activiteiten",
       "places": "plaatsen",
@@ -236,99 +237,204 @@
       "Marrakech": "Marrakech",
       "Essaouira": "Essaouira"
     },
-    "tours": {  
-      "heading": "Touren",
-    "show_map": "Karte anzeigen",
-    "Itinerary": "Reiseroute",
-    "form": {
-      "title": "Buchen Sie Ihre Tour",
-      "Number_Adults": "Anzahl Erwachsene",
-      "Number_Children": "Anzahl Kinder",
-      "date of reservation": "Reservierungsdatum",
-      "select_Date": "Datum auswählen",
-      "Number_Babies": "Anzahl Babys",
-      "Confirm_Reservation": "Reservierung bestätigen",
-      "Duration": "Dauer",
-      "Detail_Tariff": "Tarifdetails",
-      "Price_Adults": "Preis Erwachsene",
-      "Price_Children": "Preis Kinder",
-      "Price_Babies": "Preis Babys",
-      "Total_Price": "Gesamtpreis",
-      "alert": "Bitte wählen Sie ein Datum, das später als heute liegt"
-    },
-    "propose": {
-      "propose1": {
-        "title": "Kostenlose Stornierung",
-        "descr": "Stornieren Sie bis zu 24 Stunden im Voraus für eine vollständige Rückerstattung."
-      },
-      "propose2": {
-        "title": "Maximale Sicherheit",
-        "descr": "Verstärkte Sicherheitsmaßnahmen, um Ihre Ruhe zu gewährleisten."
-      },
-      "propose3": {
-        "title": "24/7 Support",
-        "descr": "Hilfe jederzeit verfügbar, um Ihre Fragen zu beantworten."
-      },
-      "propose4": {
-        "title": "Kleine Gruppen",
-        "descr": "Genießen Sie eine persönlichere Erfahrung mit kleinen Gruppengrößen."
-      }
-    },
-    "tour": {
-      "tour_1": {
-        "title": "Reise von Agadir nach Marrakesch",
-        "route": {
-          "Amskroud": "Amskroud",
-          "Imi n'Tanout": "Imi n'Tanout",
-          "sidi mokhtar": "Sidi Mokhtar",
-          "chichaoua": "Chichaoua",
-          "lalla Takerkoust": "Lalla Takerkoust",
-          "point 6": "Punkt 6"
+  
+      "tours": {
+        "heading": "Touren",
+        "show_map": "Karte anzeigen",
+        "Itinerary": "Reiseverlauf",
+        "Date_depart": "Abreisedatuma",
+        "Date_fin ":"Enddatum",
+        "at":"um",
+        "stop":"Stopp",
+        "form": {
+          "loadingMessage": "Wird geladen... Bitte warten",
+  "successMessage": "Reservierung erfolgreich abgeschickt!",
+  "errorMessage": "Es ist ein Fehler beim Absenden der Reservierung aufgetreten."
+,
+          "title": "Buchen Sie Ihre Tour hier, indem Sie das Formular ausfüllen"          ,
+          "FirstName": "Vorname",
+          "LastName": "Nachname",
+          "numberPhone": "Telefonnummer",
+          "email": "E-Mail",
+          "hasAnimal": "Haben Sie ein Tier dabei?",
+          "Number_Adults": "Anzahl Erwachsene",
+          "Number_Children": "Anzahl Kinder",
+          "date of reservation": "Reservierungsdatum",
+          "select_Date": "Datum auswählen",
+          "select_person": "Person auswählen",
+          "errorFirstName": "Vorname ist erforderlich",
+          "errorLastName": "Nachname ist erforderlich",
+          "errornumberPhon1": "Telefonnummer ist erforderlich",
+          "errornumberPhon2": "Die Telefonnummer muss mit 06 beginnen und 10 Ziffern enthalten",
+          "errorEmail1": "E-Mail ist erforderlich",
+          "errorEmail2": "Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. 'name@gmail.com'",
+          "Confirm_Reservation": "Reservierung bestätigen",
+          "confirme_change": "Änderung bestätigen",
+          "Duration": "Dauer",
+          "Detail_Tariff": "Tarifdetails",
+          "Price_Adults": "Preis Erwachsene",
+          "Price_Children": "Preis Kinder",
+          "Price_Babies": "Preis Babys",
+          "Total_Price": "Gesamtpreis",
+          "alert": "Bitte wählen Sie ein Datum nach dem heutigen Tag"
         },
-        "passBy": {
-          "passBy": "Vorbeifahren an",
-          "pass": {
-            "Amskroud": "Amskroud",
-            "Imi n'Tanout": "Imi n'Tanout",
-            "Sidi Mokhtar": "Sidi Mokhtar",
-            "Chichaoua": "Chichaoua",
-            "Lalla Takerkoust": "Lalla Takerkoust"
+        "propose": {
+          "propose1": {
+            "title": "Kostenlose Stornierung",
+            "descr": "Stornierung bis zu 24 Stunden im Voraus für eine vollständige Rückerstattung."
+          },
+          "propose2": {
+            "title": "Maximale Sicherheit",
+            "descr": "Erhöhte Sicherheitsmaßnahmen für Ihre Zufriedenheit."
+          },
+          "propose3": {
+            "title": "24/7 Support",
+            "descr": "Unterstützung jederzeit verfügbar, um Ihre Fragen zu beantworten."
+          },
+          "propose4": {
+            "title": "Kleine Gruppen",
+            "descr": "Genießen Sie eine persönlichere Erfahrung mit kleinen Gruppen."
           }
         },
-        "description": "Entdecken Sie die malerische Landschaft zwischen Agadir und Marrakesch mit faszinierenden Zwischenstopps.",
-        "departure": "Marrakesch",
-        "arrival": "Essaouira",
-        "type": "Entdeckung",
-        "duration": "2 Stunden 30 Minuten"
-      },
-    
-  
-        "tour_2": {
-          "title": "Excursie Marrakech - Essaouira",
-          "description": "Een magische route door de heuvels en arganbossen naar de Atlantische kust.",
-          "type": "Ontdekking",
-          "duration": "1 dag"
-        },
-        "tour_3": {
-          "title": "Roadtrip Essaouira - Agadir",
-          "description": "Ga op ontdekkingstocht naar de wilde stranden en charmante kustdorpjes.",
-          "type": "Ontspanning",
-          "duration": "3 dagen"
-        },
-        "tour_4": {
-          "title": "Eendaagse Avontuur Agadir - Essaouira",
-          "description": "Geniet van een panoramische route naar de beroemde blauwe stad, Essaouira.",
-          "type": "Rondleiding",
-          "duration": "1 dag"
-        },
-        "tour_5": {
-          "title": "Rondreis Marrakech, Essaouira en Agadir",
-          "description": "Ontdek de wonderen van drie iconische steden in Marokko.",
-          "type": "Excursie",
-          "duration": "5 dagen"
+        "tour": {
+          "tour_1": {
+            "title": "Reise von Agadir nach Marrakesch",
+            "route": {
+              "Amskroud": "Amskroud",
+              "Imi n'Tanout": "Imi n'Tanout",
+              "Sidi Mokhtar": "Sidi Mokhtar",
+              "Chichaoua": "Chichaoua",
+              "Lalla Takerkoust": "Lalla Takerkoust",
+              "Point 6": "Punkt 6"
+            },
+            "passBy": {
+              "passBy": "Vorbeikommen",
+              "pass": {
+                "Amskroud": "Amskroud",
+                "Imi n'Tanout": "Imi n'Tanout",
+                "Sidi Mokhtar": "Sidi Mokhtar",
+                "Chichaoua": "Chichaoua",
+                "Lalla Takerkoust": "Lalla Takerkoust"
+              }
+            },
+            "description": "Entdecken Sie die malerische Landschaft zwischen Agadir und Marrakesch mit faszinierenden Zwischenstopps.",
+            "departure": "Marrakesch",
+            "arrival": "Essaouira",
+            "type": "Entdeckung",
+            "duration": "Dauer"
+          },
+          "tour_2": {
+            "title": "Ausflug Marrakesch - Essaouira",
+            "description": "Eine magische Route durch Hügel und Arganwälder bis zur Atlantikküste.",
+            "type": "Entdeckung",
+            "duration": "1 Tag",
+            "route": {
+              "Marrakech": "Marrakesch",
+              "Argan Oil Cooperative": "Arganöl-Kooperative",
+              "Sidi Mokhtar": "Sidi Mokhtar",
+              "Chichaoua": "Chichaoua",
+              "Ounara": "Ounara",
+              "Bab Doukkala (Essaouira)": "Bab Doukkala (Essaouira)",
+              "Point 6": "Punkt 6"
+            },
+            "passBy": {
+              "passBy": "Vorbeikommen",
+              "pass": {
+                "Chichaoua": "Chichaoua",
+                "Argan Oil Cooperative": "Arganöl-Kooperative",
+                "Sidi Lmokhtar": "Sidi Lmokhtar",
+                "Ounara": "Ounara",
+                "Bab Doukkala (Essaouira)": "Bab Doukkala (Essaouira)"
+              
+              
+              }
+            },
+            "departure": "Marrakesch",
+            "arrival": "Essaouira"
+          },
+          "tour_3": {
+            "title": "Roadtrip Essaouira - Agadir",
+            "description": "Entdecken Sie unberührte Strände und charmante Küstendörfer.",
+            "type": "Entspannung",
+            "duration": "3 Tage",
+            "route": {
+              "Essaouira": "Essaouira",
+              "Sidi Kaouki": "Sidi Kaouki",
+              "Tamri (Banana Village)": "Tamri (Bananendorf)",
+              "Taghazout": "Taghazout",
+              "Seafront Promenade (Agadir)": "Strandpromenade (Agadir)",
+              "Kasbah Agadir Oufella": "Kasbah Agadir Oufella",
+              "Agadir": "Agadir"
+            },
+            "passBy": {
+              "passBy": "Vorbeikommen",
+              "pass": {
+               
+                "Sidi Kaouki": "Sidi Kaouki",
+                "Tamri (Banana Village)": "Tamri (Bananendorf)",
+                "Taghazout": "Taghazout",
+                "Seafront Promenade (Agadir)": "Strandpromenade (Agadir)",
+                "Kasbah Agadir Oufella": "Kasbah Agadir Oufella"
+            
+              }
+            },
+            "departure": "Essaouira",
+            "arrival": "Agadir"
+          },
+          "tour_4": {
+            "title": "Tagesabenteuer Agadir - Essaouira",
+            "description": "Genießen Sie eine Panoramastraße zur berühmten blauen Stadt, Essaouira.",
+            "type": "Geführte Tour",
+            "duration": "1 Tag",
+            "route": {
+              "Agadir": "Agadir",
+              "Tamri": "Tamri",
+              "Taghazout": "Taghazout",
+              "Cap Ghir": "Cap Ghir",
+              "Sidi Kaouki": "Sidi Kaouki",
+              "Bab Marrakech (Essaouira)": "Bab Marrakech (Essaouira)",
+              "Essaouira": "Essaouira"
+            },
+            "passBy": {
+              "passBy": "Vorbeikommen",
+              "pass": {
+                "Tamri": "Tamri",
+                "Taghazout": "Taghazout",
+                "Cap Ghir": "Cap Ghir",
+                "Sidi Kaouki": "Sidi Kaouki",
+                "Bab Marrakech (Essaouira)": "Bab Marrakech (Essaouira)"
+              }
+            },
+            "departure": "Agadir",
+            "arrival": "Essaouira"
+          },
+          "tour_5": {
+            "title": "Rundreise Marrakesch, Essaouira und Agadir",
+            "description": "Entdecken Sie die Wunder von drei ikonischen marokkanischen Städten.",
+            "type": "Kultur",
+            "duration": "5 Tage",
+            "route": {
+              "Agadir": "Agadir",
+              "Marrakech": "Marrakesch",
+              "Essaouira": "Essaouira",
+              "Tamri": "Tamri",
+              "Taghazout": "Taghazout"
+            },
+            "passBy": {
+              "passBy": "Vorbeikommen",
+              "pass": {
+                "Marrakech": "Marrakesch",
+                "Essaouira": "Essaouira",
+                "Tamri": "Tamri",
+                "Taghazout": "Taghazout"
+              }
+            },
+            "departure": "Agadir",
+            "arrival": "Marrakesch"
+          }
         }
       }
-    },
+    ,
 
     "downloads": {
       "title": "Downloads",

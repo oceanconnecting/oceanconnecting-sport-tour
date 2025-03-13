@@ -16,7 +16,7 @@ function LanguageSwitcher() {
     { code: "fr", label: "French", flag: "FR" },
     { code: "en", label: "English", flag: "GB" },
     { code: "ar", label: "Arabic", flag: "SA" },
-    { code: "de", label: "Dutch", flag: "NL" },
+    { code: "de", label: "Germany", flag: "DE" },
     { code: "es", label: "Spanish", flag: "ES" },
   ];
 

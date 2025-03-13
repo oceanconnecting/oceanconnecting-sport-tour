@@ -8,14 +8,31 @@ import Image from "next/image";
 import type React from "react";
 import Button from "./Button";
 import { Tour } from "@/types";
-
+import Ratting from "@/Components/ratting";
+import { useTranslations } from "next-intl";
 interface ToursCardProps {
   tour: Tour;
 }
 
 const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
-  const fullStars = Math.floor(tour.rating);
-  const halfStar = tour.rating % 1 >= 0.5 ? 1 : 0;
+const tt=useTranslations("homepage.tours");
+  const calculDuration = (startDate: string, endDate?: string): string => {
+    if (!endDate) return "Durée inconnue"; // If endDate is missing
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    const diffMs = end.getTime() - start.getTime(); // Difference in milliseconds
+
+    // Convert milliseconds to hours
+    const diffHours = diffMs / (1000 * 60 * 60);
+    return diffHours < 24
+    ? `${Math.round(diffHours)}h`
+    : `${Math.round(diffHours / 24)} jours`;
+
+  };
+
+  const duration = calculDuration(tour.startDate, tour.endDate);
+  
+
   const router = useRouter();
   const locale = useLocale();
 
@@ -31,50 +48,38 @@ const ToursCard: React.FC<ToursCardProps> = ({ tour }) => {
       <div className="relative">
         <Image
           src={tour.image || "/placeholder.svg"}
-          alt={tour.title}
+          alt={tt(`tour.tour_${tour.id}.title`)}
           width={400}
           height={300}
           className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
         />
         <div className="absolute top-4 left-4 bg-background-50 px-2 py-1 rounded-full text-xs font-semibold text-text-700 uppercase">
-          {tour.type}
+          {tt(`tour.tour_${tour.id}.type`)}
         </div>
       </div>
 
       <div className="p-6 h-full flex flex-col">
         <h2 className="text-2xl font-bold mb-2 text-text-700 group-hover:text-primary-600 transition-colors duration-300">
-          {tour.title}
+        {tt(`tour.tour_${tour.id}.title`)}
         </h2>
 
         <p className="text-text-700 mb-4 line-clamp-2 flex-1">
-          {tour.description}
+          {tt(`tour.tour_${tour.id}.description`)}
         </p>
 
         <div className="flex items-center mb-4 text-sm text-text-700">
-          <span>{tour.departure}</span>
+          <span>{tt(`tour.tour_${tour.id}.departure`)}</span>
           <GoDotFill size={8} className="text-text-700 mx-3" />
-          <span>{tour.arrival}</span>
+          <span>{tt(`tour.tour_${tour.id}.arrival`)}</span>
         </div>
 
         <div className="flex items-center mb-4">
-          <span className="text-primary-600 font-medium">{tour.duration}</span>
+          <span className="text-primary-600 font-medium">
+
+          {duration}
+          </span>
           <GoDotFill size={8} className="text-primary-500 mx-3" />
-          <div className="flex">
-            {[...Array(5)].map((_, index) => (
-              <span key={index}>
-                {index < fullStars ? (
-                  <FaStar className="text-yellow-400" />
-                ) : index < fullStars + halfStar ? (
-                  <FaStar
-                    className="text-yellow-400"
-                    style={{ clipPath: "inset(0 50% 0 0)" }}
-                  />
-                ) : (
-                  <FaRegStar className="text-yellow-400" />
-                )}
-              </span>
-            ))}
-          </div>
+          <Ratting rating={tour.rating}/>
         </div>
 
         <div className="border-t pt-4 border-background-300">

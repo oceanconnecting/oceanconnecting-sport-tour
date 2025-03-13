@@ -3,15 +3,19 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Tag from "@/Components/Tag";
-import { FaStar, FaRegStar, FaRegHeart, FaHeart } from "react-icons/fa";
-import Propose from "./propos";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { Tour } from "@/types";
 import Itinerary from "./Itinerary";
 import getToursData from "./ToursData";
-import FormTour from "./Form";
 import AnimatedModalDemo from "./modalMaps";
 import { useTranslations } from "next-intl";
 import Image from "./image";
+import FormReservation from "./FormReservation";
+import Rating from "../../../../Components/ratting";
+import BackButton from "./back";
+import { IoMdArrowRoundBack } from "react-icons/io";
+
+
 const TourDetails = () => {
   const tt = useTranslations("homepage.tours");
   const ToursData: Tour[] = getToursData();
@@ -44,35 +48,25 @@ const TourDetails = () => {
       </div>
     );
 
-  const fullStars = Math.floor(tour.rating);
-  const hasHalfStar = tour.rating % 1 >= 0.5;
-
   return (
-    <section className="py-20">
+    <section className="py-20 w-full bg-background-50 overflow-hidden px-8">
+      <BackButton href="/#Tours"/>
+
+
       <Tag>{tt(`tour.tour_${numericId}.title`)}</Tag>
-      <div className="grid grid-cols-2 items-center gap-4 py-4 px-8 bg-gray-50 rounded-xl shadow-sm w-full"></div>
-      <div className="grid lg:grid-cols-2 w-full md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-2 rounded-lg shadow-lg">
-        <Itinerary
-          id={numericId}
-          title={tour.title}
-          passBy={tour.passBy}
-          image={tour.image}
-        />
+      <div className="grid lg:grid-cols-2 w-full md:grid-cols-1 sm:grid-cols-1 gap-6 bg-background-50 p-2 rounded-lg shadow-lg">
         <div className=" rounded-lg w-full flex justify-center items-center">
-          {/* <TourMap route={tour.route} /> */}
-          {/* <ImageCarousel  images={tour.images}/> */}
           <Image images={tour.images} />
         </div>
-      </div>
-
-      {/* modal map  */}
-      <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-gray-50 p-3 rounded-lg shadow-lg">
-        <div className="  rounded-lg flex justify-center items-center">
-          <AnimatedModalDemo id={numericId} route={tour.route} />
-          <div />
+        <div className=" p-6 rounded-lg flex justify-center items-start">
+          <Itinerary tour={tour} />
         </div>
       </div>
-      <FormTour tour={tour} />
+      <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-6 bg-background-50 p-3 rounded-lg shadow-lg">
+        <div className=" p-6 rounded-lg flex  justify-center items-end">
+          <FormReservation tour={tour} />
+        </div>
+      </div>
     </section>
   );
 };
