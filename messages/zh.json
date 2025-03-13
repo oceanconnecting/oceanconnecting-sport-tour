@@ -1,0 +1,583 @@
+{
+  "metadata": {
+    "title": "海洋运动之旅",
+    "description": "通过海洋运动之旅探索难忘的儿童冒险之旅。",
+    "keywords": "海洋运动游览，冒险旅行，儿童旅行，摩洛哥旅游，阿加迪尔旅游，马拉喀什游览，埃斯奥伊拉旅行，儿童活动，运动营，带导游的旅游，儿童安全旅行，户外冒险，文化经验，旅行社摩洛哥摩洛哥摩洛哥"
+  },
+  "homepage": {
+    "navbar": {
+      "title": "海洋运动之旅",
+      "about": "关于",
+      "tours": "游览",
+      "features": "特征",
+      "activities": "活动",
+      "places": "地方",
+      "sports": "运动",
+      "services": "服务",
+      "downloads": "下载",
+      "gallery": "画廊",
+      "professional": "专业的",
+      "contact": "接触"
+    },
+    "hero": {
+      "hero_tag": "为了好奇的头脑而量身定制的冒险",
+      "grand_title": {
+        "txt_1": "学习",
+        "txt_2": "旅行",
+        "txt_3": "并成长",
+        "end_txt": "和"
+      },
+      "highlighted": "海洋运动之旅",
+      "descr": "我们专注于为孩子们创造难忘的旅游体验！",
+      "contact_button": "取得联系",
+      "start_button": "开始探索"
+    },
+    "about": {
+      "about_tag": "多年的经验",
+      "about_title": "关于我们",
+      "about_text": "Ocean Sport ET Tours是位于Agadir的旅游运输和体育公司的公司，该公司于2022年开始运营。该协会经营着一系列非常多样化的服务，这些服务被认为是高质量的，它们结合了可用性，积极性和质量。"
+    },
+    "choose": {
+      "title": "为什么选择我们",
+      "choose_1": {
+        "title": "安全安全",
+        "descr": "您孩子的安全是我们在训练有素的员工和安全旅行中的重中之重。"
+      },
+      "choose_2": {
+        "title": "有趣的活动",
+        "descr": "孩子们会喜欢和记住的引人入胜且有趣的体验。"
+      },
+      "choose_3": {
+        "title": "教育价值",
+        "descr": "学习和冒险的混合，以扩大孩子的视野。"
+      }
+    },
+    "activities": {
+      "activities_title": "活动",
+      "activities": {
+        "activity_1": {
+          "title": "水上公园",
+          "descr": "在水上公园享受充满乐趣的水滑梯，波浪池和懒惰的河流。"
+        },
+        "activity_2": {
+          "title": "骆驼骑",
+          "descr": "通过风景秀丽的沙丘骑骆驼，体验传统的沙漠冒险。"
+        },
+        "activity_3": {
+          "title": "热气球",
+          "descr": "在景观上方飙升，并在热气球骑行中欣赏壮丽的景色。"
+        },
+        "activity_4": {
+          "title": "骑马",
+          "descr": "踏上骑马的小径和开阔田野的和平旅程。"
+        },
+        "activity_5": {
+          "title": "杰斯基",
+          "descr": "在高功率的jetski上越过水的快速速度。"
+        },
+        "activity_6": {
+          "title": "卡丁车",
+          "descr": "与朋友和家人在卡丁车赛道上与朋友和家人比赛，以获得肾上腺素包装的体验。"
+        },
+        "activity_7": {
+          "title": "降落伞",
+          "descr": "采取信仰的飞跃，体验降落伞跳伞的兴奋。"
+        },
+        "activity_8": {
+          "title": "Quad＆Buggy",
+          "descr": "带有四轮自行车或越野车的坚固地形和沙质步道。"
+        },
+        "activity_9": {
+          "title": "砂板",
+          "descr": "在沙板上滑下高耸的沙丘，进行独特的沙漠冒险。"
+        },
+        "activity_10": {
+          "title": "冲浪",
+          "descr": "抓住海浪，享受在公海冲浪的快感。"
+        }
+      }
+    },
+    "text_ticker": {
+      "text_1": "鼓舞年轻的思想，一次一次冒险。",
+      "text_2": "每个旅程都是激发好奇心和喜悦的机会。",
+      "text_3": "创造通过探索和游戏持续一生的记忆。",
+      "text_4": "组织冒险，塑造梦想并带来微笑。",
+      "text_5": "每个孩子都应该得到发现和乐趣的魔力。",
+      "text_6": "探索能力促进想象力，活动使梦想栩栩如生。",
+      "text_7": "计划它。",
+      "text_8": "将简单的旅行变成儿童非凡冒险。",
+      "text_9": "关心的组织者创造了孩子们宝藏的回忆。",
+      "text_10": "精心计划的巡回演出不仅仅是一次旅行，这是一个通往奇迹的门户。"
+    },
+    "places": {
+      "title": "地方",
+      "place_1": {
+        "title": "阿加迪尔·乌弗拉（Agadir Oufella）",
+        "city": "阿加迪尔",
+        "descr": "一个历史悠久的山顶堡垒，可欣赏阿加迪尔及其海岸线的全景。"
+      },
+      "place_2": {
+        "title": "檐口",
+        "city": "阿加迪尔",
+        "descr": "一个活泼的海滨长廊，衬有咖啡馆，餐馆和商店，非常适合悠闲地散步和享受海风。"
+      },
+      "place_3": {
+        "title": "鳄鱼公园",
+        "city": "阿加迪尔",
+        "descr": "一个独特的鳄鱼公园，设有郁郁葱葱的花园和300多个尼罗河鳄鱼。"
+      },
+      "place_4": {
+        "title": "海豚世界阿加迪尔",
+        "city": "阿加迪尔",
+        "descr": "一个娱乐中心，游客可以欣赏海豚表演并与这些聪明的海洋动物互动。"
+      },
+      "place_5": {
+        "title": "Imi Ouaddar",
+        "city": "阿加迪尔",
+        "descr": "一个风景如画的沿海村庄以其原始的海滩和悠闲的氛围而闻名，非常适合放松身心。"
+      },
+      "place_6": {
+        "title": "legzira",
+        "city": "阿加迪尔",
+        "descr": "这个自然的奇迹以其在海滩上令人惊叹的红色岩石拱门而闻名，是自然爱好者和摄影师的必游之地。"
+      },
+      "place_7": {
+        "title": "码头",
+        "city": "阿加迪尔",
+        "descr": "现代港口地区，设有豪华游艇，高档商店和海滨用餐选择。"
+      },
+      "place_8": {
+        "title": "麦地那和亚马克遗产博物馆",
+        "city": "阿加迪尔",
+        "descr": "一个文化枢纽展示了传统的摩洛哥建筑，艺术和文物，庆祝Amazigh Heritage。"
+      },
+      "place_9": {
+        "title": "天堂谷",
+        "city": "阿加迪尔",
+        "descr": "郁郁葱葱的绿洲，上面有天然游泳池和瀑布，周围是棕榈树和戏剧性的悬崖。"
+      },
+      "place_10": {
+        "title": "Souss Massa",
+        "city": "阿加迪尔",
+        "descr": "一个以多种野生动植物闻名的国家公园，包括火烈鸟和稀有的鸟类及其风景景观。"
+      },
+      "place_11": {
+        "title": "露天赛",
+        "city": "阿加迪尔",
+        "descr": "一个繁华的传统市场，提供各种商品，从香料和纺织品到手工艺品和新鲜农产品。"
+      },
+      "place_12": {
+        "title": "Taghazout",
+        "city": "阿加迪尔",
+        "descr": "一个迷人的渔村变成了冲浪避风港，以世界一流的波浪，轻松的氛围和令人惊叹的日落而闻名。"
+      },
+      "place_13": {
+        "title": "卡斯巴",
+        "city": "埃索拉（Essaouira）",
+        "descr": "Essaouira的标志性历史遗址之一，位于摩洛哥的大西洋海岸。"
+      },
+      "place_14": {
+        "title": "麦地那",
+        "city": "埃索拉（Essaouira）",
+        "descr": "它位于摩洛哥的大西洋海岸，是一个历史和文化遗址，自2001年以来被刻在联合国教科文组织世界遗产。18世纪由苏丹·穆罕默德·本·阿卜杜拉（Sultan Mohammed Ben Abdallah）于18世纪建立，它反映了伊斯兰和欧洲建筑的独特融合，展示了其作为商业和文化的角色。"
+      },
+      "place_15": {
+        "title": "Essaouira Ramparts",
+        "city": "埃索拉（Essaouira）",
+        "descr": "参观麦地那的墙壁，发现令人叹为观止的景色 - 典型的日落，全景海景和野外悬崖 - 或前往保护这座堡垒的旧大炮。"
+      },
+      "place_16": {
+        "title": "Le Jardin Majorelle",
+        "city": "马拉喀什",
+        "descr": "这个迷人的植物园，由雅克·梅杰勒（Jacques Majorelle）创建，并由伊夫·圣洛朗（Yves Saint Laurent）恢复，提供了一个和平的避风港，其中包括用蓝色Majorelle Blue绘制的异国情调的植物和建筑物。"
+      },
+      "place_17": {
+        "title": "JEMAA EL-FNA",
+        "city": "马拉喀什",
+        "descr": "这个活泼的广场是马拉喀什的跳动心，充满了魅力。"
+      },
+      "place_18": {
+        "title": "拉梅纳拉",
+        "city": "马拉喀什",
+        "descr": "这个拥有中央盆地的巨大花园是轻松漫步的理想场所，并欣赏了阿特拉斯山脉的壮丽景色。"
+      },
+      "show_more": "显示更多"
+    },
+    "services": {
+      "title": "服务",
+      "services": {
+        "service6": {
+          "title": "游览，旅行和冒险",
+          "desc": "探索独特的目的地，并进行难忘的冒险。"
+        },
+        "service5": {
+          "title": "体育节目​​和训练营",
+          "desc": "参加体育活动并提高您的表现。"
+        },
+        "service4": {
+          "title": "班车和机场迁移",
+          "desc": "方便的航天飞机服务和机场转移，可轻松旅行。"
+        },
+        "service3": {
+          "title": "事件和聚会",
+          "desc": "组织和参加聚会，以获得令人难忘的经历。"
+        },
+        "service2": {
+          "title": "住宿和租车",
+          "desc": "预订住宿和出租汽车，以方便旅行。"
+        },
+        "service1": {
+          "title": "运输和物流",
+          "desc": "有效的运输和物流解决方案可满足您的需求。"
+        }
+      }
+    },
+    "city": {
+      "All": "全部",
+      "Agadir": "阿加迪尔",
+      "Marrakech": "马拉喀什",
+      "Essaouira": "埃索拉（Essaouira）"
+    },
+    "propose": {
+      "propose1": {
+        "title": "免费取消",
+        "descr": "提前24小时取消以获得全额退款。"
+      },
+      "propose2": {
+        "title": "最大安全性",
+        "descr": "加强了安全措施，以确保您的安心。"
+      },
+      "propose3": {
+        "title": "24/7支持",
+        "descr": "随时可用的帮助来回答您的问题。"
+      },
+      "propose4": {
+        "title": "小组",
+        "descr": "享受小组人数的更个性化的体验。"
+      }
+    },
+    "downloads": {
+      "title": "下载",
+      "descr": "我们公司为您提供所有您将需要与我们一起旅行所需的所有信息，从您着陆的那一天到我们在机场说再见的那一刻，海洋运动和旅游都会照顾一切。",
+      "text_1": "下载7天计划",
+      "text_2": "下载10天计划",
+      "button": "下载"
+    },
+    "tours": {
+      "heading": "游览",
+      "show_map": "显示地图",
+      "Itinerary": "行程",
+      "Date_depart": "出发日期",
+      "Date_fin": "结束日期",
+      "at": "在",
+      "stop": "停止",
+      "book": "立即预订",
+      "form": {
+        "title": "预订您的旅行",
+        "FirstName": "名",
+        "LastName": "姓",
+        "numberPhone": "电话号码",
+        "email": "电子邮件",
+        "hasAnimal": "你有动物吗？",
+        "Number_Adults": "成年人的数量",
+        "Number_Children": "儿童人数",
+        "date of reservation": "预订日期",
+        "select_Date": "选择日期",
+        "select_person": "选择人",
+        "errorFirstName": "需要名字",
+        "errorLastName": "需要姓氏",
+        "errornumberPhon1": "需要电话号码",
+        "errornumberPhon2": "电话号码必须从06开始，并包含10位数字",
+        "errorEmail1": "需要电子邮件。",
+        "errorEmail2": "请输入有效的电子邮件地址，例如'name@gmail.com'",
+        "loadingMessage": "加载中...",
+        "successMessage": "✅预订成功发送了！",
+        "errorMessage": "❌在发送预订时发生错误。",
+        "Confirm_Reservation": "确认预订",
+        "confirme_change": "确认更改",
+        "Duration": "期间",
+        "Detail_Tariff": "关税详细信息",
+        "Price_Adults": "成人的价格",
+        "Price_Children": "儿童的价格",
+        "Price_Babies": "婴儿的价格",
+        "Total_Price": "总价",
+        "alert": "请选择日期比今天晚"
+      },
+      "tour": {
+        "tour_1": {
+          "title": "从阿加迪尔到马拉喀什的旅行",
+          "route": {
+            "Amskroud": "Amskroud",
+            "Imi n'Tanout": "imi n'tanout",
+            "Sidi Mokhtar": "Sidi Mokhtar",
+            "Chichaoua": "Chichaoua",
+            "Lalla Takerkoust": "Lalla Takerkoust",
+            "Point 6": "点6"
+          },
+          "passBy": {
+            "passBy": "经过",
+            "pass": {
+              "Amskroud": "Amskroud",
+              "Imi n'Tanout": "imi n'tanout",
+              "Sidi Mokhtar": "Sidi Mokhtar",
+              "Chichaoua": "Chichaoua",
+              "Lalla Takerkoust": "Lalla Takerkoust"
+            }
+          },
+          "description": "在阿加迪尔和马拉喀什之间发现风景如画的景观，并引人入胜。",
+          "departure": "马拉喀什",
+          "arrival": "埃索拉（Essaouira）",
+          "type": "发现",
+          "duration": "期间"
+        },
+        "tour_2": {
+          "title": "马拉喀什 - 埃索拉（Essaouira）游览",
+          "description": "穿过山丘和摩洛哥坚果森林到大西洋海岸的神奇之旅。",
+          "type": "发现",
+          "duration": "1天",
+          "route": {
+            "Marrakech": "马拉喀什",
+            "Argan Oil Cooperative": "摩洛哥机油合作社",
+            "Sidi Mokhtar": "Sidi Mokhtar",
+            "Chichaoua": "Chichaoua",
+            "Ounara": "奥纳拉",
+            "Bab Doukkala (Essaouira)": "Bab Doukkala（Essaouira）",
+            "Point 6": "点6"
+          },
+          "passBy": {
+            "passBy": "经过",
+            "pass": {
+              "Chichaoua": "Chichaoua",
+              "Argan Oil Cooperative": "摩洛哥机油合作社",
+              "Sidi Lmokhtar": "Sidi lmokhtar",
+              "Ounara": "奥纳拉",
+              "Bab Doukkala (Essaouira)": "Bab Doukkala（Essaouira）"
+            }
+          },
+          "departure": "马拉喀什",
+          "arrival": "埃索拉（Essaouira）"
+        },
+        "tour_3": {
+          "title": "公路旅行Essaouira -Agadir",
+          "description": "探索野生海滩和迷人的沿海村庄。",
+          "type": "松弛",
+          "duration": "3天",
+          "route": {
+            "Sidi Kaouki": "Sidi Kaouki",
+            "Tamri (Banana Village)": "塔姆里（香蕉村）",
+            "Taghazout": "Taghazout",
+            "Seafront Promenade (Agadir)": "海滨长廊（阿加迪尔）",
+            "Kasbah Agadir Oufella": "Kasbah Agadir Oufella"
+          },
+          "passBy": {
+            "passBy": "经过",
+            "pass": {
+              "Essaouira": "埃索拉（Essaouira）",
+              "Sidi Kaouki": "Sidi Kaouki",
+              "Tamri (Banana Village)": "塔姆里（香蕉村）",
+              "Taghazout": "Taghazout",
+              "Seafront Promenade (Agadir)": "海滨长廊（阿加迪尔）",
+              "Kasbah Agadir Oufella": "Kasbah Agadir Oufella",
+              "Agadir": "阿加迪尔"
+            }
+          },
+          "departure": "埃索拉（Essaouira）",
+          "arrival": "阿加迪尔"
+        },
+        "tour_4": {
+          "title": "Day Adventure Agadir -Essaouira",
+          "description": "享受通往著名的蓝色城市Essaouira的风景秀丽的路线。",
+          "type": "导游",
+          "duration": "1天",
+          "route": {
+            "Agadir": "阿加迪尔",
+            "Tamri": "塔姆里",
+            "Taghazout": "Taghazout",
+            "Cap Ghir": "帽盖",
+            "Sidi Kaouki": "Sidi Kaouki",
+            "Bab Marrakech (Essaouira)": "Bab Marrakech（Essaouira）",
+            "Essaouira": "埃索拉（Essaouira）"
+          },
+          "passBy": {
+            "passBy": "通过",
+            "pass": {
+              "Tamri": "塔姆里",
+              "Taghazout": "Taghazout",
+              "Cap Ghir": "帽盖",
+              "Sidi Kaouki": "Sidi Kaouki",
+              "Bab Marrakech (Essaouira)": "Bab Marrakech（Essaouira）"
+            }
+          },
+          "departure": "阿加迪尔",
+          "arrival": "埃索拉（Essaouira）"
+        },
+        "tour_5": {
+          "title": "Marrakech，Essaouira和Agadir Tour",
+          "description": "探索三个标志性摩洛哥城市的奇观。",
+          "type": "文化",
+          "duration": "5天",
+          "route": {
+            "Agadir": "阿加迪尔",
+            "Marrakech": "马拉喀什",
+            "Essaouira": "埃索拉（Essaouira）",
+            "Tamri": "塔姆里",
+            "Taghazout": "Taghazout"
+          },
+          "passBy": {
+            "passBy": "通过",
+            "pass": {
+              "Marrakech": "马拉喀什",
+              "Essaouira": "埃索拉（Essaouira）",
+              "Tamri": "塔姆里",
+              "Taghazout": "Taghazout"
+            }
+          },
+          "departure": "阿加迪尔",
+          "arrival": "马拉喀什"
+        }
+      }
+    },
+    "sports": {
+      "title": "运动的",
+      "text": "保持活跃对于儿童和青少年至关重要，我们的计划提供各种运动，以保持他们的参与，健康和玩乐！",
+      "football": {
+        "name": "足球",
+        "description": "世界上最受欢迎的运动鼓励团队合作，战略和耐力。"
+      },
+      "basketball": {
+        "name": "篮球",
+        "description": "一项高能运动，可增强敏捷性，速度和团队合作。"
+      },
+      "swimming": {
+        "name": "游泳",
+        "description": "全身锻炼，可以增强力量，耐力和灵活性。"
+      },
+      "tennis": {
+        "name": "网球",
+        "description": "快节奏的球拍运动，可改善反射，协调和专注力。"
+      },
+      "gymnastics": {
+        "name": "体操",
+        "description": "一项可以增强灵活性，平衡和核心力量的运动。"
+      },
+      "skateboarding": {
+        "name": "滑板",
+        "description": "一种动态的运动，可促进平衡，创造力和毅力。"
+      }
+    },
+    "opinion": {
+      "title": "我们的客户对我们的看法",
+      "opinions": {
+        "opinion_1": {
+          "name": "亚历克斯·史密斯",
+          "opinion": "惊人的体验！"
+        },
+        "opinion_2": {
+          "name": "马克·约翰逊",
+          "opinion": "伟大的体育活动！"
+        },
+        "opinion_3": {
+          "name": "胡安·李",
+          "opinion": "巡回演出很有趣，但时间表有点紧。"
+        },
+        "opinion_4": {
+          "name": "大卫·布朗",
+          "opinion": "优质的服务！"
+        },
+        "opinion_5": {
+          "name": "Emmanual Wilson",
+          "opinion": "工作人员非常关心，我的孩子在整个旅程中都感到舒适。"
+        },
+        "opinion_6": {
+          "name": "詹姆斯·卡特",
+          "opinion": "组织良好的巡回演出，进行各种活动。"
+        },
+        "opinion_7": {
+          "name": "奥利弗·马丁内斯（Oliver Martinez）",
+          "opinion": "很棒的体育计划！"
+        }
+      }
+    },
+    "footer": {
+      "tanks": "感谢您访问我们的网站，欢迎",
+      "Rights": "版权所有",
+      "Copyright": "版权"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "与我们联系以获取更多信息或预订巡回演出。",
+    "form": {
+      "name": "姓名",
+      "email": "电子邮件",
+      "message": "信息",
+      "send": "发送消息",
+      "success": "您的消息已成功发送。",
+      "error": "发生错误。",
+      "sending": "发送..."
+    },
+    "details": {
+      "title": "联系方式"
+    }
+  },
+  "offlineChat": {
+    "title": "聊天支持",
+    "choose": "选择一个问题",
+    "question1": {
+      "question": "我怎么帮你？",
+      "answer": "Ocean Sport Tours是一家提供令人兴奋的与海洋有关的活动和游览的公司。"
+    },
+    "question2": {
+      "question": "什么是海洋运动之旅？",
+      "answer": "Ocean Sport Tours是一家提供令人兴奋的与海洋有关的活动和游览的公司。"
+    },
+    "question3": {
+      "question": "您提供什么活动？",
+      "answer": "我们提供各种活动，包括浮潜，水肺潜水和游艇游览。"
+    },
+    "question4": {
+      "question": "你在哪里？",
+      "answer": "我们在包括热带岛屿和沿海城市在内的多个地点运营。"
+    },
+    "question5": {
+      "question": "它要多少钱？",
+      "answer": "定价取决于活动和位置。"
+    },
+    "question6": {
+      "question": "我需要以前的经验吗？",
+      "answer": "大多数活动不需要先前的经验。"
+    },
+    "question7": {
+      "question": "您有什么安全措施？",
+      "answer": "我们遵循严格的安全协议，包括经过认证的指南，安全设备和紧急程序。"
+    },
+    "question8": {
+      "question": "我可以预订私人旅行吗？",
+      "answer": "是的，可应要求提供私人旅行。"
+    },
+    "question9": {
+      "question": "您提供团体折扣吗？",
+      "answer": "是的，我们为大型聚会提供团体折扣。"
+    },
+    "question10": {
+      "question": "我应该带什么巡回演出？",
+      "answer": "我们建议带上泳衣，防晒霜，毛巾和任何必要的个人物品。"
+    },
+    "question11": {
+      "question": "孩子可以参加旅行吗？",
+      "answer": "是的，欢迎孩子们！"
+    },
+    "question12": {
+      "question": "您提供救生衣和安全装备吗？",
+      "answer": "是的，为每项活动提供了所有安全设备，包括救生衣。"
+    },
+    "question13": {
+      "question": "我该如何预订游览？",
+      "answer": "您可以通过我们的网站在线预订游览，也可以联系我们的客户服务团队。"
+    },
+    "question14": {
+      "question": "您接受什么付款方式？",
+      "answer": "我们接受信用卡，贝宝和银行转让。"
+    }
+  }
+}
