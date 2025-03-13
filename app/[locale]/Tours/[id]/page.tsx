@@ -50,7 +50,7 @@ const TourDetails = () => {
 
   return (
     <section className="py-20 w-full bg-background-50 overflow-hidden px-8">
-     <BackButton href="/#Tours"><IoMdArrowRoundBack  size={30} /></BackButton>
+      <BackButton href="/#Tours"/>
 
 
       <Tag>{tt(`tour.tour_${numericId}.title`)}</Tag>

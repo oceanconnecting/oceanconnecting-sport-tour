@@ -253,6 +253,7 @@
       "Date_fin":"Date fin ",
       "at":"à",
       "stop":"stop",
+      "book": "réservez maintenant",
 
       "form": {
         "title": "Réservez votre visite",
