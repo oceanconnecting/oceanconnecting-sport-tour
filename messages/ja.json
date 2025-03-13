@@ -1,0 +1,583 @@
+{
+  "metadata": {
+    "title": "オーシャンスポーツツアー",
+    "description": "オーシャンスポーツツアーをお楽しみください。",
+    "keywords": "オーシャンスポーツツアー、アドベンチャーツアー、キッズトラベル、モロッコ観光、アガディールツアー、マラケシュエクスカーション、エッサウイラ旅行、キッズアクティビティ、スポーツキャンプ、ガイド付きツアー、子供向けの安全な旅行、アウトドアアドベンチャー、文化体験、旅行代理店モロッコ"
+  },
+  "homepage": {
+    "navbar": {
+      "title": "オーシャンスポーツツアー",
+      "about": "について",
+      "tours": "ツアー",
+      "features": "特徴",
+      "activities": "活動",
+      "places": "場所",
+      "sports": "スポーツ",
+      "services": "サービス",
+      "downloads": "ダウンロード",
+      "gallery": "ギャラリー",
+      "professional": "プロ",
+      "contact": "接触"
+    },
+    "hero": {
+      "hero_tag": "好奇心and盛な心に合わせた冒険",
+      "grand_title": {
+        "txt_1": "学ぶ",
+        "txt_2": "旅行",
+        "txt_3": "そして成長します",
+        "end_txt": "と"
+      },
+      "highlighted": "オーシャンスポーツツアー",
+      "descr": "私たちは、子供向けの忘れられないツアー体験を作成することを専門としています！",
+      "contact_button": "連絡してください",
+      "start_button": "探索を開始します"
+    },
+    "about": {
+      "about_tag": "長年の経験",
+      "about_title": "私たちについて",
+      "about_text": "Agadirに拠点を置く観光客輸送とスポーツの会社であるOcean Sport ET Toursは、2022年に運営を開始しました。この協会は、高品質であるとみなされる非常に多様なサービスの範囲を運営しており、可用性、積極性、品質を組み合わせています。"
+    },
+    "choose": {
+      "title": "なぜ私たちを選ぶのか",
+      "choose_1": {
+        "title": "安全で安全",
+        "descr": "あなたの子供の安全は、訓練されたスタッフと安全な旅行で私たちの最優先事項です。"
+      },
+      "choose_2": {
+        "title": "楽しいアクティビティ",
+        "descr": "子供たちが楽しんで覚えている魅力的で楽しい体験。"
+      },
+      "choose_3": {
+        "title": "教育的価値",
+        "descr": "あなたの子供の視野を広げるための学習と冒険の組み合わせ。"
+      }
+    },
+    "activities": {
+      "activities_title": "活動",
+      "activities": {
+        "activity_1": {
+          "title": "アクアパーク",
+          "descr": "Aqua Parkで、楽しい充填水のスライド、波のプール、怠zyな川の一日をお楽しみください。"
+        },
+        "activity_2": {
+          "title": "ラクダに乗る",
+          "descr": "風光明媚な砂丘を通ってラクダに乗って伝統的な砂漠の冒険を体験してください。"
+        },
+        "activity_3": {
+          "title": "熱気球",
+          "descr": "風景の上で高く舞い上がり、熱気球に乗って息をのむような景色を眺めることができます。"
+        },
+        "activity_4": {
+          "title": "馬に乗る",
+          "descr": "馬に乗ってトレイルやオープンフィールドを通る平和な旅に乗り出します。"
+        },
+        "activity_5": {
+          "title": "Jetski",
+          "descr": "強力なジェットスキーで水を横切ってスピードを上げるというスリルを感じてください。"
+        },
+        "activity_6": {
+          "title": "カート",
+          "descr": "アドレナリンで満たされた体験のために、ゴーカートトラックで友人や家族とのレース。"
+        },
+        "activity_7": {
+          "title": "パラシュート",
+          "descr": "信仰の飛躍を遂げ、パラシュートでスカイダイビングの興奮を体験してください。"
+        },
+        "activity_8": {
+          "title": "Quad＆Buggy",
+          "descr": "険しい地形と砂質のトレイルを、クワッドバイクやバギーライドでナビゲートします。"
+        },
+        "activity_9": {
+          "title": "サンドボード",
+          "descr": "ユニークな砂漠の冒険のために、砂板の上にそびえ立つ砂丘を滑り降ります。"
+        },
+        "activity_10": {
+          "title": "サーフィン",
+          "descr": "波をつかみ、外海でのサーフィンのスリルを楽しんでください。"
+        }
+      }
+    },
+    "text_ticker": {
+      "text_1": "インスピレーションを与える若い心、一度に1つの冒険。",
+      "text_2": "すべての旅は、好奇心と喜びを引き起こすチャンスです。",
+      "text_3": "探索と遊びを通して一生続く思い出を作成します。",
+      "text_4": "冒険を整理し、夢を形作り、笑顔をもたらします。",
+      "text_5": "すべての子供は、発見と楽しみの魔法に値します。",
+      "text_6": "探索は想像力を燃やし、活動は夢を実現します。",
+      "text_7": "それを計画します。",
+      "text_8": "子供のための並外れた冒険に簡単な旅行を変える。",
+      "text_9": "気にする主催者は、子供たちの宝物を作成します。",
+      "text_10": "よく計画されたツアーは旅行以上のものであり、不思議に思うゲートウェイです。"
+    },
+    "places": {
+      "title": "場所",
+      "place_1": {
+        "title": "Agadir Oufella",
+        "city": "アガディール",
+        "descr": "アガディールとその海岸線のパノラマビューを提供する歴史的な丘の上の要塞。"
+      },
+      "place_2": {
+        "title": "コーニッシュ",
+        "city": "アガディール",
+        "descr": "カフェ、レストラン、ショップが並ぶ活気のある海辺の遊歩道は、ゆったりとした散歩や海風を楽しむのに最適です。"
+      },
+      "place_3": {
+        "title": "クロコパーク",
+        "city": "アガディール",
+        "descr": "緑豊かな庭園と300を超えるナイルワニを備えたユニークなワニの公園。"
+      },
+      "place_4": {
+        "title": "イルカの世界アガディール",
+        "city": "アガディール",
+        "descr": "訪問者がイルカのショーを楽しんで、これらの知的な海洋動物と交流できるエンターテイメントセンター。"
+      },
+      "place_5": {
+        "title": "Imi ouaddar",
+        "city": "アガディール",
+        "descr": "手付かずのビーチとのんびりした雰囲気で知られる絵のように美しい沿岸村。リラックスした休暇に最適です。"
+      },
+      "place_6": {
+        "title": "レジジラ",
+        "city": "アガディール",
+        "descr": "ビーチにある見事な赤い岩のアーチで有名なこの自然の不思議は、自然愛好家や写真家にとって必見です。"
+      },
+      "place_7": {
+        "title": "マリーナ",
+        "city": "アガディール",
+        "descr": "高級ヨット、高級ショップ、ウォーターフロントの食事のオプションを備えたモダンな港エリア。"
+      },
+      "place_8": {
+        "title": "メディナとアマジグヘリテージ博物館",
+        "city": "アガディール",
+        "descr": "伝統的なモロッコの建築、芸術、アーティファクトを紹介する文化的なハブ。"
+      },
+      "place_9": {
+        "title": "パラダイスバレー",
+        "city": "アガディール",
+        "descr": "ヤシの木と劇的な崖に囲まれた自然のプールと滝のある緑豊かなオアシス。"
+      },
+      "place_10": {
+        "title": "Souss Massa",
+        "city": "アガディール",
+        "descr": "フラミンゴや珍しい鳥の種、その風光明媚な風景など、その多様な野生生物で知られる国立公園。"
+      },
+      "place_11": {
+        "title": "スーク・エルは持っていた",
+        "city": "アガディール",
+        "descr": "スパイスやテキスタイルから手工芸品や新鮮な農産物まで、さまざまな商品を提供する賑やかな伝統的な市場。"
+      },
+      "place_12": {
+        "title": "Taghazout",
+        "city": "アガディール",
+        "descr": "魅力的な漁村は、世界クラスの波、リラックスした雰囲気、見事な夕日で知られているサーフヘイブンになりました。"
+      },
+      "place_13": {
+        "title": "カスバ",
+        "city": "エッサウイラ",
+        "descr": "モロッコの大西洋沿岸にあるエッサウイラの象徴的な歴史的サイトの1つ。"
+      },
+      "place_14": {
+        "title": "メディナ",
+        "city": "エッサウイラ",
+        "descr": "モロッコの大西洋沿岸に位置し、2001年からユネスコの世界遺産として刻まれた歴史的および文化的な場所です。18世紀にスルタンモハメッドベンアブダラによって設立されたイスラムとヨーロッパの建築のユニークなブレンドを反映しており、その役割をコマーシャルおよび文化岐路として紹介しています。"
+      },
+      "place_15": {
+        "title": "Essaouira Ramparts",
+        "city": "エッサウイラ",
+        "descr": "メディナの壁を訪れて、息をのむような景色を発見します。息をのむような夕日、パノラマの景色、野生の崖 - を発見するか、この要塞を守る古い大砲に向かいます。"
+      },
+      "place_16": {
+        "title": "ル・ジャルディン・マジョレル",
+        "city": "マラケシュ",
+        "descr": "ジャック・マジョルレルによって作成され、イヴ・サン・ローランによって復元されたこの魅惑的な植物園は、マジョル・ブルーに描かれたエキゾチックな植物や建物との平和の天国を提供します。"
+      },
+      "place_17": {
+        "title": "ジェマー・エル・フナ",
+        "city": "マラケシュ",
+        "descr": "マラケシュの鼓動の中心であるこの活気のある広場は、魅力に満ちています。"
+      },
+      "place_18": {
+        "title": "ラメナラ",
+        "city": "マラケシュ",
+        "descr": "中央の盆地のあるこの広大な庭は、アトラス山脈の壮大な景色を望むリラックスした散歩に理想的な場所です。"
+      },
+      "show_more": "もっと見せてください"
+    },
+    "services": {
+      "title": "サービス",
+      "services": {
+        "service6": {
+          "title": "遠足、旅行、冒険",
+          "desc": "ユニークな目的地を探索し、忘れられない冒険に乗り出します。"
+        },
+        "service5": {
+          "title": "スポーツプログラムとトレーニングキャンプ",
+          "desc": "スポーツ活動に参加し、パフォーマンスを向上させます。"
+        },
+        "service4": {
+          "title": "シャトルと空港移動",
+          "desc": "簡単な旅行のために、便利なシャトルサービスと空港送迎。"
+        },
+        "service3": {
+          "title": "イベントとパーティー",
+          "desc": "思い出に残る体験のために、イベントやパーティーを整理して参加します。"
+        },
+        "service2": {
+          "title": "宿泊施設とレンタカー",
+          "desc": "便利な旅行のために宿泊施設とレンタカーを予約します。"
+        },
+        "service1": {
+          "title": "輸送とロジスティクス",
+          "desc": "お客様のニーズに合わせて効率的な輸送およびロジスティクスソリューション。"
+        }
+      }
+    },
+    "city": {
+      "All": "全て",
+      "Agadir": "アガディール",
+      "Marrakech": "マラケシュ",
+      "Essaouira": "エッサウイラ"
+    },
+    "propose": {
+      "propose1": {
+        "title": "自由キャンセル",
+        "descr": "全額払い戻しのために最大24時間前にキャンセルします。"
+      },
+      "propose2": {
+        "title": "最大のセキュリティ",
+        "descr": "あなたの心の安らぎを確保するためのセキュリティ対策を強化しました。"
+      },
+      "propose3": {
+        "title": "24時間年中無休のサポート",
+        "descr": "あなたの質問に答えるためにいつでも利用できる支援。"
+      },
+      "propose4": {
+        "title": "小グループ",
+        "descr": "小さなグループサイズでよりパーソナライズされた体験をお楽しみください。"
+      }
+    },
+    "downloads": {
+      "title": "ダウンロード",
+      "descr": "私たちの会社は、オーシャンスポーツ、ツアーを通して、私たちとのユニークなツアーに必要なすべての情報を提供しています。着陸日から、空港で別れを告げる瞬間まで、すべての面倒を見てくれます。",
+      "text_1": "7日間の計画をダウンロードしてください",
+      "text_2": "10日計画をダウンロードしてください",
+      "button": "ダウンロード"
+    },
+    "tours": {
+      "heading": "ツアー",
+      "show_map": "マップを表示します",
+      "Itinerary": "旅程",
+      "Date_depart": "出発日",
+      "Date_fin": "終了日",
+      "at": "で",
+      "stop": "停止",
+      "book": "今すぐ予約してください",
+      "form": {
+        "title": "ツアーを予約してください",
+        "FirstName": "ファーストネーム",
+        "LastName": "苗字",
+        "numberPhone": "電話番号",
+        "email": "メール",
+        "hasAnimal": "あなたはあなたと一緒に動物を持っていますか？",
+        "Number_Adults": "大人の数",
+        "Number_Children": "子供の数",
+        "date of reservation": "予約日",
+        "select_Date": "[日付]を選択します",
+        "select_person": "人を選択します",
+        "errorFirstName": "名が必要です",
+        "errorLastName": "姓が必要です",
+        "errornumberPhon1": "電話番号が必要です",
+        "errornumberPhon2": "電話番号は06から始まり、10桁を含む必要があります",
+        "errorEmail1": "メールが必要です。",
+        "errorEmail2": "有効な電子メールアドレスを入力してください。たとえば、「name@gmail.com」",
+        "loadingMessage": "読み込み...",
+        "successMessage": "servation Serveration Secontfully！",
+        "errorMessage": "reservation予約の送信中にエラーが発生しました。",
+        "Confirm_Reservation": "予約を確認します",
+        "confirme_change": "変更を確認します",
+        "Duration": "間隔",
+        "Detail_Tariff": "関税の詳細",
+        "Price_Adults": "大人の価格",
+        "Price_Children": "子供の価格",
+        "Price_Babies": "赤ちゃんの価格",
+        "Total_Price": "総価格",
+        "alert": "今日より遅く日付を選択してください"
+      },
+      "tour": {
+        "tour_1": {
+          "title": "アガディールからマラケシュへの旅行",
+          "route": {
+            "Amskroud": "amskroud",
+            "Imi n'Tanout": "imi n'tanout",
+            "Sidi Mokhtar": "Sidi Mokhtar",
+            "Chichaoua": "チチャウア",
+            "Lalla Takerkoust": "ララ・テルクート",
+            "Point 6": "ポイント6"
+          },
+          "passBy": {
+            "passBy": "通り過ぎます",
+            "pass": {
+              "Amskroud": "amskroud",
+              "Imi n'Tanout": "imi n'tanout",
+              "Sidi Mokhtar": "Sidi Mokhtar",
+              "Chichaoua": "チチャウア",
+              "Lalla Takerkoust": "ララ・テルクート"
+            }
+          },
+          "description": "魅力的な停留所で、アガディールとマラケシュの間の絵のような風景を発見してください。",
+          "departure": "マラケシュ",
+          "arrival": "エッサウイラ",
+          "type": "発見",
+          "duration": "間隔"
+        },
+        "tour_2": {
+          "title": "Marrakech -Essaouira Excursion",
+          "description": "丘やアルガンの森を大西洋岸への魔法の旅。",
+          "type": "発見",
+          "duration": "1日",
+          "route": {
+            "Marrakech": "マラケシュ",
+            "Argan Oil Cooperative": "アルガンオイル協同組合",
+            "Sidi Mokhtar": "Sidi Mokhtar",
+            "Chichaoua": "チチャウア",
+            "Ounara": "オウナラ",
+            "Bab Doukkala (Essaouira)": "バブ・ドゥッカラ（エッサウイラ）",
+            "Point 6": "ポイント6"
+          },
+          "passBy": {
+            "passBy": "通り過ぎます",
+            "pass": {
+              "Chichaoua": "チチャウア",
+              "Argan Oil Cooperative": "アルガンオイル協同組合",
+              "Sidi Lmokhtar": "sidi lmokhtar",
+              "Ounara": "オウナラ",
+              "Bab Doukkala (Essaouira)": "バブ・ドゥッカラ（エッサウイラ）"
+            }
+          },
+          "departure": "マラケシュ",
+          "arrival": "エッサウイラ"
+        },
+        "tour_3": {
+          "title": "ロードトリップエッサウイラ - アガディール",
+          "description": "野生のビーチと魅力的な沿岸の村を探索してください。",
+          "type": "リラクゼーション",
+          "duration": "3日",
+          "route": {
+            "Sidi Kaouki": "Sidi Kaouki",
+            "Tamri (Banana Village)": "タムリ（バナナ村）",
+            "Taghazout": "Taghazout",
+            "Seafront Promenade (Agadir)": "海辺の遊歩道（アガディール）",
+            "Kasbah Agadir Oufella": "Kasbah Agadir Oufella"
+          },
+          "passBy": {
+            "passBy": "通り過ぎます",
+            "pass": {
+              "Essaouira": "エッサウイラ",
+              "Sidi Kaouki": "Sidi Kaouki",
+              "Tamri (Banana Village)": "タムリ（バナナ村）",
+              "Taghazout": "Taghazout",
+              "Seafront Promenade (Agadir)": "海辺の遊歩道（アガディール）",
+              "Kasbah Agadir Oufella": "Kasbah Agadir Oufella",
+              "Agadir": "アガディール"
+            }
+          },
+          "departure": "エッサウイラ",
+          "arrival": "アガディール"
+        },
+        "tour_4": {
+          "title": "Day Adventure Agadir -Essaouira",
+          "description": "有名な青い街、エッサウイラへの風光明媚なルートをお楽しみください。",
+          "type": "ガイド付きツアー",
+          "duration": "1日",
+          "route": {
+            "Agadir": "アガディール",
+            "Tamri": "タムリ",
+            "Taghazout": "Taghazout",
+            "Cap Ghir": "キャップギア",
+            "Sidi Kaouki": "Sidi Kaouki",
+            "Bab Marrakech (Essaouira)": "バブ・マラケシュ（エッサウイラ）",
+            "Essaouira": "エッサウイラ"
+          },
+          "passBy": {
+            "passBy": "通り抜けます",
+            "pass": {
+              "Tamri": "タムリ",
+              "Taghazout": "Taghazout",
+              "Cap Ghir": "キャップギア",
+              "Sidi Kaouki": "Sidi Kaouki",
+              "Bab Marrakech (Essaouira)": "バブ・マラケシュ（エッサウイラ）"
+            }
+          },
+          "departure": "アガディール",
+          "arrival": "エッサウイラ"
+        },
+        "tour_5": {
+          "title": "Marrakech、Essaouira、Agadir Tour",
+          "description": "3つの象徴的なモロッコの都市の不思議を探ります。",
+          "type": "文化",
+          "duration": "5日",
+          "route": {
+            "Agadir": "アガディール",
+            "Marrakech": "マラケシュ",
+            "Essaouira": "エッサウイラ",
+            "Tamri": "タムリ",
+            "Taghazout": "Taghazout"
+          },
+          "passBy": {
+            "passBy": "通り抜けます",
+            "pass": {
+              "Marrakech": "マラケシュ",
+              "Essaouira": "エッサウイラ",
+              "Tamri": "タムリ",
+              "Taghazout": "Taghazout"
+            }
+          },
+          "departure": "アガディール",
+          "arrival": "マラケシュ"
+        }
+      }
+    },
+    "sports": {
+      "title": "スポーツ",
+      "text": "子供やティーンエイジャーにとってアクティブにとどまることは不可欠であり、私たちのプログラムは、彼らを魅了し、健康で、楽しんでいるためにさまざまなスポーツを提供しています！",
+      "football": {
+        "name": "フットボール",
+        "description": "世界で最も人気のあるスポーツであるサッカーは、チームワーク、戦略、耐久性を奨励しています。"
+      },
+      "basketball": {
+        "name": "バスケットボール",
+        "description": "敏ility性、スピード、チームワークを向上させる高エネルギースポーツ。"
+      },
+      "swimming": {
+        "name": "水泳",
+        "description": "強度、持久力、柔軟性を構築する全身トレーニング。"
+      },
+      "tennis": {
+        "name": "テニス",
+        "description": "反射、調整、焦点を改善するペースの速いラケットスポーツ。"
+      },
+      "gymnastics": {
+        "name": "体操",
+        "description": "柔軟性、バランス、コアの強さを向上させるスポーツ。"
+      },
+      "skateboarding": {
+        "name": "スケートボード",
+        "description": "バランス、創造性、忍耐を促進するダイナミックなスポーツ。"
+      }
+    },
+    "opinion": {
+      "title": "私たちの顧客が私たちについて言ったこと",
+      "opinions": {
+        "opinion_1": {
+          "name": "アレックス・スミス",
+          "opinion": "素晴らしい経験！"
+        },
+        "opinion_2": {
+          "name": "マーク・ジョンソン",
+          "opinion": "素晴らしいスポーツアクティビティ！"
+        },
+        "opinion_3": {
+          "name": "フアン・リー",
+          "opinion": "ツアーは楽しかったですが、スケジュールは少しきついものでした。"
+        },
+        "opinion_4": {
+          "name": "デビッド・ブラウン",
+          "opinion": "素晴らしいサービス！"
+        },
+        "opinion_5": {
+          "name": "エマニュアルウィルソン",
+          "opinion": "スタッフはとても思いやりがあり、私の子供たちは旅行中に快適に感じました。"
+        },
+        "opinion_6": {
+          "name": "ジェームズ・カーター",
+          "opinion": "さまざまなアクティビティを備えたよく組織されたツアー。"
+        },
+        "opinion_7": {
+          "name": "オリバー・マルティネス",
+          "opinion": "素晴らしいスポーツプログラム！"
+        }
+      }
+    },
+    "footer": {
+      "tanks": "当社のウェブサイトにアクセスしていただきありがとうございます",
+      "Rights": "無断転載を禁じます",
+      "Copyright": "著作権"
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "詳細については、ツアーを予約するためにご連絡ください。",
+    "form": {
+      "name": "名前",
+      "email": "メール",
+      "message": "メッセージ",
+      "send": "メッセージを送信します",
+      "success": "あなたのメッセージは正常に送信されました。",
+      "error": "エラーが発生しました。",
+      "sending": "送信..."
+    },
+    "details": {
+      "title": "連絡先の詳細"
+    }
+  },
+  "offlineChat": {
+    "title": "チャットサポート",
+    "choose": "質問を選択してください",
+    "question1": {
+      "question": "どんな御用でしょうか？",
+      "answer": "オーシャンスポーツツアーは、エキサイティングな海洋関連のアクティビティとツアーを提供する会社です。"
+    },
+    "question2": {
+      "question": "オーシャンスポーツツアーとは何ですか？",
+      "answer": "オーシャンスポーツツアーは、エキサイティングな海洋関連のアクティビティとツアーを提供する会社です。"
+    },
+    "question3": {
+      "question": "どんなアクティビティを提供していますか？",
+      "answer": "シュノーケリング、スキューバダイビング、​​ボートツアーなど、さまざまなアクティビティを提供しています。"
+    },
+    "question4": {
+      "question": "どこにいますか？",
+      "answer": "熱帯の島や沿岸都市など、複数の場所で営業​​しています。"
+    },
+    "question5": {
+      "question": "いくらかかりますか？",
+      "answer": "価格は、アクティビティと場所によって異なります。"
+    },
+    "question6": {
+      "question": "事前の経験が必要ですか？",
+      "answer": "ほとんどのアクティビティでは、以前の経験は必要ありません。"
+    },
+    "question7": {
+      "question": "どのような安全対策がありますか？",
+      "answer": "認定ガイド、安全装置、緊急手順など、厳格な安全プロトコルに従います。"
+    },
+    "question8": {
+      "question": "プライベートツアーを予約できますか？",
+      "answer": "はい、プライベートツアーはリクエストに応じて利用できます。"
+    },
+    "question9": {
+      "question": "グループ割引はありますか？",
+      "answer": "はい、大規模なパーティーにグループ割引を提供しています。"
+    },
+    "question10": {
+      "question": "ツアーに何をもたらすべきですか？",
+      "answer": "水着、日焼け止め、タオル、必要な個人的なアイテムを持参することをお勧めします。"
+    },
+    "question11": {
+      "question": "子供たちはツアーで許可されていますか？",
+      "answer": "はい、子供たちは大歓迎です！"
+    },
+    "question12": {
+      "question": "ライフジャケットとセーフティギアを提供していますか？",
+      "answer": "はい、ライフジャケットを含むすべての安全装置が各アクティビティに提供されています。"
+    },
+    "question13": {
+      "question": "ツアーを予約するにはどうすればよいですか？",
+      "answer": "当社のウェブサイトからオンラインでツアーを予約するか、カスタマーサービスチームに連絡することができます。"
+    },
+    "question14": {
+      "question": "どのような支払い方法を受け入れますか？",
+      "answer": "クレジットカード、PayPal、および銀行の転送を受け入れます。"
+    }
+  }
+}

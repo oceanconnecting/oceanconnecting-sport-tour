@@ -11,13 +11,17 @@ import { usePathname } from "next/navigation";
 function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
-  const validLocales = ["fr", "en", "ar", "de", "es"];
+  const validLocales = ["fr", "en", "ar", "de", "es", "ja", "pt", "ru", "zh"];
   const Locales = [
     { code: "fr", label: "French", flag: "FR" },
     { code: "en", label: "English", flag: "GB" },
     { code: "ar", label: "Arabic", flag: "SA" },
-    { code: "de", label: "Germany", flag: "DE" },
+    { code: "de", label: "Deutch", flag: "DE" },
     { code: "es", label: "Spanish", flag: "ES" },
+    { code: "ja", label: "Japanese", flag: "JP" },
+    { code: "pt", label: "Portuguese", flag: "PT" },
+    { code: "ru", label: "Russian", flag: "RU" },
+    { code: "zh", label: "Chinese", flag: "CN" },
   ];
 
   if (!validLocales.includes(locale)) {
