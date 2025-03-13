@@ -253,6 +253,7 @@
       "Date_fin":"Fecha de finalización",
       "at":"a",
       "stop":"Alto",
+      "book":"Reservar",
         "form": {
           "title": "Reserva tu tour aquí rellenando el formulario",
           "loadingMessage": "Cargando... Por favor, espere",
@@ -285,24 +286,7 @@
           "Total_Price": "Precio total",
           "alert": "Por favor, selecciona una fecha posterior a hoy"
         },
-        "propose": {
-          "propose1": {
-            "title": "Cancelación gratuita",
-            "descr": "Cancelación hasta 24 horas antes para un reembolso completo."
-          },
-          "propose2": {
-            "title": "Máxima seguridad",
-            "descr": "Medidas de seguridad reforzadas para garantizar tu tranquilidad."
-          },
-          "propose3": {
-            "title": "Soporte 24/7",
-            "descr": "Asistencia disponible en cualquier momento para responder a tus preguntas."
-          },
-          "propose4": {
-            "title": "Grupos reducidos",
-            "descr": "Disfruta de una experiencia más personal con grupos pequeños."
-          }
-        },
+       
         "tour": {
           "tour_1": {
             "title": "Viaje de Agadir a Marrakech",

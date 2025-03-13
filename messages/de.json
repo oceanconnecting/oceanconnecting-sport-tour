@@ -246,6 +246,7 @@
         "Date_fin ":"Enddatum",
         "at":"um",
         "stop":"Stopp",
+        "book": "Buchen",
         "form": {
           "loadingMessage": "Wird geladen... Bitte warten",
   "successMessage": "Reservierung erfolgreich abgeschickt!",
@@ -278,24 +279,7 @@
           "Total_Price": "Gesamtpreis",
           "alert": "Bitte wählen Sie ein Datum nach dem heutigen Tag"
         },
-        "propose": {
-          "propose1": {
-            "title": "Kostenlose Stornierung",
-            "descr": "Stornierung bis zu 24 Stunden im Voraus für eine vollständige Rückerstattung."
-          },
-          "propose2": {
-            "title": "Maximale Sicherheit",
-            "descr": "Erhöhte Sicherheitsmaßnahmen für Ihre Zufriedenheit."
-          },
-          "propose3": {
-            "title": "24/7 Support",
-            "descr": "Unterstützung jederzeit verfügbar, um Ihre Fragen zu beantworten."
-          },
-          "propose4": {
-            "title": "Kleine Gruppen",
-            "descr": "Genießen Sie eine persönlichere Erfahrung mit kleinen Gruppen."
-          }
-        },
+       
         "tour": {
           "tour_1": {
             "title": "Reise von Agadir nach Marrakesch",

@@ -2,7 +2,7 @@
 
 import ParticipantCounter from "@/Components/ParticipantCounter";
 import type React from "react";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Label } from "@/Components/ui/label";
 import { Input } from "@/Components/ui/input";
@@ -11,6 +11,9 @@ import { Checkbox } from "@/Components/ui/checkbox";
 import { handleSubmitReservationTour } from "./handleSubmitReservationTour";
 import type { Tour } from "@/types";
 import { toast } from "react-toastify";
+import { isValidPhoneNumber } from 'libphonenumber-js';
+import ReactCountryFlag from "react-country-flag";
+import Select from "react-select";
 interface ReservationFormData {
   adults: number;
   children: number;
@@ -25,6 +28,35 @@ interface FormProps {
   tour: Tour;
 }
 
+
+
+// Liste des pays avec drapeaux et codes
+const codesPays = [
+  { code: "+212", nom: "Maroc", drapeau: "MA" },
+  { code: "+33", nom: "France", drapeau: "FR" },
+  { code: "+34", nom: "Espagne", drapeau: "ES" },
+  { code: "+49", nom: "Allemagne", drapeau: "DE" },
+  { code: "+213", nom: "Algérie", drapeau: "DZ" },
+  { code: "+1", nom: "États-Unis", drapeau: "US" },
+  { code: "+44", nom: "Royaume-Uni", drapeau: "GB" },
+  { code: "+39", nom: "Italie", drapeau: "IT" },
+];
+
+// Options formatées pour react-select
+const optionsPays = codesPays.map((pays) => ({
+  value: pays.code,
+  label: (
+    <div className="flex items-center gap-2">
+      <ReactCountryFlag
+        countryCode={pays.drapeau}
+        svg
+        style={{ width: "1.5em", height: "1.5em", borderRadius: "3px" }}
+      />
+      {pays.nom} ({pays.code})
+    </div>
+  ),
+}));
+
 const FormReservation: React.FC<FormProps> = ({ tour }) => {
   const tt = useTranslations("homepage.tours");
   // Définir les valeurs initiales du formulaire
@@ -38,9 +70,12 @@ const FormReservation: React.FC<FormProps> = ({ tour }) => {
     hasAnimal: false,
   };
   const [formData, setFormData] = useState<ReservationFormData>(initialFormData);
-
+  const [countryCode, setCountryCode] = useState<string>('+212'); // Code pays par défaut
+  const [isValid, setIsValid] = useState<boolean>(true); // Validation du numéro
   const [errors, setErrors] = useState<Partial<ReservationFormData>>({});
-const [loading, setLoading] = useState(false);
+  const [paysSelectionne, setPaysSelectionne] = useState(optionsPays[0]);
+
+  const [loading, setLoading] = useState(false);
   const increment = (field: keyof ReservationFormData) =>
     setFormData((prev) => ({
       ...prev,
@@ -58,6 +93,31 @@ const [loading, setLoading] = useState(false);
           ? (prev[field] as number) - 1
           : 0,
     }));
+
+  const countryCodes = [
+    { code: "+212", name: "Maroc", flag: "MA" },
+    { code: "+33", name: "France", flag: "FR" },
+    { code: "+34", name: "Espagne", flag: "ES" },
+    { code: "+49", name: "Allemagne", flag: "DE" },
+    { code: "+213", name: "Algérie", flag: "DZ" },
+    { code: "+1", name: "États-Unis", flag: "US" },
+    { code: "+44", name: "Royaume-Uni", flag: "GB" },
+    { code: "+39", name: "Italie", flag: "IT" },
+  ]
+  const handleCountryChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setCountryCode(event.target.value);
+    setFormData((prev) => ({ ...prev, numberPhone: '' })); // Réinitialiser le champ du numéro lorsque le code pays change
+  };
+
+  const handlePhoneNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    setFormData((prev) => ({ ...prev, numberPhone: value }));
+
+    // Valider le numéro de téléphone avec le code pays
+    const fullNumber = countryCode + value;
+    setIsValid(isValidPhoneNumber(fullNumber));
+  };
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
@@ -81,9 +141,18 @@ const [loading, setLoading] = useState(false);
       newErrors.email = tt("form.errorEmail2");
     }
 
+
+
+
+
+
+    // Valider le numéro avec la bibliothèque libphonenumber-js
+
+
     if (!formData.numberPhone) {
+
       newErrors.numberPhone = tt("form.errornumberPhon1");
-    } else if (!/^06\d{8}$/.test(formData.numberPhone)) {
+    } else if (!isValidPhoneNumber(countryCode + formData.numberPhone)) {
       newErrors.numberPhone = tt("form.errornumberPhon2");
     }
 
@@ -94,18 +163,18 @@ const [loading, setLoading] = useState(false);
 
       try {
         const formDataToSend = new FormData();
-       
-        
+
+
         // Ajouter des données à FormData
         formDataToSend.append("formData", JSON.stringify(formData));
         formDataToSend.append("tour", JSON.stringify(tour));
-      
+
         // Afficher les données de formDataToSend dans la console
         console.log("FormData to send:");
         formDataToSend.forEach((value, key) => {
           console.log(`${key}: ${value}`);
         });
-      
+
 
         await handleSubmitReservationTour(formDataToSend);
         // alert("Réservation envoyée avec succès !");
@@ -120,22 +189,22 @@ const [loading, setLoading] = useState(false);
 
   };
 
-  const isFormEmpty = 
-  (!formData || 
-    formData.adults === 0 || 
-    // Validation spéciale pour les enfants (valide s'il y a 0 enfant)
-    formData.children < 0 || formData.children === undefined ||
-    formData.firstName.trim() === "" || 
-    formData.lastName.trim() === "" || 
-    formData.numberPhone.trim() === "" || 
-    formData.email.trim() === ""
-  );
+  const isFormEmpty =
+    (!formData ||
+      formData.adults === 0 ||
+      // Validation spéciale pour les enfants (valide s'il y a 0 enfant)
+      formData.children < 0 || formData.children === undefined ||
+      formData.firstName.trim() === "" ||
+      formData.lastName.trim() === "" ||
+      formData.numberPhone.trim() === "" ||
+      formData.email.trim() === ""
+    );
 
 
   return (
     <div id="book" className="w-full max-w-4xl mx-auto sm:px-6">
       <h1 className="text-slate-500 text-sm sm:text-lg md:text-xl lg:text-2xl text-center">
-      {tt("form.title")}
+        {tt("form.title")}
       </h1>
       <form
         onSubmit={handleSubmit}
@@ -160,7 +229,6 @@ const [loading, setLoading] = useState(false);
             />
           </div>
         </div>
-
         {/* Personal Information */}
         <div className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -183,7 +251,6 @@ const [loading, setLoading] = useState(false);
                 <p className="mt-1 text-sm text-red-500">{errors.firstName}</p>
               )}
             </LabelInputContainer>
-
             <LabelInputContainer>
               <Label
                 htmlFor="lastName"
@@ -204,23 +271,49 @@ const [loading, setLoading] = useState(false);
               )}
             </LabelInputContainer>
           </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <LabelInputContainer>
+
               <Label
                 htmlFor="numberPhone"
                 className="text-base font-medium text-gray-700 dark:text-gray-300"
               >
                 {tt("form.numberPhone")}
               </Label>
-              <Input
-                id="numberPhone"
-                placeholder="06********"
-                type="text"
-                value={formData.numberPhone}
-                onChange={handleInputChange}
-                className="mt-1 w-full rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm py-3 px-4 focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
+              <div className="flex items-center w-full space-x-2">
+              <div className="flex items-center gap-2">
+  {/* Drapeau sélectionné */}
+ 
+
+  {/* Select */}
+  <Select
+    options={optionsPays}
+    value={paysSelectionne}
+    onChange={(newValue) => {
+      setPaysSelectionne(newValue);
+      setCountryCode(newValue?.value || '+212');
+      setFormData((prev) => ({ ...prev, numberPhone: '' }));
+    }}
+    className="w-full"
+  />
+
+</div>
+
+
+
+                <div className="w-2/3">
+                  <Input
+                    onChange={handlePhoneNumberChange}
+                    placeholder={`Ex: ${countryCode.substring(1)}12345678`} // Placeholder dynamique
+                    id="numberPhone"
+                    type="text"
+                    value={formData.numberPhone}
+                    className="mt-1 w-full rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm py-3 px-4 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  />
+                </div>
+
+              </div>
+
               {errors.numberPhone && (
                 <p className="mt-1 text-sm text-red-500">
                   {errors.numberPhone}
@@ -284,7 +377,7 @@ const [loading, setLoading] = useState(false);
             disabled={isFormEmpty || loading}
           >
             <span className="relative z-10">
-              { loading? tt("form.loadingMessage"): tt("form.Confirm_Reservation")}
+              {loading ? tt("form.loadingMessage") : tt("form.Confirm_Reservation")}
             </span>
             <BottomGradient />
           </button>

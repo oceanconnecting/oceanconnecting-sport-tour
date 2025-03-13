@@ -106,7 +106,7 @@ export default function Itinerary({ tour }: ItineraryProps) {
             className="bg-primary-500 py-2 px-6 rounded-3xl text-white flex justify-center"
             href="#book"
           >
-            book now
+            {tt("book")} 
           </Link>
         </div>
       </div>
