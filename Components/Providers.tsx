@@ -14,5 +14,9 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     return <>{children}</>; // Render children without ThemeProvider during SSR
   }
 
-  return <ThemeProvider attribute="class">{children}</ThemeProvider>; // Wrap children with ThemeProvider after mount
+  return (
+    <ThemeProvider defaultTheme="light" attribute="class">
+      {children}
+    </ThemeProvider>
+  ); // Wrap children with ThemeProvider after mount
 }
