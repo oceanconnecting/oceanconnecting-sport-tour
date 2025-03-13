@@ -10,6 +10,7 @@ import BackToTopButton from "@/Components/BackToTopButton";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import WhatsappContact from "@/Components/WhatsappContact";
 import OfflineChat from "@/Components/OfflineChat";
+import { Analytics } from '@vercel/analytics/react';
 // import { Toaster } from "@/Components/ui/sonner"
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
@@ -69,6 +70,7 @@ export default async function RootLayout({
 
             <Footer />
           </Providers>
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
