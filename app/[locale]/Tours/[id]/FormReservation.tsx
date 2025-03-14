@@ -30,20 +30,20 @@ interface FormProps {
 
 
 const countryCodes = [
-  { code: "+212", name: "Maroc", flag: "MA", ex: "212 612345678" },
-  { code: "+213", name: "Algérie", flag: "DZ", ex: "213 512345678" },
-  { code: "+216", name: "Tunisie", flag: "TN", ex: "216 91234567" },
-  { code: "+218", name: "Libye", flag: "LY", ex: "218 912345678" },
-  { code: "+220", name: "Gambie", flag: "GM", ex: "220 7123456" },
-  { code: "+221", name: "Sénégal", flag: "SN", ex: "221 701234567" },
-  { code: "+222", name: "Mauritanie", flag: "MR", ex: "222 36123456" },
-  { code: "+223", name: "Mali", flag: "ML", ex: "223 70123456" },
-  { code: "+33", name: "France", flag: "FR", ex: "33 612345678" },
-  { code: "+34", name: "Espagne", flag: "ES", ex: "34 612345678" },
-  { code: "+49", name: "Allemagne", flag: "DE", ex: "49 15123456789" },
-  { code: "+1", name: "États-Unis", flag: "US", ex: "1 5551234567" },
-  { code: "+44", name: "Royaume-Uni", flag: "GB", ex: "44 7123456789" },
-  { code: "+39", name: "Italie", flag: "IT", ex: "39 3123456789" },
+  { code: "+212", name: "Maroc", flag: "MA", ex: "+212 612345678" },
+  { code: "+213", name: "Algérie", flag: "DZ", ex: "+213 512345678" },
+  { code: "+216", name: "Tunisie", flag: "TN", ex: "+216 91234567" },
+  { code: "+218", name: "Libye", flag: "LY", ex: "+218 912345678" },
+  { code: "+220", name: "Gambie", flag: "GM", ex: "+220 7123456" },
+  { code: "+221", name: "Sénégal", flag: "SN", ex: "+221 701234567" },
+  { code: "+222", name: "Mauritanie", flag: "MR", ex: "+222 36123456" },
+  { code: "+223", name: "Mali", flag: "ML", ex: "+223 70123456" },
+  { code: "+33", name: "France", flag: "FR", ex: "+33 612345678" },
+  { code: "+34", name: "Espagne", flag: "ES", ex: "+34 612345678" },
+  { code: "+49", name: "Allemagne", flag: "DE", ex: "+49 15123456789" },
+  { code: "+1", name: "États-Unis", flag: "US", ex: "+1 5551234567" },
+  { code: "+44", name: "Royaume-Uni", flag: "GB", ex: "+44 7123456789" },
+  { code: "+39", name: "Italie", flag: "IT", ex: "+39 3123456789" },
 ];
 
 
