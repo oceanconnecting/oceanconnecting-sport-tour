@@ -268,7 +268,7 @@
         "errorFirstName": "الاسم مطلوب",
         "errorLastName": "اللقب مطلوب",
         "errornumberPhon1": "رقم الهاتف مطلوب",
-        "errornumberPhon2": "يجب أن يبدأ رقم الهاتف بـ 06 ويتكون من 10 أرقام",
+        "errornumberPhon2": "الرجاء إدخال رقم هاتف صالح",
         "errorEmail1": "البريد الإلكتروني مطلوب.",
         "errorEmail2": "الرجاء إدخال بريد إلكتروني صالح مثل 'name@gmail.com'",
         "loadingMessage": "جار التحميل...",

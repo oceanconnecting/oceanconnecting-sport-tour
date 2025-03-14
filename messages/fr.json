@@ -268,7 +268,7 @@
         "errorFirstName": "Le Nom est oubligatoire",
         "errorLastName": "le prenom est oubligatoire",
         "errornumberPhon1": "Le numéro de téléphone est obligatoire",
-        "errornumberPhon2": "Le numéro de téléphone doit commencer par 06 et contenir 10 chiffres",
+        "errornumberPhon2": "Veuillez entrer un numéro de téléphone valide",
         "errorEmail1": "L'adresse e-mail est requise.",
         "errorEmail2": "Veuillez entrer une adresse e-mail valide par exemple 'name@gmail.com'",
         "loadingMessage": "Chargement...           ",

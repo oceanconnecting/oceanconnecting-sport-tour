@@ -274,7 +274,7 @@
         "errorFirstName": "First Name is required",
         "errorLastName": "Last Name is required",
         "errornumberPhon1": "Phone Number is required",
-        "errornumberPhon2": "Phone Number must start with 06 and contain 10 digits",
+        "errornumberPhon2": "Please enter a valid phone number",
         "errorEmail1": "Email is required.",
         "errorEmail2": "Please enter a valid email address, e.g., 'name@gmail.com'",
         "loadingMessage": "Loading...",

@@ -29,86 +29,82 @@ interface FormProps {
 }
 
 
-
-// Liste des pays avec drapeaux et codes
-const codesPays = [
-  { code: "+212", nom: "Maroc", drapeau: "MA" },
-  { code: "+33", nom: "France", drapeau: "FR" },
-  { code: "+34", nom: "Espagne", drapeau: "ES" },
-  { code: "+49", nom: "Allemagne", drapeau: "DE" },
-  { code: "+213", nom: "Algérie", drapeau: "DZ" },
-  { code: "+1", nom: "États-Unis", drapeau: "US" },
-  { code: "+44", nom: "Royaume-Uni", drapeau: "GB" },
-  { code: "+39", nom: "Italie", drapeau: "IT" },
+const countryCodes = [
+  { code: "+212", name: "Maroc", flag: "MA", ex: "212 612345678" },
+  { code: "+213", name: "Algérie", flag: "DZ", ex: "213 512345678" },
+  { code: "+216", name: "Tunisie", flag: "TN", ex: "216 91234567" },
+  { code: "+218", name: "Libye", flag: "LY", ex: "218 912345678" },
+  { code: "+220", name: "Gambie", flag: "GM", ex: "220 7123456" },
+  { code: "+221", name: "Sénégal", flag: "SN", ex: "221 701234567" },
+  { code: "+222", name: "Mauritanie", flag: "MR", ex: "222 36123456" },
+  { code: "+223", name: "Mali", flag: "ML", ex: "223 70123456" },
+  { code: "+33", name: "France", flag: "FR", ex: "33 612345678" },
+  { code: "+34", name: "Espagne", flag: "ES", ex: "34 612345678" },
+  { code: "+49", name: "Allemagne", flag: "DE", ex: "49 15123456789" },
+  { code: "+1", name: "États-Unis", flag: "US", ex: "1 5551234567" },
+  { code: "+44", name: "Royaume-Uni", flag: "GB", ex: "44 7123456789" },
+  { code: "+39", name: "Italie", flag: "IT", ex: "39 3123456789" },
 ];
 
-// Options formatées pour react-select
-const optionsPays = codesPays.map((pays) => ({
-  value: pays.code,
-  label: (
-    <div className="flex items-center gap-2">
-      <ReactCountryFlag
-        countryCode={pays.drapeau}
-        svg
-        style={{ width: "1.5em", height: "1.5em", borderRadius: "3px" }}
-      />
-      {pays.nom} ({pays.code})
-    </div>
-  ),
-}));
+
+
 
 const FormReservation: React.FC<FormProps> = ({ tour }) => {
   const tt = useTranslations("homepage.tours");
   // Définir les valeurs initiales du formulaire
-  const initialFormData: ReservationFormData = {
-    adults: 0,
-    children: 0,
-    firstName: "",
-    lastName: "",
-    numberPhone: "",
-    email: "",
-    hasAnimal: false,
-  };
+  const initialFormData: ReservationFormData = {adults: 0,children: 0,firstName: "",lastName: "",numberPhone: "",email: "",hasAnimal: false,};
   const [formData, setFormData] = useState<ReservationFormData>(initialFormData);
   const [countryCode, setCountryCode] = useState<string>('+212'); // Code pays par défaut
   const [isValid, setIsValid] = useState<boolean>(true); // Validation du numéro
   const [errors, setErrors] = useState<Partial<ReservationFormData>>({});
-  const [paysSelectionne, setPaysSelectionne] = useState(optionsPays[0]);
-
   const [loading, setLoading] = useState(false);
+  const [paysSelectionne, setPaysSelectionne] = useState<{ value: string; label: React.JSX.Element } | null>({
+                  value: countryCodes[0].code,
+                  label: (
+                    <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                      <ReactCountryFlag
+                        countryCode={countryCodes[0].flag}
+                        svg
+                        style={{ width: "1.5em", height: "1.5em" }}
+                      />
+                      {countryCodes[0].name}
+                    </div>
+                  ),
+                });
+
   const increment = (field: keyof ReservationFormData) =>
-    setFormData((prev) => ({
-      ...prev,
-      [field]:
-        typeof prev[field] === "number"
-          ? (prev[field] as number) + 1
-          : prev[field],
-    }));
+              setFormData((prev) => ({
+                ...prev,
+                [field]:
+                  typeof prev[field] === "number"
+                    ? (prev[field] as number) + 1
+                    : prev[field],
+              }));
 
   const decrement = (field: keyof ReservationFormData) =>
-    setFormData((prev) => ({
-      ...prev,
-      [field]:
-        typeof prev[field] === "number" && prev[field] > 0
-          ? (prev[field] as number) - 1
-          : 0,
-    }));
+            setFormData((prev) => ({
+              ...prev,
+              [field]:
+                typeof prev[field] === "number" && prev[field] > 0
+                  ? (prev[field] as number) - 1
+                  : 0,
+            }));
 
-  const countryCodes = [
-    { code: "+212", name: "Maroc", flag: "MA" },
-    { code: "+33", name: "France", flag: "FR" },
-    { code: "+34", name: "Espagne", flag: "ES" },
-    { code: "+49", name: "Allemagne", flag: "DE" },
-    { code: "+213", name: "Algérie", flag: "DZ" },
-    { code: "+1", name: "États-Unis", flag: "US" },
-    { code: "+44", name: "Royaume-Uni", flag: "GB" },
-    { code: "+39", name: "Italie", flag: "IT" },
-  ]
-  const handleCountryChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    setCountryCode(event.target.value);
-    setFormData((prev) => ({ ...prev, numberPhone: '' })); // Réinitialiser le champ du numéro lorsque le code pays change
-  };
-
+  // Convert countries to react-select format
+  const countryOptions = countryCodes.map((country) => ({
+              value: country.code,
+              label: (
+                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                  <ReactCountryFlag
+                    countryCode={country.flag}
+                    svg
+                    style={{ width: "1.5em", height: "1.5em" }}
+                  />
+                  {country.code}
+                </div>
+              ),
+            }));
+  // function to handle phone number change and validate it
   const handlePhoneNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setFormData((prev) => ({ ...prev, numberPhone: value }));
@@ -118,7 +114,7 @@ const FormReservation: React.FC<FormProps> = ({ tour }) => {
     setIsValid(isValidPhoneNumber(fullNumber));
   };
 
-
+  // function to handle input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     setFormData((prev) => ({
@@ -163,10 +159,16 @@ const FormReservation: React.FC<FormProps> = ({ tour }) => {
 
       try {
         const formDataToSend = new FormData();
-
+        const translation={
+          "errorMessage": tt("form.errorMessage"),
+          "successMessage": tt("form.successMessage"),
+        }
 
         // Ajouter des données à FormData
-        formDataToSend.append("formData", JSON.stringify(formData));
+        formDataToSend.append("formData", JSON.stringify({
+          formData,
+          numberPhone: countryCode + formData.numberPhone,
+        }));
         formDataToSend.append("tour", JSON.stringify(tour));
 
         // Afficher les données de formDataToSend dans la console
@@ -176,7 +178,7 @@ const FormReservation: React.FC<FormProps> = ({ tour }) => {
         });
 
 
-        await handleSubmitReservationTour(formDataToSend);
+        await handleSubmitReservationTour(formDataToSend,translation);
         // alert("Réservation envoyée avec succès !");
         setFormData(initialFormData);
       } catch (error) {
@@ -273,7 +275,6 @@ const FormReservation: React.FC<FormProps> = ({ tour }) => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <LabelInputContainer>
-
               <Label
                 htmlFor="numberPhone"
                 className="text-base font-medium text-gray-700 dark:text-gray-300"
@@ -281,30 +282,25 @@ const FormReservation: React.FC<FormProps> = ({ tour }) => {
                 {tt("form.numberPhone")}
               </Label>
               <div className="flex items-center w-full space-x-2">
-              <div className="flex items-center gap-2">
-  {/* Drapeau sélectionné */}
- 
-
-  {/* Select */}
-  <Select
-    options={optionsPays}
-    value={paysSelectionne}
-    onChange={(newValue) => {
-      setPaysSelectionne(newValue);
-      setCountryCode(newValue?.value || '+212');
-      setFormData((prev) => ({ ...prev, numberPhone: '' }));
-    }}
-    className="w-full"
-  />
-
-</div>
-
-
-
+                <div className="flex items-center gap-2">
+                  
+                  {/* Select */}
+                  <div className="w-full h-full mx-auto">
+                    <Select
+                    className="w-full h-full rounded-xl"
+                      options={countryOptions}
+                      onChange={(selected) => setPaysSelectionne(selected)}
+                      isSearchable
+                    />
+                  </div>
+                </div>
                 <div className="w-2/3">
                   <Input
                     onChange={handlePhoneNumberChange}
-                    placeholder={`Ex: ${countryCode.substring(1)}12345678`} // Placeholder dynamique
+                    placeholder={paysSelectionne ? countryCodes.find(country => country.code === paysSelectionne.value)?.ex : "Ex: 123456789"}
+
+
+                    // Placeholder dynamique
                     id="numberPhone"
                     type="text"
                     value={formData.numberPhone}

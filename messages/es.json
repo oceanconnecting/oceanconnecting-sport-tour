@@ -273,7 +273,7 @@
           "errorFirstName": "El nombre es obligatorio",
           "errorLastName": "El apellido es obligatorio",
           "errornumberPhon1": "El número de teléfono es obligatorio",
-          "errornumberPhon2": "El número de teléfono debe comenzar con 06 y tener 10 dígitos",
+          "errornumberPhon2": "Por favor, introduce un número de teléfono válido",
           "errorEmail1": "El correo electrónico es obligatorio",
           "errorEmail2": "Por favor, introduce un correo electrónico válido, por ejemplo 'name@gmail.com'",
           "Confirm_Reservation": "Confirmar reserva",

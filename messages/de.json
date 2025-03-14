@@ -266,7 +266,7 @@
           "errorFirstName": "Vorname ist erforderlich",
           "errorLastName": "Nachname ist erforderlich",
           "errornumberPhon1": "Telefonnummer ist erforderlich",
-          "errornumberPhon2": "Die Telefonnummer muss mit 06 beginnen und 10 Ziffern enthalten",
+          "errornumberPhon2": "Bitte geben Sie eine gültige Telefonnummer ",
           "errorEmail1": "E-Mail ist erforderlich",
           "errorEmail2": "Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. 'name@gmail.com'",
           "Confirm_Reservation": "Reservierung bestätigen",
