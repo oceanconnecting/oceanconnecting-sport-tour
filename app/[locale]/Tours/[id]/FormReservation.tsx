@@ -2,7 +2,7 @@
 
 import ParticipantCounter from "@/Components/ParticipantCounter";
 import type React from "react";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Label } from "@/Components/ui/label";
 import { Input } from "@/Components/ui/input";
@@ -11,6 +11,9 @@ import { Checkbox } from "@/Components/ui/checkbox";
 import { handleSubmitReservationTour } from "./handleSubmitReservationTour";
 import type { Tour } from "@/types";
 import { toast } from "react-toastify";
+import { isValidPhoneNumber } from 'libphonenumber-js';
+import ReactCountryFlag from "react-country-flag";
+import Select from "react-select";
 interface ReservationFormData {
   adults: number;
   children: number;
@@ -25,40 +28,93 @@ interface FormProps {
   tour: Tour;
 }
 
+
+const countryCodes = [
+  { code: "+212", name: "Maroc", flag: "MA", ex: "+212 612345678" },
+  { code: "+213", name: "Algérie", flag: "DZ", ex: "+213 512345678" },
+  { code: "+216", name: "Tunisie", flag: "TN", ex: "+216 91234567" },
+  { code: "+218", name: "Libye", flag: "LY", ex: "+218 912345678" },
+  { code: "+220", name: "Gambie", flag: "GM", ex: "+220 7123456" },
+  { code: "+221", name: "Sénégal", flag: "SN", ex: "+221 701234567" },
+  { code: "+222", name: "Mauritanie", flag: "MR", ex: "+222 36123456" },
+  { code: "+223", name: "Mali", flag: "ML", ex: "+223 70123456" },
+  { code: "+33", name: "France", flag: "FR", ex: "+33 612345678" },
+  { code: "+34", name: "Espagne", flag: "ES", ex: "+34 612345678" },
+  { code: "+49", name: "Allemagne", flag: "DE", ex: "+49 15123456789" },
+  { code: "+1", name: "États-Unis", flag: "US", ex: "+1 5551234567" },
+  { code: "+44", name: "Royaume-Uni", flag: "GB", ex: "+44 7123456789" },
+  { code: "+39", name: "Italie", flag: "IT", ex: "+39 3123456789" },
+];
+
+
+
+
 const FormReservation: React.FC<FormProps> = ({ tour }) => {
   const tt = useTranslations("homepage.tours");
   // Définir les valeurs initiales du formulaire
-  const initialFormData: ReservationFormData = {
-    adults: 0,
-    children: 0,
-    firstName: "",
-    lastName: "",
-    numberPhone: "",
-    email: "",
-    hasAnimal: false,
-  };
+  const initialFormData: ReservationFormData = {adults: 0,children: 0,firstName: "",lastName: "",numberPhone: "",email: "",hasAnimal: false,};
   const [formData, setFormData] = useState<ReservationFormData>(initialFormData);
-
+  const [countryCode, setCountryCode] = useState<string>('+212'); // Code pays par défaut
+  const [isValid, setIsValid] = useState<boolean>(true); // Validation du numéro
   const [errors, setErrors] = useState<Partial<ReservationFormData>>({});
-const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [paysSelectionne, setPaysSelectionne] = useState<{ value: string; label: React.JSX.Element } | null>({
+                  value: countryCodes[0].code,
+                  label: (
+                    <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                      <ReactCountryFlag
+                        countryCode={countryCodes[0].flag}
+                        svg
+                        style={{ width: "1.5em", height: "1.5em" }}
+                      />
+                      {countryCodes[0].name}
+                    </div>
+                  ),
+                });
+
   const increment = (field: keyof ReservationFormData) =>
-    setFormData((prev) => ({
-      ...prev,
-      [field]:
-        typeof prev[field] === "number"
-          ? (prev[field] as number) + 1
-          : prev[field],
-    }));
+              setFormData((prev) => ({
+                ...prev,
+                [field]:
+                  typeof prev[field] === "number"
+                    ? (prev[field] as number) + 1
+                    : prev[field],
+              }));
 
   const decrement = (field: keyof ReservationFormData) =>
-    setFormData((prev) => ({
-      ...prev,
-      [field]:
-        typeof prev[field] === "number" && prev[field] > 0
-          ? (prev[field] as number) - 1
-          : 0,
-    }));
+            setFormData((prev) => ({
+              ...prev,
+              [field]:
+                typeof prev[field] === "number" && prev[field] > 0
+                  ? (prev[field] as number) - 1
+                  : 0,
+            }));
 
+  // Convert countries to react-select format
+  const countryOptions = countryCodes.map((country) => ({
+              value: country.code,
+              label: (
+                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                  <ReactCountryFlag
+                    countryCode={country.flag}
+                    svg
+                    style={{ width: "1.5em", height: "1.5em" }}
+                  />
+                  {country.code}
+                </div>
+              ),
+            }));
+  // function to handle phone number change and validate it
+  const handlePhoneNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    setFormData((prev) => ({ ...prev, numberPhone: value }));
+
+    // Valider le numéro de téléphone avec le code pays
+    const fullNumber = countryCode + value;
+    setIsValid(isValidPhoneNumber(fullNumber));
+  };
+
+  // function to handle input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     setFormData((prev) => ({
@@ -81,9 +137,18 @@ const [loading, setLoading] = useState(false);
       newErrors.email = tt("form.errorEmail2");
     }
 
+
+
+
+
+
+    // Valider le numéro avec la bibliothèque libphonenumber-js
+
+
     if (!formData.numberPhone) {
+
       newErrors.numberPhone = tt("form.errornumberPhon1");
-    } else if (!/^06\d{8}$/.test(formData.numberPhone)) {
+    } else if (!isValidPhoneNumber(countryCode + formData.numberPhone)) {
       newErrors.numberPhone = tt("form.errornumberPhon2");
     }
 
@@ -94,20 +159,26 @@ const [loading, setLoading] = useState(false);
 
       try {
         const formDataToSend = new FormData();
-       
-        
+        const translation={
+          "errorMessage": tt("form.errorMessage"),
+          "successMessage": tt("form.successMessage"),
+        }
+
         // Ajouter des données à FormData
-        formDataToSend.append("formData", JSON.stringify(formData));
+        formDataToSend.append("formData", JSON.stringify({
+          formData,
+          numberPhone: countryCode + formData.numberPhone,
+        }));
         formDataToSend.append("tour", JSON.stringify(tour));
-      
+
         // Afficher les données de formDataToSend dans la console
         console.log("FormData to send:");
         formDataToSend.forEach((value, key) => {
           console.log(`${key}: ${value}`);
         });
-      
 
-        await handleSubmitReservationTour(formDataToSend);
+
+        await handleSubmitReservationTour(formDataToSend,translation);
         // alert("Réservation envoyée avec succès !");
         setFormData(initialFormData);
       } catch (error) {
@@ -120,22 +191,22 @@ const [loading, setLoading] = useState(false);
 
   };
 
-  const isFormEmpty = 
-  (!formData || 
-    formData.adults === 0 || 
-    // Validation spéciale pour les enfants (valide s'il y a 0 enfant)
-    formData.children < 0 || formData.children === undefined ||
-    formData.firstName.trim() === "" || 
-    formData.lastName.trim() === "" || 
-    formData.numberPhone.trim() === "" || 
-    formData.email.trim() === ""
-  );
+  const isFormEmpty =
+    (!formData ||
+      formData.adults === 0 ||
+      // Validation spéciale pour les enfants (valide s'il y a 0 enfant)
+      formData.children < 0 || formData.children === undefined ||
+      formData.firstName.trim() === "" ||
+      formData.lastName.trim() === "" ||
+      formData.numberPhone.trim() === "" ||
+      formData.email.trim() === ""
+    );
 
 
   return (
     <div id="book" className="w-full max-w-4xl mx-auto sm:px-6">
       <h1 className="text-slate-500 text-sm sm:text-lg md:text-xl lg:text-2xl text-center">
-      {tt("form.title")}
+        {tt("form.title")}
       </h1>
       <form
         onSubmit={handleSubmit}
@@ -160,7 +231,6 @@ const [loading, setLoading] = useState(false);
             />
           </div>
         </div>
-
         {/* Personal Information */}
         <div className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -183,7 +253,6 @@ const [loading, setLoading] = useState(false);
                 <p className="mt-1 text-sm text-red-500">{errors.firstName}</p>
               )}
             </LabelInputContainer>
-
             <LabelInputContainer>
               <Label
                 htmlFor="lastName"
@@ -204,7 +273,6 @@ const [loading, setLoading] = useState(false);
               )}
             </LabelInputContainer>
           </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <LabelInputContainer>
               <Label
@@ -213,14 +281,35 @@ const [loading, setLoading] = useState(false);
               >
                 {tt("form.numberPhone")}
               </Label>
-              <Input
-                id="numberPhone"
-                placeholder="06********"
-                type="text"
-                value={formData.numberPhone}
-                onChange={handleInputChange}
-                className="mt-1 w-full rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm py-3 px-4 focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
+              <div className="flex items-center w-full space-x-2">
+                <div className="flex items-center gap-2">
+                  
+                  {/* Select */}
+                  <div className="w-full h-full mx-auto">
+                    <Select
+                    className="w-full h-full rounded-xl"
+                      options={countryOptions}
+                      onChange={(selected) => setPaysSelectionne(selected)}
+                      isSearchable
+                    />
+                  </div>
+                </div>
+                <div className="w-2/3">
+                  <Input
+                    onChange={handlePhoneNumberChange}
+                    placeholder={paysSelectionne ? countryCodes.find(country => country.code === paysSelectionne.value)?.ex : "Ex: 123456789"}
+
+
+                    // Placeholder dynamique
+                    id="numberPhone"
+                    type="text"
+                    value={formData.numberPhone}
+                    className="mt-1 w-full rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm py-3 px-4 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  />
+                </div>
+
+              </div>
+
               {errors.numberPhone && (
                 <p className="mt-1 text-sm text-red-500">
                   {errors.numberPhone}
@@ -284,7 +373,7 @@ const [loading, setLoading] = useState(false);
             disabled={isFormEmpty || loading}
           >
             <span className="relative z-10">
-              { loading? tt("form.loadingMessage"): tt("form.Confirm_Reservation")}
+              {loading ? tt("form.loadingMessage") : tt("form.Confirm_Reservation")}
             </span>
             <BottomGradient />
           </button>

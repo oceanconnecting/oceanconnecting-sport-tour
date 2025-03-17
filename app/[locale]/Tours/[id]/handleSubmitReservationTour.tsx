@@ -1,7 +1,8 @@
 import { toast } from "react-toastify";
-import { useTranslations } from "next-intl";
-export async function handleSubmitReservationTour(formData: FormData) {
-  const tt=useTranslations("homepage.tours");
+
+
+
+export async function handleSubmitReservationTour(formData: FormData,translation:  Record<string, string>) {
   console.log("🚀 Données brutes reçues :", Object.fromEntries(formData));
 
   const dataRaw = formData.get("formData");
@@ -11,7 +12,7 @@ export async function handleSubmitReservationTour(formData: FormData) {
 
   if (!dataRaw || !tourRaw) {
     // console.error(" Erreur : Certaines données sont manquantes !");
-    toast.error(`${tt("form.errorMessage")}`);
+    toast.error(`${translation["errorMessage"]}`||"Une erreur s'est produite lors de l'envoi de votre réservation !");
     return false;
   }
 
@@ -79,11 +80,11 @@ export async function handleSubmitReservationTour(formData: FormData) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    toast.success(`${tt("form.successMessage")}`);
+    toast.success(`${translation["successMessage"]}`||"Votre réservation a été envoyée avec succès !");
     return true;
   } catch (error) {
     // console.error("❌ Erreur lors de l'envoi du formulaire :", error);
-    toast.error(`${tt("form.errorMessage")}`);
+    toast.error(`${translation["errorMessage"]}`||"Une erreur s'est produite lors de l'envoi de votre réservation !");
     return false;
   }
 }

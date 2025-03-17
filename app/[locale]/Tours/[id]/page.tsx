@@ -51,8 +51,6 @@ const TourDetails = () => {
   return (
     <section className="py-20 w-full bg-background-50 overflow-hidden px-8">
       <BackButton href="/#Tours"/>
-
-
       <Tag>{tt(`tour.tour_${numericId}.title`)}</Tag>
       <div className="grid lg:grid-cols-2 w-full md:grid-cols-1 sm:grid-cols-1 gap-6 bg-background-50 p-2 rounded-lg shadow-lg">
         <div className=" rounded-lg w-full flex justify-center items-center">

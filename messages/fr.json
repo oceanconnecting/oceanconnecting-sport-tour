@@ -139,7 +139,6 @@
     },
     "places": {
       "title": "lieux",
-
       "place_1": {
         "title": "Agadir Oufella",
         "city": "Agadir",
@@ -283,7 +282,6 @@
       "at": "à",
       "stop": "stop",
       "book": "réservez maintenant",
-
       "form": {
         "title": "Réservez votre visite",
         "FirstName": "Nom",
@@ -299,7 +297,7 @@
         "errorFirstName": "Le Nom est oubligatoire",
         "errorLastName": "le prenom est oubligatoire",
         "errornumberPhon1": "Le numéro de téléphone est obligatoire",
-        "errornumberPhon2": "Le numéro de téléphone doit commencer par 06 et contenir 10 chiffres",
+        "errornumberPhon2": "Veuillez entrer un numéro de téléphone valide",
         "errorEmail1": "L'adresse e-mail est requise.",
         "errorEmail2": "Veuillez entrer une adresse e-mail valide par exemple 'name@gmail.com'",
         "loadingMessage": "Chargement...           ",
@@ -316,7 +314,6 @@
         "Total_Price": "Total Price",
         "alert": "Veuillez sélectionner une date ultérieure à aujourd'hui"
       },
-
       "tour": {
         "tour_1": {
           "title": "Voyage d'Agadir à Marrakech",
@@ -404,7 +401,6 @@
           "description": "Profitez d'une route panoramique jusqu'à la célèbre ville bleue, Essaouira.",
           "type": "Visite guidée",
           "duration": "1 journée",
-
           "route": {
             "Agadir": "Agadir",
             "Tamri": "Tamri",
@@ -454,7 +450,6 @@
         }
       }
     },
-
     "opinion": {
       "title": "Ce que nos clients disent de nous",
       "opinions": {
