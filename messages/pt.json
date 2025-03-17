@@ -1,0 +1,583 @@
+{
+  "metadata": {
+    "title": "Ocean Sport Tours",
+    "description": "Explore passeios inesquecíveis de aventura para crianças com o Ocean Sports Tour. ",
+    "keywords": "Tour Sports Ocean, passeios de aventura, viagens infantis, turismo de marrocos, passeios de agadir, excursões de Marrakech, viagens de Esseouira, atividades infantis, acampamentos esportivos, visitas guiadas, viagens seguras para crianças, aventura ao ar livre, experiências culturais, agência de viagens Marrocos"
+  },
+  "homepage": {
+    "navbar": {
+      "title": "Ocean Sports Tour",
+      "about": "sobre",
+      "tours": "passeios",
+      "features": "características",
+      "activities": "atividades",
+      "places": "lugares",
+      "sports": "esportes",
+      "services": "serviços",
+      "downloads": "downloads",
+      "gallery": "galeria",
+      "professional": "profissional",
+      "contact": "contato"
+    },
+    "hero": {
+      "hero_tag": "Aventura adaptada para mentes curiosas",
+      "grand_title": {
+        "txt_1": "Aprender",
+        "txt_2": "Viagem",
+        "txt_3": "e crescer",
+        "end_txt": "com"
+      },
+      "highlighted": "Ocean Sports Tour",
+      "descr": "Somos especializados em criar experiências inesquecíveis de turnê para crianças! ",
+      "contact_button": "Entre em contato",
+      "start_button": "Comece a explorar"
+    },
+    "about": {
+      "about_tag": "Anos de experiência",
+      "about_title": "sobre nós",
+      "about_text": "Ocean Sport Tours, Companhia de Transporte Turista e Esporte com sede em Agadir, começou a operação em 2022. A Associação opera uma gama muito diversificada de serviços que considerados de alta qualidade, eles combinam disponibilidade, proatividade e qualidade. "
+    },
+    "choose": {
+      "title": "Por que nos escolher",
+      "choose_1": {
+        "title": "Seguro e seguro",
+        "descr": "A segurança do seu filho é a nossa principal prioridade, com funcionários treinados e viagens seguras."
+      },
+      "choose_2": {
+        "title": "Atividades divertidas",
+        "descr": "Experiências envolventes e divertidas que as crianças vão gostar e lembrar."
+      },
+      "choose_3": {
+        "title": "Valor educacional",
+        "descr": "Uma mistura de aprendizado e aventura para expandir os horizontes de seu filho."
+      }
+    },
+    "activities": {
+      "activities_title": "atividades",
+      "activities": {
+        "activity_1": {
+          "title": "Aqua Park",
+          "descr": "Desfrute de um dia de escorregadores de água divertidos, piscinas de ondas e rios preguiçosos no Aqua Park."
+        },
+        "activity_2": {
+          "title": "Ride camel",
+          "descr": "Experimente uma aventura tradicional do deserto, montando um camelo através de dunas cênicas."
+        },
+        "activity_3": {
+          "title": "Balão de ar quente",
+          "descr": "Soe bem acima da paisagem e aprecie vistas deslumbrantes em um passeio de balão de ar quente."
+        },
+        "activity_4": {
+          "title": "Passeio de cavalos",
+          "descr": "Embarque em uma jornada pacífica por trilhas e campos abertos a cavalo."
+        },
+        "activity_5": {
+          "title": "Jetski",
+          "descr": "Sinta a emoção de acelerar a água em um Jetski de alta potência."
+        },
+        "activity_6": {
+          "title": "Karting",
+          "descr": "Corra contra amigos e familiares em uma pista de kart para uma experiência cheia de adrenalina."
+        },
+        "activity_7": {
+          "title": "Pára -quedas",
+          "descr": "Dê um salto de fé e experimente a emoção de paraquedismo com um pára -quedas."
+        },
+        "activity_8": {
+          "title": "Quad & Buggy",
+          "descr": "Navegue aos terrenos acidentados e trilhas arenosas com uma bicicleta quadrada ou buggy."
+        },
+        "activity_9": {
+          "title": "Sandboard",
+          "descr": "Deslize dunas de areia imponentes em um sandboard para uma aventura única do deserto."
+        },
+        "activity_10": {
+          "title": "Surf",
+          "descr": "Pegue as ondas e aproveite a emoção de surfar no mar aberto."
+        }
+      }
+    },
+    "text_ticker": {
+      "text_1": "Inspirando jovens mentes, uma aventura de cada vez.",
+      "text_2": "Toda jornada é uma chance de despertar curiosidade e alegria.",
+      "text_3": "Crie memórias que duram uma vida inteira através da exploração e do jogo.",
+      "text_4": "Organizar aventuras, moldar sonhos e trazer sorrisos.",
+      "text_5": "Toda criança merece a magia da descoberta e diversão.",
+      "text_6": "A exploração alimenta a imaginação e as atividades dão vida aos sonhos.",
+      "text_7": "Planeje. ",
+      "text_8": "Transformando viagens simples em aventuras extraordinárias para crianças.",
+      "text_9": "Os organizadores que se importam criam as memórias do Kids Treasure.",
+      "text_10": "Uma turnê bem planejada é mais do que uma viagem, é uma porta de entrada para se perguntar."
+    },
+    "places": {
+      "title": "lugares",
+      "place_1": {
+        "title": "Agadir Oufella",
+        "city": "Agadir",
+        "descr": "Uma fortaleza histórica no topo da colina que oferece vistas panorâmicas de Agadir e sua costa. "
+      },
+      "place_2": {
+        "title": "Corniche",
+        "city": "Agadir",
+        "descr": "Um passeio animado à beira -mar repleto de cafés, restaurantes e lojas, ideal para passear de lazer e apreciar a brisa do oceano."
+      },
+      "place_3": {
+        "title": "Croco Park",
+        "city": "Agadir",
+        "descr": "Um parque crocodilo exclusivo com jardins exuberantes e mais de 300 crocodilos do Nilo. "
+      },
+      "place_4": {
+        "title": "Dolphin World Agadir",
+        "city": "Agadir",
+        "descr": "Um centro de entretenimento onde os visitantes podem desfrutar de shows de golfinhos e interagir com esses animais marinhos inteligentes."
+      },
+      "place_5": {
+        "title": "IMI Ouaddar",
+        "city": "Agadir",
+        "descr": "Uma pitoresca vila costeira conhecida por suas praias intocadas e atmosfera descontraída, perfeita para uma escapada relaxante."
+      },
+      "place_6": {
+        "title": "Legzira",
+        "city": "Agadir",
+        "descr": "Famosa por seus impressionantes arcos de rocha vermelha na praia, essa maravilha natural é uma visita obrigatória para os amantes e fotógrafos da natureza."
+      },
+      "place_7": {
+        "title": "Marina",
+        "city": "Agadir",
+        "descr": "Uma área de porto moderna com iates de luxo, lojas sofisticadas e opções de refeições à beira -mar."
+      },
+      "place_8": {
+        "title": "Museu Medina e Amazigh Heritage",
+        "city": "Agadir",
+        "descr": "Um centro cultural mostrando arquitetura, arte e artefatos marroquinos tradicionais, comemorando o Amazigh Heritage."
+      },
+      "place_9": {
+        "title": "Paradise Valley",
+        "city": "Agadir",
+        "descr": "Um oásis exuberante com piscinas e cachoeiras naturais, cercadas por palmeiras e falésias dramáticas. "
+      },
+      "place_10": {
+        "title": "Sous Massa",
+        "city": "Agadir",
+        "descr": "Um parque nacional conhecido por sua vida selvagem diversificada, incluindo flamingos e espécies de aves raras, bem como suas paisagens cênicas."
+      },
+      "place_11": {
+        "title": "Souk El tinha",
+        "city": "Agadir",
+        "descr": "Um mercado tradicional movimentado oferece uma ampla variedade de mercadorias, de especiarias e têxteis a artesanato e produtos frescos."
+      },
+      "place_12": {
+        "title": "Taghazout",
+        "city": "Agadir",
+        "descr": "Uma vila de pescadores encantadora virou para Haven, conhecida por suas ondas de classe mundial, vibração descontraída e pôr do sol deslumbrante."
+      },
+      "place_13": {
+        "title": "Kasbah",
+        "city": "Esseouira",
+        "descr": "Um dos locais históricos icônicos de Esseouira, localizada na costa atlântica de Marrocos."
+      },
+      "place_14": {
+        "title": "Medina",
+        "city": "Esseouira",
+        "descr": "Localizado na costa atlântica de Marrocos, é um local histórico e cultural inscrito como Patrimônio Mundial da UNESCO desde 2001. Fundado no século 18 pelo sultão Mohammed Ben Abdallah, reflete uma mistura única de arquitetura islâmica e européia, apresentando seu papel como um cruzamento comercial e cultural."
+      },
+      "place_15": {
+        "title": "Essaouira Ramparts",
+        "city": "Esseouira",
+        "descr": "Visite as paredes da Medina para descobrir vistas deslumbrantes - pôr do sol de imóveis, vistas panorâmicas do mar e falésias selvagens - ou vá para os antigos canhões que protegem essa fortaleza. "
+      },
+      "place_16": {
+        "title": "Le Jardin majorelle",
+        "city": "Marrakech",
+        "descr": "Este encantador jardim botânico, criado por Jacques Majorelle e restaurado por Yves Saint Laurent, oferece um refúgio de paz com plantas e edifícios exóticos pintados em Majorelle Blue."
+      },
+      "place_17": {
+        "title": "Jemaa el-fna",
+        "city": "Marrakech",
+        "descr": "O coração espancado de Marrakech, este quadrado animado está cheio de charme. "
+      },
+      "place_18": {
+        "title": "La Ménara",
+        "city": "Marrakech",
+        "descr": "Este vasto jardim com sua bacia central é o local ideal para um passeio relaxante com uma vista magnífica das montanhas do Atlas."
+      },
+      "show_more": "mostre mais"
+    },
+    "services": {
+      "title": "serviços",
+      "services": {
+        "service6": {
+          "title": "Excursões, viagens e aventuras",
+          "desc": "Explore destinos únicos e embarque em aventuras inesquecíveis."
+        },
+        "service5": {
+          "title": "Programas esportivos e campos de treinamento",
+          "desc": "Participe de atividades esportivas e melhore seu desempenho."
+        },
+        "service4": {
+          "title": "Transferência de transporte e aeroporto",
+          "desc": "Serviços de transporte convenientes e transferências de aeroportos para facilitar viagens."
+        },
+        "service3": {
+          "title": "Eventos e festas",
+          "desc": "Organize e participe de eventos e festas para experiências memoráveis."
+        },
+        "service2": {
+          "title": "Acomodação e aluguel de carros",
+          "desc": "Reserve acomodações e alugue carros para viagens convenientes."
+        },
+        "service1": {
+          "title": "Transporte e logística",
+          "desc": "Soluções eficientes de transporte e logística para suas necessidades."
+        }
+      }
+    },
+    "city": {
+      "All": "Todos",
+      "Agadir": "Agadir",
+      "Marrakech": "Marrakech",
+      "Essaouira": "Esseouira"
+    },
+    "propose": {
+      "propose1": {
+        "title": "Cancelamento livre",
+        "descr": "Cancelar até 24 horas de antecedência para obter um reembolso total."
+      },
+      "propose2": {
+        "title": "Segurança máxima",
+        "descr": "Medidas de segurança aprimoradas para garantir sua paz de espírito."
+      },
+      "propose3": {
+        "title": "Suporte 24/7",
+        "descr": "Assistência disponível a qualquer momento para responder às suas perguntas."
+      },
+      "propose4": {
+        "title": "Pequenos grupos",
+        "descr": "Desfrute de uma experiência mais personalizada com tamanhos de pequenos grupos."
+      }
+    },
+    "downloads": {
+      "title": "Downloads",
+      "descr": "Nossa empresa oferece a você todas as informações que você precisará para sua turnê única conosco, durante todo o Ocean Sport and Tours cuida de tudo, desde o dia em que você pousa, até o momento em que nos despedimos no aeroporto. ",
+      "text_1": "Faça o download do planejamento dos 7 dias",
+      "text_2": "Baixe o planejamento de 10 dias",
+      "button": "Download"
+    },
+    "tours": {
+      "heading": "Passeios",
+      "show_map": "Mostrar mapa",
+      "Itinerary": "Itinerário",
+      "Date_depart": "Data de partida",
+      "Date_fin": "Data de término",
+      "at": "no",
+      "stop": "parar",
+      "book": "Reserve agora",
+      "form": {
+        "title": "Reserve sua turnê",
+        "FirstName": "Primeiro nome",
+        "LastName": "Sobrenome",
+        "numberPhone": "Número de telefone",
+        "email": "E-mail",
+        "hasAnimal": "Você tem um animal com você?",
+        "Number_Adults": "Número de adultos",
+        "Number_Children": "Número de crianças",
+        "date of reservation": "Data de reserva",
+        "select_Date": "Selecione a data",
+        "select_person": "Selecione Pessoa",
+        "errorFirstName": "O primeiro nome é necessário",
+        "errorLastName": "O sobrenome é necessário",
+        "errornumberPhon1": "O número de telefone é necessário",
+        "errornumberPhon2": "O número de telefone deve começar com 06 e conter 10 dígitos",
+        "errorEmail1": "O email é necessário.",
+        "errorEmail2": "Por favor, insira um endereço de e -mail válido, por exemplo, 'name@gmail.com'",
+        "loadingMessage": "Carregando...",
+        "successMessage": "✅ Reserva enviada com sucesso!",
+        "errorMessage": "❌ Ocorreu um erro ao enviar a reserva.",
+        "Confirm_Reservation": "Confirme a reserva",
+        "confirme_change": "Confirme a alteração",
+        "Duration": "Duração",
+        "Detail_Tariff": "Detalhes da tarifa",
+        "Price_Adults": "Preço para adultos",
+        "Price_Children": "Preço para crianças",
+        "Price_Babies": "Preço para bebês",
+        "Total_Price": "Preço total",
+        "alert": "Selecione uma data mais tarde do que hoje"
+      },
+      "tour": {
+        "tour_1": {
+          "title": "Viagem de Agadir para Marrakech",
+          "route": {
+            "Amskroud": "Amskroud",
+            "Imi n'Tanout": "Imi n'tanout",
+            "Sidi Mokhtar": "Sidi Mokhtar",
+            "Chichaoua": "Chichaoua",
+            "Lalla Takerkoust": "Lalla Takerkoust",
+            "Point 6": "Ponto 6"
+          },
+          "passBy": {
+            "passBy": "Passar por",
+            "pass": {
+              "Amskroud": "Amskroud",
+              "Imi n'Tanout": "Imi n'tanout",
+              "Sidi Mokhtar": "Sidi Mokhtar",
+              "Chichaoua": "Chichaoua",
+              "Lalla Takerkoust": "Lalla Takerkoust"
+            }
+          },
+          "description": "Descubra as paisagens pitorescas entre Agadir e Marrakech com paradas fascinantes.",
+          "departure": "Marrakech",
+          "arrival": "Esseouira",
+          "type": "Descoberta",
+          "duration": "Duração"
+        },
+        "tour_2": {
+          "title": "Marrakech - Excursão de Esseouira",
+          "description": "Uma jornada mágica por colinas e florestas de argan até a costa atlântica.",
+          "type": "Descoberta",
+          "duration": "1 dia",
+          "route": {
+            "Marrakech": "Marrakech",
+            "Argan Oil Cooperative": "Cooperativa de óleo de argan",
+            "Sidi Mokhtar": "Sidi Mokhtar",
+            "Chichaoua": "Chichaoua",
+            "Ounara": "OUNARA",
+            "Bab Doukkala (Essaouira)": "Bab Doukkala (Esseouira)",
+            "Point 6": "Ponto 6"
+          },
+          "passBy": {
+            "passBy": "Passar por",
+            "pass": {
+              "Chichaoua": "Chichaoua",
+              "Argan Oil Cooperative": "Cooperativa de óleo de argan",
+              "Sidi Lmokhtar": "Sidi Lmokhtar",
+              "Ounara": "OUNARA",
+              "Bab Doukkala (Essaouira)": "Bab Doukkala (Esseouira)"
+            }
+          },
+          "departure": "Marrakech",
+          "arrival": "Esseouira"
+        },
+        "tour_3": {
+          "title": "Viagem de estrada Esseouira - Agadir",
+          "description": "Explore praias selvagens e aldeias costeiras encantadoras.",
+          "type": "Relaxamento",
+          "duration": "3 dias",
+          "route": {
+            "Sidi Kaouki": "Sidi Kaouki",
+            "Tamri (Banana Village)": "Tamri (Banana Village)",
+            "Taghazout": "Taghazout",
+            "Seafront Promenade (Agadir)": "Promenade à beira -mar (Agadir)",
+            "Kasbah Agadir Oufella": "Kasbah Agadir Oufella"
+          },
+          "passBy": {
+            "passBy": "Passar por",
+            "pass": {
+              "Essaouira": "Esseouira",
+              "Sidi Kaouki": "Sidi Kaouki",
+              "Tamri (Banana Village)": "Tamri (Banana Village)",
+              "Taghazout": "Taghazout",
+              "Seafront Promenade (Agadir)": "Promenade à beira -mar (Agadir)",
+              "Kasbah Agadir Oufella": "Kasbah Agadir Oufella",
+              "Agadir": "Agadir"
+            }
+          },
+          "departure": "Esseouira",
+          "arrival": "Agadir"
+        },
+        "tour_4": {
+          "title": "Day Adventure Agadir - Esseouira",
+          "description": "Desfrute de uma rota panorâmica para a famosa cidade azul, Esseouira.",
+          "type": "Tour guiado",
+          "duration": "1 dia",
+          "route": {
+            "Agadir": "Agadir",
+            "Tamri": "Tamri",
+            "Taghazout": "Taghazout",
+            "Cap Ghir": "Cap Ghir",
+            "Sidi Kaouki": "Sidi Kaouki",
+            "Bab Marrakech (Essaouira)": "Bab Marrakech (Esseouira)",
+            "Essaouira": "Esseouira"
+          },
+          "passBy": {
+            "passBy": "Passar por",
+            "pass": {
+              "Tamri": "Tamri",
+              "Taghazout": "Taghazout",
+              "Cap Ghir": "Cap Ghir",
+              "Sidi Kaouki": "Sidi Kaouki",
+              "Bab Marrakech (Essaouira)": "Bab Marrakech (Esseouira)"
+            }
+          },
+          "departure": "Agadir",
+          "arrival": "Esseouira"
+        },
+        "tour_5": {
+          "title": "Marrakech, Esseouira e Agadir Tour",
+          "description": "Explore as maravilhas de três cidades marroquinas icônicas.",
+          "type": "cultura",
+          "duration": "5 dias",
+          "route": {
+            "Agadir": "Agadir",
+            "Marrakech": "Marrakech",
+            "Essaouira": "Esseouira",
+            "Tamri": "Tamri",
+            "Taghazout": "Taghazout"
+          },
+          "passBy": {
+            "passBy": "Passar por",
+            "pass": {
+              "Marrakech": "Marrakech",
+              "Essaouira": "Esseouira",
+              "Tamri": "Tamri",
+              "Taghazout": "Taghazout"
+            }
+          },
+          "departure": "Agadir",
+          "arrival": "Marrakech"
+        }
+      }
+    },
+    "sports": {
+      "title": "esportes",
+      "text": "Manter -se ativo é essencial para crianças e adolescentes, e nosso programa oferece uma variedade de esportes para mantê -los engajados, saudáveis ​​e se divertindo! ",
+      "football": {
+        "name": "Futebol",
+        "description": "O esporte mais popular do mundo, o futebol incentiva o trabalho em equipe, a estratégia e a resistência. "
+      },
+      "basketball": {
+        "name": "Basquetebol",
+        "description": "Um esporte de alta energia que aumenta a agilidade, a velocidade e o trabalho em equipe. "
+      },
+      "swimming": {
+        "name": "Natação",
+        "description": "Um treino de corpo inteiro que cria força, resistência e flexibilidade. "
+      },
+      "tennis": {
+        "name": "Tênis",
+        "description": "Um esporte de raquete em ritmo acelerado que melhora os reflexos, a coordenação e o foco. "
+      },
+      "gymnastics": {
+        "name": "Ginástica",
+        "description": "Um esporte que aumenta a flexibilidade, o equilíbrio e a força do núcleo. "
+      },
+      "skateboarding": {
+        "name": "Skate",
+        "description": "Um esporte dinâmico que promove equilíbrio, criatividade e perseverança. "
+      }
+    },
+    "opinion": {
+      "title": "O que nossos clientes disseram sobre nós",
+      "opinions": {
+        "opinion_1": {
+          "name": "Alex Smith",
+          "opinion": "Experiência incrível! "
+        },
+        "opinion_2": {
+          "name": "Mark Johnson",
+          "opinion": "Ótimas atividades esportivas! "
+        },
+        "opinion_3": {
+          "name": "Juan Lee",
+          "opinion": "O passeio foi divertido, mas o cronograma foi um pouco apertado. "
+        },
+        "opinion_4": {
+          "name": "David Brown",
+          "opinion": "Excelente serviço! "
+        },
+        "opinion_5": {
+          "name": "Emmanual Wilson",
+          "opinion": "A equipe era muito atenciosa e meus filhos se sentiram confortáveis ​​durante a viagem. "
+        },
+        "opinion_6": {
+          "name": "James Carter",
+          "opinion": "Um passeio bem organizado com uma variedade de atividades. "
+        },
+        "opinion_7": {
+          "name": "Oliver Martinez",
+          "opinion": "Programa de esportes fantásticos! "
+        }
+      }
+    },
+    "footer": {
+      "tanks": "Obrigado por visitar nosso site e bem -vindo a",
+      "Rights": "Todos os direitos reservados",
+      "Copyright": "Direitos autorais"
+    }
+  },
+  "contact": {
+    "title": "Contate-nos",
+    "subtitle": "Entre em contato conosco para obter mais informações ou para reservar uma turnê.",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Mensagem",
+      "send": "Enviar mensagem",
+      "success": "Sua mensagem foi enviada com sucesso.",
+      "error": "Ocorreu um erro. ",
+      "sending": "Enviando ..."
+    },
+    "details": {
+      "title": "Detalhes de contato"
+    }
+  },
+  "offlineChat": {
+    "title": "Suporte de bate -papo",
+    "choose": "Escolha uma pergunta",
+    "question1": {
+      "question": "Como posso ajudá-lo?",
+      "answer": "Ocean Sport Tours é uma empresa que oferece atividades e passeios interessantes relacionados ao oceano."
+    },
+    "question2": {
+      "question": "O que é o Ocean Sport Tours?",
+      "answer": "Ocean Sport Tours é uma empresa que oferece atividades e passeios interessantes relacionados ao oceano."
+    },
+    "question3": {
+      "question": "Que atividades você oferece?",
+      "answer": "Oferecemos uma variedade de atividades, incluindo snorkeling, mergulho e passeios de barco."
+    },
+    "question4": {
+      "question": "Onde você está localizado?",
+      "answer": "Operamos em vários locais, incluindo ilhas tropicais e cidades costeiras."
+    },
+    "question5": {
+      "question": "Quanto custa isso?",
+      "answer": "O preço varia de acordo com a atividade e a localização. "
+    },
+    "question6": {
+      "question": "Eu preciso de experiência anterior?",
+      "answer": "Nenhuma experiência anterior é necessária para a maioria das atividades. "
+    },
+    "question7": {
+      "question": "Que medidas de segurança você tem?",
+      "answer": "Seguimos protocolos de segurança estritos, incluindo guias certificados, equipamentos de segurança e procedimentos de emergência."
+    },
+    "question8": {
+      "question": "Posso reservar uma turnê privada?",
+      "answer": "Sim, passeios particulares estão disponíveis mediante solicitação. "
+    },
+    "question9": {
+      "question": "Você oferece descontos em grupo?",
+      "answer": "Sim, oferecemos descontos em grupo para grandes festas. "
+    },
+    "question10": {
+      "question": "O que devo trazer para a turnê?",
+      "answer": "Recomendamos trazer roupas de banho, protetor solar, toalha e quaisquer itens pessoais necessários."
+    },
+    "question11": {
+      "question": "As crianças são permitidas nos passeios?",
+      "answer": "Sim, as crianças são bem -vindas! "
+    },
+    "question12": {
+      "question": "Você fornece coletes salva -vidas e equipamentos de segurança?",
+      "answer": "Sim, todos os equipamentos de segurança, incluindo coletes salva -vidas, são fornecidos para cada atividade."
+    },
+    "question13": {
+      "question": "Como faço para reservar uma turnê?",
+      "answer": "Você pode reservar uma turnê on -line através do nosso site ou entrar em contato com nossa equipe de atendimento ao cliente."
+    },
+    "question14": {
+      "question": "Quais métodos de pagamento você aceita?",
+      "answer": "Aceitamos cartões de crédito, PayPal e transferências bancárias."
+    }
+  }
+}

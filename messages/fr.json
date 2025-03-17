@@ -11,6 +11,7 @@
       "features": "fonctionnalités",
       "activities": "activités",
       "places": "lieux",
+      "sports": "sports",
       "tours": "visites",
       "services": "services",
       "downloads": "téléchargements",
@@ -94,6 +95,34 @@
           "title": "Surf",
           "descr": "Attrapez les vagues et vivez l'excitation du surf en mer."
         }
+      }
+    },
+    "sports": {
+      "title": "sports",
+      "text": "Rester actif est essentiel pour les enfants et les adolescents, et notre programme propose une variété de sports pour les garder engagés, en bonne santé et amusés ! Qu'ils aiment le football, le basketball, la natation, le tennis, la gymnastique ou le skateboard, il y en a pour tous les goûts.",
+      "football": {
+        "name": "Football",
+        "description": "Le sport le plus populaire au monde, le football favorise le travail d'équipe, la stratégie et l'endurance. Les joueurs collaborent pour passer, dribbler et marquer des buts, améliorant ainsi leur coordination et leur condition physique."
+      },
+      "basketball": {
+        "name": "Basketball",
+        "description": "Un sport dynamique qui améliore l'agilité, la vitesse et l'esprit d'équipe. Les joueurs dribblent, passent et tirent pour marquer des points, développant ainsi leur coordination et leur réflexion stratégique."
+      },
+      "swimming": {
+        "name": "Natation",
+        "description": "Un exercice complet qui renforce la force, l'endurance et la flexibilité. La natation est excellente pour la santé cardiovasculaire et constitue un moyen agréable de rester actif dans l'eau."
+      },
+      "tennis": {
+        "name": "Tennis",
+        "description": "Un sport de raquette rapide qui améliore les réflexes, la coordination et la concentration. Le tennis développe la réflexion stratégique tout en offrant un excellent entraînement cardiovasculaire."
+      },
+      "gymnastics": {
+        "name": "Gymnastique",
+        "description": "Un sport qui améliore la flexibilité, l'équilibre et la force du tronc. La gymnastique permet de développer la discipline et la coordination à travers divers mouvements et enchaînements."
+      },
+      "skateboarding": {
+        "name": "Skateboard",
+        "description": "Un sport dynamique qui favorise l'équilibre, la créativité et la persévérance. Le skateboard permet aux participants d'apprendre des figures et d'améliorer leur coordination tout en s'amusant."
       }
     },
     "text_ticker": {
@@ -274,6 +303,7 @@
         "loadingMessage": "Chargement...           ",
         "successMessage": "✅Réservation envoyée avec succès !",
         "errorMessage": "❌Une erreur s'est produite lors de l'envoi de la réservation.",
+
         "Confirm_Reservation": "Confirmer la reservation",
         "confirme_change": "Confirmer changement",
         "Duration": "Duration",
@@ -343,6 +373,7 @@
           "description": "Partez à la découverte des plages sauvages et des charmants villages côtiers.",
           "type": "Relaxation",
           "duration": "3 jours",
+
           "route": {
             "Sidi Kaouki": "Sidi Kaouki",
             "Tamri (Banana Village)": "Tamri (Banana Village)",
@@ -397,6 +428,7 @@
           "description": "Explorez les merveilles de trois villes emblématiques du Maroc.",
           "type": "culture",
           "duration": "5 jours",
+
           "route": {
             "Agadir": "Agadir",
             "Marrakech": "Marrakech",

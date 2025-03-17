@@ -8,12 +8,13 @@
     "navbar": {
       "title": "Ocean Sports Tour",
       "about": "about",
-      "tours":"tours",
+      "tours": "tours",
       "features": "features",
       "activities": "activities",
       "places": "places",
       "services": "services",
       "downloads": "downloads",
+      "sports": "sports",
       "gallery": "gallery",
       "professional": "professional",
       "contact": "contact"
@@ -238,11 +239,26 @@
       "Marrakech": "Marrakech",
       "Essaouira": "Essaouira"
     },
-    
-   
-      
 
-       
+    "propose": {
+      "propose1": {
+        "title": "Free Cancellation",
+        "descr": "Cancel up to 24 hours in advance for a full refund."
+      },
+      "propose2": {
+        "title": "Maximum Security",
+        "descr": "Enhanced security measures to ensure your peace of mind."
+      },
+      "propose3": {
+        "title": "24/7 Support",
+        "descr": "Assistance available at any time to answer your questions."
+      },
+      "propose4": {
+        "title": "Small Groups",
+        "descr": "Enjoy a more personalized experience with small group sizes."
+      }
+    },
+
     "downloads": {
       "title": "Downloads",
       "descr": "Our company offer for you all the information you're going to need for your unique tour with us, Throughout, ocean sport and tours takes care of everything, from the day you land, until the moment we say goodbye at the airport. About here, you will come across Everything concerning Tariff and schedule of your tours, trips, travels, accommodation… that you can download easy and fast.",
@@ -379,49 +395,79 @@
           "route": {
             "Agadir": "Agadir",
             "Tamri": "Tamri",
-"Taghazout": "Taghazout",
-"Cap Ghir": "Cap Ghir",
-"Sidi Kaouki": "Sidi Kaouki",
-"Bab Marrakech (Essaouira)": "Bab Marrakech (Essaouira)",
-"Essaouira": "Essaouira"
-},
-"passBy": {
-  "passBy": "Pass through",
-  "pass": {
-    "Tamri": "Tamri",
-    "Taghazout": "Taghazout",
-    "Cap Ghir": "Cap Ghir",
-    "Sidi Kaouki": "Sidi Kaouki",
-    "Bab Marrakech (Essaouira)": "Bab Marrakech (Essaouira)"
-  }
-},
-"departure": "Agadir",
-"arrival": "Essaouira"
-},
-"tour_5": {
-  "title": "Marrakech, Essaouira, and Agadir Tour",
-  "description": "Explore the wonders of three iconic Moroccan cities.",
-  "type": "culture",
-  "duration": "5 days",
-  "route": {
-    "Agadir": "Agadir",
-    "Marrakech": "Marrakech",
-    "Essaouira": "Essaouira",
-    "Tamri": "Tamri",
-    "Taghazout": "Taghazout"
-  },
-  "passBy": {
-    "passBy": "Pass through",
-    "pass": {
-      "Marrakech": "Marrakech",
-      "Essaouira": "Essaouira",
-      "Tamri": "Tamri",
-      "Taghazout": "Taghazout"
-    }
-  },
-  "departure": "Agadir",
-  "arrival": "Marrakech"}
-}},
+            "Taghazout": "Taghazout",
+            "Cap Ghir": "Cap Ghir",
+            "Sidi Kaouki": "Sidi Kaouki",
+            "Bab Marrakech (Essaouira)": "Bab Marrakech (Essaouira)",
+            "Essaouira": "Essaouira"
+          },
+          "passBy": {
+            "passBy": "Pass through",
+            "pass": {
+              "Tamri": "Tamri",
+              "Taghazout": "Taghazout",
+              "Cap Ghir": "Cap Ghir",
+              "Sidi Kaouki": "Sidi Kaouki",
+              "Bab Marrakech (Essaouira)": "Bab Marrakech (Essaouira)"
+            }
+          },
+          "departure": "Agadir",
+          "arrival": "Essaouira"
+        },
+        "tour_5": {
+          "title": "Marrakech, Essaouira, and Agadir Tour",
+          "description": "Explore the wonders of three iconic Moroccan cities.",
+          "type": "culture",
+          "duration": "5 days",
+          "route": {
+            "Agadir": "Agadir",
+            "Marrakech": "Marrakech",
+            "Essaouira": "Essaouira",
+            "Tamri": "Tamri",
+            "Taghazout": "Taghazout"
+          },
+          "passBy": {
+            "passBy": "Pass through",
+            "pass": {
+              "Marrakech": "Marrakech",
+              "Essaouira": "Essaouira",
+              "Tamri": "Tamri",
+              "Taghazout": "Taghazout"
+            }
+          },
+          "departure": "Agadir",
+          "arrival": "Marrakech"
+        }
+      }
+    },
+    "sports": {
+      "title": "sports",
+      "text": "Staying active is essential for kids and teenagers, and our program offers a variety of sports to keep them engaged, healthy, and having fun! Whether they love football, basketball, swimming, tennis, gymnastics, or skateboarding, there's something for everyone.",
+      "football": {
+        "name": "Football",
+        "description": "The world's most popular sport, football encourages teamwork, strategy, and endurance. Players work together to pass, dribble, and score goals, improving coordination and fitness."
+      },
+      "basketball": {
+        "name": "Basketball",
+        "description": "A high-energy sport that enhances agility, speed, and teamwork. Players dribble, pass, and shoot to score points, developing hand-eye coordination and strategic thinking."
+      },
+      "swimming": {
+        "name": "Swimming",
+        "description": "A full-body workout that builds strength, endurance, and flexibility. Swimming is great for cardiovascular health and is a fun way to stay active in the water."
+      },
+      "tennis": {
+        "name": "Tennis",
+        "description": "A fast-paced racket sport that improves reflexes, coordination, and focus. Tennis teaches strategic thinking while providing an excellent cardiovascular workout."
+      },
+      "gymnastics": {
+        "name": "Gymnastics",
+        "description": "A sport that enhances flexibility, balance, and core strength. Gymnastics helps develop discipline and coordination through various movements and routines."
+      },
+      "skateboarding": {
+        "name": "Skateboarding",
+        "description": "A dynamic sport that promotes balance, creativity, and perseverance. Skateboarding allows participants to learn tricks and improve coordination while having fun."
+      }
+    },
 
     "opinion": {
       "title": "What Our Customers Said About Us",
