@@ -55,7 +55,7 @@ const ToursData: Tour[] = [
       { lat: 31.6295, lng: -7.9811, name: "Marrakech" },
       { lat: 31.6295, lng: -7.9811, name: "Chichaoua" },
       { lat: 31.55, lng: -8.3, name: "Argan Oil Cooperative" },
-      { lat: 31.5, lng: -8.8, name: "Sidi Lmokhtar" },
+      { lat: 31.5, lng: -8.8, name: "Sidi Mokhtar" },
       { lat: 31.52, lng: -9.2, name: "Ounara" },
       { lat: 31.51, lng: -9.6, name: "Bab Doukkala (Essaouira)" },
       { lat: 31.5085, lng: -9.7595, name: "Point 6" },

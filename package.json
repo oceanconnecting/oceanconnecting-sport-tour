@@ -53,6 +53,7 @@
     "yet-another-react-lightbox": "^3.21.7"
   },
   "devDependencies": {
+    "@types/geojson": "^7946.0.16",
     "@types/jest": "^29.5.14",
     "@types/leaflet": "^1.9.16",
     "@types/node": "^20",
