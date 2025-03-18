@@ -227,7 +227,7 @@ const FormReservation: React.FC<FormProps> = ({ tour }) => {
               value={formData.children}
               onDecrement={() => decrement("children")}
               onIncrement={() => increment("children")}
-              label={tt("form.Number_Children")}
+              label={`${tt("form.Number_Children")}(-12)`}
             />
           </div>
         </div>
